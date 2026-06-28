@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Mail, Send, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { RiskWarning } from "@/components/RiskWarning";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -30,16 +29,18 @@ export default function ContactPage() {
               <h2 className="mt-6 text-3xl font-black text-white">{brand.product}</h2>
               <p className="mt-4 text-steel">{brand.tagline}</p>
               <div className="mt-8 flex flex-col gap-3">
-                <ButtonLink href={brand.telegramUrl} external icon={<Send className="h-4 w-4" />}>
+                <ButtonLink href={brand.telegramUrl} external icon={<span className="text-sm">📨</span>}>
                   Telegram: {brand.telegram}
                 </ButtonLink>
-                <ButtonLink href={`mailto:${brand.email}`} variant="secondary" icon={<Mail className="h-4 w-4" />}>
+                <ButtonLink href={`mailto:${brand.email}`} variant="secondary" icon={<span className="text-sm">✉️</span>}>
                   Email: {brand.email}
                 </ButtonLink>
               </div>
             </div>
             <div className="rounded-2xl border border-line bg-panel/78 p-8">
-              <ShieldCheck className="h-9 w-9 text-emerald" />
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-emerald/10 text-emerald">
+                ✔
+              </span>
               <h2 className="mt-6 text-3xl font-black text-white">What to include</h2>
               <div className="mt-6 grid gap-4 text-sm text-steel">
                 {[
