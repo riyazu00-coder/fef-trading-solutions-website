@@ -1,44 +1,73 @@
 import type { Metadata } from "next";
-import { BookOpen, Download, ExternalLink, HelpCircle, History, LifeBuoy, Settings, Video } from "lucide-react";
-import { RiskWarning } from "@/components/RiskWarning";
+import {
+  BookOpen,
+  Download,
+  KeyRound,
+  Monitor,
+  ShieldCheck,
+  Server,
+  HelpCircle,
+  Video,
+} from "lucide-react";
+
 import { SectionHeading } from "@/components/SectionHeading";
+import { RiskWarning } from "@/components/RiskWarning";
 
 export const metadata: Metadata = {
   title: "Documentation",
-  description: "FEF Trading Solutions documentation resources for installation, setup, support and release notes."
+  description:
+    "Documentation, installation guides and support resources for FEF Trading Solutions software.",
 };
 
 const docs = [
   {
-    title: "Quick Start Guide",
-    description: "Set up master and slave EAs in minutes.",
-    icon: <BookOpen className="h-5 w-5" />
-  },
-  {
     title: "Installation Guide",
-    description: "Step-by-step MT5 installation and configuration.",
-    icon: <Download className="h-5 w-5" />
+    description: "Step-by-step installation for all FEF MT5 software.",
+    icon: Download,
+    status: "Available",
   },
   {
-    title: "Video Tutorials",
-    description: "Guided walkthroughs for installation, accounts and operating workflows.",
-    icon: <Video className="h-5 w-5" />
+    title: "License Activation",
+    description: "Activate your purchased software license.",
+    icon: KeyRound,
+    status: "Available",
+  },
+  {
+    title: "Trade Copier Manual",
+    description: "Complete operating guide for Professional Trade Copier MT5.",
+    icon: BookOpen,
+    status: "Available",
+  },
+  {
+    title: "Manual Trade Manager PRO",
+    description: "Configuration and feature documentation.",
+    icon: ShieldCheck,
+    status: "Available",
+  },
+  {
+    title: "Broker Compatibility",
+    description: "Supported MT5 brokers and symbol mapping.",
+    icon: Monitor,
+    status: "Available",
+  },
+  {
+    title: "VPS Setup Guide",
+    description: "Recommended VPS configuration for 24/7 operation.",
+    icon: Server,
+    status: "Available",
   },
   {
     title: "Frequently Asked Questions",
-    description: "Common questions about copying, brokers and licensing.",
-    icon: <HelpCircle className="h-5 w-5" />
+    description: "Answers to the most common customer questions.",
+    icon: HelpCircle,
+    status: "Available",
   },
   {
-    title: "Version History",
-    description: "Versioned release notes and changes.",
-    icon: <History className="h-5 w-5" />
+    title: "Video Tutorials",
+    description: "Coming soon.",
+    icon: Video,
+    status: "Coming Soon",
   },
-  {
-    title: "Support Center",
-    description: "Direct support via Telegram and email.",
-    icon: <LifeBuoy className="h-5 w-5" />
-  }
 ];
 
 export default function DocumentationPage() {
@@ -46,47 +75,43 @@ export default function DocumentationPage() {
     <>
       <section className="mx-auto max-w-7xl px-5 py-24 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Documentation & Support"
-          title="Resources to get you"
-          gradient="running fast"
-          description="Installation, configuration and support resources for FEF Professional Trade Copier MT5."
+          eyebrow="Documentation Center"
+          title="Everything you need"
+          gradient="to get started"
+          description="Professional documentation, setup instructions and operating manuals for every FEF Trading Solutions product."
         />
-        <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {docs.map((doc) => (
-            <article key={doc.title} className="premium-border rounded-xl bg-panel/76 p-6">
-              <div className="flex gap-5">
-                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-lg bg-cyan/10 text-electric ring-1 ring-cyan/15">
-                  {doc.icon}
-                </span>
-                <div>
-                  <h2 className="inline-flex items-center gap-2 text-lg font-bold text-white">
-                    {doc.title}
-                    <ExternalLink className="h-4 w-4 text-steel" />
-                  </h2>
-                  <p className="mt-2 text-sm leading-6 text-steel">{doc.description}</p>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-12 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-line bg-panel/75 p-8">
-          <div className="flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-lg bg-electric/10 text-electric">
-              <Settings className="h-5 w-5" />
-            </span>
-            <h2 className="text-2xl font-black text-white">Recommended setup flow</h2>
-          </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-4">
-            {["Install copier files", "Attach master EA", "Attach slave EAs", "Run sync check"].map((item, index) => (
-              <div key={item} className="rounded-xl border border-line bg-ink/55 p-5">
-                <p className="font-mono text-sm text-electric">0{index + 1}</p>
-                <h3 className="mt-4 font-bold text-white">{item}</h3>
-              </div>
-            ))}
-          </div>
+        <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {docs.map((doc) => {
+            const Icon = doc.icon;
+
+            return (
+              <article
+                key={doc.title}
+                className="rounded-2xl border border-line bg-panel/75 p-7 transition hover:border-electric/40"
+              >
+                <Icon className="h-8 w-8 text-electric" />
+
+                <h2 className="mt-6 text-xl font-bold text-white">
+                  {doc.title}
+                </h2>
+
+                <p className="mt-3 text-sm text-steel">
+                  {doc.description}
+                </p>
+
+                <span
+                  className={`mt-6 inline-flex rounded-full px-4 py-1 text-xs font-bold ${
+                    doc.status === "Available"
+                      ? "bg-emerald/10 text-emerald"
+                      : "bg-white/5 text-steel"
+                  }`}
+                >
+                  {doc.status}
+                </span>
+              </article>
+            );
+          })}
         </div>
       </section>
 

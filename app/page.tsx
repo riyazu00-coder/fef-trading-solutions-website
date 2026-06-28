@@ -56,8 +56,52 @@ const whyItems = [
 export default function HomePage() {
   return (
     <main className="relative overflow-hidden">
-      <HeroVisual />
+  <section className="mx-auto grid min-h-[calc(100vh-var(--header-height))] max-w-7xl items-center gap-12 px-5 py-24 sm:px-6 lg:grid-cols-[1fr_0.95fr] lg:px-8">
+    <div>
+      <div className="inline-flex items-center gap-2 rounded-full border border-line bg-panel/70 px-4 py-2 text-sm text-steel">
+        <span className="h-2 w-2 rounded-full bg-emerald" />
+        {brand.product} - {brand.status}
+      </div>
 
+      <h1 className="mt-10 max-w-3xl text-5xl font-black leading-[0.95] text-white sm:text-6xl lg:text-7xl">
+        Professional Trading Software for{" "}
+        <span className="bg-gradient-to-r from-electric via-cyan to-emerald bg-clip-text text-transparent">
+          MetaTrader 5
+        </span>
+      </h1>
+
+      <p className="mt-8 max-w-2xl text-xl leading-8 text-steel">
+        Powerful, reliable and intelligent trading solutions engineered for
+        professional traders, portfolio managers and multi-account trading.
+      </p>
+
+      <div className="mt-8 flex flex-wrap gap-3">
+        <ButtonLink href="/contact" icon={<ArrowRight className="h-4 w-4" />}>
+          Buy Now
+        </ButtonLink>
+        <ButtonLink href="/products" variant="secondary">
+          Explore Products
+        </ButtonLink>
+      </div>
+
+      <div className="mt-12 grid max-w-xl grid-cols-3 gap-6 text-sm text-steel">
+        <div>
+          <BadgeCheck className="mb-3 h-5 w-5 text-electric" />
+          Low-latency engine
+        </div>
+        <div>
+          <ShieldCheck className="mb-3 h-5 w-5 text-electric" />
+          Multi-broker ready
+        </div>
+        <div>
+          <Activity className="mb-3 h-5 w-5 text-electric" />
+          Real-time sync
+        </div>
+      </div>
+    </div>
+
+    <HeroVisual />
+  </section>
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="mb-10">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-400">
