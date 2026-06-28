@@ -153,3 +153,46 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
+.premium-card {
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(34, 211, 238, 0.45);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.premium-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.premium-glow::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  opacity: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(56, 189, 248, 0.25),
+    rgba(16, 185, 129, 0.18),
+    transparent
+  );
+  transition: opacity 220ms ease;
+  pointer-events: none;
+}
+
+.premium-glow:hover::before {
+  opacity: 1;
+}
+
+.premium-glow > * {
+  position: relative;
+  z-index: 1;
+}
