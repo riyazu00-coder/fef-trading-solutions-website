@@ -26,10 +26,11 @@ export const brand = {
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
+  { label: "Downloads", href: "/downloads" },
   { label: "Trade Copier", href: "/trade-copier" },
   { label: "Documentation", href: "/documentation" },
   { label: "Support", href: "/support" },
-  { label: "Contact", href: "/contact" }
+  { label: "Contact", href: "/contact" },
 ];
 
 export const products = [
