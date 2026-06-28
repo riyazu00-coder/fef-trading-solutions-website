@@ -1,13 +1,26 @@
 export const brand = {
   name: "FEF Trading Solutions",
   shortName: "FEF Trading",
-  tagline: "Built for Traders. Engineered for Performance.",
+  tagline: "Professional MetaTrader 5 Software Company",
   product: "FEF Professional Trade Copier MT5",
   status: "Available Now",
-  email: "fefhvn@gmail.com",
+
+  email: "sales@feftradingsolutions.com",
+
   telegram: "@forexmetalsignals",
   telegramUrl: "https://t.me/forexmetalsignals",
-  domain: "feftradingsolutions.com"
+
+  domain: "feftradingsolutions.com",
+  website: "https://feftradingsolutions.com",
+
+  phone: "+971526235196",
+  whatsapp: "+971526235196",
+
+  support: "24 Hours",
+  workingHours: "09:00 - 18:00 UAE Time (UTC+4)",
+
+  address:
+    "G7 Emirates NBD Tower, 477 Street, Al Nuaimia 2, Ajman, United Arab Emirates",
 };
 
 export const navItems = [
@@ -24,32 +37,58 @@ export const products = [
     name: "FEF Professional Trade Copier MT5",
     status: "Available Now",
     description: "Professional Master/Slave Trade Copier",
-    details: "Mirror trades across multiple accounts with symbol detection, retry handling, state sync and dashboard controls."
+    details:
+      "Mirror trades across multiple MT5 accounts with symbol detection, retry handling, state sync, dashboard controls and event logging.",
+  },
+  {
+    name: "FEF Manual Trade Manager PRO MT5",
+    status: "Available Now",
+    description: "Professional Manual Trade Management Suite",
+    details:
+      "Manage manual MT5 trades with auto SL/TP, break-even, trailing stop, partial close, ATR stops, session boxes, ORB, FVG, BOS/CHoCH, liquidity sweeps and DXY dashboard.",
   },
   {
     name: "FEF Smart Trader MT5",
     status: "Coming Soon",
-    description: "Institutional automated trading",
-    details: "Planned intelligent automation for structured MT5 execution and systematic operator workflows."
+    description: "Automated Trading Engine",
+    details:
+      "Planned automation system using trend, structure, confirmation and risk-based execution logic for MetaTrader 5.",
   },
   {
-    name: "FEF Trade Manager MT5",
+    name: "FEF Gold Master EA MT5",
     status: "Coming Soon",
-    description: "Advanced trade management",
-    details: "Designed to make day-to-day order control clearer, faster and less repetitive."
+    description: "XAUUSD Automation Concept",
+    details:
+      "Specialized gold trading automation concept designed for XAUUSD traders with structured execution and risk visibility.",
   },
   {
     name: "FEF Risk Manager MT5",
     status: "Coming Soon",
-    description: "Professional account protection",
-    details: "Planned controls for account limits, emergency workflows and operator visibility."
+    description: "Professional Account Protection",
+    details:
+      "Planned risk-control tool for account limits, drawdown protection, emergency actions and operator visibility.",
   },
   {
     name: "FEF Trade Scanner MT5",
     status: "Coming Soon",
-    description: "Multi-symbol opportunity scanner",
-    details: "A focused scanner for watching symbols, conditions and alerts from one operator surface."
-  }
+    description: "Multi-Symbol Opportunity Scanner",
+    details:
+      "A focused scanner for watching symbols, market conditions, alerts and trading opportunities from one operator surface.",
+  },
+  {
+    name: "FEF Smart Money PRO MT5",
+    status: "Coming Soon",
+    description: "Market Structure & Liquidity Toolkit",
+    details:
+      "Smart Money and price-action analysis tool for BOS, CHoCH, FVG, liquidity sweeps, structure shifts and confirmation zones.",
+  },
+  {
+    name: "FEF VPS Monitor",
+    status: "Coming Soon",
+    description: "VPS & Terminal Health Monitor",
+    details:
+      "Planned monitoring utility for VPS uptime, MT5 terminal health, copier status and account connectivity.",
+  },
 ];
 
 export const copierFeatures = [

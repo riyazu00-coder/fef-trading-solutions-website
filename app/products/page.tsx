@@ -29,44 +29,46 @@ export default function ProductsPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-5 lg:grid-cols-[1fr_1fr]">
-          <div className="rounded-2xl border border-line bg-panel/75 p-8">
-            <span className="inline-flex rounded-full border border-emerald/35 bg-emerald/10 px-4 py-1 text-xs font-bold text-emerald">
-              Available Now
-            </span>
-            <h2 className="mt-6 text-3xl font-black text-white">FEF Professional Trade Copier MT5</h2>
-            <p className="mt-4 text-steel">
-              The first released FEF product is built around master/slave trade copying, symbol detection and operational
-              visibility for MetaTrader 5.
-            </p>
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <ButtonLink href="/trade-copier" icon={<ArrowRight className="h-4 w-4" />}>
-                Explore Trade Copier
-              </ButtonLink>
-              <ButtonLink href="/contact" variant="secondary">
-                Buy Now
-              </ButtonLink>
-            </div>
-          </div>
-          <div className="rounded-2xl border border-line bg-panel/75 p-8">
-            <span className="inline-flex rounded-full border border-line bg-white/[0.04] px-4 py-1 text-xs font-bold text-steel">
-              Roadmap
-            </span>
-            <h2 className="mt-6 text-3xl font-black text-white">Coming Soon Products</h2>
-            <div className="mt-6 grid gap-4">
-              {products.slice(1).map((product) => (
-                <div key={product.name} className="flex gap-3 rounded-lg border border-line bg-ink/45 p-4">
-                  <Clock3 className="mt-1 h-4 w-4 shrink-0 text-electric" />
-                  <div>
-                    <h3 className="font-bold text-white">{product.name}</h3>
-                    <p className="mt-1 text-sm text-steel">{product.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+  <div className="rounded-2xl border border-line bg-panel/75 p-8">
+    <span className="inline-flex rounded-full border border-line bg-white/[0.04] px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-steel">
+      Development Roadmap
+    </span>
+
+    <h2 className="mt-6 text-3xl font-black text-white">
+      FEF Software Roadmap
+    </h2>
+
+    <div className="mt-8 grid gap-5 lg:grid-cols-3">
+      <div className="rounded-xl border border-emerald/25 bg-emerald/5 p-6">
+        <h3 className="text-lg font-bold text-emerald">Released</h3>
+        <ul className="mt-4 space-y-3 text-sm text-steel">
+          <li>✓ FEF Professional Trade Copier MT5</li>
+          <li>✓ FEF Manual Trade Manager PRO MT5</li>
+        </ul>
+      </div>
+
+      <div className="rounded-xl border border-cyan/25 bg-cyan/5 p-6">
+        <h3 className="text-lg font-bold text-cyan">In Development</h3>
+        <ul className="mt-4 space-y-3 text-sm text-steel">
+          <li>• FEF Smart Trader MT5</li>
+          <li>• FEF Gold Master EA MT5</li>
+          <li>• FEF Risk Manager MT5</li>
+          <li>• FEF Trade Scanner MT5</li>
+        </ul>
+      </div>
+
+      <div className="rounded-xl border border-line bg-white/[0.03] p-6">
+        <h3 className="text-lg font-bold text-white">Research Phase</h3>
+        <ul className="mt-4 space-y-3 text-sm text-steel">
+          <li>• FEF Smart Money PRO MT5</li>
+          <li>• FEF VPS Monitor</li>
+          <li>• FEF License Manager</li>
+          <li>• Customer Portal</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="mx-auto max-w-7xl px-5 py-12 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-line bg-ink/55 p-8">
