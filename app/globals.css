@@ -196,3 +196,53 @@ textarea {
   position: relative;
   z-index: 1;
 }
+.demo-path {
+  stroke-dasharray: 12 18;
+  stroke-dashoffset: 120;
+  filter: drop-shadow(0 0 8px rgba(29, 168, 255, 0.75));
+  animation: demo-flow 1.45s linear infinite;
+}
+
+.demo-active .demo-path {
+  stroke-dasharray: 18 14;
+  animation: demo-flow 900ms linear infinite;
+}
+
+.packet {
+  opacity: 0;
+  filter: drop-shadow(0 0 10px rgba(25, 215, 135, 0.9));
+  animation: packet-pulse 1.45s ease-in-out infinite;
+}
+
+.demo-active .packet {
+  opacity: 1;
+  animation: packet-pulse 900ms ease-in-out infinite;
+}
+
+@keyframes demo-flow {
+  from {
+    stroke-dashoffset: 120;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes packet-pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1.25);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
