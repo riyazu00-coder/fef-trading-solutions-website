@@ -27,8 +27,10 @@ export const navItems = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
   { label: "Downloads", href: "/downloads" },
+  { label: "Changelog", href: "/changelog" },
   { label: "Trade Copier", href: "/trade-copier" },
   { label: "Documentation", href: "/documentation" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Support", href: "/support" },
   { label: "Contact", href: "/contact" },
 ];
