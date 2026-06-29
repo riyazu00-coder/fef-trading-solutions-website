@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {
   BadgeCheck,
   Building2,
+  ExternalLink,
   LifeBuoy,
   Mail,
   PackageCheck,
@@ -22,10 +23,13 @@ export const metadata: Metadata = {
 const plans = [
   {
     name: "FEF Professional Trade Copier MT5",
-    label: "Trade Copier",
-    price: "Contact Sales",
+    label: "Available on MQL5",
+    price: "Buy on MQL5",
     description:
       "Professional Master/Slave trade copying for MetaTrader 5 operators.",
+    cta: "Buy on MQL5",
+    href: brand.mql5Url,
+    external: true,
     features: [
       "Master/Slave copying",
       "Multi-account workflow",
@@ -40,8 +44,10 @@ const plans = [
     name: "FEF Manual Trade Manager PRO MT5",
     label: "Trade Manager",
     price: "Contact Sales",
-    description:
-      "Manual trade management suite for serious MT5 traders.",
+    description: "Manual trade management suite for serious MT5 traders.",
+    cta: "Contact Sales",
+    href: "/contact",
+    external: false,
     features: [
       "Auto SL/TP",
       "Break-even",
@@ -59,6 +65,9 @@ const plans = [
     price: "Contact Sales",
     description:
       "Bundle access for traders who want both available FEF products.",
+    cta: "Contact Sales",
+    href: "/contact",
+    external: false,
     features: [
       "Trade Copier MT5",
       "Manual Trade Manager PRO MT5",
@@ -72,13 +81,15 @@ const plans = [
 
 const trustItems = [
   {
-    title: "Lifetime License Options",
-    description: "Commercial licensing options available for serious MT5 users.",
+    title: "Official MQL5 Market Release",
+    description:
+      "FEF Professional Trade Copier MT5 is available through the official MQL5 Market.",
     icon: PackageCheck,
   },
   {
     title: "Secure Digital Delivery",
-    description: "Software access is provided after purchase confirmation.",
+    description:
+      "Customers can purchase and access the Trade Copier through the MQL5 ecosystem.",
     icon: ShieldCheck,
   },
   {
@@ -95,14 +106,14 @@ const trustItems = [
 
 const faqs = [
   {
-    question: "Is this a subscription?",
+    question: "Where can I buy FEF Professional Trade Copier MT5?",
     answer:
-      "Pricing depends on the product and license type. Contact sales for current lifetime or commercial license options.",
+      "FEF Professional Trade Copier MT5 is available on the official MQL5 Market. Use the Buy on MQL5 button to open the product page.",
   },
   {
-    question: "How do I receive the software?",
+    question: "Is this a subscription?",
     answer:
-      "After purchase confirmation, FEF Trading Solutions provides secure digital delivery with setup guidance.",
+      "License and rental options are managed through the MQL5 Market product page.",
   },
   {
     question: "Can I use it on any MT5 broker?",
@@ -131,7 +142,7 @@ export default function PricingPage() {
           {plans.map((plan) => (
             <article
               key={plan.name}
-              className="rounded-2xl border border-line bg-panel/76 p-8"
+              className="premium-card premium-glow rounded-2xl border border-line bg-panel/76 p-8"
             >
               <span className="inline-flex rounded-full border border-emerald/25 bg-emerald/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.2em] text-emerald">
                 {plan.label}
@@ -157,11 +168,18 @@ export default function PricingPage() {
               </ul>
 
               <ButtonLink
-                href="/contact"
+                href={plan.href}
+                external={plan.external}
                 className="mt-8"
-                icon={<Mail className="h-4 w-4" />}
+                icon={
+                  plan.external ? (
+                    <ExternalLink className="h-4 w-4" />
+                  ) : (
+                    <Mail className="h-4 w-4" />
+                  )
+                }
               >
-                Contact Sales
+                {plan.cta}
               </ButtonLink>
             </article>
           ))}
@@ -183,7 +201,7 @@ export default function PricingPage() {
             return (
               <article
                 key={item.title}
-                className="rounded-2xl border border-line bg-panel/76 p-7"
+                className="premium-card premium-glow rounded-2xl border border-line bg-panel/76 p-7"
               >
                 <Icon className="h-8 w-8 text-electric" />
                 <h2 className="mt-6 text-xl font-bold text-white">
@@ -210,9 +228,18 @@ export default function PricingPage() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink href="/contact" icon={<Mail className="h-4 w-4" />}>
+            <ButtonLink
+              href={brand.mql5Url}
+              external
+              icon={<ExternalLink className="h-4 w-4" />}
+            >
+              Buy Trade Copier on MQL5
+            </ButtonLink>
+
+            <ButtonLink href="/contact" variant="secondary" icon={<Mail className="h-4 w-4" />}>
               Contact Sales
             </ButtonLink>
+
             <ButtonLink href={brand.telegramUrl} external variant="secondary">
               Telegram Support
             </ButtonLink>
@@ -232,7 +259,7 @@ export default function PricingPage() {
           {faqs.map((faq) => (
             <article
               key={faq.question}
-              className="rounded-2xl border border-line bg-panel/76 p-7"
+              className="premium-card premium-glow rounded-2xl border border-line bg-panel/76 p-7"
             >
               <h2 className="text-xl font-bold text-white">{faq.question}</h2>
               <p className="mt-3 text-sm leading-6 text-steel">

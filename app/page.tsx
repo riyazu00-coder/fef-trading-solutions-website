@@ -4,10 +4,12 @@ import {
   BadgeCheck,
   Building2,
   Cpu,
+  ExternalLink,
   Layers3,
   Network,
   Radio,
   ShieldCheck,
+  Store,
   Zap,
 } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
@@ -70,6 +72,13 @@ const ecosystemItems = [
   "Customer Portal",
 ];
 
+const mql5Items = [
+  "Official MQL5 Market release",
+  "Secure product delivery",
+  "MetaTrader 5 compatible",
+  "Professional customer support",
+];
+
 export default function HomePage() {
   return (
     <main className="relative overflow-hidden">
@@ -94,10 +103,11 @@ export default function HomePage() {
 
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink
-              href="/contact"
-              icon={<ArrowRight className="h-4 w-4" />}
+              href={brand.mql5Url}
+              external
+              icon={<ExternalLink className="h-4 w-4" />}
             >
-              Buy Now
+              Buy on MQL5
             </ButtonLink>
             <ButtonLink href="/products" variant="secondary">
               Explore Products
@@ -107,7 +117,7 @@ export default function HomePage() {
           <div className="mt-12 grid max-w-xl grid-cols-3 gap-6 text-sm text-steel">
             <div>
               <BadgeCheck className="mb-3 h-5 w-5 text-electric" />
-              Low-latency engine
+              MQL5 Market
             </div>
 
             <div>
@@ -123,6 +133,55 @@ export default function HomePage() {
         </div>
 
         <HeroVisual />
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-10">
+        <div className="premium-card premium-glow rounded-3xl border border-emerald/25 bg-panel/70 p-8 shadow-2xl shadow-black/20">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald/30 bg-emerald/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-emerald">
+                <Store className="h-4 w-4" />
+                Officially Available
+              </div>
+
+              <h2 className="mt-6 text-3xl font-black text-white md:text-5xl">
+                FEF Professional Trade Copier MT5 is live on the{" "}
+                <span className="text-gradient">MQL5 Market</span>
+              </h2>
+
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-steel">
+                Purchase and access the official MetaTrader 5 version directly
+                through the MQL5 Market ecosystem with secure product delivery.
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <ButtonLink
+                  href={brand.mql5Url}
+                  external
+                  icon={<ExternalLink className="h-4 w-4" />}
+                >
+                  Open MQL5 Product Page
+                </ButtonLink>
+
+                <ButtonLink href="/trade-copier" variant="secondary">
+                  View Product Details
+                </ButtonLink>
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {mql5Items.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-line bg-white/[0.03] p-5"
+                >
+                  <BadgeCheck className="h-5 w-5 text-emerald" />
+                  <p className="mt-4 text-sm font-bold text-white">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20">

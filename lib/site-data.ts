@@ -3,7 +3,7 @@ export const brand = {
   shortName: "FEF Trading",
   tagline: "Professional MetaTrader 5 Software Company",
   product: "FEF Professional Trade Copier MT5",
-  status: "Available Now",
+  status: "Available on MQL5 Market",
 
   email: "sales@feftradingsolutions.com",
 
@@ -15,12 +15,15 @@ export const brand = {
 
   phone: "+971526235196",
   whatsapp: "+971526235196",
+  whatsappUrl: "https://wa.me/971526235196",
 
   support: "24 Hours",
   workingHours: "09:00 - 18:00 UAE Time (UTC+4)",
 
   address:
     "G7 Emirates NBD Tower, 477 Street, Al Nuaimia 2, Ajman, United Arab Emirates",
+
+  mql5Url: "https://www.mql5.com/en/market/product/183557",
 };
 
 export const navItems = [
@@ -38,7 +41,7 @@ export const navItems = [
 export const products = [
   {
     name: "FEF Professional Trade Copier MT5",
-    status: "Available Now",
+    status: "Available on MQL5 Market",
     description: "Professional Master/Slave Trade Copier",
     details:
       "Mirror trades across multiple MT5 accounts with symbol detection, retry handling, state sync, dashboard controls and event logging.",
@@ -97,80 +100,98 @@ export const products = [
 export const copierFeatures = [
   {
     title: "Exact Master Mirror",
-    description: "Slave accounts replicate master positions with precise directional intent."
+    description:
+      "Slave accounts replicate master positions with precise directional intent.",
   },
   {
     title: "Copy Every MT5 Symbol",
-    description: "Built for FX, metals, indices, energies, crypto and broker-specific CFDs."
+    description:
+      "Built for FX, metals, indices, energies, crypto and broker-specific CFDs.",
   },
   {
     title: "Multi-Broker Compatible",
-    description: "Works across brokers with different symbol naming schemes."
+    description: "Works across brokers with different symbol naming schemes.",
   },
   {
     title: "Automatic Symbol Detection",
-    description: "Smart resolver handles prefixes, suffixes and common symbol aliases."
+    description:
+      "Smart resolver handles prefixes, suffixes and common symbol aliases.",
   },
   {
     title: "Unlimited Simultaneous Trades",
-    description: "Copy concurrent tickets without an artificial position cap."
+    description:
+      "Copy concurrent tickets without an artificial position cap.",
   },
   {
     title: "Multiple Positions per Symbol",
-    description: "Track and copy each position independently on the same symbol."
+    description:
+      "Track and copy each position independently on the same symbol.",
   },
   {
     title: "Same Lot Mode",
-    description: "Mirror master lot size directly when fixed sizing is required."
+    description:
+      "Mirror master lot size directly when fixed sizing is required.",
   },
   {
     title: "Lot Multiplier Mode",
-    description: "Scale slave position size proportionally for account-level allocation."
+    description:
+      "Scale slave position size proportionally for account-level allocation.",
   },
   {
     title: "Professional Dashboard",
-    description: "Dense operator panel for monitoring account state, sync status and actions."
+    description:
+      "Dense operator panel for monitoring account state, sync status and actions.",
   },
   {
     title: "Heartbeat Monitoring",
-    description: "Connection and account health checks help operators spot interruptions fast."
+    description:
+      "Connection and account health checks help operators spot interruptions fast.",
   },
   {
     title: "Smart Synchronization Engine",
-    description: "Stateful synchronization designed around real MT5 account conditions."
+    description:
+      "Stateful synchronization designed around real MT5 account conditions.",
   },
   {
     title: "Retry Queue",
-    description: "Failed copy requests are queued and retried with controlled recovery."
+    description:
+      "Failed copy requests are queued and retried with controlled recovery.",
   },
   {
     title: "Automatic Recovery",
-    description: "Restores state after restart and resumes synchronization cleanly."
+    description:
+      "Restores state after restart and resumes synchronization cleanly.",
   },
   {
     title: "Manual Slave Close Protection",
-    description: "Helps protect copied positions from accidental slave-side close actions."
+    description:
+      "Helps protect copied positions from accidental slave-side close actions.",
   },
   {
     title: "Event Log",
-    description: "Searchable operational log for copy events, retries and account changes."
+    description:
+      "Searchable operational log for copy events, retries and account changes.",
   },
   {
     title: "Daily Profit/Loss",
-    description: "Per-account realized P/L visibility for operational tracking."
+    description:
+      "Per-account realized P/L visibility for operational tracking.",
   },
   {
     title: "Floating Profit",
-    description: "Aggregated live exposure view across open positions."
+    description:
+      "Aggregated live exposure view across open positions.",
   },
   {
     title: "Sync Now",
-    description: "Manual resync command when an operator wants immediate reconciliation."
+    description:
+      "Manual resync command when an operator wants immediate reconciliation.",
   },
   {
     title: "Panic Close",
-    description: "Emergency flatten action for controlled shutdown scenarios."
-  }
+    description:
+      "Emergency flatten action for controlled shutdown scenarios.",
+  },
 ];
 
 export const riskWarning =

@@ -4,6 +4,7 @@ import {
   BarChart3,
   CheckCircle2,
   DatabaseZap,
+  ExternalLink,
   Gauge,
   HeartPulse,
   Infinity,
@@ -14,7 +15,7 @@ import {
   RefreshCcw,
   RefreshCw,
   Route,
-  ShieldCheck
+  ShieldCheck,
 } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
@@ -28,7 +29,7 @@ import { brand, copierFeatures } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "FEF Professional Trade Copier MT5",
   description:
-    "Professional master/slave trade copier for MetaTrader 5 with symbol detection, retry queue, heartbeat monitoring and operator controls."
+    "Professional master/slave trade copier for MetaTrader 5 with symbol detection, retry queue, heartbeat monitoring and operator controls.",
 };
 
 const icons = [
@@ -45,7 +46,7 @@ const icons = [
   <BarChart3 key="bar" className="h-5 w-5" />,
   <Activity key="activity" className="h-5 w-5" />,
   <RefreshCcw key="sync" className="h-5 w-5" />,
-  <Power key="power" className="h-5 w-5" />
+  <Power key="power" className="h-5 w-5" />,
 ];
 
 export default function TradeCopierPage() {
@@ -53,33 +54,62 @@ export default function TradeCopierPage() {
     <>
       <section className="relative overflow-hidden">
         <div className="site-grid absolute inset-0" />
+
         <div className="relative mx-auto max-w-7xl px-5 py-24 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.98fr_1.02fr] lg:items-center">
             <div>
               <span className="inline-flex rounded-full border border-emerald/35 bg-emerald/10 px-4 py-1 text-xs font-bold text-emerald">
                 {brand.status}
               </span>
+
               <h1 className="mt-6 text-balance text-5xl font-black leading-[1.05] text-white sm:text-6xl">
-                FEF Professional <span className="text-gradient">Trade Copier MT5</span>
+                FEF Professional{" "}
+                <span className="text-gradient">Trade Copier MT5</span>
               </h1>
+
               <p className="mt-6 text-lg leading-8 text-steel">
-                Professional Master/Slave Trade Copier for MetaTrader 5 designed to mirror trades across multiple accounts
-                with speed, stability and precision.
+                Professional Master/Slave Trade Copier for MetaTrader 5 designed
+                to mirror trades across multiple accounts with speed, stability
+                and precision.
               </p>
+
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <ButtonLink href="/contact">Buy Now</ButtonLink>
+                <ButtonLink
+                  href={brand.mql5Url}
+                  external
+                  icon={<ExternalLink className="h-4 w-4" />}
+                >
+                  Buy on MQL5
+                </ButtonLink>
+
                 <ButtonLink href="/documentation" variant="secondary">
                   View Documentation
                 </ButtonLink>
               </div>
+
+              <p className="mt-5 text-sm text-steel">
+                Officially published on the MQL5 Market for MetaTrader 5 users.
+              </p>
             </div>
+
             <div className="rounded-2xl border border-line bg-panel/78 p-6 shadow-glow">
+              <div className="mb-5 inline-flex rounded-full border border-electric/20 bg-electric/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-electric">
+                Official MQL5 Market Release
+              </div>
+
               <div className="grid gap-4 sm:grid-cols-2">
-                {["Exact mirror", "Symbol resolver", "Retry queue", "Heartbeat monitor"].map((item) => (
-                  <div key={item} className="rounded-xl border border-line bg-ink/60 p-5">
+                {[
+                  "Exact mirror",
+                  "Symbol resolver",
+                  "Retry queue",
+                  "Heartbeat monitor",
+                ].map((item) => (
+                  <div key={item} className="premium-card rounded-xl border border-line bg-ink/60 p-5">
                     <CheckCircle2 className="h-5 w-5 text-emerald" />
                     <p className="mt-4 font-bold text-white">{item}</p>
-                    <p className="mt-2 text-sm text-steel">Built into the released copier workflow.</p>
+                    <p className="mt-2 text-sm text-steel">
+                      Built into the released copier workflow.
+                    </p>
                   </div>
                 ))}
               </div>
@@ -95,9 +125,14 @@ export default function TradeCopierPage() {
           gradient="precision copying"
           description="Engineered around the realities of multi-account MT5 execution: accuracy, recovery and operator control."
         />
+
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {copierFeatures.map((feature, index) => (
-            <FeatureCard key={feature.title} {...feature} icon={icons[index] ?? <CheckCircle2 className="h-5 w-5" />} />
+            <FeatureCard
+              key={feature.title}
+              {...feature}
+              icon={icons[index] ?? <CheckCircle2 className="h-5 w-5" />}
+            />
           ))}
         </div>
       </section>
