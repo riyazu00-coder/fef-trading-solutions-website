@@ -35,7 +35,12 @@ export function ProductCard({
 }: ProductCardProps) {
   const Icon = icons[index % icons.length] ?? Gauge;
   const available = status === "Available Now";
-  const productHref = available ? "/trade-copier" : href;
+  const productHref =
+    name === "FEF Manual Trade Manager PRO MT5"
+      ? "/manual-trade-manager"
+      : available
+        ? "/trade-copier"
+        : href;
 
   return (
     <Link
