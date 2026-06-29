@@ -24,6 +24,8 @@ export const brand = {
     "G7 Emirates NBD Tower, 477 Street, Al Nuaimia 2, Ajman, United Arab Emirates",
 
   mql5Url: "https://www.mql5.com/en/market/product/183557",
+  manualTradeManagerMql5Url:
+    "https://www.mql5.com/en/market/product/183695?source=Site+Market+Product+Page",
 };
 
 export const navItems = [
