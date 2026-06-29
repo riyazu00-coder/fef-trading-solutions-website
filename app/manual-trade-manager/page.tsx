@@ -6,6 +6,7 @@ import {
   BarChart3,
   CheckCircle2,
   Crosshair,
+  ExternalLink,
   Gauge,
   Layers3,
   LineChart,
@@ -20,6 +21,7 @@ import {
 } from "lucide-react";
 import { ButtonLink } from "@/components/ButtonLink";
 import { RiskWarning } from "@/components/RiskWarning";
+import { brand } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "FEF Manual Trade Manager Pro MT5",
@@ -220,11 +222,18 @@ export default function ManualTradeManagerPage() {
                 context.
               </p>
 
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <ButtonLink href="/documentation">
+              <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <ButtonLink
+                  href={brand.manualTradeManagerMql5Url}
+                  external
+                  icon={<ExternalLink className="h-4 w-4" />}
+                >
+                  Buy on MQL5
+                </ButtonLink>
+                <ButtonLink href="/documentation" variant="secondary">
                   View Documentation
                 </ButtonLink>
-                <ButtonLink href="/trade-copier" variant="secondary">
+                <ButtonLink href="/trade-copier" variant="ghost">
                   Explore Trade Copier
                 </ButtonLink>
               </div>
@@ -537,11 +546,18 @@ export default function ManualTradeManagerPage() {
             dashboard-style market context.
           </p>
 
-          <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
-            <ButtonLink href="/documentation">
+          <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
+            <ButtonLink
+              href={brand.manualTradeManagerMql5Url}
+              external
+              icon={<ExternalLink className="h-4 w-4" />}
+            >
+              Buy on MQL5
+            </ButtonLink>
+            <ButtonLink href="/documentation" variant="secondary">
               View Documentation
             </ButtonLink>
-            <ButtonLink href="/trade-copier" variant="secondary">
+            <ButtonLink href="/trade-copier" variant="ghost">
               Explore Trade Copier
             </ButtonLink>
           </div>
