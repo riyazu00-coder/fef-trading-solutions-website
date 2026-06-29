@@ -1,6 +1,5 @@
 import {
   Activity,
-  ArrowRight,
   BadgeCheck,
   Building2,
   Cpu,
@@ -9,13 +8,11 @@ import {
   Radio,
   ShieldCheck,
   Store,
-  Zap,
 } from "lucide-react";
+import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
-import { DashboardPreview } from "@/components/DashboardPreview";
 import { FeatureCard } from "@/components/FeatureCard";
-import { HeroVisual } from "@/components/HeroVisual";
 import { ProductCard } from "@/components/ProductCard";
 import { RiskWarning } from "@/components/RiskWarning";
 import { TradeCopyDemo } from "@/components/TradeCopyDemo";
@@ -77,61 +74,72 @@ const releaseItems = [
 export default function HomePage() {
   return (
     <main className="relative overflow-hidden">
-      <section className="mx-auto grid min-h-[calc(100vh-var(--header-height))] max-w-7xl items-center gap-12 px-5 py-24 sm:px-6 lg:grid-cols-[1fr_0.95fr] lg:px-8">
-        <div>
-          <div className="inline-flex items-center gap-2 rounded-full border border-emerald/30 bg-emerald/10 px-4 py-2 text-sm font-semibold text-emerald">
-            <span className="h-2 w-2 rounded-full bg-emerald" />
-            Officially Available on MQL5 Market
+      <section className="relative overflow-hidden px-5 py-20 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(29,168,255,0.18),transparent_34rem),radial-gradient(circle_at_70%_25%,rgba(25,215,135,0.12),transparent_30rem)]" />
+
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mx-auto max-w-5xl text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-emerald/30 bg-emerald/10 px-4 py-2 text-sm font-semibold text-emerald">
+              <span className="h-2 w-2 rounded-full bg-emerald" />
+              Official MQL5 Market Product
+            </div>
+
+            <h1 className="mt-8 text-balance text-5xl font-black leading-[0.92] text-white sm:text-6xl lg:text-8xl">
+              FEF Professional{" "}
+              <span className="bg-gradient-to-r from-electric via-cyan to-emerald bg-clip-text text-transparent">
+                Trade Copier MT5
+              </span>
+            </h1>
+
+            <p className="mx-auto mt-7 max-w-3xl text-xl leading-8 text-steel">
+              Professional Master/Slave Trade Copier for MetaTrader 5. Exact
+              mirror, every trade, every time.
+            </p>
+
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <ButtonLink
+                href={brand.mql5Url}
+                external
+                icon={<ExternalLink className="h-4 w-4" />}
+              >
+                Buy on MQL5
+              </ButtonLink>
+
+              <ButtonLink href="/documentation" variant="secondary">
+                View Documentation
+              </ButtonLink>
+            </div>
+
+            <div className="mt-10 grid gap-4 text-sm text-steel sm:grid-cols-3">
+              <div className="rounded-2xl border border-line bg-panel/60 p-4">
+                <BadgeCheck className="mx-auto mb-3 h-5 w-5 text-electric" />
+                Official Market Release
+              </div>
+              <div className="rounded-2xl border border-line bg-panel/60 p-4">
+                <ShieldCheck className="mx-auto mb-3 h-5 w-5 text-electric" />
+                Secure MQL5 Delivery
+              </div>
+              <div className="rounded-2xl border border-line bg-panel/60 p-4">
+                <Activity className="mx-auto mb-3 h-5 w-5 text-electric" />
+                Real-Time Synchronization
+              </div>
+            </div>
           </div>
 
-          <h1 className="mt-10 max-w-3xl text-5xl font-black leading-[0.95] text-white sm:text-6xl lg:text-7xl">
-            Professional MT5 Software for{" "}
-            <span className="bg-gradient-to-r from-electric via-cyan to-emerald bg-clip-text text-transparent">
-              Trade Copying
-            </span>
-          </h1>
-
-          <p className="mt-8 max-w-2xl text-xl leading-8 text-steel">
-            FEF Trading Solutions builds professional MetaTrader 5 software for
-            trade copying, account operations and serious trading workflows.
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink
-              href={brand.mql5Url}
-              external
-              icon={<ExternalLink className="h-4 w-4" />}
-            >
-              Buy on MQL5
-            </ButtonLink>
-
-            <ButtonLink href="/trade-copier" variant="secondary">
-              View Trade Copier
-            </ButtonLink>
-          </div>
-
-          <div className="mt-12 grid max-w-xl grid-cols-3 gap-6 text-sm text-steel">
-            <div>
-              <BadgeCheck className="mb-3 h-5 w-5 text-electric" />
-              MQL5 Market
-            </div>
-
-            <div>
-              <ShieldCheck className="mb-3 h-5 w-5 text-electric" />
-              Secure delivery
-            </div>
-
-            <div>
-              <Activity className="mb-3 h-5 w-5 text-electric" />
-              Real-time sync
-            </div>
+          <div className="mt-16 overflow-hidden rounded-[2rem] border border-electric/25 bg-panel/70 p-3 shadow-2xl shadow-electric/10">
+           <Image
+  src="/images/hero.png"
+  alt="FEF Professional Trade Copier MT5 dashboard and trade copying interface"
+  width={1536}
+  height={864}
+  priority
+  className="h-auto w-full rounded-[1.5rem]"
+/>
           </div>
         </div>
-
-        <HeroVisual />
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-10">
+      <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="premium-card premium-glow rounded-3xl border border-emerald/25 bg-panel/75 p-8 shadow-glow">
           <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
             <div>
@@ -141,8 +149,7 @@ export default function HomePage() {
               </div>
 
               <h2 className="mt-6 text-3xl font-black text-white md:text-5xl">
-                FEF Professional Trade Copier MT5 is live on the{" "}
-                <span className="text-gradient">MQL5 Market</span>
+                Live on the <span className="text-gradient">MQL5 Market</span>
               </h2>
 
               <p className="mt-5 max-w-3xl text-lg leading-8 text-steel">
@@ -160,8 +167,8 @@ export default function HomePage() {
                   Open MQL5 Product Page
                 </ButtonLink>
 
-                <ButtonLink href="/documentation" variant="secondary">
-                  Installation Guide
+                <ButtonLink href="/trade-copier" variant="secondary">
+                  Product Details
                 </ButtonLink>
               </div>
             </div>
@@ -180,8 +187,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <DashboardPreview />
 
       <TradeCopyDemo />
 
