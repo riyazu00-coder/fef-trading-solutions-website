@@ -126,24 +126,6 @@ const marketPulseItems = [
   },
 ];
 
-const marketIntelligenceItems = [
-  {
-    headline: "Gold traders watch dollar weakness and breakout momentum.",
-    description:
-      "XAUUSD remains in focus as traders monitor breakout confirmation.",
-  },
-  {
-    headline: "Crypto risk appetite improves as BTC holds key levels.",
-    description:
-      "BTCUSD momentum stays active while buyers defend major support.",
-  },
-  {
-    headline: "Forex majors remain mixed ahead of US economic data.",
-    description:
-      "EURUSD and GBPUSD traders wait for clearer dollar direction.",
-  },
-];
-
 const tradingOpportunities = [
   {
     market: "Gold",
@@ -163,6 +145,246 @@ const tradingOpportunities = [
     bias: "Bullish",
     risk: "High",
   },
+];
+
+const workflowFeatures = [
+  {
+    title: "Low Latency Synchronization",
+    description: "Trade actions are processed through a fast replication path.",
+    icon: <Radio className="h-5 w-5" />,
+  },
+  {
+    title: "Multi-Broker Compatible",
+    description: "Built for practical MT5 setups across different brokers.",
+    icon: <Building2 className="h-5 w-5" />,
+  },
+  {
+    title: "Secure Trade Replication",
+    description: "Copy logic is structured around controlled account linking.",
+    icon: <ShieldCheck className="h-5 w-5" />,
+  },
+  {
+    title: "Automatic Position Updates",
+    description: "Open, modified and closed positions stay synchronized.",
+    icon: <Activity className="h-5 w-5" />,
+  },
+];
+
+const slaveAccounts = [
+  "Slave Account 1",
+  "Slave Account 2",
+  "Slave Account 3",
+  "Slave Account 4",
+];
+
+const whyFefReasons = [
+  {
+    title: "Native MetaTrader 5 Architecture",
+    description:
+      "Purpose-built around MT5 trading workflows, account behavior and operator expectations.",
+    icon: <Cpu className="h-5 w-5" />,
+  },
+  {
+    title: "Multi-Account Operations",
+    description:
+      "Designed for teams and traders managing master and slave account structures.",
+    icon: <Layers3 className="h-5 w-5" />,
+  },
+  {
+    title: "Professional Dashboard Experience",
+    description:
+      "Clear status views help operators monitor synchronization, accounts and copier activity.",
+    icon: <Activity className="h-5 w-5" />,
+  },
+  {
+    title: "Secure MQL5 Market Delivery",
+    description:
+      "Official marketplace delivery supports licensing, access and product distribution.",
+    icon: <Store className="h-5 w-5" />,
+  },
+  {
+    title: "Direct Product Support",
+    description:
+      "Setup and configuration guidance is available through clear support channels.",
+    icon: <ShieldCheck className="h-5 w-5" />,
+  },
+  {
+    title: "Continuous Software Roadmap",
+    description:
+      "FEF continues building practical tools for trading operations, risk and automation.",
+    icon: <Radio className="h-5 w-5" />,
+  },
+];
+
+const ecosystemGroups = [
+  {
+    status: "Released",
+    accent: "emerald",
+    modules: [
+      {
+        name: "Trade Copier MT5",
+        description: "Master/slave trade replication for professional MT5 workflows.",
+        icon: <Radio className="h-5 w-5" />,
+      },
+      {
+        name: "Manual Trade Manager PRO",
+        description: "Manual execution controls for active MetaTrader 5 operators.",
+        icon: <Activity className="h-5 w-5" />,
+      },
+    ],
+  },
+  {
+    status: "In Development",
+    accent: "electric",
+    modules: [
+      {
+        name: "Gold Master EA",
+        description: "Specialized gold trading automation for XAUUSD workflows.",
+        icon: <Cpu className="h-5 w-5" />,
+      },
+      {
+        name: "Risk Manager",
+        description: "Account protection and exposure controls for trading teams.",
+        icon: <ShieldCheck className="h-5 w-5" />,
+      },
+      {
+        name: "Trade Scanner",
+        description: "Market scanning tools for identifying actionable setups.",
+        icon: <BadgeCheck className="h-5 w-5" />,
+      },
+      {
+        name: "Smart Trader",
+        description: "Decision-support tools for disciplined trading workflows.",
+        icon: <Layers3 className="h-5 w-5" />,
+      },
+    ],
+  },
+  {
+    status: "Future Platform",
+    accent: "cyan",
+    modules: [
+      {
+        name: "Customer Portal",
+        description: "Central workspace for customer access and account resources.",
+        icon: <Building2 className="h-5 w-5" />,
+      },
+      {
+        name: "License Manager",
+        description: "License visibility and product entitlement management.",
+        icon: <ShieldCheck className="h-5 w-5" />,
+      },
+      {
+        name: "Downloads Center",
+        description: "Organized delivery hub for installers and product files.",
+        icon: <Store className="h-5 w-5" />,
+      },
+      {
+        name: "Update Manager",
+        description: "Version tracking and structured software release handling.",
+        icon: <Radio className="h-5 w-5" />,
+      },
+    ],
+  },
+];
+
+const faqItems = [
+  {
+    question: "Does FEF Professional Trade Copier MT5 work with any broker?",
+    answer:
+      "It is designed for MetaTrader 5 environments and supports broker-specific symbol naming conditions, but users should always test on demo accounts first.",
+  },
+  {
+    question: "Is it available on MQL5 Market?",
+    answer:
+      "Yes. FEF Professional Trade Copier MT5 is officially available on the MQL5 Market.",
+  },
+  {
+    question: "Can I copy trades to multiple slave accounts?",
+    answer:
+      "Yes. The software is designed for Master/Slave trade copying workflows across multiple connected MT5 accounts.",
+  },
+  {
+    question: "Does it support different symbol names?",
+    answer:
+      "Yes. The copier includes symbol detection logic for common broker prefixes, suffixes and symbol variations.",
+  },
+  {
+    question: "Do you provide support?",
+    answer:
+      "Yes. Support is available through Telegram, WhatsApp and email for setup and product guidance.",
+  },
+  {
+    question: "Is this financial advice?",
+    answer:
+      "No. FEF Trading Solutions develops software tools only and does not provide financial advice or profit guarantees.",
+  },
+];
+
+const softwareStatusItems = [
+  {
+    label: "Trade Copier MT5",
+    status: "Operational",
+    icon: <Radio className="h-5 w-5" />,
+    tone: "emerald",
+  },
+  {
+    label: "Manual Trade Manager PRO",
+    status: "Available",
+    icon: <Activity className="h-5 w-5" />,
+    tone: "emerald",
+  },
+  {
+    label: "Market Pulse",
+    status: "Preview Mode",
+    icon: <BadgeCheck className="h-5 w-5" />,
+    tone: "electric",
+  },
+  {
+    label: "Downloads Center",
+    status: "Active",
+    icon: <Store className="h-5 w-5" />,
+    tone: "emerald",
+  },
+  {
+    label: "Documentation",
+    status: "Updated",
+    icon: <Layers3 className="h-5 w-5" />,
+    tone: "cyan",
+  },
+];
+
+const supportDeliveryItems = [
+  {
+    label: "MQL5 Market",
+    status: "Published",
+    icon: <Store className="h-5 w-5" />,
+    tone: "emerald",
+  },
+  {
+    label: "Customer Support",
+    status: "Online",
+    icon: <ShieldCheck className="h-5 w-5" />,
+    tone: "emerald",
+  },
+  {
+    label: "Secure Delivery",
+    status: "Active",
+    icon: <BadgeCheck className="h-5 w-5" />,
+    tone: "cyan",
+  },
+  {
+    label: "Product Updates",
+    status: "Roadmap Active",
+    icon: <Radio className="h-5 w-5" />,
+    tone: "electric",
+  },
+];
+
+const operationsHighlights = [
+  "Official MQL5 Product",
+  "UAE Business Location",
+  "24 Hours Support",
+  "MT5 Software Ecosystem",
 ];
 
 export default function HomePage() {
@@ -364,66 +586,38 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="premium-card mt-5 overflow-hidden rounded-3xl border border-electric/20 bg-ink/60 p-5 shadow-[0_22px_70px_rgba(0,0,0,0.28)] sm:p-6">
-                <div className="flex flex-col justify-between gap-4 border-b border-white/[0.08] pb-5 md:flex-row md:items-center">
-                  <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.24em] text-electric">
-                      Market Intelligence Feed
-                    </p>
-                    <h3 className="mt-3 text-2xl font-black text-white">
-                      Static trader context
-                    </h3>
-                  </div>
-                  <p className="rounded-full border border-emerald/25 bg-emerald/10 px-4 py-2 text-sm font-semibold text-emerald">
-                    Static preview data. Live market feed coming soon.
-                  </p>
-                </div>
-
-                <div className="mt-5 grid gap-4 lg:grid-cols-3">
-                  {marketIntelligenceItems.map((item) => (
-                    <div
-                      key={item.headline}
-                      className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4"
-                    >
-                      <span className="mb-4 block h-2.5 w-2.5 rounded-full bg-emerald shadow-emerald" />
-                      <p className="text-sm font-bold leading-6 text-white">
-                        {item.headline}
-                      </p>
-                      <p className="mt-2 text-sm leading-6 text-steel">
-                        {item.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <p className="mt-6 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4 text-sm leading-6 text-steel">
+                Market Pulse is informational only and does not provide
+                financial advice.
+              </p>
             </div>
 
-            <div>
-              <aside className="premium-card premium-glow rounded-3xl border border-emerald/25 bg-panel/75 p-6 shadow-emerald">
+            <div className="lg:self-start">
+              <aside className="premium-card premium-glow rounded-3xl border border-emerald/25 bg-panel/75 p-5 shadow-emerald lg:max-h-[680px] lg:overflow-hidden">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-sm font-semibold uppercase tracking-[0.24em] text-emerald">
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald">
                       Trading Opportunities
                     </p>
-                    <h3 className="mt-3 text-2xl font-black text-white">
+                    <h3 className="mt-2 text-xl font-black text-white">
                       Watchlist focus
                     </h3>
                   </div>
-                  <Radio className="h-6 w-6 text-emerald" />
+                  <Radio className="h-5 w-5 text-emerald" />
                 </div>
 
-                <div className="mt-7 space-y-4">
+                <div className="mt-5 space-y-3 lg:max-h-[560px] lg:overflow-y-auto lg:pr-1">
                   {tradingOpportunities.map((item) => (
                     <div
                       key={item.market}
-                      className="rounded-2xl border border-line bg-ink/55 p-5"
+                      className="rounded-2xl border border-line bg-ink/55 p-3.5"
                     >
-                      <div className="flex items-start justify-between gap-4">
-                        <div>
-                          <p className="font-mono text-base font-black text-white">
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="min-w-0">
+                          <p className="font-mono text-sm font-black text-white">
                             {item.market}
                           </p>
-                          <p className="mt-2 text-sm font-semibold text-steel">
+                          <p className="mt-1 text-xs font-semibold leading-5 text-steel">
                             {item.setup}
                           </p>
                         </div>
@@ -440,20 +634,20 @@ export default function HomePage() {
                         </span>
                       </div>
 
-                      <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
-                        <div className="rounded-xl border border-white/[0.08] bg-white/[0.03] p-3">
-                          <p className="text-xs uppercase tracking-[0.2em] text-steel">
+                      <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
+                        <div className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 py-2">
+                          <p className="uppercase tracking-[0.18em] text-steel">
                             Bias
                           </p>
-                          <p className="mt-2 font-bold text-white">
+                          <p className="mt-1 font-bold text-white">
                             {item.bias}
                           </p>
                         </div>
-                        <div className="rounded-xl border border-white/[0.08] bg-white/[0.03] p-3">
-                          <p className="text-xs uppercase tracking-[0.2em] text-steel">
+                        <div className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 py-2">
+                          <p className="uppercase tracking-[0.18em] text-steel">
                             Risk
                           </p>
-                          <p className="mt-2 font-bold text-white">
+                          <p className="mt-1 font-bold text-white">
                             {item.risk}
                           </p>
                         </div>
@@ -462,6 +656,474 @@ export default function HomePage() {
                   ))}
                 </div>
               </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="relative overflow-hidden rounded-[2rem] border border-emerald/20 bg-[linear-gradient(135deg,rgba(5,7,13,0.96),rgba(11,18,32,0.94))] p-6 shadow-[0_28px_95px_rgba(0,0,0,0.42)] sm:p-8 lg:p-10">
+          <div className="site-grid absolute inset-0 opacity-20" aria-hidden="true" />
+          <div
+            className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald/70 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-electric/10 blur-3xl"
+            aria-hidden="true"
+          />
+
+          <div className="relative grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald/25 bg-emerald/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald">
+                <Cpu className="h-4 w-4" />
+                Copier workflow
+              </div>
+
+              <h2 className="mt-6 text-3xl font-black text-white md:text-5xl">
+                How FEF Trade Copier Works
+              </h2>
+              <p className="mt-5 max-w-3xl text-lg leading-8 text-steel">
+                Trades from the master account are automatically synchronized to
+                connected slave accounts while preserving the execution workflow
+                traders expect inside MetaTrader 5.
+              </p>
+
+              <div className="mt-8 rounded-3xl border border-line bg-ink/55 p-5 shadow-[0_24px_80px_rgba(0,0,0,0.3)] sm:p-6">
+                <div className="mx-auto flex max-w-3xl flex-col items-center">
+                  <div className="w-full rounded-2xl border border-electric/25 bg-panel/80 p-5 text-center">
+                    <Activity className="mx-auto h-6 w-6 text-electric" />
+                    <p className="mt-3 font-mono text-sm font-black uppercase tracking-[0.18em] text-white">
+                      Master Account
+                    </p>
+                  </div>
+
+                  <div className="h-8 w-px bg-gradient-to-b from-electric to-emerald" />
+
+                  <div className="w-full rounded-2xl border border-cyan/25 bg-white/[0.035] p-5 text-center">
+                    <Radio className="mx-auto h-6 w-6 text-cyan" />
+                    <p className="mt-3 font-mono text-sm font-black uppercase tracking-[0.18em] text-white">
+                      Trade Detected
+                    </p>
+                  </div>
+
+                  <div className="h-8 w-px bg-gradient-to-b from-cyan to-emerald" />
+
+                  <div className="w-full rounded-2xl border border-emerald/30 bg-emerald/10 p-5 text-center shadow-emerald">
+                    <Cpu className="mx-auto h-6 w-6 text-emerald" />
+                    <p className="mt-3 font-mono text-sm font-black uppercase tracking-[0.18em] text-white">
+                      FEF Synchronization Engine
+                    </p>
+                  </div>
+
+                  <div className="relative h-10 w-full max-w-lg">
+                    <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-emerald/70" />
+                    <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald/70 to-transparent" />
+                  </div>
+
+                  <div className="grid w-full gap-4 sm:grid-cols-2">
+                    {slaveAccounts.map((account) => (
+                      <div
+                        key={account}
+                        className="rounded-2xl border border-line bg-panel/75 p-4"
+                      >
+                        <div className="flex items-center gap-3">
+                          <Building2 className="h-5 w-5 text-electric" />
+                          <p className="font-mono text-sm font-black text-white">
+                            {account}
+                          </p>
+                        </div>
+                        <div className="mt-4 grid gap-2 text-sm font-semibold text-steel">
+                          <span className="inline-flex items-center gap-2">
+                            <BadgeCheck className="h-4 w-4 text-emerald" />
+                            Connected
+                          </span>
+                          <span className="inline-flex items-center gap-2">
+                            <BadgeCheck className="h-4 w-4 text-emerald" />
+                            Synchronized
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+              {workflowFeatures.map((feature) => (
+                <div
+                  key={feature.title}
+                  className="premium-card premium-glow rounded-2xl border border-line bg-panel/75 p-5"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-xl border border-electric/25 bg-electric/10 p-3 text-electric">
+                      {feature.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-black text-white">
+                        {feature.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-6 text-steel">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative px-6 py-16">
+        <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-line to-transparent" />
+
+        <div className="relative mx-auto max-w-7xl">
+          <div className="mb-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-electric/25 bg-electric/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-electric">
+                <BadgeCheck className="h-4 w-4" />
+                FEF advantage
+              </div>
+              <h2 className="mt-6 text-3xl font-black text-white md:text-5xl">
+                Why Professional Traders Choose FEF
+              </h2>
+            </div>
+
+            <p className="max-w-3xl text-lg leading-8 text-steel lg:justify-self-end">
+              FEF Trading Solutions focuses on reliable MT5 software, clear
+              operator dashboards and tools built for serious trading
+              operations.
+            </p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {whyFefReasons.map((reason) => (
+              <div
+                key={reason.title}
+                className="premium-card premium-glow rounded-2xl border border-line bg-panel/75 p-6 shadow-[0_20px_70px_rgba(0,0,0,0.28)]"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="rounded-xl border border-emerald/25 bg-emerald/10 p-3 text-emerald">
+                    {reason.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-black text-white">
+                      {reason.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-steel">
+                      {reason.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="relative overflow-hidden rounded-[2rem] border border-electric/20 bg-[linear-gradient(135deg,rgba(6,12,22,0.98),rgba(11,18,32,0.92))] p-6 shadow-[0_30px_105px_rgba(0,0,0,0.44)] sm:p-8 lg:p-10">
+          <div className="site-grid absolute inset-0 opacity-20" aria-hidden="true" />
+          <div
+            className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-electric/70 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute -right-20 top-24 h-72 w-72 rounded-full bg-emerald/10 blur-3xl"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute -left-24 bottom-12 h-72 w-72 rounded-full bg-electric/10 blur-3xl"
+            aria-hidden="true"
+          />
+
+          <div className="relative mx-auto max-w-4xl text-center">
+            <div className="inline-flex items-center gap-2 rounded-full border border-emerald/25 bg-emerald/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald">
+              <Layers3 className="h-4 w-4" />
+              FEF Software Ecosystem
+            </div>
+            <h2 className="mt-6 text-3xl font-black text-white md:text-5xl">
+              One Platform. Multiple Professional Trading Solutions.
+            </h2>
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-steel">
+              FEF Trading Solutions is building an integrated ecosystem of
+              MetaTrader 5 software designed for professional traders,
+              portfolio managers and multi-account operations.
+            </p>
+          </div>
+
+          <div className="relative mt-12">
+            <div
+              className="absolute left-1/2 top-20 hidden h-[calc(100%-5rem)] w-px -translate-x-1/2 bg-gradient-to-b from-electric/70 via-emerald/45 to-cyan/35 lg:block"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute left-[8%] right-[8%] top-52 hidden h-px bg-gradient-to-r from-transparent via-electric/45 to-transparent lg:block"
+              aria-hidden="true"
+            />
+            <div
+              className="absolute left-[8%] right-[8%] top-[34rem] hidden h-px bg-gradient-to-r from-transparent via-emerald/35 to-transparent lg:block"
+              aria-hidden="true"
+            />
+
+            <div className="relative mx-auto max-w-sm rounded-3xl border border-emerald/30 bg-panel/90 p-6 text-center shadow-emerald">
+              <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl border border-electric/25 bg-electric/10 text-electric">
+                <Cpu className="h-6 w-6" />
+              </div>
+              <p className="mt-4 text-sm font-semibold uppercase tracking-[0.22em] text-steel">
+                Center Node
+              </p>
+              <h3 className="mt-2 text-2xl font-black text-white">
+                FEF Trading Solutions
+              </h3>
+            </div>
+
+            <div className="relative mt-10 grid gap-6 lg:grid-cols-3">
+              {ecosystemGroups.map((group) => (
+                <div key={group.status} className="relative">
+                  <div
+                    className="mx-auto mb-5 hidden h-8 w-px bg-gradient-to-b from-emerald/60 to-transparent lg:block"
+                    aria-hidden="true"
+                  />
+                  <div className="rounded-3xl border border-line bg-ink/55 p-4 shadow-[0_22px_75px_rgba(0,0,0,0.3)] sm:p-5">
+                    <div className="mb-4 flex items-center justify-between gap-3">
+                      <p className="text-sm font-bold uppercase tracking-[0.22em] text-white">
+                        {group.status}
+                      </p>
+                      <span
+                        className={
+                          group.accent === "emerald"
+                            ? "rounded-full border border-emerald/25 bg-emerald/10 px-3 py-1 text-xs font-bold text-emerald"
+                            : group.accent === "cyan"
+                              ? "rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1 text-xs font-bold text-cyan"
+                              : "rounded-full border border-electric/25 bg-electric/10 px-3 py-1 text-xs font-bold text-electric"
+                        }
+                      >
+                        Connected
+                      </span>
+                    </div>
+
+                    <div className="grid gap-4">
+                      {group.modules.map((module) => (
+                        <div
+                          key={module.name}
+                          className="premium-card premium-glow relative rounded-2xl border border-line bg-panel/75 p-5"
+                        >
+                          <div
+                            className="absolute -left-5 top-1/2 hidden h-px w-5 bg-gradient-to-r from-transparent to-emerald/40 lg:block"
+                            aria-hidden="true"
+                          />
+                          <div className="flex items-start gap-4">
+                            <div
+                              className={
+                                group.accent === "emerald"
+                                  ? "rounded-xl border border-emerald/25 bg-emerald/10 p-3 text-emerald"
+                                  : group.accent === "cyan"
+                                    ? "rounded-xl border border-cyan/25 bg-cyan/10 p-3 text-cyan"
+                                    : "rounded-xl border border-electric/25 bg-electric/10 p-3 text-electric"
+                              }
+                            >
+                              {module.icon}
+                            </div>
+                            <div>
+                              <div className="flex flex-wrap items-center gap-2">
+                                <h3 className="text-base font-black text-white">
+                                  {module.name}
+                                </h3>
+                                <span
+                                  className={
+                                    group.accent === "emerald"
+                                      ? "rounded-full bg-emerald/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-emerald"
+                                      : group.accent === "cyan"
+                                        ? "rounded-full bg-cyan/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-cyan"
+                                        : "rounded-full bg-electric/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-electric"
+                                  }
+                                >
+                                  {group.status}
+                                </span>
+                              </div>
+                              <p className="mt-3 text-sm leading-6 text-steel">
+                                {module.description}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="relative overflow-hidden rounded-[2rem] border border-emerald/20 bg-[linear-gradient(135deg,rgba(5,7,13,0.98),rgba(11,18,32,0.94))] p-6 shadow-[0_30px_105px_rgba(0,0,0,0.44)] sm:p-8 lg:p-10">
+          <div className="site-grid absolute inset-0 opacity-20" aria-hidden="true" />
+          <div
+            className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald/70 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute -right-24 top-16 h-72 w-72 rounded-full bg-electric/10 blur-3xl"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute -left-24 bottom-8 h-72 w-72 rounded-full bg-emerald/10 blur-3xl"
+            aria-hidden="true"
+          />
+
+          <div className="relative mb-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-electric/25 bg-electric/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-electric">
+                <Cpu className="h-4 w-4" />
+                Operations dashboard
+              </div>
+              <h2 className="mt-6 text-3xl font-black text-white md:text-5xl">
+                FEF Operations Center
+              </h2>
+            </div>
+
+            <p className="max-w-3xl text-lg leading-8 text-steel lg:justify-self-end">
+              A professional overview of product status, support availability
+              and trading software operations.
+            </p>
+          </div>
+
+          <div className="relative rounded-3xl border border-line bg-ink/60 p-4 shadow-[0_24px_85px_rgba(0,0,0,0.34)] sm:p-5 lg:p-6">
+            <div className="grid gap-5 lg:grid-cols-2">
+              <div className="rounded-3xl border border-line bg-panel/75 p-5">
+                <div className="mb-5 flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-sm font-bold uppercase tracking-[0.22em] text-emerald">
+                      Software Status
+                    </p>
+                    <h3 className="mt-2 text-2xl font-black text-white">
+                      Product operations
+                    </h3>
+                  </div>
+                  <Activity className="h-6 w-6 text-emerald" />
+                </div>
+
+                <div className="grid gap-3">
+                  {softwareStatusItems.map((item) => (
+                    <div
+                      key={item.label}
+                      className="premium-card rounded-2xl border border-line bg-ink/55 p-4"
+                    >
+                      <div className="flex items-center justify-between gap-4">
+                        <div className="flex min-w-0 items-center gap-3">
+                          <div
+                            className={
+                              item.tone === "emerald"
+                                ? "rounded-xl border border-emerald/25 bg-emerald/10 p-2.5 text-emerald"
+                                : item.tone === "cyan"
+                                  ? "rounded-xl border border-cyan/25 bg-cyan/10 p-2.5 text-cyan"
+                                  : "rounded-xl border border-electric/25 bg-electric/10 p-2.5 text-electric"
+                            }
+                          >
+                            {item.icon}
+                          </div>
+                          <div className="min-w-0">
+                            <p className="truncate font-semibold text-white">
+                              {item.label}
+                            </p>
+                            <p className="mt-1 text-xs text-steel">
+                              MT5 software operation
+                            </p>
+                          </div>
+                        </div>
+                        <span
+                          className={
+                            item.tone === "emerald"
+                              ? "inline-flex shrink-0 items-center gap-2 rounded-full border border-emerald/25 bg-emerald/10 px-3 py-1 text-xs font-bold text-emerald"
+                              : item.tone === "cyan"
+                                ? "inline-flex shrink-0 items-center gap-2 rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1 text-xs font-bold text-cyan"
+                                : "inline-flex shrink-0 items-center gap-2 rounded-full border border-electric/25 bg-electric/10 px-3 py-1 text-xs font-bold text-electric"
+                          }
+                        >
+                          <span className="h-2 w-2 rounded-full bg-current" />
+                          {item.status}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-line bg-panel/75 p-5">
+                <div className="mb-5 flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-sm font-bold uppercase tracking-[0.22em] text-electric">
+                      Support & Delivery
+                    </p>
+                    <h3 className="mt-2 text-2xl font-black text-white">
+                      Availability layer
+                    </h3>
+                  </div>
+                  <ShieldCheck className="h-6 w-6 text-electric" />
+                </div>
+
+                <div className="grid gap-3">
+                  {supportDeliveryItems.map((item) => (
+                    <div
+                      key={item.label}
+                      className="premium-card rounded-2xl border border-line bg-ink/55 p-4"
+                    >
+                      <div className="flex items-center justify-between gap-4">
+                        <div className="flex min-w-0 items-center gap-3">
+                          <div
+                            className={
+                              item.tone === "emerald"
+                                ? "rounded-xl border border-emerald/25 bg-emerald/10 p-2.5 text-emerald"
+                                : item.tone === "cyan"
+                                  ? "rounded-xl border border-cyan/25 bg-cyan/10 p-2.5 text-cyan"
+                                  : "rounded-xl border border-electric/25 bg-electric/10 p-2.5 text-electric"
+                            }
+                          >
+                            {item.icon}
+                          </div>
+                          <div className="min-w-0">
+                            <p className="truncate font-semibold text-white">
+                              {item.label}
+                            </p>
+                            <p className="mt-1 text-xs text-steel">
+                              Delivery and support status
+                            </p>
+                          </div>
+                        </div>
+                        <span
+                          className={
+                            item.tone === "emerald"
+                              ? "inline-flex shrink-0 items-center gap-2 rounded-full border border-emerald/25 bg-emerald/10 px-3 py-1 text-xs font-bold text-emerald"
+                              : item.tone === "cyan"
+                                ? "inline-flex shrink-0 items-center gap-2 rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1 text-xs font-bold text-cyan"
+                                : "inline-flex shrink-0 items-center gap-2 rounded-full border border-electric/25 bg-electric/10 px-3 py-1 text-xs font-bold text-electric"
+                          }
+                        >
+                          <span className="h-2 w-2 rounded-full bg-current" />
+                          {item.status}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-5 grid gap-3 border-t border-white/[0.08] pt-5 sm:grid-cols-2 lg:grid-cols-4">
+              {operationsHighlights.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-white/[0.08] bg-white/[0.035] px-4 py-4 text-center"
+                >
+                  <BadgeCheck className="mx-auto h-5 w-5 text-emerald" />
+                  <p className="mt-3 text-sm font-bold text-white">{item}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -621,6 +1283,60 @@ export default function HomePage() {
               index={index}
             />
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="relative overflow-hidden rounded-[2rem] border border-line bg-[linear-gradient(135deg,rgba(11,18,32,0.92),rgba(5,7,13,0.96))] p-6 shadow-[0_28px_95px_rgba(0,0,0,0.38)] sm:p-8 lg:p-10">
+          <div className="site-grid absolute inset-0 opacity-20" aria-hidden="true" />
+          <div
+            className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald/70 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute -right-24 top-12 h-72 w-72 rounded-full bg-electric/10 blur-3xl"
+            aria-hidden="true"
+          />
+
+          <div className="relative mb-10 grid gap-6 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald/25 bg-emerald/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald">
+                <BadgeCheck className="h-4 w-4" />
+                FAQ
+              </div>
+              <h2 className="mt-6 text-3xl font-black text-white md:text-5xl">
+                Frequently Asked Questions
+              </h2>
+            </div>
+
+            <p className="max-w-3xl text-lg leading-8 text-steel lg:justify-self-end">
+              Quick answers for traders, portfolio managers and MT5 users
+              considering FEF Professional Trade Copier MT5.
+            </p>
+          </div>
+
+          <div className="relative grid gap-4 lg:grid-cols-2">
+            {faqItems.map((item) => (
+              <div
+                key={item.question}
+                className="premium-card premium-glow rounded-2xl border border-line bg-panel/70 p-6"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 rounded-xl border border-electric/25 bg-electric/10 p-2.5 text-electric">
+                    <ShieldCheck className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-black leading-7 text-white">
+                      {item.question}
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-steel">
+                      {item.answer}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
