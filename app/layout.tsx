@@ -2,40 +2,58 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { brand } from "@/lib/site-data";
 import "./globals.css";
 
+const siteUrl = "https://www.feftradingsolutions.com/";
+const siteName = "FEF Trading Solutions";
+const siteDescription =
+  "Professional MetaTrader 5 trading software for trade copying, manual trade management, documentation, downloads, support, and workflow-focused trading tools.";
+const socialImage = "/images/hero.png";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://feftradingsolutions.com"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: `${brand.name} | Professional MT5 Trading Software`,
-    template: `%s | ${brand.name}`
+    default: siteName,
+    template: `%s | ${siteName}`,
   },
-  description:
-    "Premium MetaTrader 5 trading software from FEF Trading Solutions, including the FEF Professional Trade Copier MT5.",
+  description: siteDescription,
   keywords: [
     "FEF Trading Solutions",
-    "FEF Professional Trade Copier MT5",
     "MT5 trade copier",
     "MetaTrader 5 software",
-    "master slave trade copier",
-    "multi-account trading software"
+    "trade copier MT5",
+    "manual trade manager MT5",
+    "trading software",
+    "MQL5 Market",
+    "MT5 tools",
   ],
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
-    title: `${brand.name} | Professional MT5 Trading Software`,
-    description:
-      "Powerful, reliable and intelligent trading solutions engineered for professional traders, portfolio managers and multi-account trading.",
-    url: "https://feftradingsolutions.com",
-    siteName: brand.name,
+    type: "website",
+    siteName,
+    url: siteUrl,
+    title: siteName,
+    description: siteDescription,
+    images: [
+      {
+        url: socialImage,
+        alt: `${siteName} MetaTrader 5 trading software`,
+      },
+    ],
     locale: "en_US",
-    type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: `${brand.name} | Professional MT5 Trading Software`,
-    description:
-      "Built for Traders. Engineered for Performance. Professional MetaTrader 5 software tools from FEF Trading Solutions."
-  }
+    title: siteName,
+    description: siteDescription,
+    images: [socialImage],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
