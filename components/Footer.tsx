@@ -38,6 +38,7 @@ const companyLinks = [
   { label: "Contact", href: "/contact" },
   { label: "Support", href: "/support" },
   { label: "Documentation", href: "/documentation" },
+  { label: "Risk Disclaimer", href: "/risk-disclaimer" },
 ];
 
 const bottomLinks = [
