@@ -9,6 +9,24 @@ const siteName = "FEF Trading Solutions";
 const siteDescription =
   "Professional MetaTrader 5 trading software for trade copying, manual trade management, documentation, downloads, support, and workflow-focused trading tools.";
 const socialImage = "/images/og-image.png";
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: siteName,
+    url: siteUrl,
+    logo: `${siteUrl}images/og-image.png`,
+    description: siteDescription,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteName,
+    url: siteUrl,
+    description:
+      "Professional MetaTrader 5 trading software and workflow tools for traders.",
+  },
+];
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -60,6 +78,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <Header />
         <main>{children}</main>
         <Footer />
