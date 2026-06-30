@@ -26,7 +26,7 @@ const HOME_SOCIAL_TITLE =
   "Professional MT5 Trading Software | FEF Trading Solutions";
 const HOME_DESCRIPTION =
   "Premium MetaTrader 5 trading software for trade copying, manual trade management, live market awareness, documentation, downloads, and professional trading workflows.";
-const HOME_SOCIAL_IMAGE = "/images/hero.png";
+const HOME_SOCIAL_IMAGE = "/images/og-image.png";
 
 export const metadata: Metadata = {
   title: HOME_TITLE,

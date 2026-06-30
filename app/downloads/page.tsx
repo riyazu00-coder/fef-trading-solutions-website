@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     description:
       "Access FEF Trading Solutions MetaTrader 5 software download resources, product documentation, setup guidance, and MQL5 Market links for professional trading workflow tools.",
     url: "https://www.feftradingsolutions.com/downloads",
-    images: ["/images/hero.png"],
+    images: ["/images/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "MT5 Software Downloads | FEF Trading Solutions",
     description:
       "Access FEF Trading Solutions MetaTrader 5 software download resources, product documentation, setup guidance, and MQL5 Market links for professional trading workflow tools.",
-    images: ["/images/hero.png"],
+    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,

@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     title: "Privacy Policy | FEF Trading Solutions",
     description: pageDescription,
     url: pageUrl,
-    images: ["/images/hero.png"],
+    images: ["/images/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy | FEF Trading Solutions",
     description: pageDescription,
-    images: ["/images/hero.png"],
+    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,

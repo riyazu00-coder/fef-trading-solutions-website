@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     description:
       "Read FEF Trading Solutions documentation for MetaTrader 5 software setup, trade copier workflows, manual trade management tools, downloads, support guidance, and professional trading operations.",
     url: "https://www.feftradingsolutions.com/documentation",
-    images: ["/images/hero.png"],
+    images: ["/images/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "MT5 Product Documentation | FEF Trading Solutions",
     description:
       "Read FEF Trading Solutions documentation for MetaTrader 5 software setup, trade copier workflows, manual trade management tools, downloads, support guidance, and professional trading operations.",
-    images: ["/images/hero.png"],
+    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,

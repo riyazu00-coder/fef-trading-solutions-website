@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     description:
       "Professional MetaTrader 5 trade copier software built for copying trades between MT5 accounts with workflow-focused controls, documentation, download access, and MQL5 Market availability.",
     url: "https://www.feftradingsolutions.com/trade-copier",
-    images: ["/images/hero.png"],
+    images: ["/images/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "FEF Professional Trade Copier MT5 | FEF Trading Solutions",
     description:
       "Professional MetaTrader 5 trade copier software built for copying trades between MT5 accounts with workflow-focused controls, documentation, download access, and MQL5 Market availability.",
-    images: ["/images/hero.png"],
+    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,

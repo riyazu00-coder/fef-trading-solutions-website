@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     description:
       "Track FEF Trading Solutions product updates, release notes, improvements, and version history for MetaTrader 5 trade copier and manual trade management software.",
     url: "https://www.feftradingsolutions.com/changelog",
-    images: ["/images/hero.png"],
+    images: ["/images/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Product Changelog | FEF Trading Solutions",
     description:
       "Track FEF Trading Solutions product updates, release notes, improvements, and version history for MetaTrader 5 trade copier and manual trade management software.",
-    images: ["/images/hero.png"],
+    images: ["/images/og-image.png"],
   },
   robots: {
     index: true,
