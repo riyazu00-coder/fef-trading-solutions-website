@@ -26,7 +26,28 @@ import { brand, copierFeatures } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "FEF Professional Trade Copier MT5",
   description:
-    "Professional master/slave trade copier for MetaTrader 5 with symbol detection, retry queue, heartbeat monitoring and operator controls.",
+    "Professional MetaTrader 5 trade copier software built for copying trades between MT5 accounts with workflow-focused controls, documentation, download access, and MQL5 Market availability.",
+  alternates: {
+    canonical: "https://www.feftradingsolutions.com/trade-copier",
+  },
+  openGraph: {
+    title: "FEF Professional Trade Copier MT5 | FEF Trading Solutions",
+    description:
+      "Professional MetaTrader 5 trade copier software built for copying trades between MT5 accounts with workflow-focused controls, documentation, download access, and MQL5 Market availability.",
+    url: "https://www.feftradingsolutions.com/trade-copier",
+    images: ["/images/hero.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FEF Professional Trade Copier MT5 | FEF Trading Solutions",
+    description:
+      "Professional MetaTrader 5 trade copier software built for copying trades between MT5 accounts with workflow-focused controls, documentation, download access, and MQL5 Market availability.",
+    images: ["/images/hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const heroStats = [
