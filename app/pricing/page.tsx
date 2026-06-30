@@ -17,9 +17,30 @@ import { RiskWarning } from "@/components/RiskWarning";
 import { brand } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Pricing",
+  title: "MT5 Software Pricing",
   description:
-    "Official FEF Trading Solutions purchase paths for MetaTrader 5 software through MQL5 Market product pages.",
+    "Review FEF Trading Solutions product access and pricing guidance for MetaTrader 5 software, including trade copier tools, manual trade management software, MQL5 Market links, and professional workflow utilities.",
+  alternates: {
+    canonical: "https://www.feftradingsolutions.com/pricing",
+  },
+  openGraph: {
+    title: "MT5 Software Pricing | FEF Trading Solutions",
+    description:
+      "Review FEF Trading Solutions product access and pricing guidance for MetaTrader 5 software, including trade copier tools, manual trade management software, MQL5 Market links, and professional workflow utilities.",
+    url: "https://www.feftradingsolutions.com/pricing",
+    images: ["/images/hero.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MT5 Software Pricing | FEF Trading Solutions",
+    description:
+      "Review FEF Trading Solutions product access and pricing guidance for MetaTrader 5 software, including trade copier tools, manual trade management software, MQL5 Market links, and professional workflow utilities.",
+    images: ["/images/hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const trustCards = [
