@@ -39,6 +39,7 @@ const companyLinks = [
   { label: "Support", href: "/support" },
   { label: "Documentation", href: "/documentation" },
   { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Use", href: "/terms-of-use" },
   { label: "Risk Disclaimer", href: "/risk-disclaimer" },
 ];
 
