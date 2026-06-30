@@ -452,6 +452,12 @@ const tradingOpportunities = [
     bias: "Bullish",
     risk: "High",
   },
+  {
+    market: "USDJPY",
+    setup: "Yen momentum watch",
+    bias: "Bullish",
+    risk: "Medium",
+  },
 ];
 
 const workflowFeatures = [
@@ -888,8 +894,8 @@ export default async function HomePage() {
               </p>
             </div>
 
-            <div className="lg:self-start">
-              <aside className="premium-card premium-glow rounded-3xl border border-emerald/25 bg-panel/75 p-5 shadow-emerald lg:max-h-[680px] lg:overflow-hidden">
+            <div className="lg:self-stretch">
+              <aside className="premium-card premium-glow rounded-3xl border border-emerald/25 bg-panel/75 p-5 shadow-emerald lg:flex lg:h-full lg:flex-col lg:overflow-hidden">
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.22em] text-emerald">
@@ -902,11 +908,11 @@ export default async function HomePage() {
                   <Radio className="h-5 w-5 text-emerald" />
                 </div>
 
-                <div className="mt-5 space-y-3">
+                <div className="mt-4 space-y-2.5">
                   {tradingOpportunities.map((item) => (
                     <div
                       key={item.market}
-                      className="rounded-2xl border border-line bg-ink/55 p-3.5"
+                      className="rounded-2xl border border-line bg-ink/55 p-3"
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div className="min-w-0">
@@ -930,7 +936,7 @@ export default async function HomePage() {
                         </span>
                       </div>
 
-                      <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
+                      <div className="mt-2.5 grid grid-cols-2 gap-2 text-xs">
                         <div className="rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 py-2">
                           <p className="uppercase tracking-[0.18em] text-steel">
                             Bias
