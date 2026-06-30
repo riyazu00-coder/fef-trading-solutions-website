@@ -213,9 +213,38 @@ const faqItems = [
   },
 ];
 
+const manualTradeManagerStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "FEF Manual Trade Manager Pro MT5",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "MetaTrader 5",
+  url: "https://www.feftradingsolutions.com/manual-trade-manager",
+  image: "https://www.feftradingsolutions.com/images/manual-trade-manager.png",
+  publisher: {
+    "@type": "Organization",
+    name: "FEF Trading Solutions",
+    url: "https://www.feftradingsolutions.com/",
+  },
+  description:
+    "Professional MetaTrader 5 manual trade management software designed to help traders manage open positions with stop loss, take profit, break-even, trailing stop, partial close, and workflow-focused controls.",
+  offers: {
+    "@type": "Offer",
+    url: brand.manualTradeManagerMql5Url,
+    availability: "https://schema.org/InStock",
+    priceCurrency: "USD",
+  },
+};
+
 export default function ManualTradeManagerPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(manualTradeManagerStructuredData),
+        }}
+      />
       <section className="relative overflow-hidden px-5 pb-16 pt-24 sm:px-6 lg:px-8 lg:pt-28">
         <div className="site-grid absolute inset-0 opacity-30" aria-hidden="true" />
         <div

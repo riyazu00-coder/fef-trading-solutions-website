@@ -124,9 +124,38 @@ const operatorControls = [
   "Event log visibility",
 ];
 
+const tradeCopierStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "FEF Professional Trade Copier MT5",
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "MetaTrader 5",
+  url: "https://www.feftradingsolutions.com/trade-copier",
+  image: "https://www.feftradingsolutions.com/images/og-image.png",
+  publisher: {
+    "@type": "Organization",
+    name: "FEF Trading Solutions",
+    url: "https://www.feftradingsolutions.com/",
+  },
+  description:
+    "Professional MetaTrader 5 trade copier software built for copying trades between MT5 accounts with workflow-focused controls, documentation, download access, and MQL5 Market availability.",
+  offers: {
+    "@type": "Offer",
+    url: brand.mql5Url,
+    availability: "https://schema.org/InStock",
+    priceCurrency: "USD",
+  },
+};
+
 export default function TradeCopierPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(tradeCopierStructuredData),
+        }}
+      />
       <section className="relative overflow-hidden px-5 pb-16 pt-24 sm:px-6 lg:px-8 lg:pt-28">
         <div className="site-grid absolute inset-0 opacity-30" aria-hidden="true" />
         <div
