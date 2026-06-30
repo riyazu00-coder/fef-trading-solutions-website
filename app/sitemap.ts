@@ -1,12 +1,70 @@
 import type { MetadataRoute } from "next";
 
-const routes = ["", "/products", "/trade-copier", "/documentation", "/support", "/contact"];
+const siteUrl = "https://www.feftradingsolutions.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({
-    url: `https://feftradingsolutions.com${route}`,
-    lastModified: new Date("2026-06-27"),
-    changeFrequency: "monthly",
-    priority: route === "" ? 1 : 0.8
-  }));
+  const lastModified = new Date();
+
+  return [
+    {
+      url: siteUrl,
+      lastModified,
+      changeFrequency: "daily",
+      priority: 1,
+    },
+    {
+      url: `${siteUrl}/products`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/trade-copier`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/manual-trade-manager`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${siteUrl}/downloads`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/documentation`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/support`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    {
+      url: `${siteUrl}/pricing`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    {
+      url: `${siteUrl}/changelog`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+    {
+      url: `${siteUrl}/contact`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+  ];
 }
