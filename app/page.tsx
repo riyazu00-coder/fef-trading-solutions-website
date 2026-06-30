@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   Activity,
   BadgeCheck,
@@ -18,6 +19,38 @@ import { ProductCard } from "@/components/ProductCard";
 import { RiskWarning } from "@/components/RiskWarning";
 import { TradeCopyDemo } from "@/components/TradeCopyDemo";
 import { brand, products } from "@/lib/site-data";
+
+const HOME_URL = "https://www.feftradingsolutions.com/";
+const HOME_TITLE = "Professional MT5 Trading Software";
+const HOME_SOCIAL_TITLE =
+  "Professional MT5 Trading Software | FEF Trading Solutions";
+const HOME_DESCRIPTION =
+  "Premium MetaTrader 5 trading software for trade copying, manual trade management, live market awareness, documentation, downloads, and professional trading workflows.";
+const HOME_SOCIAL_IMAGE = "/images/hero.png";
+
+export const metadata: Metadata = {
+  title: HOME_TITLE,
+  description: HOME_DESCRIPTION,
+  alternates: {
+    canonical: HOME_URL,
+  },
+  openGraph: {
+    title: HOME_SOCIAL_TITLE,
+    description: HOME_DESCRIPTION,
+    url: HOME_URL,
+    images: [HOME_SOCIAL_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: HOME_SOCIAL_TITLE,
+    description: HOME_DESCRIPTION,
+    images: [HOME_SOCIAL_IMAGE],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export const revalidate = 60;
 
