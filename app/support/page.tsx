@@ -22,9 +22,30 @@ import { RiskWarning } from "@/components/RiskWarning";
 import { brand } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Support",
+  title: "MT5 Software Support",
   description:
-    "Professional FEF Trading Solutions support center for MT5 product setup, documentation, troubleshooting and safe deployment guidance.",
+    "Get support guidance for FEF Trading Solutions MetaTrader 5 software, including trade copier setup, manual trade manager usage, downloads, documentation, troubleshooting, and product workflow help.",
+  alternates: {
+    canonical: "https://www.feftradingsolutions.com/support",
+  },
+  openGraph: {
+    title: "MT5 Software Support | FEF Trading Solutions",
+    description:
+      "Get support guidance for FEF Trading Solutions MetaTrader 5 software, including trade copier setup, manual trade manager usage, downloads, documentation, troubleshooting, and product workflow help.",
+    url: "https://www.feftradingsolutions.com/support",
+    images: ["/images/hero.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MT5 Software Support | FEF Trading Solutions",
+    description:
+      "Get support guidance for FEF Trading Solutions MetaTrader 5 software, including trade copier setup, manual trade manager usage, downloads, documentation, troubleshooting, and product workflow help.",
+    images: ["/images/hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const heroStatusCards = [
