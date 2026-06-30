@@ -8,7 +8,7 @@ const siteUrl = "https://www.feftradingsolutions.com/";
 const siteName = "FEF Trading Solutions";
 const siteDescription =
   "Professional MetaTrader 5 trading software for trade copying, manual trade management, documentation, downloads, support, and workflow-focused trading tools.";
-const socialImage = "/images/hero.png";
+const socialImage = "/images/og-image.png";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
