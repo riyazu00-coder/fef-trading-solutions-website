@@ -10,6 +10,7 @@ import {
   Store,
 } from "lucide-react";
 import Image from "next/image";
+import { headers } from "next/headers";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
 import { FeatureCard } from "@/components/FeatureCard";
@@ -17,6 +18,351 @@ import { ProductCard } from "@/components/ProductCard";
 import { RiskWarning } from "@/components/RiskWarning";
 import { TradeCopyDemo } from "@/components/TradeCopyDemo";
 import { brand, products } from "@/lib/site-data";
+
+export const revalidate = 60;
+
+const MARKET_PULSE_REVALIDATE_SECONDS = 60;
+const MARKET_PULSE_PROVIDER = "Twelve Data";
+const MARKET_PULSE_SYMBOLS = [
+  "XAUUSD",
+  "EURUSD",
+  "GBPUSD",
+  "BTCUSD",
+  "USDJPY",
+  "USDCHF",
+] as const;
+
+type MarketPulseSymbol = (typeof MARKET_PULSE_SYMBOLS)[number];
+type MarketPulseStatus = "live" | "partial" | "fallback";
+type MarketPulseSource = "live" | "fallback";
+
+type MarketPulseMarket = {
+  symbol: MarketPulseSymbol;
+  providerSymbol: string;
+  name: string;
+  price: number;
+  change: number;
+  percentChange: number;
+  high: number | null;
+  low: number | null;
+  previousClose: number | null;
+  source: MarketPulseSource;
+};
+
+type MarketPulsePayload = {
+  status: MarketPulseStatus;
+  provider: string;
+  updatedAt: string;
+  note: string;
+  markets: MarketPulseMarket[];
+};
+
+const MARKET_PULSE_FALLBACKS: Record<MarketPulseSymbol, MarketPulseMarket> = {
+  XAUUSD: {
+    symbol: "XAUUSD",
+    providerSymbol: "XAU/USD",
+    name: "Gold",
+    price: 2325,
+    change: 0,
+    percentChange: 0,
+    high: null,
+    low: null,
+    previousClose: null,
+    source: "fallback",
+  },
+  EURUSD: {
+    symbol: "EURUSD",
+    providerSymbol: "EUR/USD",
+    name: "Euro / Dollar",
+    price: 1.08,
+    change: 0,
+    percentChange: 0,
+    high: null,
+    low: null,
+    previousClose: null,
+    source: "fallback",
+  },
+  GBPUSD: {
+    symbol: "GBPUSD",
+    providerSymbol: "GBP/USD",
+    name: "Pound / Dollar",
+    price: 1.27,
+    change: 0,
+    percentChange: 0,
+    high: null,
+    low: null,
+    previousClose: null,
+    source: "fallback",
+  },
+  BTCUSD: {
+    symbol: "BTCUSD",
+    providerSymbol: "BTC/USD",
+    name: "Bitcoin",
+    price: 65000,
+    change: 0,
+    percentChange: 0,
+    high: null,
+    low: null,
+    previousClose: null,
+    source: "fallback",
+  },
+  USDJPY: {
+    symbol: "USDJPY",
+    providerSymbol: "USD/JPY",
+    name: "Dollar / Yen",
+    price: 150,
+    change: 0,
+    percentChange: 0,
+    high: null,
+    low: null,
+    previousClose: null,
+    source: "fallback",
+  },
+  USDCHF: {
+    symbol: "USDCHF",
+    providerSymbol: "USD/CHF",
+    name: "Dollar / Swiss Franc",
+    price: 0.9,
+    change: 0,
+    percentChange: 0,
+    high: null,
+    low: null,
+    previousClose: null,
+    source: "fallback",
+  },
+};
+
+function cloneFallbackMarket(symbol: MarketPulseSymbol): MarketPulseMarket {
+  return { ...MARKET_PULSE_FALLBACKS[symbol] };
+}
+
+function createFallbackMarketPulse(): MarketPulsePayload {
+  return {
+    status: "fallback",
+    provider: MARKET_PULSE_PROVIDER,
+    updatedAt: new Date().toISOString(),
+    note: "Live quotes are unavailable; fallback placeholders are marked per market.",
+    markets: MARKET_PULSE_SYMBOLS.map(cloneFallbackMarket),
+  };
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null;
+}
+
+function parseNumber(value: unknown): number | null {
+  if (typeof value === "number") {
+    return Number.isFinite(value) ? value : null;
+  }
+
+  if (typeof value !== "string" || value.trim() === "") {
+    return null;
+  }
+
+  const parsed = Number(value);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function parseOptionalNumber(value: unknown): number | null {
+  return value === null || value === undefined ? null : parseNumber(value);
+}
+
+function resolveMarketPulseStatus(
+  markets: readonly MarketPulseMarket[],
+): MarketPulseStatus {
+  const liveCount = markets.filter((market) => market.source === "live").length;
+
+  if (liveCount === markets.length) {
+    return "live";
+  }
+
+  return liveCount > 0 ? "partial" : "fallback";
+}
+
+function getMarketPulseNote(status: MarketPulseStatus): string {
+  if (status === "live") {
+    return "Live market snapshot from the Twelve Data quote endpoint.";
+  }
+
+  if (status === "partial") {
+    return "Some live quotes are temporarily unavailable; fallback placeholders are marked per market.";
+  }
+
+  return "Live quotes are unavailable; fallback placeholders are marked per market.";
+}
+
+function normalizeMarketPulseMarket(
+  market: Record<string, unknown> | undefined,
+  symbol: MarketPulseSymbol,
+): MarketPulseMarket {
+  if (!market) {
+    return cloneFallbackMarket(symbol);
+  }
+
+  const fallback = MARKET_PULSE_FALLBACKS[symbol];
+  const price = parseNumber(market.price);
+  const change = parseNumber(market.change);
+  const percentChange = parseNumber(market.percentChange);
+  const source: MarketPulseSource =
+    market.source === "live" || market.source === "fallback"
+      ? market.source
+      : "fallback";
+
+  if (price === null || change === null || percentChange === null) {
+    return cloneFallbackMarket(symbol);
+  }
+
+  return {
+    symbol,
+    providerSymbol:
+      typeof market.providerSymbol === "string"
+        ? market.providerSymbol
+        : fallback.providerSymbol,
+    name: typeof market.name === "string" ? market.name : fallback.name,
+    price,
+    change,
+    percentChange,
+    high: parseOptionalNumber(market.high),
+    low: parseOptionalNumber(market.low),
+    previousClose: parseOptionalNumber(market.previousClose),
+    source,
+  };
+}
+
+function normalizeMarketPulsePayload(payload: unknown): MarketPulsePayload {
+  if (!isRecord(payload) || !Array.isArray(payload.markets)) {
+    return createFallbackMarketPulse();
+  }
+
+  const marketsBySymbol = new Map<string, Record<string, unknown>>();
+
+  payload.markets.forEach((market) => {
+    if (isRecord(market) && typeof market.symbol === "string") {
+      marketsBySymbol.set(market.symbol, market);
+    }
+  });
+
+  const markets = MARKET_PULSE_SYMBOLS.map((symbol) =>
+    normalizeMarketPulseMarket(marketsBySymbol.get(symbol), symbol),
+  );
+  const status = resolveMarketPulseStatus(markets);
+
+  return {
+    status,
+    provider:
+      typeof payload.provider === "string"
+        ? payload.provider
+        : MARKET_PULSE_PROVIDER,
+    updatedAt:
+      typeof payload.updatedAt === "string"
+        ? payload.updatedAt
+        : new Date().toISOString(),
+    note: typeof payload.note === "string" ? payload.note : getMarketPulseNote(status),
+    markets,
+  };
+}
+
+async function getMarketPulse(): Promise<MarketPulsePayload> {
+  try {
+    const headerStore = await headers();
+    const host = (
+      headerStore.get("x-forwarded-host") ?? headerStore.get("host") ?? ""
+    )
+      .split(",")[0]
+      .trim();
+
+    if (!host) {
+      return createFallbackMarketPulse();
+    }
+
+    const forwardedProtocol = headerStore
+      .get("x-forwarded-proto")
+      ?.split(",")[0]
+      .trim();
+    const protocol =
+      forwardedProtocol ??
+      (host.startsWith("localhost") || host.startsWith("127.0.0.1")
+        ? "http"
+        : "https");
+    const marketPulseUrl = new URL("/api/market-pulse", `${protocol}://${host}`);
+    const response = await fetch(marketPulseUrl, {
+      next: { revalidate: MARKET_PULSE_REVALIDATE_SECONDS },
+    });
+
+    if (!response.ok) {
+      return createFallbackMarketPulse();
+    }
+
+    return normalizeMarketPulsePayload(await response.json());
+  } catch {
+    return createFallbackMarketPulse();
+  }
+}
+
+function formatMarketPrice(market: MarketPulseMarket): string {
+  const digits =
+    market.symbol === "USDJPY"
+      ? 3
+      : market.symbol === "XAUUSD" || market.symbol === "BTCUSD"
+        ? 2
+        : 5;
+
+  return new Intl.NumberFormat("en-US", {
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  }).format(market.price);
+}
+
+function formatPercentChange(value: number): string {
+  const prefix = value > 0 ? "+" : "";
+  return `${prefix}${value.toFixed(2)}%`;
+}
+
+function getMarketChangeClass(value: number): string {
+  if (value < 0) {
+    return "font-mono text-sm font-black text-red-300";
+  }
+
+  if (value > 0) {
+    return "font-mono text-sm font-black text-emerald";
+  }
+
+  return "font-mono text-sm font-black text-steel";
+}
+
+function getMarketSparklineClass(value: number): string {
+  if (value < 0) {
+    return "h-full w-full text-red-300/70";
+  }
+
+  if (value > 0) {
+    return "h-full w-full text-emerald/70";
+  }
+
+  return "h-full w-full text-steel/70";
+}
+
+function getMarketSparklinePoints(value: number): string {
+  if (value < 0) {
+    return "0,10 18,15 34,13 52,21 70,18 88,27 106,30 124,35 140,32";
+  }
+
+  if (value > 0) {
+    return "0,32 18,27 34,28 52,20 70,22 88,14 106,16 124,8 140,10";
+  }
+
+  return "0,22 18,21 34,22 52,21 70,22 88,21 106,22 124,21 140,22";
+}
+
+function getMarketSourceClass(source: MarketPulseSource): string {
+  return source === "live"
+    ? "rounded-full border border-emerald/25 bg-emerald/10 px-3 py-1 text-xs font-bold text-emerald"
+    : "rounded-full border border-white/[0.12] bg-white/[0.04] px-3 py-1 text-xs font-bold text-steel";
+}
+
+function getMarketPulseStatusLabel(status: MarketPulseStatus): string {
+  return status === "live" ? "Live market snapshot" : "Market snapshot";
+}
 
 const whyItems = [
   {
@@ -85,45 +431,6 @@ const releaseItems = [
   "Secure MQL5 delivery and licensing",
   "MetaTrader 5 / Windows compatible",
   "Professional setup support available",
-];
-
-const marketPulseItems = [
-  {
-    symbol: "XAUUSD",
-    bias: "Bullish",
-    change: "+1.25%",
-    note: "Gold strength",
-  },
-  {
-    symbol: "EURUSD",
-    bias: "Neutral",
-    change: "+0.08%",
-    note: "Range market",
-  },
-  {
-    symbol: "GBPUSD",
-    bias: "Bearish",
-    change: "-0.34%",
-    note: "Sterling pressure",
-  },
-  {
-    symbol: "BTCUSD",
-    bias: "Bullish",
-    change: "+2.18%",
-    note: "Crypto risk-on",
-  },
-  {
-    symbol: "DXY",
-    bias: "Bearish",
-    change: "-0.41%",
-    note: "Dollar weakness",
-  },
-  {
-    symbol: "USOIL",
-    bias: "Neutral",
-    change: "+0.12%",
-    note: "Energy stable",
-  },
 ];
 
 const tradingOpportunities = [
@@ -387,7 +694,9 @@ const operationsHighlights = [
   "MT5 Software Ecosystem",
 ];
 
-export default function HomePage() {
+export default async function HomePage() {
+  const marketPulse = await getMarketPulse();
+
   return (
     <main className="relative overflow-hidden bg-[linear-gradient(180deg,rgba(5,7,13,0.24),rgba(7,17,31,0.72)_34%,rgba(5,7,13,0.36))]">
       <section className="relative overflow-hidden px-5 pb-20 pt-24 sm:px-6 lg:px-8 lg:pt-28">
@@ -510,7 +819,7 @@ export default function HomePage() {
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-electric/25 bg-electric/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-electric">
                 <Activity className="h-4 w-4" />
-                Static preview snapshot
+                {getMarketPulseStatusLabel(marketPulse.status)}
               </div>
 
               <h2 className="mt-6 text-3xl font-black text-white md:text-5xl">
@@ -522,7 +831,7 @@ export default function HomePage() {
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                {marketPulseItems.map((item) => (
+                {marketPulse.markets.map((item) => (
                   <div
                     key={item.symbol}
                     className="premium-card rounded-2xl border border-line bg-ink/55 p-5 shadow-[0_18px_55px_rgba(0,0,0,0.24)]"
@@ -532,47 +841,34 @@ export default function HomePage() {
                         <p className="font-mono text-lg font-black text-white">
                           {item.symbol}
                         </p>
-                        <p className="mt-2 text-sm text-steel">{item.note}</p>
+                        <p className="mt-2 text-sm text-steel">{item.name}</p>
                       </div>
-                      <span
-                        className={
-                          item.bias === "Bullish"
-                            ? "rounded-full border border-emerald/25 bg-emerald/10 px-3 py-1 text-xs font-bold text-emerald"
-                            : item.bias === "Bearish"
-                              ? "rounded-full border border-electric/25 bg-electric/10 px-3 py-1 text-xs font-bold text-electric"
-                              : "rounded-full border border-white/[0.12] bg-white/[0.04] px-3 py-1 text-xs font-bold text-steel"
-                        }
-                      >
-                        {item.bias}
+                      <span className={getMarketSourceClass(item.source)}>
+                        {item.source === "live" ? "Live" : "Fallback"}
                       </span>
                     </div>
 
                     <div className="mt-6 flex items-end justify-between gap-4">
-                      <p
-                        className={
-                          item.change.startsWith("-")
-                            ? "font-mono text-2xl font-black text-electric"
-                            : "font-mono text-2xl font-black text-emerald"
-                        }
-                      >
-                        {item.change}
-                      </p>
+                      <div>
+                        <p className="font-mono text-2xl font-black text-white">
+                          {formatMarketPrice(item)}
+                        </p>
+                        <p className={getMarketChangeClass(item.percentChange)}>
+                          {formatPercentChange(item.percentChange)}
+                        </p>
+                      </div>
                       <div className="h-10 flex-1 overflow-hidden rounded bg-white/[0.04]">
                         <svg
                           viewBox="0 0 140 42"
-                          className={
-                            item.change.startsWith("-")
-                              ? "h-full w-full text-electric/70"
-                              : "h-full w-full text-emerald/70"
-                          }
+                          className={getMarketSparklineClass(
+                            item.percentChange,
+                          )}
                           aria-hidden="true"
                         >
                           <polyline
-                            points={
-                              item.change.startsWith("-")
-                                ? "0,10 18,15 34,13 52,21 70,18 88,27 106,30 124,35 140,32"
-                                : "0,32 18,27 34,28 52,20 70,22 88,14 106,16 124,8 140,10"
-                            }
+                            points={getMarketSparklinePoints(
+                              item.percentChange,
+                            )}
                             fill="none"
                             stroke="currentColor"
                             strokeWidth="3"
@@ -587,8 +883,8 @@ export default function HomePage() {
               </div>
 
               <p className="mt-6 rounded-2xl border border-white/[0.08] bg-white/[0.03] p-4 text-sm leading-6 text-steel">
-                Market Pulse is informational only and does not provide
-                financial advice.
+                Market data is for informational display only and may be
+                delayed. It is not financial advice.
               </p>
             </div>
 
@@ -606,7 +902,7 @@ export default function HomePage() {
                   <Radio className="h-5 w-5 text-emerald" />
                 </div>
 
-                <div className="mt-5 space-y-3 lg:max-h-[560px] lg:overflow-y-auto lg:pr-1">
+                <div className="mt-5 space-y-3">
                   {tradingOpportunities.map((item) => (
                     <div
                       key={item.market}
