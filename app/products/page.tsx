@@ -17,9 +17,30 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { brand } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Products",
+  title: "MT5 Trading Software Products",
   description:
-    "Explore the FEF Trading Solutions MT5 software ecosystem for trade copying, manual trade management, documentation, downloads and support workflows.",
+    "Explore FEF Trading Solutions products for MetaTrader 5, including professional trade copying tools, manual trade management software, documentation, downloads, and workflow-focused trading utilities.",
+  alternates: {
+    canonical: "https://www.feftradingsolutions.com/products",
+  },
+  openGraph: {
+    title: "MT5 Trading Software Products | FEF Trading Solutions",
+    description:
+      "Explore FEF Trading Solutions products for MetaTrader 5, including professional trade copying tools, manual trade management software, documentation, downloads, and workflow-focused trading utilities.",
+    url: "https://www.feftradingsolutions.com/products",
+    images: ["/images/hero.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MT5 Trading Software Products | FEF Trading Solutions",
+    description:
+      "Explore FEF Trading Solutions products for MetaTrader 5, including professional trade copying tools, manual trade management software, documentation, downloads, and workflow-focused trading utilities.",
+    images: ["/images/hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const heroStats = [
