@@ -19,9 +19,30 @@ import { RiskWarning } from "@/components/RiskWarning";
 import { brand } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Downloads",
+  title: "MT5 Software Downloads",
   description:
-    "Official FEF Trading Solutions software center for MT5 product links, documentation, release notes and safe setup guidance.",
+    "Access FEF Trading Solutions MetaTrader 5 software download resources, product documentation, setup guidance, and MQL5 Market links for professional trading workflow tools.",
+  alternates: {
+    canonical: "https://www.feftradingsolutions.com/downloads",
+  },
+  openGraph: {
+    title: "MT5 Software Downloads | FEF Trading Solutions",
+    description:
+      "Access FEF Trading Solutions MetaTrader 5 software download resources, product documentation, setup guidance, and MQL5 Market links for professional trading workflow tools.",
+    url: "https://www.feftradingsolutions.com/downloads",
+    images: ["/images/hero.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MT5 Software Downloads | FEF Trading Solutions",
+    description:
+      "Access FEF Trading Solutions MetaTrader 5 software download resources, product documentation, setup guidance, and MQL5 Market links for professional trading workflow tools.",
+    images: ["/images/hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const heroStats = [
