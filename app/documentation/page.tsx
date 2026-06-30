@@ -300,24 +300,43 @@ export default function DocumentationPage() {
           ))}
         </div>
 
-        <div className="premium-card premium-glow mt-6 rounded-[2rem] border border-emerald/25 bg-panel/75 p-6 sm:p-8">
-          <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-center">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald">
-                Manual Trade Manager
-              </p>
-              <h3 className="mt-3 text-2xl font-black text-white">
-                Manual Trade Manager Setup Guide
-              </h3>
-              <p className="mt-3 max-w-3xl text-sm leading-7 text-steel">
-                Install, attach, configure, and safely test FEF Manual Trade
-                Manager Pro MT5 before using it on a live account.
-              </p>
-            </div>
+        <div className="mt-6 grid gap-5 lg:grid-cols-2">
+          <div className="premium-card premium-glow rounded-[2rem] border border-electric/25 bg-panel/75 p-6 sm:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-electric">
+              Trade Copier
+            </p>
+            <h3 className="mt-3 text-2xl font-black text-white">
+              Trade Copier Setup Guide
+            </h3>
+            <p className="mt-3 text-sm leading-7 text-steel">
+              Install, configure, and safely test FEF Professional Trade Copier
+              MT5 with sender and receiver accounts before using it on live MT5
+              accounts.
+            </p>
+            <ButtonLink
+              href="/documentation/trade-copier-setup"
+              variant="secondary"
+              className="mt-6"
+            >
+              Read setup guide
+            </ButtonLink>
+          </div>
 
+          <div className="premium-card premium-glow rounded-[2rem] border border-emerald/25 bg-panel/75 p-6 sm:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald">
+              Manual Trade Manager
+            </p>
+            <h3 className="mt-3 text-2xl font-black text-white">
+              Manual Trade Manager Setup Guide
+            </h3>
+            <p className="mt-3 text-sm leading-7 text-steel">
+              Install, attach, configure, and safely test FEF Manual Trade
+              Manager Pro MT5 before using it on a live account.
+            </p>
             <ButtonLink
               href="/documentation/manual-trade-manager-setup"
               variant="secondary"
+              className="mt-6"
             >
               Read setup guide
             </ButtonLink>
