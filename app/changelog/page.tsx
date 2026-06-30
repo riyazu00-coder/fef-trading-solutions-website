@@ -20,9 +20,30 @@ import { RiskWarning } from "@/components/RiskWarning";
 import { brand } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Changelog",
+  title: "Product Changelog",
   description:
-    "Release notes and software update center for FEF Trading Solutions MetaTrader 5 products.",
+    "Track FEF Trading Solutions product updates, release notes, improvements, and version history for MetaTrader 5 trade copier and manual trade management software.",
+  alternates: {
+    canonical: "https://www.feftradingsolutions.com/changelog",
+  },
+  openGraph: {
+    title: "Product Changelog | FEF Trading Solutions",
+    description:
+      "Track FEF Trading Solutions product updates, release notes, improvements, and version history for MetaTrader 5 trade copier and manual trade management software.",
+    url: "https://www.feftradingsolutions.com/changelog",
+    images: ["/images/hero.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Product Changelog | FEF Trading Solutions",
+    description:
+      "Track FEF Trading Solutions product updates, release notes, improvements, and version history for MetaTrader 5 trade copier and manual trade management software.",
+    images: ["/images/hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const heroStatusCards = [
