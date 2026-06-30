@@ -20,9 +20,30 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { brand } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Documentation",
+  title: "MT5 Product Documentation",
   description:
-    "Setup, configuration, testing and operation documentation for FEF Professional Trade Copier MT5.",
+    "Read FEF Trading Solutions documentation for MetaTrader 5 software setup, trade copier workflows, manual trade management tools, downloads, support guidance, and professional trading operations.",
+  alternates: {
+    canonical: "https://www.feftradingsolutions.com/documentation",
+  },
+  openGraph: {
+    title: "MT5 Product Documentation | FEF Trading Solutions",
+    description:
+      "Read FEF Trading Solutions documentation for MetaTrader 5 software setup, trade copier workflows, manual trade management tools, downloads, support guidance, and professional trading operations.",
+    url: "https://www.feftradingsolutions.com/documentation",
+    images: ["/images/hero.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MT5 Product Documentation | FEF Trading Solutions",
+    description:
+      "Read FEF Trading Solutions documentation for MetaTrader 5 software setup, trade copier workflows, manual trade management tools, downloads, support guidance, and professional trading operations.",
+    images: ["/images/hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const quickStartItems = [
