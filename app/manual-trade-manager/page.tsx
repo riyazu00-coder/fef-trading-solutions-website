@@ -26,7 +26,28 @@ import { brand } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "FEF Manual Trade Manager Pro MT5",
   description:
-    "Professional manual trade management dashboard for MetaTrader 5 with SL/TP handling, breakeven, trailing stop, partial close and visual market context.",
+    "Professional MetaTrader 5 manual trade management software designed to help traders manage open positions with stop loss, take profit, break-even, trailing stop, partial close, and workflow-focused controls.",
+  alternates: {
+    canonical: "https://www.feftradingsolutions.com/manual-trade-manager",
+  },
+  openGraph: {
+    title: "FEF Manual Trade Manager Pro MT5 | FEF Trading Solutions",
+    description:
+      "Professional MetaTrader 5 manual trade management software designed to help traders manage open positions with stop loss, take profit, break-even, trailing stop, partial close, and workflow-focused controls.",
+    url: "https://www.feftradingsolutions.com/manual-trade-manager",
+    images: ["/images/manual-trade-manager.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FEF Manual Trade Manager Pro MT5 | FEF Trading Solutions",
+    description:
+      "Professional MetaTrader 5 manual trade management software designed to help traders manage open positions with stop loss, take profit, break-even, trailing stop, partial close, and workflow-focused controls.",
+    images: ["/images/manual-trade-manager.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const positioningCards = [
