@@ -20,9 +20,30 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { brand } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact FEF Trading Solutions",
   description:
-    "Contact FEF Trading Solutions for MT5 software inquiries, product setup guidance, MQL5 purchase help, documentation and support resources.",
+    "Contact FEF Trading Solutions for MetaTrader 5 software inquiries, trade copier support, manual trade manager questions, product access, documentation, and professional trading workflow assistance.",
+  alternates: {
+    canonical: "https://www.feftradingsolutions.com/contact",
+  },
+  openGraph: {
+    title: "Contact FEF Trading Solutions",
+    description:
+      "Contact FEF Trading Solutions for MetaTrader 5 software inquiries, trade copier support, manual trade manager questions, product access, documentation, and professional trading workflow assistance.",
+    url: "https://www.feftradingsolutions.com/contact",
+    images: ["/images/hero.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact FEF Trading Solutions",
+    description:
+      "Contact FEF Trading Solutions for MetaTrader 5 software inquiries, trade copier support, manual trade manager questions, product access, documentation, and professional trading workflow assistance.",
+    images: ["/images/hero.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 const heroStatusCards = [
