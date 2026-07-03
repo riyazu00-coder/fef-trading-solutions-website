@@ -6,6 +6,8 @@ export const brand = {
   status: "Available on MQL5 Market",
 
   email: "sales@feftradingsolutions.com",
+  emailUrl:
+    "https://mail.google.com/mail/?view=cm&fs=1&to=sales@feftradingsolutions.com",
 
   telegram: "@Feftrading",
   telegramUrl: "https://t.me/Feftrading",
@@ -14,8 +16,8 @@ export const brand = {
   website: "https://feftradingsolutions.com",
 
   phone: "+971526235196",
-  whatsapp: "REPLACE_WITH_REAL_WHATSAPP_NUMBER",
-  whatsappUrl: "https://wa.me/REPLACE_WITH_REAL_WHATSAPP_NUMBER_WITHOUT_PLUS_OR_SPACES",
+  whatsapp: "+971526235916",
+  whatsappUrl: "https://wa.me/971526235916",
 
   support: "24 Hours",
   workingHours: "09:00 - 18:00 UAE Time (UTC+4)",
