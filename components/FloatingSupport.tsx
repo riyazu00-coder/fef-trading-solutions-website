@@ -81,12 +81,12 @@ export function FloatingSupport() {
       aria-label="24/7 Support contact options"
       className="fixed bottom-4 right-4 z-50 sm:bottom-6 sm:right-6"
     >
-      <div className="rounded-2xl border border-white/[0.12] bg-ink/85 p-2 shadow-[0_18px_60px_rgba(0,0,0,0.45),0_0_32px_rgba(34,211,238,0.12)] backdrop-blur-xl">
+      <div className="w-fit max-w-[calc(100vw-2rem)] rounded-2xl border border-white/[0.12] bg-ink/85 p-2 shadow-[0_18px_60px_rgba(0,0,0,0.45),0_0_32px_rgba(34,211,238,0.12)] backdrop-blur-xl">
         <p className="mb-2 rounded-full border border-emerald/20 bg-emerald/10 px-3 py-1.5 text-center text-[10px] font-black uppercase tracking-[0.16em] text-emerald">
           24/7 Support
         </p>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex items-center justify-center gap-2">
           <a
             aria-label={`Telegram ${brand.telegram}`}
             className="group flex h-11 w-11 items-center justify-center rounded-full border border-electric/25 bg-electric/10 text-electric shadow-[0_0_24px_rgba(56,189,248,0.12)] transition duration-200 hover:-translate-y-0.5 hover:border-electric/45 hover:bg-electric/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-electric/60 focus:ring-offset-2 focus:ring-offset-ink"
@@ -114,7 +114,9 @@ export function FloatingSupport() {
           <a
             aria-label={`Email ${brand.email}`}
             className="group flex h-11 w-11 items-center justify-center rounded-full border border-cyan/25 bg-cyan/10 text-cyan shadow-[0_0_24px_rgba(34,211,238,0.12)] transition duration-200 hover:-translate-y-0.5 hover:border-cyan/45 hover:bg-cyan/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan/60 focus:ring-offset-2 focus:ring-offset-ink"
-            href={`mailto:${brand.email}`}
+            href={brand.emailUrl}
+            rel="noreferrer"
+            target="_blank"
             title={`Email ${brand.email}`}
           >
             <EmailIcon />
