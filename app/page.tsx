@@ -15,6 +15,7 @@ import { headers } from "next/headers";
 import { ButtonLink } from "@/components/ButtonLink";
 import { CTASection } from "@/components/CTASection";
 import { FeatureCard } from "@/components/FeatureCard";
+import { FloatingSupport } from "@/components/FloatingSupport";
 import { ProductCard } from "@/components/ProductCard";
 import { RiskWarning } from "@/components/RiskWarning";
 import { TradeCopyDemo } from "@/components/TradeCopyDemo";
@@ -1677,6 +1678,7 @@ export default async function HomePage() {
 
       <RiskWarning />
       <CTASection />
+      <FloatingSupport />
     </main>
   );
 }

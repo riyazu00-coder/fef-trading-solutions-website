@@ -7,15 +7,15 @@ export const brand = {
 
   email: "sales@feftradingsolutions.com",
 
-  telegram: "@forexmetalsignals",
-  telegramUrl: "https://t.me/forexmetalsignals",
+  telegram: "@Feftrading",
+  telegramUrl: "https://t.me/Feftrading",
 
   domain: "feftradingsolutions.com",
   website: "https://feftradingsolutions.com",
 
   phone: "+971526235196",
-  whatsapp: "+971526235196",
-  whatsappUrl: "https://wa.me/971526235196",
+  whatsapp: "REPLACE_WITH_REAL_WHATSAPP_NUMBER",
+  whatsappUrl: "https://wa.me/REPLACE_WITH_REAL_WHATSAPP_NUMBER_WITHOUT_PLUS_OR_SPACES",
 
   support: "24 Hours",
   workingHours: "09:00 - 18:00 UAE Time (UTC+4)",
