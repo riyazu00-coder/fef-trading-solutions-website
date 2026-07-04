@@ -5,6 +5,7 @@ import {
   Boxes,
   CheckCircle2,
   ClipboardCheck,
+  Download,
   ExternalLink,
   FileText,
   Headphones,
@@ -50,6 +51,13 @@ const heroStats = [
   "MT5 Software Ecosystem",
   "Documentation & Support",
 ];
+
+const companyProfile = {
+  title: "Company Profile",
+  description:
+    "Download the FEF Trading Solutions company profile with details about our trading software products, AI software development services, AI-backed websites, documentation, support resources, and future software ecosystem.",
+  href: "/downloads/fef-trading-solutions-company-profile.pdf",
+};
 
 const productCards = [
   {
@@ -197,6 +205,56 @@ export default function DownloadsPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-5 py-16 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-[2rem] border border-emerald/20 bg-[linear-gradient(135deg,rgba(5,7,13,0.96),rgba(11,18,32,0.94))] p-6 shadow-[0_28px_95px_rgba(0,0,0,0.42)] sm:p-8 lg:p-10">
+          <div className="site-grid absolute inset-0 opacity-20" aria-hidden="true" />
+          <div
+            className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald/70 to-transparent"
+            aria-hidden="true"
+          />
+
+          <div className="relative grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald/25 bg-emerald/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald">
+                <FileText className="h-4 w-4" />
+                Company resource
+              </div>
+              <h2 className="mt-6 text-3xl font-black text-white md:text-5xl">
+                Company Profile
+              </h2>
+              <p className="mt-5 max-w-3xl text-lg leading-8 text-steel">
+                {companyProfile.description}
+              </p>
+            </div>
+
+            <div className="premium-card rounded-[2rem] border border-line bg-panel/75 p-6 sm:p-8">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <div className="rounded-xl border border-electric/25 bg-electric/10 p-3 text-electric">
+                    <Download className="h-5 w-5" />
+                  </div>
+                  <h3 className="mt-5 text-2xl font-black text-white">
+                    {companyProfile.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-steel">
+                    PDF company overview and service profile.
+                  </p>
+                </div>
+
+                <a
+                  href={companyProfile.href}
+                  download
+                  className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-brand-gradient px-5 py-3 text-sm font-semibold text-ink shadow-glow transition hover:brightness-110"
+                >
+                  <Download className="h-4 w-4" />
+                  Download Company Profile
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

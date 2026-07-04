@@ -24,11 +24,16 @@ const productLinks = [
   { label: "FEF Professional Trade Copier MT5", href: "/trade-copier" },
   { label: "FEF Manual Trade Manager Pro MT5", href: "/manual-trade-manager" },
   { label: "Products", href: "/products" },
+  { label: "AI Software Development", href: "/ai-software-development" },
   { label: "Pricing", href: "/pricing" },
 ];
 
 const softwareCenterLinks = [
   { label: "Downloads", href: "/downloads" },
+  {
+    label: "Company Profile",
+    href: "/downloads/fef-trading-solutions-company-profile.pdf",
+  },
   { label: "Changelog", href: "/changelog" },
   { label: "Documentation", href: "/documentation" },
   { label: "Support Center", href: "/support" },

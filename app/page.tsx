@@ -2,10 +2,15 @@ import type { Metadata } from "next";
 import {
   Activity,
   BadgeCheck,
+  Bot,
+  BrainCircuit,
   Building2,
   Cpu,
+  Download,
   ExternalLink,
+  Globe2,
   Layers3,
+  QrCode,
   Radio,
   ShieldCheck,
   Store,
@@ -734,6 +739,21 @@ const operationsHighlights = [
   "MT5 Software Ecosystem",
 ];
 
+const homepageAiCards = [
+  {
+    title: "AI Software Development",
+    description:
+      "Custom software products, dashboards, customer portals, workflow systems, and automation tools built around practical business needs.",
+    icon: <BrainCircuit className="h-5 w-5" />,
+  },
+  {
+    title: "AI-backed Websites",
+    description:
+      "Premium websites planned with AI-supported content structure, contact flows, SEO foundations, automation-ready architecture, and future software expansion.",
+    icon: <Globe2 className="h-5 w-5" />,
+  },
+];
+
 export default async function HomePage() {
   const marketPulse = await getMarketPulse();
 
@@ -836,6 +856,122 @@ export default async function HomePage() {
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-emerald">
                     Live sync ready
                   </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="relative overflow-hidden rounded-[2rem] border border-emerald/20 bg-[linear-gradient(135deg,rgba(5,7,13,0.96),rgba(11,18,32,0.94))] p-6 shadow-[0_28px_95px_rgba(0,0,0,0.42)] sm:p-8 lg:p-10">
+          <div className="site-grid absolute inset-0 opacity-20" aria-hidden="true" />
+          <div
+            className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald/70 to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="absolute -right-24 top-12 h-72 w-72 rounded-full bg-electric/10 blur-3xl"
+            aria-hidden="true"
+          />
+
+          <div className="relative grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald/25 bg-emerald/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-emerald">
+                <Bot className="h-4 w-4" />
+                AI Software Development
+              </div>
+
+              <h2 className="mt-6 text-3xl font-black text-white md:text-5xl">
+                From idea to{" "}
+                <span className="text-gradient">AI-backed software product</span>
+              </h2>
+
+              <p className="mt-5 text-lg leading-8 text-steel">
+                FEF Trading Solutions helps businesses, traders, and founders
+                turn ideas into professional digital products, AI-backed
+                websites, automation systems, and market-focused software
+                platforms.
+              </p>
+
+              <div className="mt-8 grid gap-4 md:grid-cols-2">
+                {homepageAiCards.map((item) => (
+                  <article
+                    key={item.title}
+                    className="premium-card rounded-2xl border border-line bg-panel/75 p-5"
+                  >
+                    <div className="rounded-xl border border-electric/25 bg-electric/10 p-3 text-electric">
+                      {item.icon}
+                    </div>
+                    <h3 className="mt-5 text-lg font-black text-white">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-steel">
+                      {item.description}
+                    </p>
+                  </article>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <ButtonLink
+                  href="/ai-software-development"
+                  icon={<ExternalLink className="h-4 w-4" />}
+                >
+                  Explore AI Software Development
+                </ButtonLink>
+                <ButtonLink href="/contact" variant="secondary">
+                  Contact FEF
+                </ButtonLink>
+                <a
+                  href="/downloads/fef-trading-solutions-company-profile.pdf"
+                  download
+                  className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-lg text-sm font-semibold text-steel transition hover:text-white"
+                >
+                  <Download className="h-4 w-4" />
+                  View / Download Company Profile
+                </a>
+              </div>
+            </div>
+
+            <div className="grid gap-5">
+              <div className="premium-card overflow-hidden rounded-[2rem] border border-electric/25 bg-ink/70 p-2 shadow-[0_28px_85px_rgba(0,0,0,0.38)]">
+                <Image
+                  src="/images/ai-software-development-hero.png"
+                  alt="AI software development services by FEF Trading Solutions"
+                  width={1536}
+                  height={864}
+                  className="h-auto w-full rounded-[1.5rem] border border-white/[0.08] object-cover"
+                />
+              </div>
+
+              <div className="premium-card rounded-[2rem] border border-line bg-panel/75 p-5">
+                <div className="grid gap-5 sm:grid-cols-[auto_1fr] sm:items-center">
+                  <div className="rounded-2xl border border-emerald/25 bg-white p-3 shadow-emerald">
+                    <Image
+                      src="/images/site-qr.png"
+                      alt="QR code for the official FEF Trading Solutions website"
+                      width={150}
+                      height={150}
+                      className="h-32 w-32 object-contain sm:h-36 sm:w-36"
+                    />
+                  </div>
+                  <div>
+                    <div className="inline-flex items-center gap-2 rounded-full border border-cyan/25 bg-cyan/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-cyan">
+                      <QrCode className="h-4 w-4" />
+                      Website QR
+                    </div>
+                    <h3 className="mt-4 text-2xl font-black text-white">
+                      Scan to Visit Our Website
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-steel">
+                      Scan the QR code to open the official FEF Trading
+                      Solutions website.
+                    </p>
+                    <p className="mt-4 break-all font-mono text-sm font-bold text-emerald">
+                      https://www.feftradingsolutions.com
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
