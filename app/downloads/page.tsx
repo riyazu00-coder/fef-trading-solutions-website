@@ -231,7 +231,7 @@ export default function DownloadsPage() {
               </p>
             </div>
 
-            <div className="premium-card rounded-[2rem] border border-line bg-panel/75 p-6 sm:p-8">
+            <div className="premium-card premium-glow rounded-[2rem] border border-emerald/25 bg-[linear-gradient(135deg,rgba(11,18,32,0.96),rgba(5,7,13,0.92))] p-6 shadow-emerald sm:p-8">
               <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <div className="rounded-xl border border-electric/25 bg-electric/10 p-3 text-electric">
@@ -241,7 +241,7 @@ export default function DownloadsPage() {
                     {companyProfile.title}
                   </h3>
                   <p className="mt-3 text-sm leading-6 text-steel">
-                    PDF company overview and service profile.
+                    Download the FEF Trading Solutions company profile.
                   </p>
                 </div>
 

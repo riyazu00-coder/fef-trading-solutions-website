@@ -10,12 +10,12 @@ export function Logo() {
       aria-label={`${brand.name} home`}
     >
       <Image
-        src="/images/fef-logo-wide.png"
+        src="/images/fef-logo-ai.png"
         alt="FEF Trading Solutions"
         width={260}
         height={80}
         priority
-        className="h-9 w-auto max-w-[190px] object-contain sm:h-11 sm:max-w-[230px]"
+        className="h-10 w-auto max-w-[200px] object-contain sm:h-12 sm:max-w-[240px]"
       />
     </Link>
   );

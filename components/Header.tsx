@@ -13,16 +13,16 @@ const groups = [
     label: "Products",
     items: [
       { label: "Trade Copier MT5", href: "/trade-copier" },
+      { label: "Manual Trade Manager", href: "/manual-trade-manager" },
       { label: "Products", href: "/products" },
-      { label: "AI Software Development", href: "/ai-software-development" },
       { label: "Pricing", href: "/pricing" },
     ],
   },
   {
     label: "Resources",
     items: [
-      { label: "Downloads", href: "/downloads" },
       { label: "Documentation", href: "/documentation" },
+      { label: "Downloads", href: "/downloads" },
       { label: "Changelog", href: "/changelog" },
     ],
   },
@@ -38,6 +38,11 @@ const groups = [
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const mainLinks = [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about-us" },
+    { label: "AI Software Development", href: "/ai-software-development" },
+  ];
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/[0.08] bg-ink/82 backdrop-blur-xl">
@@ -48,22 +53,25 @@ export function Header() {
           className="hidden items-center gap-2 lg:flex"
           aria-label="Main navigation"
         >
-          <Link
-            href="/"
-            className={`focus-ring rounded-md px-3 py-2 text-sm transition ${
-              pathname === "/"
-                ? "bg-electric/12 text-white"
-                : "text-steel hover:text-white"
-            }`}
-          >
-            Home
-          </Link>
+          {mainLinks.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`focus-ring rounded-md px-3 py-2 text-[15px] transition ${
+                pathname === item.href
+                  ? "bg-electric/12 text-white"
+                  : "text-steel hover:text-white"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
 
           {groups.map((group) => (
             <div key={group.label} className="group relative">
               <button
                 type="button"
-                className="focus-ring inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm text-steel transition hover:text-white"
+                className="focus-ring inline-flex items-center gap-1 rounded-md px-3 py-2 text-[15px] text-steel transition hover:text-white"
               >
                 {group.label}
                 <ChevronDown className="h-4 w-4 transition group-hover:rotate-180" />
@@ -115,13 +123,16 @@ export function Header() {
             className="mx-auto grid max-w-7xl gap-2"
             aria-label="Mobile navigation"
           >
-            <Link
-              href="/"
-              className="focus-ring rounded-lg border border-line bg-panel px-4 py-3 text-sm font-medium text-steel"
-              onClick={() => setOpen(false)}
-            >
-              Home
-            </Link>
+            {mainLinks.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="focus-ring rounded-lg border border-line bg-panel px-4 py-3 text-[15px] font-medium text-steel"
+                onClick={() => setOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
 
             {groups.flatMap((group) =>
               group.items.map((item) => (
