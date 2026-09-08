@@ -14,6 +14,7 @@ const groups = [
     items: [
       { label: "Trade Copier MT5", href: "/trade-copier" },
       { label: "Manual Trade Manager", href: "/manual-trade-manager" },
+      { label: "Trading Agent", href: "/trading-agent" },
       { label: "Products", href: "/products" },
       { label: "Pricing", href: "/pricing" },
     ],
