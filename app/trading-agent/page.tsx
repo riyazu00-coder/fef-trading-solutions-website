@@ -96,6 +96,57 @@ const safetyStates = [
   "MT5 relay provides quotes only, not trade approval",
 ];
 
+const relayProof = [
+  {
+    label: "Local MT5 demo",
+    value: "Verified",
+    detail: "Broker quote export completed in the local demo environment.",
+    tone: "emerald",
+  },
+  {
+    label: "Publisher response",
+    value: "5 symbols · HTTP 202",
+    detail: "Every supported symbol was accepted by the quote-only relay.",
+    tone: "cyan",
+  },
+  {
+    label: "Relay cache",
+    value: "READY",
+    detail: "The validated in-memory quote cache returned a ready state.",
+    tone: "emerald",
+  },
+  {
+    label: "Status provenance",
+    value: "MT5_RELAY / MT5 LIVE",
+    detail: "The local status response consumed relay quotes for all five markets.",
+    tone: "cyan",
+  },
+  {
+    label: "Quote classification",
+    value: "Broker quote · Tradeable",
+    detail: "Broker and tradeable provenance flags were verified in the local proof.",
+    tone: "emerald",
+  },
+  {
+    label: "Position state",
+    value: "No open positions detected",
+    detail: "The proof completed without opening or modifying any position.",
+    tone: "steel",
+  },
+  {
+    label: "Safety state",
+    value: "Execution locked throughout",
+    detail: "Dashboard safety-lock visibility remained active during verification.",
+    tone: "amber",
+  },
+  {
+    label: "Next environment",
+    value: "Exness VPS dry run pending",
+    detail: "Remote supervision and recovery evidence remains a future step.",
+    tone: "amber",
+  },
+];
+
 const roadmap = [
   {
     status: "Verified",
@@ -292,6 +343,103 @@ export default function TradingAgentPage() {
                 execution authority outside this public preview.
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden px-5 py-20 sm:px-6 lg:px-8 lg:py-24">
+        <div className="site-grid absolute inset-0 opacity-20" aria-hidden="true" />
+        <div
+          className="absolute inset-0 bg-[radial-gradient(circle_at_10%_15%,rgba(25,215,135,0.10),transparent_26rem),radial-gradient(circle_at_90%_70%,rgba(29,168,255,0.12),transparent_28rem)]"
+          aria-hidden="true"
+        />
+
+        <div className="relative mx-auto max-w-7xl">
+          <div className="grid gap-7 lg:grid-cols-[1fr_0.72fr] lg:items-end">
+            <div className="max-w-3xl">
+              <span className="inline-flex items-center gap-2 rounded-full border border-emerald/30 bg-emerald/10 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-emerald">
+                <Check className="h-4 w-4" />
+                Development evidence recorded
+              </span>
+              <h2 className="mt-6 text-balance text-3xl font-black text-white sm:text-5xl">
+                Verified Local Relay Proof
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-steel">
+                The quote path was verified end to end in a controlled local
+                demo environment, from MT5 snapshot export through relay
+                acceptance and dashboard provenance.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-line bg-ink/60 p-5">
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-steel">
+                Verified watchlist
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {instruments.map((symbol) => (
+                  <span
+                    key={`proof-${symbol}`}
+                    className="rounded-lg border border-cyan/25 bg-cyan/[0.07] px-3 py-2 font-mono text-xs font-black text-cyan"
+                  >
+                    {symbol}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {relayProof.map((proof) => (
+              <article
+                key={proof.label}
+                className="premium-card flex min-h-56 flex-col rounded-2xl border border-line bg-panel/75 p-6"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="text-xs font-black uppercase tracking-[0.16em] text-steel">
+                    {proof.label}
+                  </span>
+                  <span
+                    className={`h-2.5 w-2.5 shrink-0 rounded-full ${
+                      proof.tone === "emerald"
+                        ? "bg-emerald shadow-emerald"
+                        : proof.tone === "cyan"
+                          ? "bg-cyan shadow-glow"
+                          : proof.tone === "amber"
+                            ? "bg-amber-300"
+                            : "bg-steel"
+                    }`}
+                    aria-hidden="true"
+                  />
+                </div>
+                <p className="mt-6 text-xl font-black leading-7 text-white">
+                  {proof.value}
+                </p>
+                <p className="mt-auto pt-5 text-sm leading-6 text-steel">
+                  {proof.detail}
+                </p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-6 grid gap-4 lg:grid-cols-2">
+            <div className="rounded-2xl border border-electric/25 bg-electric/[0.06] p-5 sm:p-6">
+              <div className="flex items-start gap-3">
+                <Activity className="mt-0.5 h-5 w-5 shrink-0 text-electric" />
+                <p className="text-sm font-semibold leading-6 text-white">
+                  Evidence is from local development verification. Public
+                  website does not expose live trading endpoints.
+                </p>
+              </div>
+            </div>
+            <div className="rounded-2xl border border-amber-400/30 bg-amber-400/[0.07] p-5 sm:p-6">
+              <div className="flex items-start gap-3">
+                <LockKeyhole className="mt-0.5 h-5 w-5 shrink-0 text-amber-300" />
+                <p className="text-sm font-semibold leading-6 text-amber-100">
+                  Quote-only research mode. Execution remains locked.
+                  Real-money execution is not approved.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
