@@ -1,0 +1,353 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --header-height: 76px;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #05070d;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #f7fbff;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: 
+    radial-gradient(circle at 20% 0%, rgba(29, 168, 255, 0.12), transparent 32rem),
+    radial-gradient(circle at 85% 18%, rgba(25, 215, 135, 0.08), transparent 30rem),
+    linear-gradient(rgba(5, 7, 13, 0.65) 0%, rgba(7, 17, 31, 0.72) 44%, rgba(5, 7, 13, 0.85) 100%) !important;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Ensure background transparency on main containers so TradingView 3D Aurora glows through */
+main {
+  background-color: transparent !important;
+}
+
+header.sticky {
+  background-color: rgba(5, 7, 13, 0.78) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #05070d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1da8ff;
+}
+
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM: TYPOGRAPHY & LETTER STYLING
+   ========================================================================== */
+
+/* Universal semi-bold refined headings (600–650) */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-weight: 600 !important;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+/* Neutralize harsh extra-bold weights across entire website to refined 600 */
+.font-black, .font-extrabold {
+  font-weight: 600 !important;
+}
+
+/* Medium weight for labels, buttons, navigation items, pills, badges, and table headers */
+button, .btn, [role="button"], label, th, nav a, .badge, .pill, select, input[type="submit"], input[type="button"] {
+  font-weight: 500;
+}
+
+/* Regular weight and high-contrast readability for body & supporting text */
+p, li, td, dd, blockquote, .body-text, .text-steel {
+  font-weight: 400;
+  color: #cbd5e1;
+}
+
+/* Monospace metrics for tickers, numbers, code, and telemetry */
+code, pre, .font-mono, .mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM: APPROVED HEADLINE GRADIENT PATTERN
+   (Cyan #1da8ff → Turquoise #19d3d0 → Green #19d787)
+   ========================================================================== */
+
+.fef-headline-gradient,
+.text-gradient,
+.headline-gradient,
+.gradient-text,
+h1 span.gradient,
+h2 span.gradient,
+h3 span.gradient,
+h1 span[class*="bg-clip-text"],
+h2 span[class*="bg-clip-text"],
+h3 span[class*="bg-clip-text"] {
+  background-image: linear-gradient(to right, #1da8ff, #19d3d0, #19d787) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  display: inline-block;
+}
+
+/* ==========================================================================
+   GLOBAL DESIGN SYSTEM: PURE DARK-GLASS EFFECT (GLASSMORPHISM)
+   ========================================================================== */
+
+/* 1. Large Sections, Hero Panels, Bento Frames & Modals */
+.fef-glass-section,
+.glass-section,
+.fef-section-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 35%, rgba(6, 11, 22, 0.58) 100%) !important;
+  backdrop-filter: blur(28px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(140%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 0 30px 0 rgba(25, 211, 208, 0.03),
+    0 24px 60px -12px rgba(0, 0, 0, 0.75),
+    0 0 35px -10px rgba(29, 168, 255, 0.10) !important;
+  position: relative;
+}
+
+/* 2. Interactive Feature Cards, Product Cards & Grid Tiles */
+.fef-glass-card,
+.glass-card,
+.premium-card,
+.feature-box,
+.content-box {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 45%, rgba(6, 12, 24, 0.45) 100%) !important;
+  backdrop-filter: blur(20px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(130%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.16),
+    0 10px 30px -5px rgba(0, 0, 0, 0.45) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.fef-glass-card:hover,
+.glass-card:hover,
+.premium-card:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 45%, rgba(8, 16, 32, 0.55) 100%) !important;
+  border-color: rgba(25, 211, 208, 0.38) !important;
+  box-shadow: 
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.28),
+    0 16px 45px -5px rgba(0, 0, 0, 0.65),
+    0 0 30px rgba(25, 211, 208, 0.14) !important;
+  transform: translateY(-2px);
+}
+
+/* 3. Static Information Panels, Telemetry Boxes & Disclaimers */
+.fef-glass-card-static,
+.glass-panel,
+.panel-static {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 45%, rgba(6, 12, 24, 0.45) 100%) !important;
+  backdrop-filter: blur(20px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(130%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.16),
+    0 10px 30px -5px rgba(0, 0, 0, 0.45) !important;
+  position: relative;
+}
+
+/* 4. Dropdowns, Overlays & Popups */
+.fef-glass-dropdown,
+.dropdown-menu {
+  background: linear-gradient(180deg, rgba(12, 19, 36, 0.96) 0%, rgba(6, 11, 22, 0.98) 100%) !important;
+  backdrop-filter: blur(36px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(36px) saturate(180%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.28),
+    0 25px 60px -10px rgba(0, 0, 0, 0.95),
+    0 0 35px rgba(25, 211, 208, 0.14) !important;
+}
+
+.fef-glass-dropdown a {
+  color: #f1f5f9;
+}
+
+.fef-glass-dropdown a:hover {
+  background: rgba(255, 255, 255, 0.10) !important;
+  color: #ffffff !important;
+}
+
+
+/* 5. Modals & Dialogs */
+.fef-glass-modal,
+dialog,
+.modal-glass {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 40%, rgba(6, 11, 22, 0.88) 100%) !important;
+  backdrop-filter: blur(36px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(36px) saturate(150%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 
+    inset 0 1px 1.5px rgba(255, 255, 255, 0.3),
+    0 30px 80px rgba(0, 0, 0, 0.85),
+    0 0 40px rgba(29, 168, 255, 0.15) !important;
+}
+
+/* 6. Form Inputs, Textareas & Select Elements */
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+textarea,
+select,
+.fef-glass-input {
+  background: rgba(6, 12, 24, 0.50) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  border-radius: 0.75rem;
+  color: #f7fbff !important;
+  font-family: inherit;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35) !important;
+  transition: all 0.2s ease;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):focus,
+textarea:focus,
+select:focus,
+.fef-glass-input:focus {
+  border-color: rgba(25, 211, 208, 0.55) !important;
+  box-shadow: 
+    0 0 0 3px rgba(29, 168, 255, 0.22),
+    inset 0 1px 2px rgba(0, 0, 0, 0.35) !important;
+  outline: none !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(148, 163, 184, 0.65) !important;
+}
+
+/* 7. Tables & Grids */
+table,
+.fef-glass-table {
+  background: rgba(6, 12, 24, 0.38) !important;
+  backdrop-filter: blur(18px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 1rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+table th,
+.fef-glass-table th {
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  text-align: left;
+}
+
+table td,
+.fef-glass-table td {
+  padding: 0.875rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+}
+
+table tr:last-child td,
+.fef-glass-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* 8. Glass Buttons & Primary Actions */
+.fef-btn-primary {
+  background: linear-gradient(135deg, #1da8ff 0%, #19d3d0 48%, #19d787 100%) !important;
+  color: #05070d !important;
+  font-weight: 500 !important;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 0 30px rgba(29, 168, 255, 0.35) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.fef-btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.fef-btn-glass {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #f7fbff !important;
+  font-weight: 500 !important;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.fef-btn-glass:hover {
+  background: rgba(255, 255, 255, 0.10) !important;
+  border-color: rgba(25, 211, 208, 0.45) !important;
+  transform: translateY(-1px);
+}
+
+/* 9. Badges and Status Pills */
+.fef-glass-pill {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.015) 100%) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.18) !important;
+}
+
+/* ==========================================================================
+   LEGACY OVERRIDES: NEUTRALIZE SOLID BLACK BOXES ACROSS ANY EXISTING CODE
+   ========================================================================== */
+
+/* Prevent any solid black backgrounds from legacy Tailwind utilities */
+.bg-ink,
+[class*="bg-ink"] {
+  background-color: rgba(6, 12, 24, 0.55) !important;
+  backdrop-filter: blur(20px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(130%) !important;
+}
+
+.bg-panel,
+[class*="bg-panel"] {
+  background-color: rgba(7, 17, 31, 0.50) !important;
+  backdrop-filter: blur(20px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(130%) !important;
+}
+
+.border-line {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
