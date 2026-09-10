@@ -351,3 +351,39 @@ table tr:last-child td,
 .border-line {
   border-color: rgba(255, 255, 255, 0.12) !important;
 }
+
+/* ==========================================================================
+   SOLUTIONS SHOWCASE ANIMATIONS & REDUCED MOTION
+   ========================================================================== */
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeInSlide 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fadeIn,
+  .animate-pulse,
+  .animate-ping,
+  .animate-bounce {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
