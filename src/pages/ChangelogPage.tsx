@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, CheckCircle2, Cpu, Sliders, ExternalLink, ArrowRight } from 'lucide-react';
+import { Clock, CheckCircle2, ExternalLink, ArrowRight } from 'lucide-react';
 
 export const ChangelogPage: React.FC = () => {
   return (
@@ -35,7 +35,7 @@ export const ChangelogPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183557"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:underline"
             >
               <span>MQL5 Product #183557</span>
@@ -90,7 +90,7 @@ export const ChangelogPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183695"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:underline"
             >
               <span>MQL5 Product #183695</span>

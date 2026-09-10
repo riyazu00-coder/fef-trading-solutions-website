@@ -66,7 +66,7 @@ export const SupportPage: React.FC = () => {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/971526235916"
+            href="https://wa.me/971551230307"
             target="_blank"
             rel="noopener noreferrer"
             className="p-5 rounded-2xl fef-glass-card hover:border-emerald-400/50 transition-all flex flex-col justify-between group space-y-4 border-emerald-500/20"
@@ -84,7 +84,7 @@ export const SupportPage: React.FC = () => {
               <div className="text-base font-semibold text-white group-hover:text-emerald-300 transition-colors">
                 WhatsApp Direct
               </div>
-              <div className="text-xs text-slate-400 font-mono mt-0.5">+971 52 623 5916</div>
+              <div className="text-xs text-slate-400 font-mono mt-0.5">+971 55 123 0307</div>
               <p className="text-xs text-slate-300 mt-2 font-normal">
                 Instant chat & live technical support.
               </p>
@@ -130,7 +130,7 @@ export const SupportPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/users/feftradingsolutions"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
             >
               <span>Message on MQL5</span>
@@ -156,6 +156,48 @@ export const SupportPage: React.FC = () => {
             >
               <span>Open Support Ticket</span>
             </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Support FAQ Section */}
+      <div id="faq" className="relative rounded-[2.5rem] fef-glass-section p-8 sm:p-10 overflow-hidden">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+        <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400 font-mono">Knowledge Base</p>
+        <h2 className="mt-3 text-2xl sm:text-4xl font-semibold text-white">
+          Frequently Asked <span className="fef-headline-gradient">Support Questions</span>
+        </h2>
+        <p className="mt-3 text-sm sm:text-base text-slate-300 font-normal">
+          Key guidelines to ensure your questions are answered quickly and accurately.
+        </p>
+
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          <div className="p-6 rounded-2xl fef-glass-card">
+            <h4 className="text-base font-semibold text-white">How should I prepare a technical support request?</h4>
+            <p className="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+              Please include your MT5 terminal build version, broker name, symbol names with suffixes (e.g. XAUUSDm), a description of what occurred, and relevant log lines from the Experts and Journal tabs.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl fef-glass-card">
+            <h4 className="text-base font-semibold text-white">Will FEF support ever ask for my broker account password?</h4>
+            <p className="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+              Never. FEF representatives will never ask for your broker account passwords, investor passwords, private keys, or seed phrases. Never share credentials with anyone.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl fef-glass-card">
+            <h4 className="text-base font-semibold text-white">Where can I find step-by-step setup guides?</h4>
+            <p className="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+              We provide dedicated setup guides for both <a href="/documentation/trade-copier-setup" className="text-cyan-400 hover:underline">Trade Copier MT5</a> and <a href="/documentation/manual-trade-manager-setup" className="text-cyan-400 hover:underline">Manual Trade Manager Pro</a>.
+            </p>
+          </div>
+
+          <div className="p-6 rounded-2xl fef-glass-card">
+            <h4 className="text-base font-semibold text-white">How quickly does the engineering team respond?</h4>
+            <p className="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+              For urgent setup assistance, our Telegram channel (<a href="https://t.me/Feftrading" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">@Feftrading</a>) and WhatsApp (<a href="https://wa.me/971551230307" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">+971 55 123 0307</a>) operate 24/7 with immediate response times.
+            </p>
           </div>
         </div>
       </div>

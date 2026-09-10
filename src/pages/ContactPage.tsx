@@ -145,7 +145,7 @@ export const ContactPage: React.FC = () => {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/971526235916"
+                href="https://wa.me/971551230307"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-white/[0.04] border border-emerald-400/30 hover:border-emerald-400 hover:bg-emerald-500/10 transition-all flex items-center justify-between group"
@@ -161,7 +161,7 @@ export const ContactPage: React.FC = () => {
                     <div className="text-xs font-semibold text-white group-hover:text-emerald-300 transition-colors">
                       WhatsApp Direct
                     </div>
-                    <div className="text-[10px] text-slate-400 font-mono">+971 52 623 5916</div>
+                    <div className="text-[10px] text-slate-400 font-mono">+971 55 123 0307</div>
                   </div>
                 </div>
                 <ExternalLink className="h-3.5 w-3.5 text-emerald-400 group-hover:translate-x-0.5 transition-transform" />
@@ -197,7 +197,7 @@ export const ContactPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/users/feftradingsolutions"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:underline"
             >
               <span>Open MQL5 Profile</span>

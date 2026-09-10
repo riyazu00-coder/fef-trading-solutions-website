@@ -110,7 +110,7 @@ export const TradingAgentPage: React.FC = () => {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {[
             {
-              title: 'MT5 Live Quote Monitoring',
+              title: 'MT5 Quote Feed Monitoring',
               desc: 'Monitor validated broker quote snapshots through a dedicated, read-only relay architecture.',
             },
             {

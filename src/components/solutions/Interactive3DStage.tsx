@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { Eye, Sparkles, Maximize2 } from 'lucide-react';
+import React, { useState, useRef, useCallback } from 'react';
+import { Sparkles } from 'lucide-react';
 
 interface Interactive3DStageProps {
   imageSrc: string;

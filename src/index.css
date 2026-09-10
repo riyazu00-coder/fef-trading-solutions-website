@@ -58,13 +58,53 @@ header.sticky {
    GLOBAL DESIGN SYSTEM: TYPOGRAPHY & LETTER STYLING
    ========================================================================== */
 
-/* Universal semi-bold refined headings (600–650) */
+/* Universal semi-bold refined headings (600–650) with safe line-height to prevent descender clipping */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Plus Jakarta Sans', Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
   font-weight: 600 !important;
   letter-spacing: -0.02em;
+  line-height: 1.15;
   color: #ffffff;
+  overflow: visible;
+}
+
+/* Ensure heading line-height is within 1.08–1.15 range across all breakpoints, preventing Tailwind line-height: 1 clipping */
+h1, .h1 {
+  line-height: 1.15;
+}
+
+h2, .h2 {
+  line-height: 1.15;
+}
+
+h3, .h3 {
+  line-height: 1.2;
+}
+
+/* Headings with explicit responsive text sizes: enforce 1.12–1.15 line-height so .text-5xl/.text-6xl don't reset line-height to 1 */
+@media (min-width: 640px) {
+  h1.sm\:text-5xl, h1.sm\:text-6xl,
+  h2.sm\:text-4xl, h2.sm\:text-5xl,
+  .sm\:text-5xl, .sm\:text-6xl {
+    line-height: 1.15 !important;
+  }
+}
+
+@media (min-width: 768px) {
+  h1.md\:text-5xl,
+  h2.md\:text-4xl, h2.md\:text-5xl,
+  .md\:text-5xl {
+    line-height: 1.15 !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1.lg\:text-5xl, h1.lg\:text-6xl, h1.lg\:text-7xl,
+  h2.lg\:text-4xl, h2.lg\:text-5xl,
+  .lg\:text-5xl, .lg\:text-6xl, .lg\:text-7xl, .lg\:text-8xl {
+    line-height: 1.15 !important;
+  }
 }
 
 /* Neutralize harsh extra-bold weights across entire website to refined 600 */
@@ -91,23 +131,36 @@ code, pre, .font-mono, .mono {
 /* ==========================================================================
    GLOBAL DESIGN SYSTEM: APPROVED HEADLINE GRADIENT PATTERN
    (Cyan #1da8ff → Turquoise #19d3d0 → Green #19d787)
+   With descender clearance for lowercase g, j, p, q, y across all breakpoints
    ========================================================================== */
 
 .fef-headline-gradient,
 .text-gradient,
 .headline-gradient,
 .gradient-text,
+[class*="fef-headline-gradient"],
+span.fef-headline-gradient,
 h1 span.gradient,
 h2 span.gradient,
 h3 span.gradient,
+h4 span.gradient,
+h5 span.gradient,
+h6 span.gradient,
 h1 span[class*="bg-clip-text"],
 h2 span[class*="bg-clip-text"],
-h3 span[class*="bg-clip-text"] {
+h3 span[class*="bg-clip-text"],
+h4 span[class*="bg-clip-text"],
+h5 span[class*="bg-clip-text"],
+h6 span[class*="bg-clip-text"],
+span[class*="bg-clip-text"] {
   background-image: linear-gradient(to right, #1da8ff, #19d3d0, #19d787) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
   display: inline-block;
+  padding-bottom: 0.08em;
+  line-height: inherit;
+  overflow: visible !important;
 }
 
 /* ==========================================================================

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FileText, Shield, ArrowRight, AlertCircle } from 'lucide-react';
+import { FileText, ArrowRight, AlertCircle } from 'lucide-react';
 
 export const TermsOfUsePage: React.FC = () => {
   return (

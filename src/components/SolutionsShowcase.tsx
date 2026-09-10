@@ -7,8 +7,7 @@ import {
   TrendingUp, 
   ArrowRight, 
   CheckCircle2,
-  Layers,
-  ExternalLink
+  Layers
 } from 'lucide-react';
 
 import { AiSoftwareVisual } from './solutions/AiSoftwareVisual';

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sparkles, Check, ArrowRight, Activity, Zap, Terminal, Shield, Layers } from 'lucide-react';
+import { Sparkles, Check, ArrowRight, Activity, Zap } from 'lucide-react';
 
 interface FontOption {
   id: string;

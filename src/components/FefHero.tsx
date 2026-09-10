@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, BadgeCheck, ShieldCheck, Activity, Terminal } from 'lucide-react';
+import { ExternalLink, BadgeCheck, ShieldCheck, Activity } from 'lucide-react';
 
 export const FefHero: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ export const FefHero: React.FC = () => {
           </div>
 
           {/* Original FEF Headline */}
-          <h1 className="mt-8 text-balance text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.015em] leading-[1.05] text-white">
+          <h1 className="mt-8 text-balance text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.015em] leading-[1.15] text-white">
             FEF Professional{' '}
             <span className="bg-gradient-to-r from-electric via-cyan to-emerald bg-clip-text text-transparent">
               Trade Copier MT5

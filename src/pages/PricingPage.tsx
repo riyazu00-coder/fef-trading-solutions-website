@@ -45,9 +45,10 @@ export const PricingPage: React.FC = () => {
             <p className="mt-2 text-sm text-slate-300 font-normal">
               High-speed master/slave account copy synchronization across brokers with custom lot multiplier.
             </p>
-            <div className="mt-6 flex items-baseline gap-2">
-              <span className="text-4xl sm:text-5xl font-semibold text-white">From $30</span>
-              <span className="text-xs text-slate-400 font-normal">/ official MQL5 Market options</span>
+            <div className="mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+              <p className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">
+                Pricing and purchase options are available on the official MQL5 Market product page.
+              </p>
             </div>
 
             <ul className="mt-8 space-y-3 text-sm text-slate-300 font-medium">
@@ -78,7 +79,7 @@ export const PricingPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183557"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-[1.02] active:scale-95"
             >
               <span>Buy on MQL5 Market</span>
@@ -108,9 +109,10 @@ export const PricingPage: React.FC = () => {
             <p className="mt-2 text-sm text-slate-300 font-normal">
               Structured post-entry position management: automatic SL/TP, breakeven, trailing stops, and partial close.
             </p>
-            <div className="mt-6 flex items-baseline gap-2">
-              <span className="text-4xl sm:text-5xl font-semibold text-white">From $30</span>
-              <span className="text-xs text-slate-400 font-normal">/ official MQL5 Market options</span>
+            <div className="mt-6 p-4 rounded-xl bg-white/5 border border-white/10">
+              <p className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">
+                Pricing and purchase options are available on the official MQL5 Market product page.
+              </p>
             </div>
 
             <ul className="mt-8 space-y-3 text-sm text-slate-300 font-medium">
@@ -141,7 +143,7 @@ export const PricingPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183695"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition transform hover:scale-[1.02] active:scale-95"
             >
               <span>Buy on MQL5 Market</span>
@@ -231,12 +233,12 @@ export const PricingPage: React.FC = () => {
               <tr>
                 <td className="font-semibold text-white">Delivery</td>
                 <td>
-                  <a href="https://www.mql5.com/en/market/product/183557" target="_blank" rel="noreferrer" className="text-cyan-400 hover:underline">
+                  <a href="https://www.mql5.com/en/market/product/183557" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
                     MQL5 Market (183557)
                   </a>
                 </td>
                 <td>
-                  <a href="https://www.mql5.com/en/market/product/183695" target="_blank" rel="noreferrer" className="text-cyan-400 hover:underline">
+                  <a href="https://www.mql5.com/en/market/product/183695" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">
                     MQL5 Market (183695)
                   </a>
                 </td>

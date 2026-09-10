@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, ShieldAlert, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { AlertTriangle, ArrowRight } from 'lucide-react';
 
 export const RiskDisclaimerPage: React.FC = () => {
   return (

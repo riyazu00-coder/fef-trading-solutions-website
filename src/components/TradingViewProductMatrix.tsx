@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Layers, ArrowUpRight, Shield, Zap, Cpu, BarChart3, Sliders, Users, Key, Download, RefreshCw } from 'lucide-react';
 
-export interface ProductItem {
+interface ProductItem {
   id: string;
   name: string;
   tag: string;
@@ -11,7 +11,7 @@ export interface ProductItem {
   status: string;
 }
 
-export const products: ProductItem[] = [
+const products: ProductItem[] = [
   {
     id: 'trade-copier',
     name: 'Trade Copier MT5',
@@ -37,7 +37,7 @@ export const products: ProductItem[] = [
     category: 'trading',
     description: 'Specialized expert advisor tailored for XAUUSD market volatility with strict drawdown mitigation controls.',
     icon: <Zap className="h-5 w-5 text-amber-400" />,
-    status: 'Testing Phase',
+    status: 'Planned',
   },
   {
     id: 'risk-manager',
@@ -73,7 +73,7 @@ export const products: ProductItem[] = [
     category: 'core',
     description: 'Centralized web dashboard for license activations, product downloads, invoices, and direct support tickets.',
     icon: <Users className="h-5 w-5 text-cyan-400" />,
-    status: 'Live',
+    status: 'Planned',
   },
   {
     id: 'license-manager',
@@ -82,7 +82,7 @@ export const products: ProductItem[] = [
     category: 'core',
     description: 'Hardware-verified licensing mechanism ensuring verified execution across approved MetaTrader 5 terminals.',
     icon: <Key className="h-5 w-5 text-[#1da8ff]" />,
-    status: 'Active',
+    status: 'Planned',
   },
   {
     id: 'downloads-center',
@@ -91,7 +91,7 @@ export const products: ProductItem[] = [
     category: 'core',
     description: 'Direct repository for latest stable compiled EX5 binaries, user guides, and configuration presets.',
     icon: <Download className="h-5 w-5 text-emerald-400" />,
-    status: 'Active',
+    status: 'Available',
   },
   {
     id: 'update-manager',
@@ -100,7 +100,7 @@ export const products: ProductItem[] = [
     category: 'core',
     description: 'Automated update notification stream keeping your trading tools aligned with new MT5 platform builds.',
     icon: <RefreshCw className="h-5 w-5 text-purple-400" />,
-    status: 'Active',
+    status: 'Planned',
   },
 ];
 
@@ -186,7 +186,11 @@ export const TradingViewProductMatrix: React.FC = () => {
 
               <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs">
                 <span className="font-mono text-[11px] text-slate-500">Status:</span>
-                <span className="font-mono text-[11px] font-medium text-emerald-400">
+                <span className={`font-mono text-[11px] font-medium ${
+                  item.status === 'Released on MQL5' || item.status === 'Available'
+                    ? 'text-emerald-400'
+                    : 'text-amber-400'
+                }`}>
                   {item.status}
                 </span>
               </div>

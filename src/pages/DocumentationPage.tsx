@@ -7,7 +7,6 @@ import {
   Sliders,
   CheckCircle,
   CheckCircle2,
-  AlertTriangle,
   HelpCircle,
   Layers,
   Activity,
@@ -38,7 +37,7 @@ export const DocumentationPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183557"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
             >
               <span>Buy on MQL5</span>
@@ -379,7 +378,7 @@ export const DocumentationPage: React.FC = () => {
           <a
             href="https://www.mql5.com/en/market/product/183557"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
           >
             <span>Buy on MQL5</span>

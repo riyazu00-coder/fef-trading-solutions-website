@@ -45,10 +45,10 @@ export const FloatingSupportWidget: React.FC = () => {
 
           {/* 2. WhatsApp Button (Prominent Center Active Double Ring) */}
           <a
-            href="https://w.app/8qrptz"
+            href="https://wa.me/971551230307"
             target="_blank"
             rel="noopener noreferrer"
-            title="WhatsApp Direct Chat (Instant Response)"
+            title="WhatsApp Direct (+971 55 123 0307)"
             aria-label="WhatsApp Direct Support"
             className="h-11 w-11 sm:h-12 sm:w-12 rounded-full border-2 border-emerald-400 bg-emerald-500/20 hover:bg-emerald-500/35 text-emerald-300 flex items-center justify-center transition-all duration-300 shadow-[0_0_25px_rgba(25,215,135,0.45)] hover:shadow-[0_0_30px_rgba(25,215,135,0.65)] hover:scale-110 active:scale-95 ring-2 ring-emerald-400/40 ring-offset-2 ring-offset-[#060c18]"
           >
@@ -69,8 +69,8 @@ export const FloatingSupportWidget: React.FC = () => {
 
           {/* 3. Email Button */}
           <a
-            href="mailto:fefhvn@gmail.com"
-            title="Direct Email (fefhvn@gmail.com)"
+            href="mailto:sales@feftradingsolutions.com"
+            title="Official Email (sales@feftradingsolutions.com)"
             aria-label="Email Support"
             className="h-10 w-10 sm:h-11 sm:w-11 rounded-full border border-cyan-400/40 bg-cyan-500/10 hover:bg-cyan-500/25 hover:border-cyan-300 text-cyan-300 flex items-center justify-center transition-all duration-300 shadow-[0_0_15px_rgba(29,168,255,0.2)] hover:shadow-[0_0_20px_rgba(29,168,255,0.45)] hover:scale-110 active:scale-95"
           >

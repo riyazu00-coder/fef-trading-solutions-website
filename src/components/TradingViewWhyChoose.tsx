@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Cpu, LayoutDashboard, Lock, Headphones, GitBranch, CheckCircle, Award } from 'lucide-react';
+import { ShieldCheck, Cpu, LayoutDashboard, Lock, Headphones, GitBranch, Award } from 'lucide-react';
 
 export const TradingViewWhyChoose: React.FC = () => {
   const reasons = [

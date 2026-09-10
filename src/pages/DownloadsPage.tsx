@@ -3,11 +3,9 @@ import {
   Download,
   FileText,
   ExternalLink,
-  ShieldCheck,
   CheckCircle2,
   Cpu,
   Sliders,
-  Layers,
   ArrowRight,
   AlertTriangle,
 } from 'lucide-react';
@@ -81,7 +79,7 @@ export const DownloadsPage: React.FC = () => {
               href="/downloads/fef-trading-solutions-company-profile.pdf"
               download="fef-trading-solutions-company-profile.pdf"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-7 py-4 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
             >
               <Download className="h-4 w-4" />
@@ -123,7 +121,7 @@ export const DownloadsPage: React.FC = () => {
               <a
                 href="https://www.mql5.com/en/market/product/183557"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
               >
                 <span>Buy on MQL5</span>
@@ -164,7 +162,7 @@ export const DownloadsPage: React.FC = () => {
               <a
                 href="https://www.mql5.com/en/market/product/183695"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
               >
                 <span>Buy on MQL5</span>

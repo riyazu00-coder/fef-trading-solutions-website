@@ -3,9 +3,6 @@ import {
   ShieldCheck,
   Cpu,
   Globe,
-  Award,
-  Users,
-  CheckCircle,
   ArrowRight,
   Download,
   Mail,
@@ -35,7 +32,7 @@ export const AboutUsPage: React.FC = () => {
               href="/downloads/fef-trading-solutions-company-profile.pdf"
               download="fef-trading-solutions-company-profile.pdf"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
             >
               <Download className="h-4 w-4" />
@@ -156,7 +153,7 @@ export const AboutUsPage: React.FC = () => {
           <a
             href="https://t.me/Feftrading"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="p-5 rounded-2xl fef-glass-card flex items-center gap-3 group"
           >
             <Send className="h-5 w-5 text-cyan-400 group-hover:scale-110 transition" />
@@ -167,15 +164,15 @@ export const AboutUsPage: React.FC = () => {
           </a>
 
           <a
-            href="https://wa.me/971526235916"
+            href="https://wa.me/971551230307"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="p-5 rounded-2xl fef-glass-card flex items-center gap-3 group"
           >
             <MessageCircle className="h-5 w-5 text-emerald-400 group-hover:scale-110 transition" />
             <div>
               <p className="text-xs text-slate-400 font-mono">WhatsApp Support</p>
-              <p className="text-sm font-semibold text-white group-hover:text-emerald-300 transition">+971 52 623 5916</p>
+              <p className="text-sm font-semibold text-white group-hover:text-emerald-300 transition">+971 55 123 0307</p>
             </div>
           </a>
         </div>

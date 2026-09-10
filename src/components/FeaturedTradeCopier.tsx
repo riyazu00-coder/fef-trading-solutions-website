@@ -34,7 +34,7 @@ export const FeaturedTradeCopier: React.FC = () => {
             <a 
               href="https://www.mql5.com/en/market/product/183557" 
               target="_blank" 
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="focus-ring inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-[0_0_30px_rgba(29,168,255,0.4)] transition transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <span>Buy on MQL5</span>

@@ -136,7 +136,7 @@ export const TradingViewFaq: React.FC = () => {
           <a
             href="https://www.mql5.com/en/market/product/183557"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="focus-ring inline-flex items-center gap-2.5 px-8 py-4 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
           >
             <span>Buy on MQL5 Market</span>

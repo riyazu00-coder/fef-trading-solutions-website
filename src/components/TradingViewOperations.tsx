@@ -1,5 +1,5 @@
 import React from 'react';
-import { Server, ExternalLink, CheckCircle, Clock, Zap, ArrowRight } from 'lucide-react';
+import { Server, ExternalLink, CheckCircle, Clock, Zap } from 'lucide-react';
 
 export const TradingViewOperations: React.FC = () => {
   return (
@@ -27,7 +27,7 @@ export const TradingViewOperations: React.FC = () => {
           <a
             href="https://www.mql5.com/en/market/product/183557"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="focus-ring shrink-0 inline-flex items-center gap-2.5 px-7 py-4 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
           >
             <span>Open MQL5 Market</span>

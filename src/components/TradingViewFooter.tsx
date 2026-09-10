@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, ShieldCheck, ArrowRight } from 'lucide-react';
+import { ExternalLink, ShieldCheck } from 'lucide-react';
 
 export const TradingViewFooter: React.FC = () => {
   return (
@@ -86,44 +86,39 @@ export const TradingViewFooter: React.FC = () => {
             <p className="font-mono text-xs font-medium uppercase tracking-wider text-white">Official Market</p>
             <ul className="space-y-2 text-xs text-slate-400">
               <li>
-                <a href="https://www.mql5.com/en/market/product/183557" target="_blank" rel="noreferrer" className="hover:text-white transition flex items-center gap-1">
+                <a href="https://www.mql5.com/en/market/product/183557" target="_blank" rel="noopener noreferrer" className="hover:text-white transition flex items-center gap-1">
                   <span>Trade Copier on MQL5</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
               <li>
-                <a href="https://www.mql5.com/en/market/product/183695" target="_blank" rel="noreferrer" className="hover:text-white transition flex items-center gap-1">
+                <a href="https://www.mql5.com/en/market/product/183695" target="_blank" rel="noopener noreferrer" className="hover:text-white transition flex items-center gap-1">
                   <span>Manual Manager on MQL5</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
               <li>
-                <a href="https://www.mql5.com/en/users/feftradingsolutions" target="_blank" rel="noreferrer" className="hover:text-white transition flex items-center gap-1">
+                <a href="https://www.mql5.com/en/users/feftradingsolutions" target="_blank" rel="noopener noreferrer" className="hover:text-white transition flex items-center gap-1">
                   <span>MQL5 Profile</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
               <li><a href="/support" className="hover:text-white transition">Support Center</a></li>
               <li>
-                <a href="https://t.me/Feftrading" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition flex items-center gap-1 text-cyan-300">
+                <a href="https://t.me/Feftrading" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition flex items-center gap-1 text-cyan-300">
                   <span>Telegram (@Feftrading)</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/971526235916" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition flex items-center gap-1 text-emerald-300">
-                  <span>WhatsApp (+971 52 623 5916)</span>
+                <a href="https://wa.me/971551230307" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition flex items-center gap-1 text-emerald-300">
+                  <span>WhatsApp (+971 55 123 0307)</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
               <li>
                 <a href="mailto:sales@feftradingsolutions.com" className="hover:text-cyan-400 transition">
                   <span>sales@feftradingsolutions.com</span>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:fefhvn@gmail.com" className="hover:text-slate-400 transition text-[11px]">
-                  <span>fefhvn@gmail.com</span>
                 </a>
               </li>
             </ul>

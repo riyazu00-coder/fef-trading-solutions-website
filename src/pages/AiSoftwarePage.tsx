@@ -1,5 +1,5 @@
 import React from "react";
-import { Bot, BrainCircuit, Globe, Terminal, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import { Bot, BrainCircuit, Globe, Terminal, CheckCircle2, Sparkles } from "lucide-react";
 
 export const AiSoftwarePage: React.FC = () => {
   return (
@@ -45,7 +45,7 @@ export const AiSoftwarePage: React.FC = () => {
           </ul>
         </div>
 
-        <div className="p-8 rounded-[2.5rem] fef-glass-card group">
+        <div id="web" className="p-8 rounded-[2.5rem] fef-glass-card group">
           <div className="p-3.5 rounded-2xl bg-emerald-400/10 border border-emerald-400/20 text-emerald-400 w-fit">
             <Globe className="h-6 w-6" />
           </div>
@@ -69,7 +69,7 @@ export const AiSoftwarePage: React.FC = () => {
           </ul>
         </div>
 
-        <div className="p-8 rounded-[2.5rem] fef-glass-card group">
+        <div id="custom-apps" className="p-8 rounded-[2.5rem] fef-glass-card group">
           <div className="p-3.5 rounded-2xl bg-blue-400/10 border border-blue-400/20 text-[#1da8ff] w-fit">
             <Terminal className="h-6 w-6" />
           </div>
@@ -89,7 +89,7 @@ export const AiSoftwarePage: React.FC = () => {
           </ul>
         </div>
 
-        <div className="p-8 rounded-[2.5rem] fef-glass-card group">
+        <div id="automation" className="p-8 rounded-[2.5rem] fef-glass-card group">
           <div className="p-3.5 rounded-2xl bg-purple-400/10 border border-purple-400/20 text-purple-400 w-fit">
             <Bot className="h-6 w-6" />
           </div>

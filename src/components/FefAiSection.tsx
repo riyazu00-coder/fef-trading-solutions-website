@@ -64,7 +64,8 @@ export const FefAiSection: React.FC = () => {
               </a>
 
               <a 
-                href="#" 
+                href="/downloads/fef-trading-solutions-company-profile.pdf"
+                download
                 className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-lg text-sm font-medium text-steel transition hover:text-white"
               >
                 <Download className="h-4 w-4" />
