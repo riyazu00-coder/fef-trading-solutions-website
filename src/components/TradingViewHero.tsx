@@ -102,17 +102,18 @@ export const TradingViewHero: React.FC = () => {
           <span>AI • SOFTWARE • DIGITAL INNOVATION</span>
         </div>
 
-        {/* Main Headline (Refined Semi-Bold 600-650, slightly reduced size for premium elegance) */}
-        <h1 className="mt-7 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.02em] text-white leading-[1.1]">
-          WE BUILD{' '}
-          <span className="block sm:inline bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(29,168,255,0.25)]">
+        {/* Main Headline (Clean 2-line layout) */}
+        <h1 className="mt-7 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.02em] text-white leading-[1.18]">
+          <span className="block">WE BUILD</span>
+          <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(29,168,255,0.25)]">
             INTELLIGENT DIGITAL SOLUTIONS
           </span>
         </h1>
 
-        {/* Supporting Description */}
+        {/* Supporting Description (Clean 2-line layout) */}
         <p className="mt-6 text-base sm:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
-          AI-powered software, cinematic websites, custom applications, business automation, and professional trading technology—all built under one innovative ecosystem.
+          <span className="block">AI-powered software, cinematic websites, custom applications, business automation,</span>
+          <span className="block sm:mt-1">and professional trading technology—all built under one innovative ecosystem.</span>
         </p>
 
         {/* Action Buttons */}

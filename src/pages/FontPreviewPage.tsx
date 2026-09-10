@@ -190,16 +190,17 @@ export const FontPreviewPage: React.FC = () => {
           </div>
 
           {/* Main Headline */}
-          <h2 className={`text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.1] ${selectedFont.headlineStyle}`}>
-            WE BUILD <br />
-            <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
+          <h2 className={`text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.18] ${selectedFont.headlineStyle}`}>
+            <span className="block">WE BUILD</span>
+            <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
               INTELLIGENT DIGITAL SOLUTIONS
             </span>
           </h2>
 
           {/* Supporting Text */}
           <p className="text-base sm:text-xl text-slate-300 leading-relaxed font-normal max-w-3xl mx-auto">
-            AI-powered software, cinematic websites, custom applications, business automation, and professional trading technology—all built under one innovative ecosystem.
+            <span className="block">AI-powered software, cinematic websites, custom applications, business automation,</span>
+            <span className="block sm:mt-1">and professional trading technology—all built under one innovative ecosystem.</span>
           </p>
 
           {/* Action Buttons */}
