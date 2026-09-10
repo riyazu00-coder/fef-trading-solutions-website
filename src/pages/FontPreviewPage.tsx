@@ -190,17 +190,21 @@ export const FontPreviewPage: React.FC = () => {
           </div>
 
           {/* Main Headline */}
-          <h2 className={`text-3xl sm:text-5xl lg:text-6xl text-white leading-[1.18] ${selectedFont.headlineStyle}`}>
+          <h2 className={`text-2xl sm:text-4xl md:text-5xl lg:text-[2.85rem] text-white leading-[1.18] uppercase ${selectedFont.headlineStyle}`}>
             <span className="block">WE BUILD</span>
-            <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
+            <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent md:whitespace-nowrap">
               INTELLIGENT DIGITAL SOLUTIONS
             </span>
           </h2>
 
           {/* Supporting Text */}
-          <p className="text-base sm:text-xl text-slate-300 leading-relaxed font-normal max-w-3xl mx-auto">
-            <span className="block">AI-powered software, cinematic websites, custom applications, business automation,</span>
-            <span className="block sm:mt-1">and professional trading technology—all built under one innovative ecosystem.</span>
+          <p className="text-xs sm:text-sm md:text-[15px] lg:text-base text-slate-300/90 leading-relaxed font-normal uppercase tracking-wider max-w-4xl mx-auto">
+            <span className="block md:whitespace-nowrap">
+              AI-POWERED SOFTWARE, CINEMATIC WEBSITES, CUSTOM APPLICATIONS, BUSINESS AUTOMATION,
+            </span>
+            <span className="block mt-1 sm:mt-1.5 md:whitespace-nowrap text-slate-400">
+              AND PROFESSIONAL TRADING TECHNOLOGY—ALL BUILT UNDER ONE INNOVATIVE ECOSYSTEM.
+            </span>
           </p>
 
           {/* Action Buttons */}

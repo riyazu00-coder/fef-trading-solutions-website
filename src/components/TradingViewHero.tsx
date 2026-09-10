@@ -94,7 +94,7 @@ export const TradingViewHero: React.FC = () => {
       </div>
 
       {/* Main Hero Header Stack */}
-      <div className="text-center max-w-4xl mx-auto">
+      <div className="text-center max-w-5xl mx-auto">
         
         {/* Small Badge above Headline */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 backdrop-blur-xl text-cyan-300 text-xs sm:text-sm font-semibold tracking-wider uppercase shadow-[0_0_20px_rgba(25,211,208,0.2)]">
@@ -102,18 +102,22 @@ export const TradingViewHero: React.FC = () => {
           <span>AI • SOFTWARE • DIGITAL INNOVATION</span>
         </div>
 
-        {/* Main Headline (Clean 2-line layout) */}
-        <h1 className="mt-7 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.02em] text-white leading-[1.18]">
+        {/* Main Headline (Strict 2-line layout in Capital Letters) */}
+        <h1 className="mt-7 text-2xl sm:text-4xl md:text-5xl lg:text-[2.85rem] xl:text-[3.25rem] font-semibold tracking-[-0.02em] uppercase text-white leading-[1.18]">
           <span className="block">WE BUILD</span>
-          <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(29,168,255,0.25)]">
+          <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(29,168,255,0.25)] md:whitespace-nowrap">
             INTELLIGENT DIGITAL SOLUTIONS
           </span>
         </h1>
 
-        {/* Supporting Description (Clean 2-line layout) */}
-        <p className="mt-6 text-base sm:text-xl text-slate-300 max-w-3xl mx-auto font-normal leading-relaxed">
-          <span className="block">AI-powered software, cinematic websites, custom applications, business automation,</span>
-          <span className="block sm:mt-1">and professional trading technology—all built under one innovative ecosystem.</span>
+        {/* Supporting Description (Strict 2-line layout in Capital Letters) */}
+        <p className="mt-6 text-xs sm:text-sm md:text-[15px] lg:text-base text-slate-300/90 max-w-4xl mx-auto font-normal uppercase tracking-wider leading-relaxed">
+          <span className="block md:whitespace-nowrap">
+            AI-POWERED SOFTWARE, CINEMATIC WEBSITES, CUSTOM APPLICATIONS, BUSINESS AUTOMATION,
+          </span>
+          <span className="block mt-1 sm:mt-1.5 md:whitespace-nowrap text-slate-400">
+            AND PROFESSIONAL TRADING TECHNOLOGY—ALL BUILT UNDER ONE INNOVATIVE ECOSYSTEM.
+          </span>
         </p>
 
         {/* Action Buttons */}
