@@ -66,7 +66,7 @@ export const SupportPage: React.FC = () => {
 
           {/* WhatsApp */}
           <a
-            href="https://w.app/8qrptz"
+            href="https://wa.me/971526235916"
             target="_blank"
             rel="noopener noreferrer"
             className="p-5 rounded-2xl fef-glass-card hover:border-emerald-400/50 transition-all flex flex-col justify-between group space-y-4 border-emerald-500/20"
@@ -84,7 +84,7 @@ export const SupportPage: React.FC = () => {
               <div className="text-base font-semibold text-white group-hover:text-emerald-300 transition-colors">
                 WhatsApp Direct
               </div>
-              <div className="text-xs text-slate-400 font-mono mt-0.5">w.app/8qrptz</div>
+              <div className="text-xs text-slate-400 font-mono mt-0.5">+971 52 623 5916</div>
               <p className="text-xs text-slate-300 mt-2 font-normal">
                 Instant chat & live technical support.
               </p>
@@ -93,7 +93,7 @@ export const SupportPage: React.FC = () => {
 
           {/* Email */}
           <a
-            href="mailto:fefhvn@gmail.com"
+            href="mailto:sales@feftradingsolutions.com"
             className="p-5 rounded-2xl fef-glass-card hover:border-cyan-400/50 transition-all flex flex-col justify-between group space-y-4"
           >
             <div className="flex items-center justify-between">
@@ -106,9 +106,9 @@ export const SupportPage: React.FC = () => {
               <div className="text-base font-semibold text-white group-hover:text-cyan-300 transition-colors">
                 Official Email
               </div>
-              <div className="text-xs text-slate-400 font-mono mt-0.5">fefhvn@gmail.com</div>
+              <div className="text-xs text-slate-400 font-mono mt-0.5">sales@feftradingsolutions.com</div>
               <p className="text-xs text-slate-300 mt-2 font-normal">
-                Inquiries, contracts, and enterprise inquiries.
+                Priority email dispatch & technical responses.
               </p>
             </div>
           </a>

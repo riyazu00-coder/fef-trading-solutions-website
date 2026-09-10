@@ -170,8 +170,10 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
               <div className="absolute left-0 top-full pt-2 w-64 z-50 animate-in fade-in slide-in-from-top-1 duration-150">
                 <div className="rounded-2xl fef-glass-dropdown p-2.5 shadow-2xl space-y-1">
                   <a href="/documentation" className="block rounded-xl px-3.5 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-cyan-300 transition">Documentation</a>
+                  <a href="/documentation/trade-copier-setup" className="block rounded-xl px-3.5 py-2 text-xs text-slate-300 hover:bg-white/10 hover:text-cyan-300 transition">↳ Trade Copier Setup Guide</a>
+                  <a href="/documentation/manual-trade-manager-setup" className="block rounded-xl px-3.5 py-2 text-xs text-slate-300 hover:bg-white/10 hover:text-cyan-300 transition">↳ Manual Manager Setup Guide</a>
                   <a href="/downloads" className="block rounded-xl px-3.5 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-cyan-300 transition">Downloads</a>
-                  <a href="/downloads/fef-trading-solutions-company-profile.pdf" download className="block rounded-xl px-3.5 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-cyan-300 transition">Company Profile</a>
+                  <a href="/downloads/fef-trading-solutions-company-profile.pdf" download className="block rounded-xl px-3.5 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-cyan-300 transition">Company Profile (PDF)</a>
                   <a href="/changelog" className="block rounded-xl px-3.5 py-2.5 text-sm font-medium text-white hover:bg-white/10 hover:text-cyan-300 transition">Changelog</a>
                 </div>
               </div>

@@ -92,6 +92,12 @@ export const TradingViewFooter: React.FC = () => {
                 </a>
               </li>
               <li>
+                <a href="https://www.mql5.com/en/market/product/183695" target="_blank" rel="noreferrer" className="hover:text-white transition flex items-center gap-1">
+                  <span>Manual Manager on MQL5</span>
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </li>
+              <li>
                 <a href="https://www.mql5.com/en/users/feftradingsolutions" target="_blank" rel="noreferrer" className="hover:text-white transition flex items-center gap-1">
                   <span>MQL5 Profile</span>
                   <ExternalLink className="h-3 w-3" />
@@ -105,13 +111,18 @@ export const TradingViewFooter: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="https://w.app/8qrptz" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition flex items-center gap-1 text-emerald-300">
-                  <span>WhatsApp Chat</span>
+                <a href="https://wa.me/971526235916" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition flex items-center gap-1 text-emerald-300">
+                  <span>WhatsApp (+971 52 623 5916)</span>
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
               <li>
-                <a href="mailto:fefhvn@gmail.com" className="hover:text-cyan-400 transition">
+                <a href="mailto:sales@feftradingsolutions.com" className="hover:text-cyan-400 transition">
+                  <span>sales@feftradingsolutions.com</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:fefhvn@gmail.com" className="hover:text-slate-400 transition text-[11px]">
                   <span>fefhvn@gmail.com</span>
                 </a>
               </li>
@@ -126,6 +137,9 @@ export const TradingViewFooter: React.FC = () => {
               <li><a href="/ai-software-development" className="hover:text-white transition">AI Software Development</a></li>
               <li><a href="/support" className="hover:text-white transition">Support Center</a></li>
               <li><a href="/contact" className="hover:text-white transition">Contact</a></li>
+              <li><a href="/risk-disclaimer" className="hover:text-amber-400 transition">Risk Disclaimer</a></li>
+              <li><a href="/privacy-policy" className="hover:text-white transition">Privacy Policy</a></li>
+              <li><a href="/terms-of-use" className="hover:text-white transition">Terms of Use</a></li>
             </ul>
           </div>
 
@@ -141,7 +155,10 @@ export const TradingViewFooter: React.FC = () => {
             <p>
               © {new Date().getFullYear()} FEF Trading Solutions. All rights reserved. MetaTrader 5 and MT5 are registered trademarks of MetaQuotes Software Corp.
             </p>
-            <div className="flex gap-4">
+            <div className="flex flex-wrap gap-4">
+              <a href="/privacy-policy" className="hover:text-white transition">Privacy Policy</a>
+              <a href="/terms-of-use" className="hover:text-white transition">Terms of Use</a>
+              <a href="/risk-disclaimer" className="hover:text-amber-400 transition">Risk Disclaimer</a>
               <a href="/documentation" className="hover:text-white transition">Documentation</a>
               <a href="/support" className="hover:text-white transition">Support</a>
               <a href="/downloads" className="hover:text-white transition">Downloads</a>

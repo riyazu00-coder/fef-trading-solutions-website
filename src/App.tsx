@@ -22,11 +22,16 @@ import { TradingAgentPage } from './pages/TradingAgentPage';
 import { ProductsPage } from './pages/ProductsPage';
 import { PricingPage } from './pages/PricingPage';
 import { DocumentationPage } from './pages/DocumentationPage';
+import { TradeCopierSetupPage } from './pages/TradeCopierSetupPage';
+import { ManualTradeManagerSetupPage } from './pages/ManualTradeManagerSetupPage';
 import { DownloadsPage } from './pages/DownloadsPage';
 import { ChangelogPage } from './pages/ChangelogPage';
 import { SupportPage } from './pages/SupportPage';
 import { ContactPage } from './pages/ContactPage';
 import { LegalPage } from './pages/LegalPage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { TermsOfUsePage } from './pages/TermsOfUsePage';
+import { RiskDisclaimerPage } from './pages/RiskDisclaimerPage';
 import { FontPreviewPage } from './pages/FontPreviewPage';
 
 export function App() {
@@ -79,6 +84,10 @@ export function App() {
         return <PricingPage />;
       case '/documentation':
         return <DocumentationPage />;
+      case '/documentation/trade-copier-setup':
+        return <TradeCopierSetupPage />;
+      case '/documentation/manual-trade-manager-setup':
+        return <ManualTradeManagerSetupPage />;
       case '/downloads':
         return <DownloadsPage />;
       case '/changelog':
@@ -87,9 +96,16 @@ export function App() {
         return <SupportPage />;
       case '/contact':
         return <ContactPage />;
-      case '/legal':
-      case '/terms':
+      case '/privacy-policy':
       case '/privacy':
+        return <PrivacyPolicyPage />;
+      case '/terms-of-use':
+      case '/terms':
+        return <TermsOfUsePage />;
+      case '/risk-disclaimer':
+      case '/risk':
+        return <RiskDisclaimerPage />;
+      case '/legal':
         return <LegalPage />;
       case '/font-preview':
         return <FontPreviewPage />;
@@ -115,7 +131,7 @@ export function App() {
       {/* 1. Official TradingView Space Mission 3D Movable Aurora Background */}
       <TradingViewAurora3D />
 
-      {/* 2. Unified FEF Website (100% Content & Copywriting Preserved) */}
+      {/* 2. Unified FEF Website */}
       <div className="relative z-10 flex flex-col min-h-screen">
         <TradingViewNavbar currentPath={currentPath} />
         {renderPage()}

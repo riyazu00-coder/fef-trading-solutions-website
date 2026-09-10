@@ -145,7 +145,7 @@ export const ContactPage: React.FC = () => {
 
               {/* WhatsApp */}
               <a
-                href="https://w.app/8qrptz"
+                href="https://wa.me/971526235916"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-white/[0.04] border border-emerald-400/30 hover:border-emerald-400 hover:bg-emerald-500/10 transition-all flex items-center justify-between group"
@@ -161,15 +161,15 @@ export const ContactPage: React.FC = () => {
                     <div className="text-xs font-semibold text-white group-hover:text-emerald-300 transition-colors">
                       WhatsApp Direct
                     </div>
-                    <div className="text-[10px] text-slate-400 font-mono">w.app/8qrptz</div>
+                    <div className="text-[10px] text-slate-400 font-mono">+971 52 623 5916</div>
                   </div>
                 </div>
                 <ExternalLink className="h-3.5 w-3.5 text-emerald-400 group-hover:translate-x-0.5 transition-transform" />
               </a>
 
-              {/* Email */}
+              {/* Official Sales Email */}
               <a
-                href="mailto:fefhvn@gmail.com"
+                href="mailto:sales@feftradingsolutions.com"
                 className="p-3 rounded-xl bg-white/[0.04] border border-cyan-400/30 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center justify-between group"
               >
                 <div className="flex items-center gap-3">
@@ -180,7 +180,7 @@ export const ContactPage: React.FC = () => {
                     <div className="text-xs font-semibold text-white group-hover:text-cyan-300 transition-colors">
                       Official Email
                     </div>
-                    <div className="text-[10px] text-slate-400 font-mono">fefhvn@gmail.com</div>
+                    <div className="text-[10px] text-slate-400 font-mono">sales@feftradingsolutions.com</div>
                   </div>
                 </div>
                 <ExternalLink className="h-3.5 w-3.5 text-cyan-400 group-hover:translate-x-0.5 transition-transform" />

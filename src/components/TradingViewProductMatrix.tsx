@@ -24,11 +24,11 @@ export const products: ProductItem[] = [
   {
     id: 'manual-trade-manager',
     name: 'Manual Trade Manager PRO',
-    tag: 'Active Development',
+    tag: 'Official Market',
     category: 'trading',
     description: 'Advanced on-chart trade execution panel with automatic risk sizing, multi-target take-profit, and trailing stop rules.',
     icon: <Sliders className="h-5 w-5 text-cyan-400" />,
-    status: 'In Development',
+    status: 'Released on MQL5',
   },
   {
     id: 'gold-master',
