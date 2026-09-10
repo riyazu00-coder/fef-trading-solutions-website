@@ -1,28 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Activity, Radio, TrendingUp, TrendingDown } from 'lucide-react';
-import { 
-  MarketQuote, 
-  WatchlistItem, 
-  initialQuotes, 
-  initialWatchlist, 
+import {
+  MarketQuote,
+  WatchlistItem,
+  initialQuotes,
+  initialWatchlist,
+  fetchLiveMarketData
 } from '../services/marketData';
 
 export const TradingViewMarketPulse: React.FC = () => {
-  const [quotes] = useState<MarketQuote[]>(initialQuotes);
-  const [watchlist] = useState<WatchlistItem[]>(initialWatchlist);
+  const [quotes, setQuotes] = useState<MarketQuote[]>(initialQuotes);
+  const [watchlist, setWatchlist] = useState<WatchlistItem[]>(initialWatchlist);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadLiveData = async () => {
+      try {
+        const data = await fetchLiveMarketData();
+        if (isMounted) {
+          setQuotes(data.quotes);
+          setWatchlist(data.watchlist);
+        }
+      } catch (err) {
+        console.warn('Market pulse feed update notice:', err);
+      }
+    };
+
+    // Immediate initial sync
+    loadLiveData();
+
+    // Auto-refresh interval every 60 seconds for continuous reference updates
+    const interval = setInterval(loadLiveData, 60000);
+
+    return () => {
+      isMounted = false;
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
       <div className="relative rounded-[2.5rem] fef-glass-section p-6 sm:p-10 lg:p-12 overflow-hidden">
         {/* Specular Edge Highlight */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
-        
+
         {/* Header */}
         <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-8 items-start">
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 text-xs font-medium uppercase tracking-[0.2em]">
               <Activity className="h-3.5 w-3.5" />
-              Market Preview
+              Market reference feed
             </div>
 
             <h2 className="mt-5 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-white">
@@ -33,13 +61,13 @@ export const TradingViewMarketPulse: React.FC = () => {
             </h2>
 
             <p className="mt-4 text-base sm:text-lg font-normal text-slate-300 max-w-2xl leading-relaxed">
-              A professional preview of major markets for traders who monitor momentum, volatility and risk mood.
+              A professional snapshot of major markets for traders who monitor momentum, volatility and risk mood.
             </p>
 
             {/* 6 Market Quote Cards in Responsive Grid */}
             <div className="mt-8 grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
               {quotes.map((q) => (
-                <div 
+                <div
                   key={q.symbol}
                   className="p-4 rounded-2xl fef-glass-card group transition duration-300"
                 >
@@ -48,9 +76,12 @@ export const TradingViewMarketPulse: React.FC = () => {
                       <p className="font-mono text-base font-semibold text-white group-hover:text-cyan-400 transition">{q.symbol}</p>
                       <p className="text-xs font-normal text-slate-400 mt-0.5">{q.name}</p>
                     </div>
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium text-slate-400 bg-white/5 border border-white/10">
-                      <span className="h-1.5 w-1.5 rounded-full bg-slate-400"></span>
-                      Preview
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/30">
+                      <span className="relative flex h-1.5 w-1.5">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
+                      </span>
+                      Reference
                     </span>
                   </div>
 
@@ -81,8 +112,8 @@ export const TradingViewMarketPulse: React.FC = () => {
               ))}
             </div>
 
-            <p className="mt-6 p-3.5 rounded-xl fef-glass-card-static text-xs font-normal text-slate-300 leading-relaxed">
-              Informational display only. Values may be delayed or simulated and do not represent executable broker prices. This is not financial advice.
+            <p className="mt-6 p-3.5 rounded-xl fef-glass-card-static text-xs font-normal text-slate-400">
+              Public reference market data. Values may be delayed, approximate, or replaced by fallback data when a provider is unavailable. These are not executable broker prices or financial advice.
             </p>
           </div>
 
@@ -99,7 +130,7 @@ export const TradingViewMarketPulse: React.FC = () => {
                     </span>
                   </h3>
                 </div>
-                <Radio className="h-5 w-5 text-emerald-400" />
+                <Radio className="h-5 w-5 text-emerald-400 animate-pulse" />
               </div>
 
               <div className="mt-5 space-y-3">
@@ -133,7 +164,7 @@ export const TradingViewMarketPulse: React.FC = () => {
         {/* Informational Disclaimer */}
         <div className="mt-8 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400">
           <p>
-            Informational display only. Values may be delayed or simulated and do not represent executable broker prices. This is not financial advice.
+            Public reference prices only. Values may be delayed or approximate and can differ from MT5 broker quotes. Not financial or trading advice.
           </p>
           <a href="/risk-disclaimer" className="text-cyan-400 hover:underline shrink-0">
             Read Risk Disclaimer

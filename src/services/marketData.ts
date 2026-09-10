@@ -27,8 +27,8 @@ export interface WatchlistItem {
 // Initial baseline fallback data matching design specifications exactly
 export const initialQuotes: MarketQuote[] = [
   {
-    symbol: 'XAUUSD',
-    name: 'Gold',
+    symbol: 'GOLD/USD',
+    name: 'Gold Reference',
     price: '4,418.65',
     change: '+0.51%',
     isPositive: true,
@@ -51,7 +51,7 @@ export const initialQuotes: MarketQuote[] = [
     points: '0,30 18,28 34,24 52,25 70,19 88,18 106,12 124,14 140,8',
   },
   {
-    symbol: 'BTCUSD',
+    symbol: 'BTC/USDT',
     name: 'Bitcoin',
     price: '78,810.01',
     change: '+0.25%',
@@ -78,7 +78,7 @@ export const initialQuotes: MarketQuote[] = [
 
 export const initialWatchlist: WatchlistItem[] = [
   {
-    name: 'Gold',
+    name: 'Gold Reference',
     status: 'Watching Breakout',
     tag: 'Medium Risk',
     tagColor: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/10',
@@ -335,8 +335,8 @@ export async function fetchLiveMarketData(): Promise<{
   const updatedQuotes: MarketQuote[] = [
     // 1. XAUUSD (Gold)
     {
-      symbol: 'XAUUSD',
-      name: 'Gold',
+      symbol: 'GOLD/USD',
+      name: 'Gold Reference',
       price: cryptoAndGold.gold ? formatNumberWithCommas(cryptoAndGold.gold.price, 2) : '4,418.65',
       change: `${(cryptoAndGold.gold?.changePercent ?? 0.51) >= 0 ? '+' : ''}${(cryptoAndGold.gold?.changePercent ?? 0.51).toFixed(2)}%`,
       isPositive: (cryptoAndGold.gold?.changePercent ?? 0.51) >= 0,
@@ -368,7 +368,7 @@ export async function fetchLiveMarketData(): Promise<{
     },
     // 4. BTCUSD (Bitcoin)
     {
-      symbol: 'BTCUSD',
+      symbol: 'BTC/USDT',
       name: 'Bitcoin',
       price: cryptoAndGold.btc ? formatNumberWithCommas(cryptoAndGold.btc.price, 2) : '78,810.01',
       change: `${(cryptoAndGold.btc?.changePercent ?? 0.25) >= 0 ? '+' : ''}${(cryptoAndGold.btc?.changePercent ?? 0.25).toFixed(2)}%`,
@@ -411,7 +411,7 @@ export async function fetchLiveMarketData(): Promise<{
 
   const updatedWatchlist: WatchlistItem[] = [
     {
-      name: 'Gold',
+      name: 'Gold Reference',
       status: 'Watching Breakout',
       tag: 'Medium Risk',
       tagColor: 'text-emerald-400 border-emerald-500/30 bg-emerald-500/10',
