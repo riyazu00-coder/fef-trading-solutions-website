@@ -11,6 +11,7 @@ import { TradingViewWhyChoose } from './components/TradingViewWhyChoose';
 import { TradingViewOperations } from './components/TradingViewOperations';
 import { TradingViewFaq } from './components/TradingViewFaq';
 import { TradingViewFooter } from './components/TradingViewFooter';
+import { FloatingSupportWidget } from './components/FloatingSupportWidget';
 
 // Subpages
 import { AboutUsPage } from './pages/AboutUsPage';
@@ -120,6 +121,9 @@ export function App() {
         {renderPage()}
         <TradingViewFooter />
       </div>
+
+      {/* 3. Floating 24/7 Support Widget (On Every Page) */}
+      <FloatingSupportWidget />
     </div>
   );
 }

@@ -97,7 +97,24 @@ export const TradingViewFooter: React.FC = () => {
                   <ExternalLink className="h-3 w-3" />
                 </a>
               </li>
-              <li><a href="/support" className="hover:text-white transition">Direct Support</a></li>
+              <li><a href="/support" className="hover:text-white transition">Support Center</a></li>
+              <li>
+                <a href="https://t.me/Feftrading" target="_blank" rel="noreferrer" className="hover:text-cyan-400 transition flex items-center gap-1 text-cyan-300">
+                  <span>Telegram (@Feftrading)</span>
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </li>
+              <li>
+                <a href="https://w.app/8qrptz" target="_blank" rel="noreferrer" className="hover:text-emerald-400 transition flex items-center gap-1 text-emerald-300">
+                  <span>WhatsApp Chat</span>
+                  <ExternalLink className="h-3 w-3" />
+                </a>
+              </li>
+              <li>
+                <a href="mailto:fefhvn@gmail.com" className="hover:text-cyan-400 transition">
+                  <span>fefhvn@gmail.com</span>
+                </a>
+              </li>
             </ul>
           </div>
 

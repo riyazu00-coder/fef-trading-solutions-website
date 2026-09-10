@@ -102,6 +102,93 @@ export const ContactPage: React.FC = () => {
         </div>
 
         <div className="lg:col-span-4 space-y-6">
+          
+          {/* 24/7 Direct Fast Channels Card */}
+          <div className="p-8 rounded-[2.5rem] fef-glass-card space-y-5 border border-emerald-500/30 shadow-[0_0_30px_rgba(25,215,135,0.12)] relative overflow-hidden">
+            <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent" />
+            
+            <div className="flex items-center justify-between">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold font-mono tracking-wider text-emerald-400 bg-emerald-500/15 border border-emerald-500/40">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping" />
+                24/7 SUPPORT
+              </span>
+              <span className="text-[11px] text-slate-400 font-mono">Fast Response</span>
+            </div>
+
+            <h3 className="text-xl font-semibold text-white">Instant Direct Channels</h3>
+            <p className="text-xs text-slate-300 font-normal leading-relaxed">
+              Connect with our dedicated engineering & trading support team directly on your preferred channel.
+            </p>
+
+            <div className="space-y-2.5 pt-2">
+              
+              {/* Telegram */}
+              <a
+                href="https://t.me/Feftrading"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-xl bg-white/[0.04] border border-cyan-400/30 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center justify-between group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                    <Send className="h-4 w-4 -translate-x-0.5 translate-y-0.5" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                      Telegram Channel
+                    </div>
+                    <div className="text-[10px] text-slate-400 font-mono">@Feftrading</div>
+                  </div>
+                </div>
+                <ExternalLink className="h-3.5 w-3.5 text-cyan-400 group-hover:translate-x-0.5 transition-transform" />
+              </a>
+
+              {/* WhatsApp */}
+              <a
+                href="https://w.app/8qrptz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-xl bg-white/[0.04] border border-emerald-400/30 hover:border-emerald-400 hover:bg-emerald-500/10 transition-all flex items-center justify-between group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4">
+                      <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                      <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-.5-.5H9a2 2 0 0 0-2 2v.5a5.5 5.5 0 0 0 5.5 5.5h.5a2 2 0 0 0 2-2v-.5a.5.5 0 0 0-.5-.5h-.5a.5.5 0 0 0 0 1" strokeWidth="1.6" />
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="text-xs font-semibold text-white group-hover:text-emerald-300 transition-colors">
+                      WhatsApp Direct
+                    </div>
+                    <div className="text-[10px] text-slate-400 font-mono">w.app/8qrptz</div>
+                  </div>
+                </div>
+                <ExternalLink className="h-3.5 w-3.5 text-emerald-400 group-hover:translate-x-0.5 transition-transform" />
+              </a>
+
+              {/* Email */}
+              <a
+                href="mailto:fefhvn@gmail.com"
+                className="p-3 rounded-xl bg-white/[0.04] border border-cyan-400/30 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center justify-between group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="h-8 w-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                    <Mail className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                      Official Email
+                    </div>
+                    <div className="text-[10px] text-slate-400 font-mono">fefhvn@gmail.com</div>
+                  </div>
+                </div>
+                <ExternalLink className="h-3.5 w-3.5 text-cyan-400 group-hover:translate-x-0.5 transition-transform" />
+              </a>
+
+            </div>
+          </div>
+
           <div className="p-8 rounded-[2.5rem] fef-glass-card space-y-4">
             <h3 className="text-lg font-semibold text-white">Direct MQL5 Channel</h3>
             <p className="text-xs text-slate-300 font-normal leading-relaxed">
@@ -124,7 +211,7 @@ export const ContactPage: React.FC = () => {
               https://www.feftradingsolutions.com
             </p>
             <p className="text-xs text-slate-400 font-normal">
-              Operating hours: Monday – Friday, GMT hours.
+              Operating hours: 24/7 Support via Telegram & WhatsApp.
             </p>
           </div>
         </div>
