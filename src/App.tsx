@@ -26,6 +26,7 @@ import { ChangelogPage } from './pages/ChangelogPage';
 import { SupportPage } from './pages/SupportPage';
 import { ContactPage } from './pages/ContactPage';
 import { LegalPage } from './pages/LegalPage';
+import { FontPreviewPage } from './pages/FontPreviewPage';
 
 export function App() {
   const [currentPath, setCurrentPath] = useState(() => window.location.pathname);
@@ -89,6 +90,8 @@ export function App() {
       case '/terms':
       case '/privacy':
         return <LegalPage />;
+      case '/font-preview':
+        return <FontPreviewPage />;
       default:
         return (
           <main className="flex-1 space-y-6 sm:space-y-10">
