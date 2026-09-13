@@ -58,6 +58,16 @@ export const TradingViewAiBento: React.FC = () => {
 
             {/* Action Buttons */}
             <div className="mt-8 flex flex-wrap items-center gap-3.5">
+              <a
+                href="https://app.feftradingsolutions.com/cockpit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-ring inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+              >
+                <span>OPEN AI TRADING PLATFORM →</span>
+                <ExternalLink className="h-4 w-4" />
+              </a>
+
               <a 
                 href="/ai-software-development" 
                 className="focus-ring inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
