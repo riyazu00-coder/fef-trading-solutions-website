@@ -90,8 +90,7 @@ export const RiskDisclaimerPage: React.FC = () => {
               </p>
             </div>
             <a
-              href="/documentation"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition shrink-0"
+              href="/documentation" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition shrink-0"
             >
               <span>Read Documentation</span>
               <ArrowRight className="h-4 w-4" />

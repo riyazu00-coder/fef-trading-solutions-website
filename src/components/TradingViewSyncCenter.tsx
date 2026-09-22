@@ -47,9 +47,9 @@ export const TradingViewSyncCenter: React.FC = () => {
           </div>
           <h2 className="mt-5 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-white">
             How FEF{' '}
-            <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
-              Trade Copier Works
-            </span>
+              <span className="fef-headline-gradient">
+                Trade Copier Works
+              </span>
           </h2>
           <p className="mt-4 text-base sm:text-lg font-normal text-slate-300 leading-relaxed">
             Trades from the master account are automatically synchronized to connected slave accounts while preserving the execution workflow traders expect inside MetaTrader 5.
@@ -120,8 +120,8 @@ export const TradingViewSyncCenter: React.FC = () => {
         {/* 4 Architectural Highlights */}
         <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-10 border-t border-white/10">
           <div className="p-4 rounded-xl fef-glass-card-static">
-            <h3 className="text-sm font-semibold text-white">Low Latency Synchronization</h3>
-            <p className="mt-1.5 text-xs font-normal text-slate-400">Engineered for immediate execution with minimal millisecond overhead.</p>
+            <h3 className="text-sm font-semibold text-white">Local Synchronization</h3>
+            <p className="mt-1.5 text-xs font-normal text-slate-400">Uses a local synchronization workflow between connected MetaTrader 5 terminals.</p>
           </div>
           <div className="p-4 rounded-xl fef-glass-card-static">
             <h3 className="text-sm font-semibold text-white">Multi-Broker Compatible</h3>
@@ -129,7 +129,7 @@ export const TradingViewSyncCenter: React.FC = () => {
           </div>
           <div className="p-4 rounded-xl fef-glass-card-static">
             <h3 className="text-sm font-semibold text-white">Secure Trade Replication</h3>
-            <p className="mt-1.5 text-xs font-normal text-slate-400">Maintains exact stop-loss, take-profit, and volume proportions automatically.</p>
+            <p className="mt-1.5 text-xs font-normal text-slate-400">Replicates configured stop-loss, take-profit, and volume settings according to the selected copier rules.</p>
           </div>
           <div className="p-4 rounded-xl fef-glass-card-static">
             <h3 className="text-sm font-semibold text-white">Automatic Position Updates</h3>
@@ -151,7 +151,7 @@ export const TradingViewSyncCenter: React.FC = () => {
             </div>
             <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-[-0.015em] text-white">
               Watch a master trade{' '}
-              <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
+              <span className="fef-headline-gradient">
                 sync across accounts
               </span>
             </h2>

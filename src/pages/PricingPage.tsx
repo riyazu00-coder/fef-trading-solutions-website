@@ -24,7 +24,7 @@ export const PricingPage: React.FC = () => {
             Transparent Pricing & <span className="fef-headline-gradient">Official MQL5 Access</span>
           </h1>
           <p className="mt-5 text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
-            Public FEF trading tools are delivered exclusively through the official MQL5 Market with automated licensing, instant encrypted delivery, and demo testing compatibility.
+            Public FEF trading tools are delivered through the official MQL5 Market with licensing, installation guidance, and demo testing compatibility.
           </p>
         </div>
       </div>
@@ -58,7 +58,7 @@ export const PricingPage: React.FC = () => {
               </li>
               <li className="flex items-center gap-2.5">
                 <Check className="h-4 w-4 text-emerald-400 shrink-0" />
-                <span>Sub-millisecond local IPC copy engine</span>
+                <span>Local IPC copy engine for terminal synchronization</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Check className="h-4 w-4 text-emerald-400 shrink-0" />
@@ -79,8 +79,7 @@ export const PricingPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183557"
               target="_blank"
-              rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-[1.02] active:scale-95"
+              rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-[1.02] active:scale-95"
             >
               <span>Buy on MQL5 Market</span>
               <ExternalLink className="h-4 w-4" />
@@ -143,8 +142,7 @@ export const PricingPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183695"
               target="_blank"
-              rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition transform hover:scale-[1.02] active:scale-95"
+              rel="noopener noreferrer" className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition transform hover:scale-[1.02] active:scale-95"
             >
               <span>Buy on MQL5 Market</span>
               <ExternalLink className="h-4 w-4" />
@@ -175,7 +173,7 @@ export const PricingPage: React.FC = () => {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {[
             { step: '01', title: 'Choose Product', desc: 'Select Trade Copier or Manual Trade Manager.' },
-            { step: '02', title: 'Open MQL5', desc: 'Visit the official verified MQL5 Market page.' },
+            { step: '02', title: 'Open MQL5', desc: 'Visit the official MQL5 Market page.' },
             { step: '03', title: 'Complete Order', desc: 'Securely check out via official MQL5 system.' },
             { step: '04', title: 'Install in MT5', desc: 'Download via MT5 Navigator > Market > Purchased.' },
             { step: '05', title: 'Documentation', desc: 'Follow FEF setup guide for parameter checks.' },

@@ -78,18 +78,18 @@ const products: ProductItem[] = [
   {
     id: 'license-manager',
     name: 'License Manager',
-    tag: 'Instant Verification',
+    tag: 'MQL5 Licensing',
     category: 'core',
-    description: 'Hardware-verified licensing mechanism ensuring verified execution across approved MetaTrader 5 terminals.',
+    description: 'License distribution and product activation managed through the official MetaTrader ecosystem.',
     icon: <Key className="h-5 w-5 text-[#1da8ff]" />,
     status: 'Planned',
   },
   {
     id: 'downloads-center',
     name: 'Downloads Center',
-    tag: 'Verified Builds',
+    tag: 'Release Registry',
     category: 'core',
-    description: 'Direct repository for latest stable compiled EX5 binaries, user guides, and configuration presets.',
+    description: 'Repository for current product releases, user guides, and configuration presets distributed through official channels.',
     icon: <Download className="h-5 w-5 text-emerald-400" />,
     status: 'Available',
   },
@@ -124,7 +124,7 @@ export const TradingViewProductMatrix: React.FC = () => {
             </div>
             <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-white">
               One Platform.{' '}
-              <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
+              <span className="fef-headline-gradient">
                 Multiple Professional Trading Solutions.
               </span>
             </h2>

@@ -174,8 +174,7 @@ export const AiSoftwarePage: React.FC = () => {
 
       {/* CAPABILITIES */}
       <section
-        id="capabilities"
-        className="mx-auto max-w-7xl scroll-mt-28 px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+        id="capabilities" className="mx-auto max-w-7xl scroll-mt-28 px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
       >
         <div className="mx-auto max-w-3xl text-center">
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-cyan-400">

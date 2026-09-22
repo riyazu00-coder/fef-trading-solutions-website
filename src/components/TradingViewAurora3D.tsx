@@ -52,12 +52,13 @@ export const TradingViewAurora3D: React.FC = () => {
       >
         <video
           ref={videoRef}
-          className="w-full h-full object-cover object-center filter brightness-90 contrast-105"
+          className="w-full h-full object-cover object-center filter brightness-90"
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
+          style={{ mixBlendMode: 'screen' }}
         >
           {/* Official TradingView Space Mission Aurora Video Sources */}
           <source

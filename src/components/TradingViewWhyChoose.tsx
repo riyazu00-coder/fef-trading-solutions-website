@@ -15,12 +15,12 @@ export const TradingViewWhyChoose: React.FC = () => {
     },
     {
       title: 'Professional Dashboard Experience',
-      desc: 'Clear visual controls, live latency tracking, and intuitive monitoring rendered directly on your MetaTrader 5 charts.',
+      desc: 'Clear visual controls, synchronization status, and intuitive monitoring rendered directly on your MetaTrader 5 charts.',
       icon: <LayoutDashboard className="h-6 w-6 text-[#19d787]" />,
     },
     {
       title: 'Secure MQL5 Market Delivery',
-      desc: 'Instant automated terminal installation, verified platform safety checks, and official MQL5 license activation.',
+      desc: 'MQL5 Market delivery with platform installation and license activation through the MetaTrader ecosystem.',
       icon: <Lock className="h-6 w-6 text-emerald-400" />,
     },
     {
@@ -30,7 +30,7 @@ export const TradingViewWhyChoose: React.FC = () => {
     },
     {
       title: 'Continuous Software Roadmap',
-      desc: 'Regular updates, performance optimizations, and guaranteed compatibility patches for every new MT5 terminal release.',
+      desc: 'The product roadmap includes maintenance, performance improvements, and compatibility updates as MetaTrader 5 evolves.',
       icon: <ShieldCheck className="h-6 w-6 text-[#1da8ff]" />,
     },
   ];
@@ -50,7 +50,7 @@ export const TradingViewWhyChoose: React.FC = () => {
           </div>
           <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-white">
             Why Professional Traders{' '}
-            <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
+            <span className="fef-headline-gradient">
               Choose FEF
             </span>
           </h2>
@@ -81,16 +81,16 @@ export const TradingViewWhyChoose: React.FC = () => {
         {/* Section 10 Trust Strip: Practical Credibility */}
         <div className="mt-12 pt-8 border-t border-white/10 grid sm:grid-cols-3 gap-6 text-center">
           <div className="p-4 rounded-xl fef-glass-card-static">
-            <h4 className="font-mono text-lg sm:text-xl font-semibold text-white">MQL5 Verified</h4>
-            <p className="text-xs font-normal text-slate-400 mt-1">Official marketplace release with digital cryptographic validation.</p>
+            <h4 className="font-mono text-lg sm:text-xl font-semibold text-white">MQL5 Market</h4>
+            <p className="text-xs font-normal text-slate-400 mt-1">Product distribution through the MQL5 Market.</p>
           </div>
           <div className="p-4 rounded-xl fef-glass-card-static">
             <h4 className="font-mono text-lg sm:text-xl font-semibold text-emerald-400">Demo-First Ready</h4>
-            <p className="text-xs font-normal text-slate-400 mt-1">Evaluate latency, symbol mapping, and accuracy on demo risk-free.</p>
+            <p className="text-xs font-normal text-slate-400 mt-1">Evaluate synchronization behavior, symbol mapping, and configured workflows on a demo account before live use.</p>
           </div>
           <div className="p-4 rounded-xl fef-glass-card-static">
-            <h4 className="font-mono text-lg sm:text-xl font-semibold text-cyan-400">24/7 Operations</h4>
-            <p className="text-xs font-normal text-slate-400 mt-1">Dedicated architecture ensuring continuous server synchronization.</p>
+            <h4 className="font-mono text-lg sm:text-xl font-semibold text-cyan-400">Continuous Workflow</h4>
+            <p className="text-xs font-normal text-slate-400 mt-1">Designed for ongoing synchronization while the required terminals and trading environment remain available.</p>
           </div>
         </div>
       </div>

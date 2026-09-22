@@ -24,7 +24,7 @@ export const TradingViewAiBento: React.FC = () => {
 
             <h2 className="mt-5 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-white leading-tight">
               From idea to{' '}
-              <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
+              <span className="fef-headline-gradient">
                 AI-backed software product
               </span>
             </h2>
@@ -61,24 +61,21 @@ export const TradingViewAiBento: React.FC = () => {
               <a
                 href="https://app.feftradingsolutions.com/cockpit"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="focus-ring inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+                rel="noopener noreferrer" className="focus-ring inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
               >
                 <span>OPEN AI TRADING PLATFORM →</span>
                 <ExternalLink className="h-4 w-4" />
               </a>
 
               <a 
-                href="/ai-software-development" 
-                className="focus-ring inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+                href="/ai-software-development" className="focus-ring inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
               >
                 <span>Explore AI Software Development</span>
                 <ExternalLink className="h-4 w-4" />
               </a>
 
               <a 
-                href="/contact" 
-                className="focus-ring inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition"
+                href="/contact" className="focus-ring inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition"
               >
                 <span>Contact FEF</span>
               </a>
@@ -100,8 +97,7 @@ export const TradingViewAiBento: React.FC = () => {
             <div className="rounded-[2rem] fef-glass-card-static p-2.5 overflow-hidden group">
               <img 
                 src="/images/ai-software-development-hero.png" 
-                alt="AI software development services by FEF Trading Solutions" 
-                className="w-full h-auto rounded-[1.5rem] border border-white/10 object-cover group-hover:scale-[1.01] transition-transform duration-500"
+                alt="AI software development services by FEF Trading Solutions" className="w-full h-auto rounded-[1.5rem] border border-white/10 object-cover group-hover:scale-[1.01] transition-transform duration-500"
               />
             </div>
 
@@ -111,8 +107,7 @@ export const TradingViewAiBento: React.FC = () => {
                 <div className="shrink-0 p-3 bg-white rounded-2xl border border-emerald-500/30 shadow-[0_0_20px_rgba(25,215,135,0.2)]">
                   <img 
                     src="/images/site-qr.png" 
-                    alt="QR code for the official FEF Trading Solutions website" 
-                    className="w-28 h-28 sm:w-32 sm:h-32 object-contain"
+                    alt="QR code for the official FEF Trading Solutions website" className="w-28 h-28 sm:w-32 sm:h-32 object-contain"
                   />
                 </div>
 

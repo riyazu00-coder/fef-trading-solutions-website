@@ -131,16 +131,14 @@ export const AiWebDevelopmentPage: React.FC = () => {
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
-                href="/contact"
-                className="fef-btn-primary inline-flex items-center justify-center gap-2"
+                href="/contact" className="fef-btn-primary inline-flex items-center justify-center gap-2"
               >
                 Discuss Your Website
                 <ArrowRight className="h-4 w-4" />
               </a>
 
               <a
-                href="#web-capabilities"
-                className="fef-btn-glass inline-flex items-center justify-center gap-2"
+                href="#web-capabilities" className="fef-btn-glass inline-flex items-center justify-center gap-2"
               >
                 Explore Capabilities
               </a>
@@ -211,8 +209,7 @@ export const AiWebDevelopmentPage: React.FC = () => {
       </section>
 
       <section
-        id="web-capabilities"
-        className="ai-web-capabilities relative px-5 py-16 sm:px-8 lg:px-10 lg:py-24"
+        id="web-capabilities" className="ai-web-capabilities relative px-5 py-16 sm:px-8 lg:px-10 lg:py-24"
       >
         <div className="mx-auto max-w-7xl">
 
@@ -376,8 +373,7 @@ export const AiWebDevelopmentPage: React.FC = () => {
           </p>
 
           <a
-            href="/contact"
-            className="fef-btn-primary mt-8 inline-flex items-center justify-center gap-2"
+            href="/contact" className="fef-btn-primary mt-8 inline-flex items-center justify-center gap-2"
           >
             Start a Project Discussion
             <ArrowRight className="h-4 w-4" />

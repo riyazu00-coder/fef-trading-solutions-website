@@ -48,8 +48,7 @@ export const ContactPage: React.FC = () => {
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Alexander Vance"
-                    className="w-full px-4 py-3 fef-glass-input text-sm"
+                    placeholder="e.g. Alexander Vance" className="w-full px-4 py-3 fef-glass-input text-sm"
                   />
                 </div>
                 <div>
@@ -59,8 +58,7 @@ export const ContactPage: React.FC = () => {
                   <input
                     type="email"
                     required
-                    placeholder="alexander@domain.com"
-                    className="w-full px-4 py-3 fef-glass-input text-sm"
+                    placeholder="alexander@domain.com" className="w-full px-4 py-3 fef-glass-input text-sm"
                   />
                 </div>
               </div>
@@ -85,14 +83,12 @@ export const ContactPage: React.FC = () => {
                 <textarea
                   rows={4}
                   required
-                  placeholder="Tell us about your project requirements, timeline, or support question..."
-                  className="w-full px-4 py-3 fef-glass-input text-sm resize-none"
+                  placeholder="Tell us about your project requirements, timeline, or support question..." className="w-full px-4 py-3 fef-glass-input text-sm resize-none"
                 />
               </div>
 
               <button
-                type="submit"
-                className="fef-btn-primary px-8 py-4 text-base w-full sm:w-auto cursor-pointer"
+                type="submit" className="fef-btn-primary px-8 py-4 text-base w-full sm:w-auto cursor-pointer"
               >
                 <span>Send Message</span>
                 <Send className="h-4 w-4" />
@@ -103,19 +99,19 @@ export const ContactPage: React.FC = () => {
 
         <div className="lg:col-span-4 space-y-6">
           
-          {/* 24/7 Direct Fast Channels Card */}
+          {/* Direct Support Channels Card */}
           <div className="p-8 rounded-[2.5rem] fef-glass-card space-y-5 border border-emerald-500/30 shadow-[0_0_30px_rgba(25,215,135,0.12)] relative overflow-hidden">
             <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent" />
             
             <div className="flex items-center justify-between">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold font-mono tracking-wider text-emerald-400 bg-emerald-500/15 border border-emerald-500/40">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping" />
-                24/7 SUPPORT
+                SUPPORT CHANNELS
               </span>
-              <span className="text-[11px] text-slate-400 font-mono">Fast Response</span>
+              <span className="text-[11px] text-slate-400 font-mono">Direct Contact</span>
             </div>
 
-            <h3 className="text-xl font-semibold text-white">Instant Direct Channels</h3>
+            <h3 className="text-xl font-semibold text-white">Direct Support Channels</h3>
             <p className="text-xs text-slate-300 font-normal leading-relaxed">
               Connect with our dedicated engineering & trading support team directly on your preferred channel.
             </p>
@@ -126,8 +122,7 @@ export const ContactPage: React.FC = () => {
               <a
                 href="https://t.me/Feftrading"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-xl bg-white/[0.04] border border-cyan-400/30 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center justify-between group"
+                rel="noopener noreferrer" className="p-3 rounded-xl bg-white/[0.04] border border-cyan-400/30 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center justify-between group"
               >
                 <div className="flex items-center gap-3">
                   <div className="h-8 w-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
@@ -147,8 +142,7 @@ export const ContactPage: React.FC = () => {
               <a
                 href="https://wa.me/971551230307"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 rounded-xl bg-white/[0.04] border border-emerald-400/30 hover:border-emerald-400 hover:bg-emerald-500/10 transition-all flex items-center justify-between group"
+                rel="noopener noreferrer" className="p-3 rounded-xl bg-white/[0.04] border border-emerald-400/30 hover:border-emerald-400 hover:bg-emerald-500/10 transition-all flex items-center justify-between group"
               >
                 <div className="flex items-center gap-3">
                   <div className="h-8 w-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
@@ -169,8 +163,7 @@ export const ContactPage: React.FC = () => {
 
               {/* Official Sales Email */}
               <a
-                href="mailto:sales@feftradingsolutions.com"
-                className="p-3 rounded-xl bg-white/[0.04] border border-cyan-400/30 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center justify-between group"
+                href="mailto:sales@feftradingsolutions.com" className="p-3 rounded-xl bg-white/[0.04] border border-cyan-400/30 hover:border-cyan-400 hover:bg-cyan-500/10 transition-all flex items-center justify-between group"
               >
                 <div className="flex items-center gap-3">
                   <div className="h-8 w-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
@@ -192,13 +185,12 @@ export const ContactPage: React.FC = () => {
           <div className="p-8 rounded-[2.5rem] fef-glass-card space-y-4">
             <h3 className="text-lg font-semibold text-white">Direct MQL5 Channel</h3>
             <p className="text-xs text-slate-300 font-normal leading-relaxed">
-              For verified product buyers, message us directly through the MQL5 Market profile.
+              For product license holders and buyers, message us directly through the MQL5 Market profile.
             </p>
             <a
               href="https://www.mql5.com/en/users/feftradingsolutions"
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:underline"
+              rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:underline"
             >
               <span>Open MQL5 Profile</span>
               <ExternalLink className="h-3.5 w-3.5" />
@@ -211,7 +203,7 @@ export const ContactPage: React.FC = () => {
               https://www.feftradingsolutions.com
             </p>
             <p className="text-xs text-slate-400 font-normal">
-              Operating hours: 24/7 Support via Telegram & WhatsApp.
+              Support channels: Telegram and WhatsApp.
             </p>
           </div>
         </div>

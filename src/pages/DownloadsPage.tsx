@@ -29,15 +29,13 @@ export const DownloadsPage: React.FC = () => {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="/products"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+              href="/products" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
             >
               <span>View Products</span>
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="/documentation"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
+              href="/documentation" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
             >
               <span>View Documentation</span>
               <ArrowRight className="h-4 w-4" />
@@ -79,8 +77,7 @@ export const DownloadsPage: React.FC = () => {
               href="/downloads/fef-trading-solutions-company-profile.pdf"
               download="fef-trading-solutions-company-profile.pdf"
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-7 py-4 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
+              rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-7 py-4 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
             >
               <Download className="h-4 w-4" />
               <span>Download Company Profile (PDF)</span>
@@ -114,28 +111,25 @@ export const DownloadsPage: React.FC = () => {
                 FEF Professional Trade Copier MT5
               </h3>
               <p className="mt-3 text-sm text-slate-300 leading-relaxed font-normal">
-                Professional master/slave trade copier for MetaTrader 5 account synchronization with ultra-low local IPC latency and cross-broker symbol translation.
+                Professional master/slave trade copier for MetaTrader 5 account synchronization with local IPC communication and cross-broker symbol translation.
               </p>
             </div>
             <div className="mt-8 pt-4 border-t border-white/10 flex flex-wrap items-center gap-3">
               <a
                 href="https://www.mql5.com/en/market/product/183557"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+                rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
               >
                 <span>Buy on MQL5</span>
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
               <a
-                href="/trade-copier"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 transition"
+                href="/trade-copier" className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 transition"
               >
                 <span>Product Page</span>
               </a>
               <a
-                href="/documentation/trade-copier-setup"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-cyan-400 hover:underline transition"
+                href="/documentation/trade-copier-setup" className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-cyan-400 hover:underline transition"
               >
                 <span>Setup Guide</span>
               </a>
@@ -162,21 +156,18 @@ export const DownloadsPage: React.FC = () => {
               <a
                 href="https://www.mql5.com/en/market/product/183695"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+                rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
               >
                 <span>Buy on MQL5</span>
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
               <a
-                href="/manual-trade-manager"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 transition"
+                href="/manual-trade-manager" className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 transition"
               >
                 <span>Product Page</span>
               </a>
               <a
-                href="/documentation/manual-trade-manager-setup"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-cyan-400 hover:underline transition"
+                href="/documentation/manual-trade-manager-setup" className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-cyan-400 hover:underline transition"
               >
                 <span>Setup Guide</span>
               </a>

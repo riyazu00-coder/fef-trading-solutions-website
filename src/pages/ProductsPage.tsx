@@ -27,15 +27,13 @@ export const ProductsPage: React.FC = () => {
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="/downloads"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+              href="/downloads" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
             >
               <span>Visit Downloads</span>
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="/pricing"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
+              href="/pricing" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
             >
               <span>View Pricing</span>
             </a>
@@ -77,7 +75,7 @@ export const ProductsPage: React.FC = () => {
                 FEF Professional Trade Copier MT5
               </h3>
               <p className="mt-2 text-sm text-slate-300 font-normal leading-relaxed">
-                Professional master/slave trade copier for MetaTrader 5 account synchronization with ultra-low latency IPC replication.
+                Professional master/slave trade copier for MetaTrader 5 account synchronization using a local IPC-based replication workflow.
               </p>
 
               <div className="mt-6 space-y-2 text-xs sm:text-sm text-slate-200">
@@ -104,21 +102,18 @@ export const ProductsPage: React.FC = () => {
               <a
                 href="https://www.mql5.com/en/market/product/183557"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+                rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
               >
                 <span>Buy on MQL5</span>
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
               <a
-                href="/trade-copier"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 transition"
+                href="/trade-copier" className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 transition"
               >
                 <span>View Product</span>
               </a>
               <a
-                href="/documentation/trade-copier-setup"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-cyan-400 hover:underline transition"
+                href="/documentation/trade-copier-setup" className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-cyan-400 hover:underline transition"
               >
                 <span>Documentation</span>
               </a>
@@ -165,21 +160,18 @@ export const ProductsPage: React.FC = () => {
               <a
                 href="https://www.mql5.com/en/market/product/183695"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+                rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
               >
                 <span>Buy on MQL5</span>
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
               <a
-                href="/manual-trade-manager"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 transition"
+                href="/manual-trade-manager" className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 transition"
               >
                 <span>View Product</span>
               </a>
               <a
-                href="/documentation/manual-trade-manager-setup"
-                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-cyan-400 hover:underline transition"
+                href="/documentation/manual-trade-manager-setup" className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-medium text-cyan-400 hover:underline transition"
               >
                 <span>Documentation</span>
               </a>
@@ -187,6 +179,115 @@ export const ProductsPage: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* FEF Trading App Platform */}
+      <section className="products-trading-app relative overflow-hidden rounded-[2.5rem] border border-emerald-400/15 bg-[#060b11]/90 p-6 sm:p-8 lg:p-10">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_75%_20%,rgba(16,185,129,0.10),transparent_38%),radial-gradient(circle_at_15%_80%,rgba(34,211,238,0.06),transparent_34%)]" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-300/50 to-transparent" />
+
+        <div className="relative z-10 grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/25 bg-emerald-400/[0.07] px-3.5 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.16em] text-emerald-300">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-50" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              </span>
+              Live Platform
+            </div>
+
+            <p className="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-cyan-300">
+              FEF Trading App
+            </p>
+
+            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-white sm:text-4xl">
+              Trading intelligence in a
+              <span className="fef-headline-gradient"> dedicated workspace.</span>
+            </h2>
+
+            <p className="mt-5 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
+              Access the FEF Trading App through its dedicated cockpit interface
+              for the monitoring and intelligence side of the FEF trading
+              technology ecosystem.
+            </p>
+
+            <div className="mt-7 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-xl border border-white/10 bg-white/[0.035] p-4">
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+                  Platform
+                </p>
+                <p className="mt-1 text-sm font-semibold text-white">
+                  FEF Trading App
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-white/10 bg-white/[0.035] p-4">
+                <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-slate-500">
+                  Access
+                </p>
+                <p className="mt-1 text-sm font-semibold text-emerald-300">
+                  Web Cockpit
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="https://app.feftradingsolutions.com/cockpit"
+                target="_blank"
+                rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-brand-gradient px-5 py-3 text-sm font-semibold text-[#05070d] shadow-glow transition hover:brightness-110"
+              >
+                <span>Open Trading App</span>
+                <ExternalLink className="h-4 w-4" />
+              </a>
+
+              <a
+                href="/trading-technology" className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:border-emerald-400/30 hover:bg-white/10"
+              >
+                <span>Trading Technology</span>
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+
+          <a
+            href="https://app.feftradingsolutions.com/cockpit"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open FEF Trading App" className="products-trading-app-screen group relative block overflow-hidden rounded-[1.35rem] border border-emerald-400/20 bg-[#05080d] shadow-[0_35px_80px_rgba(0,0,0,0.45),0_0_55px_rgba(16,185,129,0.07)]"
+          >
+            <div className="flex h-11 items-center justify-between border-b border-white/[0.07] bg-[#0b1118]/95 px-4">
+              <div className="flex gap-1.5">
+                <span className="h-2 w-2 rounded-full bg-slate-600" />
+                <span className="h-2 w-2 rounded-full bg-cyan-400/60" />
+                <span className="h-2 w-2 rounded-full bg-emerald-400/70" />
+              </div>
+
+              <span className="font-mono text-[9px] tracking-[0.1em] text-slate-500 sm:text-[10px]">
+                app.feftradingsolutions.com
+              </span>
+
+              <ExternalLink className="h-3.5 w-3.5 text-slate-500 transition group-hover:text-emerald-300" />
+            </div>
+
+            <div className="relative overflow-hidden">
+              <img
+                src="/images/trading-technology.png"
+                alt="FEF Trading App cockpit dashboard" className="block h-auto w-full transition duration-700 group-hover:scale-[1.015]"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-emerald-400/[0.025] via-transparent to-cyan-400/[0.025]" />
+            </div>
+          </a>
+        </div>
+
+        <div className="relative z-10 mt-7 flex items-start gap-2.5 border-t border-white/[0.07] pt-5 text-xs leading-6 text-slate-500">
+          <CheckCircle2 className="mt-1 h-3.5 w-3.5 shrink-0 text-emerald-400" />
+          <span>
+            Actual FEF Trading App interface shown. The application supports
+            trading intelligence workflows while trading decisions remain
+            under user control.
+          </span>
+        </div>
+      </section>
 
       {/* Product Comparison */}
       <div className="relative rounded-[2.5rem] fef-glass-section p-8 sm:p-10 overflow-hidden">
@@ -256,6 +357,7 @@ export const ProductsPage: React.FC = () => {
           {[
             { name: 'Trade Copier MT5', status: 'Available', type: 'released' },
             { name: 'Manual Trade Manager Pro', status: 'Available', type: 'released' },
+            { name: 'FEF Trading App', status: 'Live Platform', type: 'released' },
             { name: 'Downloads Center', status: 'Available', type: 'released' },
             { name: 'Documentation Portal', status: 'Available', type: 'released' },
             { name: 'Support Center', status: 'Available', type: 'released' },

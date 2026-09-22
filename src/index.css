@@ -129,9 +129,10 @@ code, pre, .font-mono, .mono {
 }
 
 /* ==========================================================================
-   GLOBAL DESIGN SYSTEM: APPROVED HEADLINE GRADIENT PATTERN
-   (Cyan #1da8ff → Turquoise #19d3d0 → Green #19d787)
-   With descender clearance for lowercase g, j, p, q, y across all breakpoints
+   GLOBAL DESIGN SYSTEM: FEF HEADLINE GRADIENT
+   Canonical: Cyan #45c9f5 → Blue #6695f5 → Violet #a57af3
+   Full definition lives in the FEF TYPOGRAPHY FINAL UNIFICATION block below.
+   These selectors are aliased here for component compatibility.
    ========================================================================== */
 
 .fef-headline-gradient,
@@ -153,7 +154,7 @@ h4 span[class*="bg-clip-text"],
 h5 span[class*="bg-clip-text"],
 h6 span[class*="bg-clip-text"],
 span[class*="bg-clip-text"] {
-  background-image: linear-gradient(to right, #1da8ff, #19d3d0, #19d787) !important;
+  /* Values resolved by --fef-heading-gradient defined further below */
   -webkit-background-clip: text !important;
   background-clip: text !important;
   color: transparent !important;
@@ -1738,3 +1739,667 @@ body:has(.business-automation-page) .fef-floating-support:hover{
 }
 
 /* ===== END BUSINESS AUTOMATION CINEMATIC EXPERIENCE ===== */
+
+/* ===== TRADING TECHNOLOGY MARKET SYSTEM EXPERIENCE ===== */
+
+.trading-technology-page{
+  position:relative;
+  background:
+    radial-gradient(circle at 82% 7%,rgba(16,185,129,.10),transparent 30rem),
+    radial-gradient(circle at 10% 48%,rgba(34,211,238,.055),transparent 34rem),
+    #05070d;
+}
+
+.trading-technology-gradient{
+  background:linear-gradient(100deg,#67e8f9 0%,#34d399 48%,#a7f3d0 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.trading-technology-hero{
+  min-height:720px;
+  isolation:isolate;
+  background:
+    linear-gradient(rgba(16,185,129,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(34,211,238,.02) 1px,transparent 1px);
+  background-size:58px 58px;
+}
+
+.trading-technology-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(115deg,transparent 0 48%,rgba(52,211,153,.035) 49%,transparent 50%),
+    radial-gradient(circle at 72% 42%,rgba(16,185,129,.08),transparent 28rem);
+  mask-image:linear-gradient(to bottom,#000,transparent 88%);
+}
+
+.trading-technology-hero::after{
+  content:"";
+  position:absolute;
+  width:36rem;
+  height:36rem;
+  right:-12rem;
+  top:-12rem;
+  border-radius:999px;
+  background:radial-gradient(circle,rgba(16,185,129,.15),rgba(34,211,238,.035) 45%,transparent 70%);
+  filter:blur(12px);
+  pointer-events:none;
+  animation:tradingTechnologyAmbient 9s ease-in-out infinite alternate;
+}
+
+.trading-technology-hero-visual{
+  position:relative;
+  perspective:1300px;
+}
+
+.trading-technology-hero-visual::before{
+  content:"TRADING SYSTEM";
+  position:absolute;
+  z-index:4;
+  right:1rem;
+  top:-1.25rem;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.62rem;
+  letter-spacing:.23em;
+  color:rgba(110,231,183,.70);
+}
+
+.trading-technology-hero-visual::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:10% 2% 5%;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(16,185,129,.17),rgba(34,211,238,.045) 42%,transparent 70%);
+  filter:blur(38px);
+}
+
+.trading-technology-hero-visual>div{
+  transform:rotateY(-4deg) rotateX(1.5deg);
+  transform-style:preserve-3d;
+  animation:tradingTechnologyFloat 7s ease-in-out infinite;
+}
+
+.trading-technology-intro{
+  position:relative;
+  background:linear-gradient(180deg,rgba(7,13,20,.72),rgba(5,7,13,.94));
+  backdrop-filter:blur(18px);
+}
+
+.trading-technology-capabilities{
+  position:relative;
+}
+
+.trading-technology-capabilities::before{
+  content:"";
+  position:absolute;
+  width:30rem;
+  height:30rem;
+  right:-16rem;
+  top:8%;
+  border-radius:999px;
+  background:radial-gradient(circle,rgba(16,185,129,.065),transparent 70%);
+  pointer-events:none;
+}
+
+.trading-technology-capability-grid .fef-glass-card{
+  position:relative;
+  overflow:hidden;
+  min-height:15.5rem;
+  background:linear-gradient(145deg,rgba(6,18,22,.84),rgba(5,8,18,.93));
+  border-color:rgba(52,211,153,.13);
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+
+.trading-technology-capability-grid .fef-glass-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(52,211,153,.56),rgba(34,211,238,.32),transparent);
+}
+
+.trading-technology-capability-grid .fef-glass-card::after{
+  content:"";
+  position:absolute;
+  width:8rem;
+  height:8rem;
+  right:-4rem;
+  bottom:-4rem;
+  border-radius:999px;
+  background:radial-gradient(circle,rgba(16,185,129,.10),transparent 70%);
+  transition:transform .35s ease;
+}
+
+.trading-technology-capability-grid .fef-glass-card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(52,211,153,.30);
+  box-shadow:0 24px 55px rgba(0,0,0,.30),0 0 32px rgba(16,185,129,.06);
+}
+
+.trading-technology-capability-grid .fef-glass-card:hover::after{
+  transform:scale(1.4);
+}
+
+/* REAL FEF TRADING APP */
+
+.trading-app-showcase{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 42%,rgba(16,185,129,.08),transparent 38rem),
+    linear-gradient(180deg,rgba(5,10,17,.96),rgba(4,8,14,.98));
+}
+
+.trading-app-showcase::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.36;
+  background-image:
+    linear-gradient(rgba(34,211,238,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(52,211,153,.03) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+
+.trading-app-screen{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(52,211,153,.20);
+  border-radius:1.35rem;
+  background:#070b12;
+  box-shadow:
+    0 45px 100px rgba(0,0,0,.48),
+    0 0 0 1px rgba(255,255,255,.025) inset,
+    0 0 65px rgba(16,185,129,.075);
+  transform:perspective(1600px) rotateX(1.2deg);
+  transform-origin:center top;
+}
+
+.trading-app-screen::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(115deg,rgba(255,255,255,.035),transparent 18% 78%,rgba(52,211,153,.018));
+  mix-blend-mode:screen;
+}
+
+.trading-app-screen-bar{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  min-height:3.25rem;
+  padding:0 1rem;
+  border-bottom:1px solid rgba(255,255,255,.065);
+  background:linear-gradient(180deg,rgba(16,24,32,.96),rgba(8,13,20,.96));
+}
+
+.trading-app-screen-bar>div:first-child span{
+  display:inline-block;
+  width:.55rem;
+  height:.55rem;
+  border-radius:999px;
+  background:rgba(148,163,184,.35);
+}
+
+.trading-app-screen-bar>div:first-child span:nth-child(2){
+  background:rgba(34,211,238,.40);
+}
+
+.trading-app-screen-bar>div:first-child span:nth-child(3){
+  background:rgba(52,211,153,.52);
+}
+
+.trading-app-screen-bar>svg{
+  justify-self:end;
+}
+
+.trading-app-screen-label{
+  max-width:25rem;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:.55rem;
+  padding:.38rem 2rem;
+  background:rgba(255,255,255,.025);
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.62rem;
+  letter-spacing:.08em;
+  color:rgba(148,163,184,.72);
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.trading-app-screen img{
+  position:relative;
+  z-index:1;
+  transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s ease;
+}
+
+.trading-app-screen:hover img{
+  transform:scale(1.012);
+  filter:brightness(1.035);
+}
+
+/* PRODUCT ECOSYSTEM */
+
+.trading-technology-products{
+  position:relative;
+}
+
+.trading-product-grid .fef-glass-card{
+  position:relative;
+  overflow:hidden;
+  min-height:19rem;
+  background:linear-gradient(150deg,rgba(7,17,22,.84),rgba(5,8,18,.94));
+  border-color:rgba(52,211,153,.13);
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+
+.trading-product-grid .fef-glass-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:4.5rem;
+  height:2px;
+  background:linear-gradient(90deg,#34d399,#22d3ee);
+  box-shadow:0 0 18px rgba(52,211,153,.32);
+}
+
+.trading-product-grid .fef-glass-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(52,211,153,.31);
+  box-shadow:0 25px 60px rgba(0,0,0,.29),0 0 30px rgba(16,185,129,.055);
+}
+
+/* SYSTEM ARCHITECTURE */
+
+.trading-technology-architecture{
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(16,185,129,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(16,185,129,.025) 1px,transparent 1px),
+    linear-gradient(180deg,rgba(6,12,19,.86),rgba(5,7,13,.96));
+  background-size:54px 54px,54px 54px,auto;
+}
+
+.trading-technology-stack{
+  position:relative;
+  display:grid;
+  gap:.85rem;
+}
+
+.trading-technology-stack::before{
+  content:"";
+  position:absolute;
+  left:1.45rem;
+  top:2rem;
+  bottom:2rem;
+  width:1px;
+  background:linear-gradient(#67e8f9,#34d399,#10b981);
+  box-shadow:0 0 16px rgba(52,211,153,.32);
+}
+
+.trading-technology-layer{
+  position:relative;
+  display:flex;
+  align-items:center;
+  gap:1.1rem;
+  margin-left:1.1rem;
+  padding:1.2rem 1.35rem 1.2rem 2.25rem;
+  border:1px solid rgba(52,211,153,.13);
+  border-radius:1rem;
+  background:linear-gradient(135deg,rgba(7,18,23,.88),rgba(5,8,18,.94));
+  box-shadow:0 14px 35px rgba(0,0,0,.20);
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+
+.trading-technology-layer:nth-child(even){
+  transform:translateX(1.5rem);
+}
+
+.trading-technology-layer::before{
+  content:"";
+  position:absolute;
+  left:-.42rem;
+  top:50%;
+  width:.76rem;
+  height:.76rem;
+  transform:translateY(-50%);
+  border:2px solid #0b1418;
+  border-radius:999px;
+  background:#34d399;
+  box-shadow:0 0 17px rgba(52,211,153,.70);
+}
+
+.trading-technology-layer:hover{
+  transform:translateX(.45rem);
+  border-color:rgba(52,211,153,.31);
+  box-shadow:0 20px 46px rgba(0,0,0,.27);
+}
+
+.trading-technology-layer:nth-child(even):hover{
+  transform:translateX(1.95rem);
+}
+
+.trading-technology-layer-number{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  width:2.5rem;
+  height:2.5rem;
+  border:1px solid rgba(52,211,153,.20);
+  border-radius:.7rem;
+  background:rgba(16,185,129,.07);
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.7rem;
+  color:#6ee7b7;
+}
+
+/* FINAL CTA */
+
+.trading-technology-cta-section{
+  position:relative;
+}
+
+.trading-technology-cta{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 120%,rgba(16,185,129,.18),transparent 46%),
+    linear-gradient(145deg,rgba(7,18,23,.94),rgba(5,8,18,.98))!important;
+  border-color:rgba(52,211,153,.18)!important;
+}
+
+.trading-technology-cta::before{
+  content:"";
+  position:absolute;
+  left:-35%;
+  top:0;
+  width:34%;
+  height:100%;
+  background:linear-gradient(90deg,transparent,rgba(52,211,153,.055),transparent);
+  transform:skewX(-18deg);
+  animation:tradingTechnologySweep 8s ease-in-out infinite;
+}
+
+body:has(.trading-technology-page) .fef-floating-support{
+  transform:scale(.82);
+  transform-origin:bottom right;
+  right:.75rem!important;
+  bottom:.75rem!important;
+  opacity:.86;
+}
+
+body:has(.trading-technology-page) .fef-floating-support:hover{
+  transform:scale(.9);
+}
+
+@keyframes tradingTechnologyFloat{
+  0%,100%{
+    transform:rotateY(-4deg) rotateX(1.5deg) translateY(0);
+  }
+  50%{
+    transform:rotateY(-2.5deg) rotateX(.8deg) translateY(-9px);
+  }
+}
+
+@keyframes tradingTechnologyAmbient{
+  from{
+    transform:translate3d(0,0,0) scale(.96);
+    opacity:.65;
+  }
+  to{
+    transform:translate3d(-2rem,2rem,0) scale(1.08);
+    opacity:1;
+  }
+}
+
+@keyframes tradingTechnologySweep{
+  0%,55%{
+    transform:translateX(-120%) skewX(-18deg);
+  }
+  80%,100%{
+    transform:translateX(430%) skewX(-18deg);
+  }
+}
+
+@media(max-width:1023px){
+  .trading-technology-hero{
+    min-height:auto;
+  }
+
+  .trading-technology-hero-visual>div{
+    transform:none;
+    animation:tradingTechnologyMobileFloat 6s ease-in-out infinite;
+  }
+
+  .trading-app-screen{
+    transform:none;
+  }
+
+  .trading-technology-layer:nth-child(even){
+    transform:none;
+  }
+
+  .trading-technology-layer:nth-child(even):hover{
+    transform:translateX(.45rem);
+  }
+}
+
+@keyframes tradingTechnologyMobileFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
+
+@media(max-width:767px){
+  .trading-technology-hero-visual::before{
+    display:none;
+  }
+
+  .trading-technology-capability-grid .fef-glass-card,
+  .trading-product-grid .fef-glass-card{
+    min-height:auto;
+  }
+
+  .trading-app-screen{
+    border-radius:.9rem;
+  }
+
+  .trading-app-screen-bar{
+    grid-template-columns:auto 1fr auto;
+    min-height:2.75rem;
+    padding:0 .7rem;
+  }
+
+  .trading-app-screen-label{
+    margin:0 .7rem;
+    padding:.3rem .6rem;
+    text-align:center;
+  }
+
+  .trading-technology-stack::before{
+    left:.3rem;
+  }
+
+  .trading-technology-layer{
+    margin-left:0;
+    padding-left:1.2rem;
+  }
+
+  .trading-technology-layer::before{
+    display:none;
+  }
+
+  body:has(.trading-technology-page) .fef-floating-support{
+    transform:scale(.76);
+    right:.4rem!important;
+    bottom:.4rem!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .trading-technology-hero::after,
+  .trading-technology-hero-visual>div,
+  .trading-technology-cta::before{
+    animation:none!important;
+  }
+
+  .trading-technology-capability-grid .fef-glass-card,
+  .trading-app-screen img,
+  .trading-product-grid .fef-glass-card,
+  .trading-technology-layer{
+    transition:none!important;
+  }
+
+  .trading-technology-hero-visual>div,
+  .trading-technology-layer,
+  .trading-technology-layer:nth-child(even),
+  .trading-app-screen{
+    transform:none!important;
+  }
+}
+
+/* ===== END TRADING TECHNOLOGY MARKET SYSTEM EXPERIENCE ===== */
+
+/* ===== FEF TYPOGRAPHY FINAL UNIFICATION ===== */
+
+/*
+  Master FEF headline language:
+  WHITE + CYAN -> BLUE -> VIOLET
+
+  Scope is deliberately limited to typography.
+  Functional green / emerald / red / amber UI states remain untouched.
+*/
+
+:root{
+  --fef-heading-white:#f8fafc;
+  --fef-heading-cyan:#45c9f5;
+  --fef-heading-blue:#6695f5;
+  --fef-heading-violet:#a57af3;
+  --fef-heading-gradient:
+    linear-gradient(
+      100deg,
+      var(--fef-heading-cyan) 0%,
+      var(--fef-heading-blue) 50%,
+      var(--fef-heading-violet) 100%
+    );
+}
+
+/*
+  Canonical headline classes.
+  !important is intentional because older page-specific systems
+  still define their own gradients earlier in this stylesheet.
+*/
+
+.fef-headline-gradient,
+.fef-gradient-text,
+.gradient-text,
+.headline-gradient,
+.text-gradient,
+.ai-software-gradient,
+.ai-web-gradient,
+.custom-applications-gradient,
+.business-automation-gradient,
+.trading-technology-gradient{
+  background:var(--fef-heading-gradient)!important;
+  background-image:var(--fef-heading-gradient)!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:transparent!important;
+  display:inline-block;
+  padding-bottom:.08em;
+  line-height:inherit;
+  filter:saturate(1.03);
+}
+
+/*
+  Legacy gradient-text spans inside headings.
+  This catches old homepage/legacy headings without recoloring
+  gradient buttons or functional UI.
+*/
+
+h1 span[class*="bg-clip-text"],
+h2 span[class*="bg-clip-text"],
+h3 span[class*="bg-clip-text"],
+h4 span[class*="bg-clip-text"],
+h5 span[class*="bg-clip-text"],
+h6 span[class*="bg-clip-text"]{
+  background:var(--fef-heading-gradient)!important;
+  background-image:var(--fef-heading-gradient)!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:transparent!important;
+  padding-bottom:.08em;
+}
+
+/* Clean white foundation for major headings. */
+
+main h1,
+main h2{
+  text-rendering:optimizeLegibility;
+}
+
+/* Solution-page h1/h2 white base color */
+
+:is(
+  .ai-software-page,
+  .ai-web-page,
+  .custom-applications-page,
+  .business-automation-page,
+  .trading-technology-page
+) h1,
+:is(
+  .ai-software-page,
+  .ai-web-page,
+  .custom-applications-page,
+  .business-automation-page,
+  .trading-technology-page
+) h2{
+  color:var(--fef-heading-white);
+}
+
+/* Selection color follows FEF blue-violet identity */
+
+::selection{
+  background:rgba(102,149,245,.28);
+  color:#fff;
+}
+
+/* Homepage hero supporting copy needs stronger contrast. */
+
+.hero-section p,
+.tradingview-hero p{
+  text-shadow:0 2px 22px rgba(0,0,0,.34);
+}
+
+/* Same identity on mobile. */
+
+@media(max-width:767px){
+  :root{
+    --fef-heading-gradient:
+      linear-gradient(
+        100deg,
+        #45c9f5 0%,
+        #6695f5 50%,
+        #a57af3 100%
+      );
+  }
+}
+
+/* ===== END FEF TYPOGRAPHY FINAL UNIFICATION ===== */

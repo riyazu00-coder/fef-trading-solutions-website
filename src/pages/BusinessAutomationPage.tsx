@@ -192,8 +192,7 @@ export const BusinessAutomationPage: React.FC = () => (
     </section>
 
     <section
-      id="automation-capabilities"
-      className="business-automation-capabilities"
+      id="automation-capabilities" className="business-automation-capabilities"
     >
       <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
         <div className="mb-12 max-w-3xl">

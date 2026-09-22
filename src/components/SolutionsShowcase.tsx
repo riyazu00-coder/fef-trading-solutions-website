@@ -99,7 +99,7 @@ const solutions: SolutionItem[] = [
     name: 'Trading Technology',
     category: 'Market Infrastructure',
     icon: <TrendingUp className="h-4 w-4 text-emerald-400" />,
-    tagline: 'Institutional-grade MetaTrader 5 execution copiers, risk engines, and algorithmic strategy panels.',
+    tagline: 'MetaTrader 5 execution copiers, risk engines, and algorithmic strategy panels for trading workflows.',
     status: 'MQL5 Market Released',
     capabilities: [
       'MT5 Software Development',
@@ -107,7 +107,7 @@ const solutions: SolutionItem[] = [
       'Risk and Account Management',
     ],
     ctaLabel: 'Explore Trading Technology',
-    ctaHref: '/trade-copier',
+    ctaHref: '/trading-technology',
     visual: <TradingTechVisual />,
   },
 ];
@@ -192,7 +192,7 @@ export const SolutionsShowcase: React.FC = () => {
 
                 {/* Headline with Approved Gradient */}
                 <h3 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight text-white flex items-center gap-2">
-                  <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent drop-shadow-[0_0_20px_rgba(29,168,255,0.25)]">
+                  <span className="fef-headline-gradient drop-shadow-[0_0_20px_rgba(69,201,245,0.25)]">
                     {current.name}
                   </span>
                 </h3>

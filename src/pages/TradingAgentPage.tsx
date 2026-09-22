@@ -5,6 +5,8 @@ import {
   Activity,
   Lock,
   CheckCircle2,
+  ExternalLink,
+  MonitorUp,
 } from 'lucide-react';
 
 export const TradingAgentPage: React.FC = () => {
@@ -32,15 +34,13 @@ export const TradingAgentPage: React.FC = () => {
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+              href="/contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
             >
               <span>Request Research Demo</span>
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="/products"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
+              href="/products" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
             >
               <span>View Product Matrix</span>
             </a>
@@ -64,6 +64,109 @@ export const TradingAgentPage: React.FC = () => {
           ))}
         </div>
       </div>
+
+      {/* Live FEF Trading App */}
+      <section className="agent-live-app relative overflow-hidden rounded-[2.5rem] border border-cyan-400/15 bg-[#060912]/95 p-6 sm:p-8 lg:p-10">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_76%_24%,rgba(34,211,238,0.10),transparent_36%),radial-gradient(circle_at_18%_78%,rgba(168,85,247,0.09),transparent_34%)]" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-300/55 to-transparent" />
+
+        <div className="relative z-10">
+          <div className="grid gap-8 lg:grid-cols-[0.76fr_1.24fr] lg:items-end">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-400/[0.07] px-3.5 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.17em] text-cyan-300">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-40" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-400" />
+                </span>
+                FEF Trading App
+              </div>
+
+              <h2 className="mt-5 text-3xl font-semibold tracking-[-0.035em] text-white sm:text-4xl">
+                See the intelligence workspace
+                <span className="fef-headline-gradient"> in the real application.</span>
+              </h2>
+
+              <p className="mt-5 max-w-xl text-sm leading-7 text-slate-300 sm:text-base">
+                Open the FEF Trading App cockpit to access the live application
+                interface connected to the broader FEF trading intelligence
+                experience.
+              </p>
+
+              <div className="mt-6 flex items-start gap-3 rounded-xl border border-amber-400/15 bg-amber-400/[0.045] p-4">
+                <Lock className="mt-0.5 h-4 w-4 shrink-0 text-amber-300" />
+                <p className="text-xs leading-6 text-slate-400">
+                  Trading Agent capabilities remain supervised and informational.
+                  Automated broker execution is not represented by this interface.
+                </p>
+              </div>
+
+              <div className="mt-7 flex flex-wrap gap-3">
+                <a
+                  href="https://app.feftradingsolutions.com/cockpit"
+                  target="_blank"
+                  rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-brand-gradient px-5 py-3 text-sm font-semibold text-[#05070d] shadow-glow transition hover:brightness-110"
+                >
+                  <span>Open FEF Trading App</span>
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+
+                <a
+                  href="/trading-technology" className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:border-cyan-400/35 hover:bg-white/10"
+                >
+                  <span>Trading Technology</span>
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+
+            <div className="hidden lg:flex justify-end">
+              <div className="flex items-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.035] px-4 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-slate-400">
+                <MonitorUp className="h-4 w-4 text-cyan-300" />
+                Live application interface
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="https://app.feftradingsolutions.com/cockpit"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open FEF Trading App cockpit" className="agent-live-app-screen group relative mt-10 block overflow-hidden rounded-[1.4rem] border border-cyan-400/20 bg-[#04070d] shadow-[0_40px_100px_rgba(0,0,0,0.50),0_0_65px_rgba(34,211,238,0.06)]"
+          >
+            <div className="grid min-h-12 grid-cols-[1fr_auto_1fr] items-center border-b border-white/[0.07] bg-[#0a1019]/95 px-4">
+              <div className="flex gap-1.5">
+                <span className="h-2 w-2 rounded-full bg-slate-600" />
+                <span className="h-2 w-2 rounded-full bg-purple-400/60" />
+                <span className="h-2 w-2 rounded-full bg-cyan-400/70" />
+              </div>
+
+              <div className="rounded-lg border border-white/[0.06] bg-white/[0.025] px-5 py-1.5 font-mono text-[9px] tracking-[0.1em] text-slate-500 sm:text-[10px]">
+                app.feftradingsolutions.com/cockpit
+              </div>
+
+              <ExternalLink className="ml-auto h-3.5 w-3.5 text-slate-500 transition group-hover:text-cyan-300" />
+            </div>
+
+            <div className="relative overflow-hidden">
+              <img
+                src="/images/trading-technology.png"
+                alt="FEF Trading App cockpit interface" className="block h-auto w-full transition duration-700 group-hover:scale-[1.012]"
+              />
+
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-purple-400/[0.02] via-transparent to-cyan-400/[0.025]" />
+            </div>
+          </a>
+
+          <div className="mt-5 flex items-start gap-2.5 text-xs leading-6 text-slate-500">
+            <CheckCircle2 className="mt-1 h-3.5 w-3.5 shrink-0 text-cyan-400" />
+            <span>
+              Actual FEF Trading App interface shown above. Research and
+              intelligence features remain subject to the safety boundaries
+              described on this page.
+            </span>
+          </div>
+        </div>
+      </section>
 
       {/* Supervised Safety Boundaries */}
       <div className="grid md:grid-cols-2 gap-8">

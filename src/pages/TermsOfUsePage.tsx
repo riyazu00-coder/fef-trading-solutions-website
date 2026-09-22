@@ -119,8 +119,7 @@ export const TermsOfUsePage: React.FC = () => {
             </p>
           </div>
           <a
-            href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition shrink-0"
+            href="/contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition shrink-0"
           >
             <span>Contact Support</span>
             <ArrowRight className="h-4 w-4" />

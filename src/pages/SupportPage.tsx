@@ -20,7 +20,7 @@ export const SupportPage: React.FC = () => {
         </div>
       </div>
 
-      {/* 24/7 Instant Fast Channels */}
+      {/* Direct Support Channels */}
       <div className="p-8 sm:p-10 rounded-[2.5rem] fef-glass-section border border-emerald-500/30 shadow-[0_0_35px_rgba(25,215,135,0.12)] relative overflow-hidden space-y-6">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent" />
         
@@ -28,13 +28,13 @@ export const SupportPage: React.FC = () => {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold font-mono tracking-wider text-emerald-400 bg-emerald-500/15 border border-emerald-500/40">
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-ping" />
-              24/7 LIVE SUPPORT
+              SUPPORT CHANNELS
             </div>
             <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-white">
-              Instant Direct <span className="fef-headline-gradient">Support Channels</span>
+              Direct <span className="fef-headline-gradient">Support Channels</span>
             </h2>
             <p className="mt-1 text-sm text-slate-300 font-normal">
-              Connect directly with our engineering and trading specialists for immediate assistance.
+              Connect with our engineering and trading specialists for product guidance and technical support.
             </p>
           </div>
         </div>
@@ -44,8 +44,7 @@ export const SupportPage: React.FC = () => {
           <a
             href="https://t.me/Feftrading"
             target="_blank"
-            rel="noopener noreferrer"
-            className="p-5 rounded-2xl fef-glass-card hover:border-cyan-400/50 transition-all flex flex-col justify-between group space-y-4"
+            rel="noopener noreferrer" className="p-5 rounded-2xl fef-glass-card hover:border-cyan-400/50 transition-all flex flex-col justify-between group space-y-4"
           >
             <div className="flex items-center justify-between">
               <div className="h-10 w-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
@@ -59,7 +58,7 @@ export const SupportPage: React.FC = () => {
               </div>
               <div className="text-xs text-slate-400 font-mono mt-0.5">@Feftrading</div>
               <p className="text-xs text-slate-300 mt-2 font-normal">
-                Direct community & priority messaging channel.
+                Official community and support channel for product updates and direct messaging.
               </p>
             </div>
           </a>
@@ -68,8 +67,7 @@ export const SupportPage: React.FC = () => {
           <a
             href="https://wa.me/971551230307"
             target="_blank"
-            rel="noopener noreferrer"
-            className="p-5 rounded-2xl fef-glass-card hover:border-emerald-400/50 transition-all flex flex-col justify-between group space-y-4 border-emerald-500/20"
+            rel="noopener noreferrer" className="p-5 rounded-2xl fef-glass-card hover:border-emerald-400/50 transition-all flex flex-col justify-between group space-y-4 border-emerald-500/20"
           >
             <div className="flex items-center justify-between">
               <div className="h-10 w-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
@@ -86,15 +84,14 @@ export const SupportPage: React.FC = () => {
               </div>
               <div className="text-xs text-slate-400 font-mono mt-0.5">+971 55 123 0307</div>
               <p className="text-xs text-slate-300 mt-2 font-normal">
-                Instant chat & live technical support.
+                Chat support and technical assistance through the official WhatsApp channel.
               </p>
             </div>
           </a>
 
           {/* Email */}
           <a
-            href="mailto:sales@feftradingsolutions.com"
-            className="p-5 rounded-2xl fef-glass-card hover:border-cyan-400/50 transition-all flex flex-col justify-between group space-y-4"
+            href="mailto:sales@feftradingsolutions.com" className="p-5 rounded-2xl fef-glass-card hover:border-cyan-400/50 transition-all flex flex-col justify-between group space-y-4"
           >
             <div className="flex items-center justify-between">
               <div className="h-10 w-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
@@ -108,7 +105,7 @@ export const SupportPage: React.FC = () => {
               </div>
               <div className="text-xs text-slate-400 font-mono mt-0.5">sales@feftradingsolutions.com</div>
               <p className="text-xs text-slate-300 mt-2 font-normal">
-                Priority email dispatch & technical responses.
+                Email support for installation questions, technical requests, and product inquiries.
               </p>
             </div>
           </a>
@@ -130,8 +127,7 @@ export const SupportPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/users/feftradingsolutions"
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
+              rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
             >
               <span>Message on MQL5</span>
               <ExternalLink className="h-4 w-4" />
@@ -151,8 +147,7 @@ export const SupportPage: React.FC = () => {
           </div>
           <div className="mt-6">
             <a
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+              href="/contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
             >
               <span>Open Support Ticket</span>
             </a>
@@ -194,9 +189,9 @@ export const SupportPage: React.FC = () => {
           </div>
 
           <div className="p-6 rounded-2xl fef-glass-card">
-            <h4 className="text-base font-semibold text-white">How quickly does the engineering team respond?</h4>
+            <h4 className="text-base font-semibold text-white">How can I reach the engineering team?</h4>
             <p className="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-              For urgent setup assistance, our Telegram channel (<a href="https://t.me/Feftrading" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">@Feftrading</a>) and WhatsApp (<a href="https://wa.me/971551230307" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">+971 55 123 0307</a>) operate 24/7 with immediate response times.
+              For setup assistance and product questions, use the official Telegram channel (<a href="https://t.me/Feftrading" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">@Feftrading</a>) or WhatsApp (<a href="https://wa.me/971551230307" target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">+971 55 123 0307</a>) for direct support.
             </p>
           </div>
         </div>

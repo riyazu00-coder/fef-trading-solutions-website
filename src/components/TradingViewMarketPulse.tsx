@@ -55,7 +55,7 @@ export const TradingViewMarketPulse: React.FC = () => {
 
             <h2 className="mt-5 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-white">
               FEF{' '}
-              <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
+              <span className="fef-headline-gradient">
                 Market Pulse
               </span>
             </h2>
@@ -125,7 +125,7 @@ export const TradingViewMarketPulse: React.FC = () => {
                   <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-emerald-400">Trading Opportunities</p>
                   <h3 className="mt-1 text-lg sm:text-xl font-semibold text-white">
                     Watchlist{' '}
-                    <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
+                    <span className="fef-headline-gradient">
                       Focus
                     </span>
                   </h3>

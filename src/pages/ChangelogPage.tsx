@@ -35,8 +35,7 @@ export const ChangelogPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183557"
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:underline"
+              rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:underline"
             >
               <span>MQL5 Product #183557</span>
               <ExternalLink className="h-3.5 w-3.5" />
@@ -47,13 +46,13 @@ export const ChangelogPage: React.FC = () => {
             FEF Professional Trade Copier MT5 Official Launch
           </h3>
           <p className="mt-2 text-sm text-slate-300 font-normal leading-relaxed">
-            Initial production release published to the official MQL5 Market with low-latency memory synchronization and cross-broker symbol mapping.
+            Initial production release published to the MQL5 Market with account synchronization and cross-broker symbol mapping.
           </p>
 
           <ul className="mt-6 space-y-2.5 text-sm text-slate-300">
             <li className="flex items-center gap-2 font-medium">
               <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" />
-              <span>Local memory IPC pipe for sub-millisecond replication</span>
+              <span>Local memory IPC pipe for terminal-to-terminal replication</span>
             </li>
             <li className="flex items-center gap-2 font-medium">
               <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" />
@@ -90,8 +89,7 @@ export const ChangelogPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183695"
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:underline"
+              rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs text-cyan-400 hover:underline"
             >
               <span>MQL5 Product #183695</span>
               <ExternalLink className="h-3.5 w-3.5" />

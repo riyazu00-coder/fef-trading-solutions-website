@@ -53,7 +53,7 @@ export const TradingViewFaq: React.FC = () => {
           </div>
           <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-white">
             Frequently Asked{' '}
-            <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
+            <span className="fef-headline-gradient">
               Questions
             </span>
           </h2>
@@ -136,16 +136,14 @@ export const TradingViewFaq: React.FC = () => {
           <a
             href="https://www.mql5.com/en/market/product/183557"
             target="_blank"
-            rel="noopener noreferrer"
-            className="focus-ring inline-flex items-center gap-2.5 px-8 py-4 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
+            rel="noopener noreferrer" className="focus-ring inline-flex items-center gap-2.5 px-8 py-4 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
           >
             <span>Buy on MQL5 Market</span>
             <ExternalLink className="h-4 w-4" />
           </a>
 
           <a
-            href="/contact"
-            className="focus-ring inline-flex items-center gap-2 px-7 py-4 rounded-xl text-sm sm:text-base font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
+            href="/contact" className="focus-ring inline-flex items-center gap-2 px-7 py-4 rounded-xl text-sm sm:text-base font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
           >
             <Mail className="h-4 w-4 text-slate-400" />
             <span>Contact FEF</span>

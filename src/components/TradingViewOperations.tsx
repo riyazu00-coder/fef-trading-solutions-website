@@ -15,7 +15,7 @@ export const TradingViewOperations: React.FC = () => {
             </span>
             <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-semibold tracking-[-0.015em] text-white">
               Live on the{' '}
-              <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
+              <span className="fef-headline-gradient">
                 MQL5 Market
               </span>
             </h2>
@@ -27,8 +27,7 @@ export const TradingViewOperations: React.FC = () => {
           <a
             href="https://www.mql5.com/en/market/product/183557"
             target="_blank"
-            rel="noopener noreferrer"
-            className="focus-ring shrink-0 inline-flex items-center gap-2.5 px-7 py-4 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
+            rel="noopener noreferrer" className="focus-ring shrink-0 inline-flex items-center gap-2.5 px-7 py-4 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
           >
             <span>Open MQL5 Market</span>
             <ExternalLink className="h-4 w-4" />
@@ -47,7 +46,7 @@ export const TradingViewOperations: React.FC = () => {
             Operations dashboard
           </div>
           <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-white">
-            FEF <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">Operations Center</span>
+            FEF <span className="fef-headline-gradient">Operations Center</span>
           </h3>
           <p className="mt-2 text-sm font-normal text-slate-300">
             A professional overview of product status, support availability and trading software operations.
@@ -89,7 +88,7 @@ export const TradingViewOperations: React.FC = () => {
             FEF Product Line
           </div>
           <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-white">
-            A growing <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">MetaTrader 5 software ecosystem</span>
+            A growing <span className="fef-headline-gradient">MetaTrader 5 software ecosystem</span>
           </h3>
           <p className="mt-2 text-sm font-normal text-slate-300">
             Start with the released Trade Copier and explore the upcoming FEF software roadmap for trading operations, risk control, and market scanning.

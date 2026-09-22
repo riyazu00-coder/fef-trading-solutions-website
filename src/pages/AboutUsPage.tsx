@@ -25,22 +25,20 @@ export const AboutUsPage: React.FC = () => {
             About FEF <span className="fef-headline-gradient">Trading Solutions</span>
           </h1>
           <p className="mt-5 text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
-            FEF Trading Solutions is an innovative technology ecosystem specializing in AI-powered software development, cinematic web applications, custom platforms, business automation, and institutional-grade MetaTrader 5 trading technology.
+            FEF Trading Solutions is an innovative technology ecosystem specializing in AI-powered software development, cinematic web applications, custom platforms, business automation, and professional MetaTrader 5 trading technology.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="/downloads/fef-trading-solutions-company-profile.pdf"
               download="fef-trading-solutions-company-profile.pdf"
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+              rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
             >
               <Download className="h-4 w-4" />
               <span>Download Company Profile (PDF)</span>
             </a>
             <a
-              href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
+              href="/contact" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
             >
               <span>Contact Us</span>
               <ArrowRight className="h-4 w-4" />
@@ -55,7 +53,7 @@ export const AboutUsPage: React.FC = () => {
           <p className="text-xs font-semibold uppercase tracking-widest text-emerald-400 font-mono">Our Mission</p>
           <h3 className="mt-3 text-2xl font-semibold text-white">Engineering Resilient Digital Systems</h3>
           <p className="mt-3 text-sm text-slate-300 leading-relaxed font-normal">
-            To provide traders, enterprises, and digital innovators with mathematically sound, ultra-low latency software tools that reduce execution drag, automate repetitive operational overhead, and enforce risk discipline.
+            To provide traders, enterprises, and digital innovators with purpose-built software tools that support efficient trading workflows, automate repetitive operational tasks, and help operators apply structured risk controls.
           </p>
         </div>
 
@@ -84,9 +82,9 @@ export const AboutUsPage: React.FC = () => {
           <div className="p-3 rounded-xl bg-emerald-400/10 border border-emerald-400/20 text-emerald-400 w-fit">
             <ShieldCheck className="h-6 w-6" />
           </div>
-          <h3 className="mt-5 text-xl font-semibold text-white">Institutional Reliability</h3>
+          <h3 className="mt-5 text-xl font-semibold text-white">Operational Reliability</h3>
           <p className="mt-3 text-sm text-slate-300 font-normal leading-relaxed">
-            Our software adheres to strict broker-agnostic compatibility, verified MQL5 Market security standards, and comprehensive demo-first validation.
+            Our software adheres to cross-broker workflow support, MQL5 Market delivery, and a demo-first validation approach.
           </p>
         </div>
 
@@ -105,12 +103,12 @@ export const AboutUsPage: React.FC = () => {
       <div className="relative rounded-[2.5rem] fef-glass-section p-8 sm:p-10 overflow-hidden">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
         <h2 className="text-2xl sm:text-3xl font-semibold text-white">
-          Practical Credibility & <span className="fef-headline-gradient">Verified Standards</span>
+          Practical Credibility & <span className="fef-headline-gradient">Product Standards</span>
         </h2>
         <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="p-5 rounded-2xl fef-glass-card-static">
             <p className="text-xs text-slate-400 uppercase tracking-wider font-mono">Marketplace</p>
-            <p className="mt-2 text-xl font-semibold text-white">MQL5 Verified</p>
+            <p className="mt-2 text-xl font-semibold text-white">MQL5 Market</p>
             <p className="mt-1 text-xs text-slate-400 font-normal">Official MetaQuotes distribution</p>
           </div>
           <div className="p-5 rounded-2xl fef-glass-card-static">
@@ -120,8 +118,8 @@ export const AboutUsPage: React.FC = () => {
           </div>
           <div className="p-5 rounded-2xl fef-glass-card-static">
             <p className="text-xs text-slate-400 uppercase tracking-wider font-mono">Architecture</p>
-            <p className="mt-2 text-xl font-semibold text-white">Sub-Millisecond</p>
-            <p className="mt-1 text-xs text-slate-400 font-normal">Fast local IPC synchronization</p>
+            <p className="mt-2 text-xl font-semibold text-white">Local Synchronization</p>
+            <p className="mt-1 text-xs text-slate-400 font-normal">MetaTrader 5 local workflow support</p>
           </div>
           <div className="p-5 rounded-2xl fef-glass-card-static">
             <p className="text-xs text-slate-400 uppercase tracking-wider font-mono">Operations</p>
@@ -135,13 +133,12 @@ export const AboutUsPage: React.FC = () => {
       <div className="p-8 sm:p-10 rounded-[2.5rem] fef-glass-section">
         <h3 className="text-2xl font-semibold text-white">Connect Directly with Our Team</h3>
         <p className="mt-2 text-sm text-slate-300">
-          Our technical representatives are available across verified communication channels:
+          Our technical representatives are available across official communication channels:
         </p>
 
         <div className="mt-6 grid sm:grid-cols-3 gap-4">
           <a
-            href="mailto:sales@feftradingsolutions.com"
-            className="p-5 rounded-2xl fef-glass-card flex items-center gap-3 group"
+            href="mailto:sales@feftradingsolutions.com" className="p-5 rounded-2xl fef-glass-card flex items-center gap-3 group"
           >
             <Mail className="h-5 w-5 text-cyan-400 group-hover:scale-110 transition" />
             <div>
@@ -153,8 +150,7 @@ export const AboutUsPage: React.FC = () => {
           <a
             href="https://t.me/Feftrading"
             target="_blank"
-            rel="noopener noreferrer"
-            className="p-5 rounded-2xl fef-glass-card flex items-center gap-3 group"
+            rel="noopener noreferrer" className="p-5 rounded-2xl fef-glass-card flex items-center gap-3 group"
           >
             <Send className="h-5 w-5 text-cyan-400 group-hover:scale-110 transition" />
             <div>
@@ -166,8 +162,7 @@ export const AboutUsPage: React.FC = () => {
           <a
             href="https://wa.me/971551230307"
             target="_blank"
-            rel="noopener noreferrer"
-            className="p-5 rounded-2xl fef-glass-card flex items-center gap-3 group"
+            rel="noopener noreferrer" className="p-5 rounded-2xl fef-glass-card flex items-center gap-3 group"
           >
             <MessageCircle className="h-5 w-5 text-emerald-400 group-hover:scale-110 transition" />
             <div>

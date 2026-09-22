@@ -6,10 +6,10 @@ export const FefHero: React.FC = () => {
     <section id="hero" className="relative overflow-hidden px-5 pb-20 pt-20 sm:px-6 lg:px-8 lg:pt-24">
       <div className="site-grid absolute inset-0 opacity-25 pointer-events-none" aria-hidden="true" />
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-electric/50 to-transparent" aria-hidden="true" />
-      
+
       <div className="relative mx-auto max-w-7xl">
         <div className="mx-auto max-w-5xl text-center">
-          
+
           {/* Official MQL5 Market Product Pill */}
           <div className="inline-flex items-center gap-2 rounded-full border border-emerald/30 bg-emerald/10 px-4 py-2 text-sm font-medium text-emerald shadow-emerald">
             <span className="h-2 w-2 rounded-full bg-emerald shadow-emerald animate-pulse" />
@@ -31,18 +31,17 @@ export const FefHero: React.FC = () => {
 
           {/* Action Buttons */}
           <div className="mt-9 flex flex-wrap justify-center gap-3">
-            <a 
-              href="https://www.mql5.com/en/market/product/183557" 
-              className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-medium transition bg-brand-gradient text-[#05070d] shadow-glow hover:brightness-110 active:scale-95" 
-              target="_blank" 
+            <a
+              href="https://www.mql5.com/en/market/product/183557" className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-medium transition bg-brand-gradient text-[#05070d] shadow-glow hover:brightness-110 active:scale-95"
+              target="_blank"
               rel="noreferrer"
             >
               <span>Buy on MQL5</span>
               <ExternalLink className="h-4 w-4" />
             </a>
 
-            <a 
-              className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-medium transition border border-line bg-white/[0.04] text-white hover:border-electric/70 hover:bg-electric/10" 
+            <a
+              className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-medium transition border border-line bg-white/[0.04] text-white hover:border-electric/70 hover:bg-electric/10"
               href="#copier-workflow"
             >
               <span>View Documentation</span>
@@ -71,7 +70,7 @@ export const FefHero: React.FC = () => {
         {/* Original FEF Dashboard Interface Card */}
         <div className="relative mt-16 lg:mt-20">
           <div className="absolute -inset-x-6 bottom-0 top-12 rounded-[2rem] bg-electric/10 blur-3xl pointer-events-none" aria-hidden="true" />
-          
+
           <div className="premium-card relative overflow-hidden rounded-[2rem] border border-electric/30 bg-panel/85 p-2.5 shadow-[0_30px_110px_rgba(0,0,0,0.6)] backdrop-blur-xl">
             {/* Window bar */}
             <div className="flex items-center justify-between border-b border-white/[0.08] px-4 py-3">
@@ -91,7 +90,7 @@ export const FefHero: React.FC = () => {
 
             {/* Dashboard Display Content */}
             <div className="relative overflow-hidden rounded-[1.5rem] border border-white/[0.08] bg-ink/90 p-5 sm:p-8">
-              
+
               <div className="grid gap-6 lg:grid-cols-3">
                 {/* Master Account Panel */}
                 <div className="rounded-2xl border border-electric/25 bg-white/[0.02] p-5">

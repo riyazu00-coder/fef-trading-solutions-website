@@ -32,17 +32,17 @@ export const TradingViewHero: React.FC = () => {
         {/* Main Headline (Strict 2-line layout in Capital Letters) */}
         <h1 className="mt-7 text-2xl sm:text-4xl md:text-5xl lg:text-[2.85rem] xl:text-[3.25rem] font-semibold tracking-[-0.02em] uppercase text-white leading-[1.18]">
           <span className="block">WE BUILD</span>
-          <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(29,168,255,0.25)] md:whitespace-nowrap">
+          <span className="block mt-1 sm:mt-2 fef-headline-gradient drop-shadow-[0_0_25px_rgba(29,168,255,0.25)] md:whitespace-nowrap">
             INTELLIGENT DIGITAL SOLUTIONS
           </span>
         </h1>
 
         {/* Supporting Description (Strict 2-line layout in Capital Letters) */}
-        <p className="mt-6 text-xs sm:text-sm md:text-[15px] lg:text-base text-slate-300/90 max-w-4xl mx-auto font-normal uppercase tracking-wider leading-relaxed">
+        <p className="mt-6 text-xs sm:text-sm md:text-[15px] lg:text-base text-slate-200/90 max-w-4xl mx-auto font-normal uppercase tracking-wider leading-relaxed">
           <span className="block md:whitespace-nowrap">
             AI-POWERED SOFTWARE, CINEMATIC WEBSITES, CUSTOM APPLICATIONS, BUSINESS AUTOMATION,
           </span>
-          <span className="block mt-1 sm:mt-1.5 md:whitespace-nowrap text-slate-400">
+          <span className="block mt-1 sm:mt-1.5 md:whitespace-nowrap text-slate-300/90">
             AND PROFESSIONAL TRADING TECHNOLOGY—ALL BUILT UNDER ONE INNOVATIVE ECOSYSTEM.
           </span>
         </p>
@@ -50,16 +50,14 @@ export const TradingViewHero: React.FC = () => {
         {/* Action Buttons */}
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3.5">
           <a 
-            href="#solutions-showcase" 
-            className="focus-ring inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-[0_0_30px_rgba(29,168,255,0.4)] transition transform hover:-translate-y-0.5 active:translate-y-0"
+            href="#solutions-showcase" className="focus-ring inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-[0_0_30px_rgba(29,168,255,0.4)] transition transform hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>EXPLORE OUR SOLUTIONS</span>
             <ArrowRight className="h-4 w-4" />
           </a>
 
           <a 
-            href="/contact" 
-            className="focus-ring inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm sm:text-base font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/50 backdrop-blur-xl transition transform hover:-translate-y-0.5"
+            href="/contact" className="focus-ring inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm sm:text-base font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/50 backdrop-blur-xl transition transform hover:-translate-y-0.5"
           >
             <span>START A PROJECT</span>
           </a>

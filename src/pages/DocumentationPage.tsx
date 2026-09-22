@@ -37,15 +37,13 @@ export const DocumentationPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183557"
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+              rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
             >
               <span>Buy on MQL5</span>
               <ExternalLink className="h-4 w-4" />
             </a>
             <a
-              href="/trade-copier"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
+              href="/trade-copier" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
             >
               <span>View Trade Copier</span>
               <ArrowRight className="h-4 w-4" />
@@ -73,8 +71,7 @@ export const DocumentationPage: React.FC = () => {
           </div>
           <div className="mt-8 pt-4 border-t border-white/10 flex items-center justify-between">
             <a
-              href="/documentation/trade-copier-setup"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition"
+              href="/documentation/trade-copier-setup" className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition"
             >
               <span>Read Setup Guide</span>
               <ArrowRight className="h-4 w-4" />
@@ -99,8 +96,7 @@ export const DocumentationPage: React.FC = () => {
           </div>
           <div className="mt-8 pt-4 border-t border-white/10 flex items-center justify-between">
             <a
-              href="/documentation/manual-trade-manager-setup"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition"
+              href="/documentation/manual-trade-manager-setup" className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition"
             >
               <span>Read Setup Guide</span>
               <ArrowRight className="h-4 w-4" />
@@ -378,15 +374,13 @@ export const DocumentationPage: React.FC = () => {
           <a
             href="https://www.mql5.com/en/market/product/183557"
             target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+            rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
           >
             <span>Buy on MQL5</span>
             <ExternalLink className="h-4 w-4" />
           </a>
           <a
-            href="/trade-copier"
-            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
+            href="/trade-copier" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
           >
             <span>View Trade Copier</span>
             <ArrowRight className="h-4 w-4" />

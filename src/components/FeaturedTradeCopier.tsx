@@ -20,7 +20,7 @@ export const FeaturedTradeCopier: React.FC = () => {
 
           <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.02em] text-white leading-tight">
             FEF Professional{' '}
-            <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
+            <span className="fef-headline-gradient">
               Trade Copier MT5
             </span>
           </h2>
@@ -34,16 +34,14 @@ export const FeaturedTradeCopier: React.FC = () => {
             <a 
               href="https://www.mql5.com/en/market/product/183557" 
               target="_blank" 
-              rel="noopener noreferrer"
-              className="focus-ring inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-[0_0_30px_rgba(29,168,255,0.4)] transition transform hover:-translate-y-0.5 active:translate-y-0"
+              rel="noopener noreferrer" className="focus-ring inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-[0_0_30px_rgba(29,168,255,0.4)] transition transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <span>Buy on MQL5</span>
               <ExternalLink className="h-4 w-4" />
             </a>
 
             <a 
-              href="/documentation" 
-              className="focus-ring inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm sm:text-base font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/50 backdrop-blur-xl transition transform hover:-translate-y-0.5"
+              href="/documentation" className="focus-ring inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm sm:text-base font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/50 backdrop-blur-xl transition transform hover:-translate-y-0.5"
             >
               <span>View Documentation</span>
               <ChevronRight className="h-4 w-4 text-slate-400" />
@@ -95,8 +93,7 @@ export const FeaturedTradeCopier: React.FC = () => {
             <div className="relative overflow-hidden rounded-2xl mt-2 border border-white/5 bg-[#020408]/60">
               <img 
                 src="/images/hero.png" 
-                alt="FEF Professional Trade Copier MT5 dashboard and trade copying interface" 
-                className="w-full h-auto object-cover transform hover:scale-[1.01] transition-transform duration-500"
+                alt="FEF Professional Trade Copier MT5 dashboard and trade copying interface" className="w-full h-auto object-cover transform hover:scale-[1.01] transition-transform duration-500"
               />
               
               {/* Vignette Gradient */}

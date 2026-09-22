@@ -15,9 +15,15 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
 
   const isHome = currentPath === '/' || currentPath === '';
   const isAbout = currentPath === '/about-us';
-  const isSolutions = currentPath === '/ai-software-development';
+  const isSolutions = [
+    '/ai-software-development',
+    '/ai-web-design-development',
+    '/custom-applications',
+    '/business-automation',
+    '/trading-technology',
+  ].includes(currentPath);
   const isProducts = ['/products', '/trade-copier', '/manual-trade-manager', '/trading-agent', '/pricing'].includes(currentPath);
-  const isResources = ['/documentation', '/downloads', '/changelog'].includes(currentPath);
+  const isResources = ['/documentation', '/documentation/trade-copier-setup', '/documentation/manual-trade-manager-setup', '/downloads', '/changelog'].includes(currentPath);
   const isSupport = ['/support', '/contact'].includes(currentPath);
 
   return (
@@ -28,22 +34,19 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
         
         {/* FEF Original Logo */}
         <a 
-          href="/" 
-          className="focus-ring flex items-center gap-3 shrink-0 group transition-transform hover:scale-[1.02]"
+          href="/" className="focus-ring flex items-center gap-3 shrink-0 group transition-transform hover:scale-[1.02]"
           aria-label="FEF Trading Solutions home"
         >
           <img 
             src="/images/fef-logo-ai.png" 
-            alt="FEF Trading Solutions" 
-            className="h-9 sm:h-10 w-auto object-contain transition-all duration-300 group-hover:brightness-110 drop-shadow-[0_0_12px_rgba(29,168,255,0.3)]"
+            alt="FEF Trading Solutions" className="h-9 sm:h-10 w-auto object-contain transition-all duration-300 group-hover:brightness-110 drop-shadow-[0_0_12px_rgba(29,168,255,0.3)]"
           />
         </a>
 
         {/* Desktop Navigation Links & Dropdowns (Title Case & Bold/Semibold like inner menu) */}
         <nav className="hidden lg:flex items-center gap-1.5" aria-label="Main navigation">
           <a 
-            href="/" 
-            className={`focus-ring px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition ${
+            href="/" className={`focus-ring px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition ${
               isHome
                 ? 'text-white bg-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]'
                 : 'text-slate-300 hover:text-white hover:bg-white/5'
@@ -52,8 +55,7 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
             Home
           </a>
           <a 
-            href="/about-us" 
-            className={`focus-ring px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition ${
+            href="/about-us" className={`focus-ring px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition ${
               isAbout
                 ? 'text-white bg-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]'
                 : 'text-slate-300 hover:text-white hover:bg-white/5'
@@ -109,7 +111,7 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
                       <p className="text-xs text-slate-300 group-hover:text-slate-200 transition mt-0.5">Streamlined operations</p>
                     </div>
                   </a>
-                  <a href="/trade-copier" className="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 text-sm text-white hover:bg-white/10 transition group">
+                  <a href="/trading-technology" className="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 text-sm text-white hover:bg-white/10 transition group">
                     <TrendingUp className="h-4 w-4 text-emerald-400 group-hover:scale-110 transition shrink-0" />
                     <div>
                       <p className="text-sm font-semibold text-white group-hover:text-cyan-300 transition leading-tight">Trading Technology</p>
@@ -142,7 +144,12 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
                 <div className="rounded-2xl fef-glass-dropdown p-2.5 shadow-2xl space-y-1">
                   <a href="/trade-copier" className="block rounded-xl px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 hover:text-cyan-300 transition">Trade Copier MT5</a>
                   <a href="/manual-trade-manager" className="block rounded-xl px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 hover:text-cyan-300 transition">Manual Trade Manager</a>
-                  <a href="/trading-agent" className="block rounded-xl px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 hover:text-cyan-300 transition">Trading Agent</a>
+
+                  <a href="/trading-agent" className="block rounded-xl px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 hover:text-cyan-300 transition">
+                    Trading Agent
+                    <span className="ml-2 text-[9px] font-mono font-medium uppercase tracking-wider text-purple-300">Research</span>
+                  </a>
+
                   <a href="/products" className="block rounded-xl px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 hover:text-cyan-300 transition">Products</a>
                   <a href="/pricing" className="block rounded-xl px-3.5 py-2.5 text-sm font-semibold text-white hover:bg-white/10 hover:text-cyan-300 transition">Pricing</a>
                 </div>
@@ -205,8 +212,7 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
                   <a
                     href="https://wa.me/971551230307"
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-xl px-3.5 py-2.5 text-sm font-semibold text-emerald-400 hover:bg-white/10 hover:text-emerald-300 transition flex items-center justify-between"
+                    rel="noopener noreferrer" className="rounded-xl px-3.5 py-2.5 text-sm font-semibold text-emerald-400 hover:bg-white/10 hover:text-emerald-300 transition flex items-center justify-between"
                   >
                     <span>WhatsApp (+971 55 123 0307)</span>
                     <ExternalLink className="h-3 w-3" />
@@ -222,8 +228,7 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
           <a
             href="https://www.mql5.com/en/market/product/183557"
             target="_blank"
-            rel="noopener noreferrer"
-            className="focus-ring inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:-translate-y-0.5"
+            rel="noopener noreferrer" className="focus-ring inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:-translate-y-0.5"
           >
             <span>MQL5 MARKET</span>
             <ExternalLink className="h-3.5 w-3.5" />
@@ -253,7 +258,7 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
             <a href="/ai-web-design-development" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• AI Web Design & Development</a>
             <a href="/custom-applications" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• Custom Applications</a>
             <a href="/business-automation" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• Business Automation</a>
-            <a href="/trade-copier" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• Trading Technology</a>
+            <a href="/trading-technology" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• Trading Technology</a>
           </div>
 
           <a href="/products" className="block rounded-xl px-3.5 py-2 text-sm font-semibold text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>Products</a>
@@ -263,8 +268,7 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
           <a
             href="https://wa.me/971551230307"
             target="_blank"
-            rel="noopener noreferrer"
-            className="block rounded-xl px-3.5 py-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 flex items-center justify-between"
+            rel="noopener noreferrer" className="block rounded-xl px-3.5 py-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 flex items-center justify-between"
             onClick={() => setMobileMenuOpen(false)}
           >
             <span>WhatsApp (+971 55 123 0307)</span>
@@ -274,8 +278,7 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
             <a 
               href="https://www.mql5.com/en/market/product/183557" 
               target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-bold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow"
+              rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-bold text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow"
             >
               <span>Buy on MQL5</span>
               <ExternalLink className="h-3.5 w-3.5" />

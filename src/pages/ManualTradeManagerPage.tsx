@@ -28,15 +28,13 @@ export const ManualTradeManagerPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183695"
               target="_blank"
-              rel="noopener noreferrer"
-              className="focus-ring inline-flex items-center gap-2.5 px-8 py-4 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
+              rel="noopener noreferrer" className="focus-ring inline-flex items-center gap-2.5 px-8 py-4 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
             >
               <span>Buy on MQL5 Market</span>
               <ExternalLink className="h-4 w-4" />
             </a>
             <a
-              href="/documentation/manual-trade-manager-setup"
-              className="focus-ring inline-flex items-center gap-2 px-7 py-4 rounded-xl text-sm sm:text-base font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
+              href="/documentation/manual-trade-manager-setup" className="focus-ring inline-flex items-center gap-2 px-7 py-4 rounded-xl text-sm sm:text-base font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
             >
               <BookOpen className="h-4 w-4" />
               <span>Setup Guide</span>
@@ -174,7 +172,7 @@ export const ManualTradeManagerPage: React.FC = () => {
               <tr>
                 <td className="font-semibold text-white">Delivery Mode</td>
                 <td>MQL5 Market (183695)</td>
-                <td>Verified licensing with auto-updates</td>
+                <td>MQL5 licensing with product updates</td>
               </tr>
             </tbody>
           </table>
@@ -190,8 +188,7 @@ export const ManualTradeManagerPage: React.FC = () => {
           </p>
         </div>
         <a
-          href="/documentation/manual-trade-manager-setup"
-          className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition shrink-0"
+          href="/documentation/manual-trade-manager-setup" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition shrink-0"
         >
           <span>Read Setup Guide</span>
           <ArrowRight className="h-4 w-4" />

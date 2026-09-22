@@ -128,8 +128,7 @@ export const ManualTradeManagerSetupPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183695"
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition"
+              rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition"
             >
               <span>View Product on MQL5 Market</span>
               <ExternalLink className="h-3.5 w-3.5" />
@@ -400,28 +399,24 @@ export const ManualTradeManagerSetupPage: React.FC = () => {
             <a
               href="https://www.mql5.com/en/market/product/183695"
               target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
+              rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition"
             >
               <span>Buy on MQL5 Market</span>
               <ExternalLink className="h-4 w-4" />
             </a>
             <a
-              href="/manual-trade-manager"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
+              href="/manual-trade-manager" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
             >
               <span>View Product Page</span>
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="/downloads"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-slate-300 hover:text-white transition"
+              href="/downloads" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-slate-300 hover:text-white transition"
             >
               <span>Downloads Center</span>
             </a>
             <a
-              href="/support"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-slate-300 hover:text-white transition"
+              href="/support" className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-slate-300 hover:text-white transition"
             >
               <span>Support Center</span>
             </a>

@@ -28,8 +28,7 @@ export const FefCopierWorkflow: React.FC = () => {
               <a
                 href="https://www.mql5.com/en/market/product/183557"
                 target="_blank"
-                rel="noreferrer"
-                className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-medium transition bg-brand-gradient text-[#05070d] shadow-glow hover:brightness-110 active:scale-95"
+                rel="noreferrer" className="focus-ring inline-flex min-h-11 items-center justify-center gap-2 rounded-lg px-6 py-3 text-sm font-medium transition bg-brand-gradient text-[#05070d] shadow-glow hover:brightness-110 active:scale-95"
               >
                 <span>Deploy on MQL5</span>
               </a>
