@@ -59,7 +59,7 @@ const solutions: SolutionItem[] = [
       'Conversion-Focused Experiences',
     ],
     ctaLabel: 'Explore Web Development',
-    ctaHref: '/contact',
+    ctaHref: '/ai-web-design-development',
     visual: <WebDevVisual />,
   },
   {
