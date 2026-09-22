@@ -3,20 +3,20 @@ import { Mail, Send } from 'lucide-react';
 
 export const FloatingSupportWidget: React.FC = () => {
   return (
-    <aside 
+    <aside
       aria-label="24/7 Support Quick Access"
-      className="fixed bottom-5 right-5 z-50 select-none group"
+      className="fef-floating-support fixed bottom-5 right-5 z-50 select-none group"
     >
-      <div 
+      <div
         style={{
           background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 40%, rgba(6, 12, 24, 0.88) 100%)',
           boxShadow: 'inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.35), 0 16px 40px -8px rgba(0, 0, 0, 0.85), 0 0 25px rgba(25, 215, 135, 0.15)',
         }}
         className="p-2.5 sm:p-3 rounded-[1.75rem] border border-white/20 backdrop-blur-2xl flex flex-col items-center gap-2.5 transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_35px_rgba(25,215,135,0.25)]"
       >
-        
+
         {/* Top 24/7 SUPPORT Header Pill */}
-        <div 
+        <div
           style={{
             background: 'linear-gradient(180deg, rgba(25, 215, 135, 0.22) 0%, rgba(6, 30, 22, 0.85) 100%)',
             boxShadow: 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.3), 0 0 15px rgba(25, 215, 135, 0.25)',
@@ -30,7 +30,7 @@ export const FloatingSupportWidget: React.FC = () => {
 
         {/* Action Icon Buttons */}
         <div className="flex items-center gap-2.5 sm:gap-3 px-1">
-          
+
           {/* 1. Telegram Button */}
           <a
             href="https://t.me/Feftrading"
@@ -53,13 +53,13 @@ export const FloatingSupportWidget: React.FC = () => {
             className="h-11 w-11 sm:h-12 sm:w-12 rounded-full border-2 border-emerald-400 bg-emerald-500/20 hover:bg-emerald-500/35 text-emerald-300 flex items-center justify-center transition-all duration-300 shadow-[0_0_25px_rgba(25,215,135,0.45)] hover:shadow-[0_0_30px_rgba(25,215,135,0.65)] hover:scale-110 active:scale-95 ring-2 ring-emerald-400/40 ring-offset-2 ring-offset-[#060c18]"
           >
             {/* Crisp WhatsApp Speech Bubble Handset SVG */}
-            <svg 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2.2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="h-5 w-5 sm:h-5.5 sm:w-5.5"
             >
               <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />

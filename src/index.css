@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   color: #f7fbff;
   font-family: 'Plus Jakarta Sans', Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: 
+  background:
     radial-gradient(circle at 20% 0%, rgba(29, 168, 255, 0.12), transparent 32rem),
     radial-gradient(circle at 85% 18%, rgba(25, 215, 135, 0.08), transparent 30rem),
     linear-gradient(rgba(5, 7, 13, 0.65) 0%, rgba(7, 17, 31, 0.72) 44%, rgba(5, 7, 13, 0.85) 100%) !important;
@@ -175,7 +175,7 @@ span[class*="bg-clip-text"] {
   backdrop-filter: blur(28px) saturate(140%) !important;
   -webkit-backdrop-filter: blur(28px) saturate(140%) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  box-shadow: 
+  box-shadow:
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
     inset 0 0 30px 0 rgba(25, 211, 208, 0.03),
     0 24px 60px -12px rgba(0, 0, 0, 0.75),
@@ -193,7 +193,7 @@ span[class*="bg-clip-text"] {
   backdrop-filter: blur(20px) saturate(130%) !important;
   -webkit-backdrop-filter: blur(20px) saturate(130%) !important;
   border: 1px solid rgba(255, 255, 255, 0.10) !important;
-  box-shadow: 
+  box-shadow:
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.16),
     0 10px 30px -5px rgba(0, 0, 0, 0.45) !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -205,7 +205,7 @@ span[class*="bg-clip-text"] {
 .premium-card:hover {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 45%, rgba(8, 16, 32, 0.55) 100%) !important;
   border-color: rgba(25, 211, 208, 0.38) !important;
-  box-shadow: 
+  box-shadow:
     inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.28),
     0 16px 45px -5px rgba(0, 0, 0, 0.65),
     0 0 30px rgba(25, 211, 208, 0.14) !important;
@@ -220,7 +220,7 @@ span[class*="bg-clip-text"] {
   backdrop-filter: blur(20px) saturate(130%) !important;
   -webkit-backdrop-filter: blur(20px) saturate(130%) !important;
   border: 1px solid rgba(255, 255, 255, 0.10) !important;
-  box-shadow: 
+  box-shadow:
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.16),
     0 10px 30px -5px rgba(0, 0, 0, 0.45) !important;
   position: relative;
@@ -233,7 +233,7 @@ span[class*="bg-clip-text"] {
   backdrop-filter: blur(36px) saturate(180%) !important;
   -webkit-backdrop-filter: blur(36px) saturate(180%) !important;
   border: 1px solid rgba(255, 255, 255, 0.16) !important;
-  box-shadow: 
+  box-shadow:
     inset 0 1px 1.5px rgba(255, 255, 255, 0.28),
     0 25px 60px -10px rgba(0, 0, 0, 0.95),
     0 0 35px rgba(25, 211, 208, 0.14) !important;
@@ -257,7 +257,7 @@ dialog,
   backdrop-filter: blur(36px) saturate(150%) !important;
   -webkit-backdrop-filter: blur(36px) saturate(150%) !important;
   border: 1px solid rgba(255, 255, 255, 0.16) !important;
-  box-shadow: 
+  box-shadow:
     inset 0 1px 1.5px rgba(255, 255, 255, 0.3),
     0 30px 80px rgba(0, 0, 0, 0.85),
     0 0 40px rgba(29, 168, 255, 0.15) !important;
@@ -284,7 +284,7 @@ textarea:focus,
 select:focus,
 .fef-glass-input:focus {
   border-color: rgba(25, 211, 208, 0.55) !important;
-  box-shadow: 
+  box-shadow:
     0 0 0 3px rgba(29, 168, 255, 0.22),
     inset 0 1px 2px rgba(0, 0, 0, 0.35) !important;
   outline: none !important;
@@ -454,3 +454,644 @@ table tr:last-child td,
   }
 }
 
+
+/* ===== AI SOFTWARE DEVELOPMENT PAGE V2 ===== */
+
+/*
+   Page-specific treatment only.
+   The global homepage/background system remains untouched.
+*/
+
+.ai-software-page {
+  position: relative;
+  isolation: isolate;
+}
+
+/*
+   Deep navy veil over the global aurora.
+   Keeps the existing FEF atmosphere but stops the background
+   from competing with the service content.
+*/
+.ai-software-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 72% 8%,
+      rgba(29, 168, 255, 0.14) 0%,
+      rgba(29, 168, 255, 0.04) 25%,
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 25% 30%,
+      rgba(25, 211, 208, 0.07) 0%,
+      transparent 34%
+    ),
+    radial-gradient(
+      circle at 50% 70%,
+      rgba(25, 215, 135, 0.035) 0%,
+      transparent 36%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(3, 7, 15, 0.64) 0%,
+      rgba(3, 8, 17, 0.78) 34%,
+      rgba(3, 7, 15, 0.91) 72%,
+      rgba(3, 7, 15, 0.96) 100%
+    );
+}
+
+/*
+   Technical grid overlay.
+   Intentionally restrained. This is enterprise AI,
+   not the control room of a 1997 science-fiction submarine.
+*/
+.ai-software-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(
+      rgba(29, 168, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(29, 168, 255, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 72px 72px;
+  -webkit-mask-image:
+    linear-gradient(
+      to bottom,
+      black 0%,
+      rgba(0, 0, 0, 0.75) 48%,
+      transparent 100%
+    );
+  mask-image:
+    linear-gradient(
+      to bottom,
+      black 0%,
+      rgba(0, 0, 0, 0.75) 48%,
+      transparent 100%
+    );
+}
+
+/* ---------------------------------------------------------------
+   AI PAGE GLASS
+   --------------------------------------------------------------- */
+
+.ai-software-page .fef-glass-section {
+  background:
+    radial-gradient(
+      circle at 12% 0%,
+      rgba(29, 168, 255, 0.075),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(10, 18, 34, 0.91) 0%,
+      rgba(6, 13, 27, 0.88) 48%,
+      rgba(5, 11, 23, 0.93) 100%
+    ) !important;
+
+  backdrop-filter: blur(30px) saturate(135%) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(135%) !important;
+
+  border-color: rgba(148, 197, 255, 0.15) !important;
+
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.13),
+    inset 0 0 45px rgba(29, 168, 255, 0.025),
+    0 24px 70px -24px rgba(0, 0, 0, 0.88),
+    0 0 50px -30px rgba(29, 168, 255, 0.32) !important;
+}
+
+.ai-software-page .fef-glass-card {
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(29, 168, 255, 0.055),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(10, 18, 33, 0.86),
+      rgba(5, 11, 23, 0.92)
+    ) !important;
+
+  border-color: rgba(255, 255, 255, 0.105) !important;
+}
+
+.ai-software-page .fef-glass-card:hover {
+  border-color: rgba(25, 211, 208, 0.34) !important;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.18),
+    0 18px 45px -16px rgba(0, 0, 0, 0.85),
+    0 0 30px rgba(25, 211, 208, 0.09) !important;
+}
+
+/* ---------------------------------------------------------------
+   HERO
+   --------------------------------------------------------------- */
+
+.ai-software-page > section:first-child {
+  min-height: min(820px, calc(100vh - var(--header-height)));
+  display: flex;
+  align-items: center;
+}
+
+.ai-software-page > section:first-child::after {
+  content: "";
+  position: absolute;
+  width: min(48vw, 680px);
+  aspect-ratio: 1;
+  right: -6%;
+  top: 4%;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 999px;
+  background:
+    radial-gradient(
+      circle,
+      rgba(29, 168, 255, 0.13) 0%,
+      rgba(25, 211, 208, 0.055) 35%,
+      transparent 70%
+    );
+  filter: blur(25px);
+}
+
+/* Give the interactive AI core a stronger hero presence */
+.ai-software-page > section:first-child .lg\:col-span-6:last-child {
+  position: relative;
+}
+
+.ai-software-page > section:first-child .lg\:col-span-6:last-child::before {
+  content: "";
+  position: absolute;
+  inset: 12% 8%;
+  z-index: -1;
+  border-radius: 999px;
+  background:
+    radial-gradient(
+      circle,
+      rgba(25, 211, 208, 0.15),
+      rgba(29, 168, 255, 0.07) 42%,
+      transparent 72%
+    );
+  filter: blur(45px);
+}
+
+/* ---------------------------------------------------------------
+   CAPABILITY NETWORK
+   --------------------------------------------------------------- */
+
+.ai-capability-network {
+  position: relative;
+  isolation: isolate;
+}
+
+.ai-capability-network::before {
+  content: "";
+  position: absolute;
+  inset: 8% 6%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.55;
+
+  background:
+    radial-gradient(
+      circle at 16.6% 25%,
+      rgba(29, 168, 255, 0.16) 0 2px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(25, 211, 208, 0.18) 0 2px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle at 83.4% 25%,
+      rgba(25, 215, 135, 0.16) 0 2px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle at 16.6% 75%,
+      rgba(25, 211, 208, 0.16) 0 2px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle at 50% 75%,
+      rgba(29, 168, 255, 0.16) 0 2px,
+      transparent 3px
+    ),
+    radial-gradient(
+      circle at 83.4% 75%,
+      rgba(25, 215, 135, 0.16) 0 2px,
+      transparent 3px
+    ),
+    linear-gradient(
+      90deg,
+      transparent 8%,
+      rgba(29, 168, 255, 0.07) 28%,
+      rgba(25, 211, 208, 0.10) 50%,
+      rgba(25, 215, 135, 0.07) 72%,
+      transparent 92%
+    );
+
+  filter: blur(0.2px);
+}
+
+/* ---------------------------------------------------------------
+   CONNECTED AI SYSTEM FLOW
+   --------------------------------------------------------------- */
+
+.ai-system-flow {
+  position: relative;
+}
+
+.ai-system-flow > * {
+  position: relative;
+  min-width: 0;
+  transition:
+    border-color 220ms ease,
+    background 220ms ease,
+    transform 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.ai-system-flow > *:hover {
+  transform: translateY(-2px);
+  border-color: rgba(25, 211, 208, 0.32) !important;
+  background: rgba(12, 23, 40, 0.72) !important;
+  box-shadow: 0 14px 32px -18px rgba(29, 168, 255, 0.55);
+}
+
+@media (min-width: 1024px) {
+  .ai-system-flow {
+    gap: 1rem;
+  }
+
+  .ai-system-flow > *:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    right: -1.05rem;
+    width: 1.1rem;
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(29, 168, 255, 0.2),
+        rgba(25, 211, 208, 0.9)
+      );
+
+    box-shadow:
+      0 0 10px rgba(25, 211, 208, 0.45);
+  }
+
+  .ai-system-flow > *:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    z-index: 6;
+    top: calc(50% - 2px);
+    right: -1.08rem;
+    width: 5px;
+    height: 5px;
+    border-top: 1px solid rgba(25, 211, 208, 0.9);
+    border-right: 1px solid rgba(25, 211, 208, 0.9);
+    transform: rotate(45deg);
+  }
+}
+
+/* ---------------------------------------------------------------
+   DEVELOPMENT TIMELINE
+   --------------------------------------------------------------- */
+
+.ai-process-timeline {
+  position: relative;
+  isolation: isolate;
+}
+
+.ai-process-timeline > * {
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .ai-process-timeline::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 5%;
+    right: 5%;
+    top: 2.25rem;
+    height: 1px;
+
+    background:
+      linear-gradient(
+        90deg,
+        transparent,
+        rgba(29, 168, 255, 0.45) 14%,
+        rgba(25, 211, 208, 0.62) 48%,
+        rgba(25, 215, 135, 0.46) 84%,
+        transparent
+      );
+
+    box-shadow:
+      0 0 18px rgba(25, 211, 208, 0.2);
+  }
+
+  .ai-process-timeline > *::before {
+    content: "";
+    position: absolute;
+    top: 1.97rem;
+    left: 1.5rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #19d3d0;
+    border: 2px solid rgba(5, 11, 23, 0.95);
+    box-shadow:
+      0 0 0 3px rgba(25, 211, 208, 0.12),
+      0 0 14px rgba(25, 211, 208, 0.5);
+  }
+}
+
+/* ---------------------------------------------------------------
+   FINAL CTA
+   --------------------------------------------------------------- */
+
+.ai-software-page > section:last-child .fef-glass-section {
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(29, 168, 255, 0.13),
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 85% 100%,
+      rgba(25, 215, 135, 0.07),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(8, 17, 32, 0.94),
+      rgba(4, 10, 22, 0.96)
+    ) !important;
+}
+
+/* ---------------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  .ai-software-page > section:first-child {
+    min-height: auto;
+  }
+
+  .ai-capability-network::before {
+    opacity: 0.25;
+  }
+}
+
+@media (max-width: 639px) {
+  .ai-software-page::after {
+    background-size: 48px 48px;
+    opacity: 0.14;
+  }
+
+  .ai-software-page > section:first-child {
+    padding-top: 2rem;
+  }
+
+  .ai-system-flow > *:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 1.5rem;
+    bottom: -0.8rem;
+    width: 1px;
+    height: 0.8rem;
+    background:
+      linear-gradient(
+        rgba(29, 168, 255, 0.25),
+        rgba(25, 211, 208, 0.8)
+      );
+  }
+}
+
+/* ---------------------------------------------------------------
+   ACCESSIBILITY
+   --------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-software-page *,
+  .ai-software-page *::before,
+  .ai-software-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* ===== END AI SOFTWARE DEVELOPMENT PAGE V2 ===== */
+
+/* ===== AI SOFTWARE FINAL POLISH ===== */
+
+/*
+   Final visual veil.
+   The global aurora remains part of the FEF identity, but on this
+   engineering page it becomes atmosphere rather than subject matter.
+*/
+
+.ai-software-page {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2, 8, 17, 0.48) 0%,
+      rgba(2, 8, 17, 0.64) 24%,
+      rgba(2, 8, 17, 0.76) 52%,
+      rgba(2, 7, 15, 0.88) 100%
+    );
+}
+
+/*
+   Stronger page-local veil over the global scenic background.
+   Cyan illumination remains around the hero/core.
+*/
+
+.ai-software-page::before {
+  background:
+    radial-gradient(
+      circle at 76% 9%,
+      rgba(29, 168, 255, 0.16) 0%,
+      rgba(29, 168, 255, 0.055) 24%,
+      transparent 46%
+    ),
+    radial-gradient(
+      circle at 55% 28%,
+      rgba(25, 211, 208, 0.045) 0%,
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 8, 18, 0.72) 0%,
+      rgba(2, 8, 18, 0.82) 32%,
+      rgba(2, 8, 17, 0.90) 67%,
+      rgba(2, 7, 15, 0.96) 100%
+    ) !important;
+}
+
+/*
+   Reduce the grid further so it behaves like texture rather than
+   becoming another visual layer competing with the content.
+*/
+
+.ai-software-page::after {
+  opacity: 0.14 !important;
+}
+
+/*
+   Hero gets controlled cyan depth rather than scenic brightness.
+*/
+
+.ai-software-page > section:first-child {
+  position: relative;
+}
+
+.ai-software-page > section:first-child::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 77% 37%,
+      rgba(29, 168, 255, 0.09),
+      transparent 35%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(2, 8, 17, 0.40),
+      transparent 52%,
+      rgba(2, 12, 25, 0.18)
+    );
+}
+
+/*
+   Increase contrast between sections and the remaining atmospheric
+   background.
+*/
+
+.ai-software-page .fef-glass-section {
+  background:
+    radial-gradient(
+      circle at 8% 0%,
+      rgba(29, 168, 255, 0.06),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(7, 17, 32, 0.95) 0%,
+      rgba(4, 12, 25, 0.94) 50%,
+      rgba(3, 10, 21, 0.96) 100%
+    ) !important;
+}
+
+/*
+   Capability cards remain slightly separated from the page surface.
+*/
+
+.ai-software-page .fef-glass-card {
+  background:
+    radial-gradient(
+      circle at 0% 0%,
+      rgba(29, 168, 255, 0.045),
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(7, 17, 31, 0.94),
+      rgba(3, 10, 21, 0.96)
+    ) !important;
+}
+
+/*
+   Desktop support widget:
+   retain access, reduce obstruction, and keep it visually secondary.
+*/
+
+body:has(.ai-software-page) .fef-floating-support {
+  transform: scale(0.88);
+  transform-origin: bottom right;
+  right: 1rem !important;
+  bottom: 1rem !important;
+  opacity: 0.92;
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+body:has(.ai-software-page) .fef-floating-support:hover,
+body:has(.ai-software-page) .fef-floating-support:focus-within {
+  transform: scale(0.94);
+  opacity: 1;
+}
+
+/*
+   Give wide desktop content a little breathing room where the fixed
+   support control occupies the lower-right viewport.
+*/
+
+@media (min-width: 1024px) {
+  .ai-software-page > section {
+    scroll-margin-top: 6rem;
+  }
+
+  .ai-software-page > section:last-child {
+    padding-bottom: 7rem;
+  }
+}
+
+/*
+   On smaller screens the support widget should not become microscopic.
+*/
+
+@media (max-width: 767px) {
+  body:has(.ai-software-page) .fef-floating-support {
+    transform: scale(0.82);
+    right: 0.5rem !important;
+    bottom: 0.5rem !important;
+  }
+
+  body:has(.ai-software-page) .fef-floating-support:hover,
+  body:has(.ai-software-page) .fef-floating-support:focus-within {
+    transform: scale(0.82);
+  }
+
+  .ai-software-page {
+    padding-bottom: 4.5rem;
+  }
+}
+
+/*
+   Preserve reduced-motion behavior.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+  body:has(.ai-software-page) .fef-floating-support {
+    transition: none !important;
+  }
+}
+
+/* ===== END AI SOFTWARE FINAL POLISH ===== */

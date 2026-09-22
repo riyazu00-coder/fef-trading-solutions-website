@@ -29,7 +29,7 @@ export const Interactive3DStage: React.FC<Interactive3DStageProps> = ({
     const rect = containerRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    
+
     // Normalize coordinates from -1 to 1
     const normX = (x / rect.width) * 2 - 1;
     const normY = (y / rect.height) * 2 - 1;
@@ -42,7 +42,7 @@ export const Interactive3DStage: React.FC<Interactive3DStageProps> = ({
   }, []);
 
   const handleMouseEnter = () => setIsHovered(true);
-  
+
   const handleMouseLeave = () => {
     setIsHovered(false);
     setRotate({ x: 0, y: 0 });
@@ -91,7 +91,7 @@ export const Interactive3DStage: React.FC<Interactive3DStageProps> = ({
       {/* 1. Volumetric Ambient Lighting */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] bg-gradient-to-tr ${glowStyles} blur-[90px] rounded-full transition-opacity duration-700 ${isHovered ? 'opacity-90 scale-110' : 'opacity-60'}`} />
-        
+
         {/* Subtle 3D Depth Grid Matrix */}
         <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#19d3d0_1px,transparent_1px)] [background-size:24px_24px]" />
       </div>
@@ -115,10 +115,10 @@ export const Interactive3DStage: React.FC<Interactive3DStageProps> = ({
 
       {/* 3. Main Floating 3D Model Stage */}
       <div className="relative z-10 my-auto w-full flex items-center justify-center py-2">
-        
+
         {/* Floating Levitation Wrapper (CSS continuous float animation) */}
         <div className="w-full flex flex-col items-center justify-center animate-float">
-          
+
           {/* Interactive 3D Transform Surface (Mouse tilt + depth) */}
           <div
             className="relative w-full max-w-[460px] aspect-[4/3] rounded-2xl transition-transform duration-200 ease-out flex items-center justify-center"
@@ -129,7 +129,7 @@ export const Interactive3DStage: React.FC<Interactive3DStageProps> = ({
             }}
           >
             {/* Cinematic 3D Render Image with Smooth Edge Radial Vignette Mask */}
-            <div 
+            <div
               className="relative w-full h-full rounded-2xl overflow-hidden shadow-[0_20px_40px_rgba(0,0,0,0.7)] border border-white/10"
               style={{
                 maskImage: 'radial-gradient(ellipse 94% 90% at 50% 50%, black 70%, transparent 100%)',
@@ -147,7 +147,7 @@ export const Interactive3DStage: React.FC<Interactive3DStageProps> = ({
               />
 
               {/* Dynamic Specular Glass Reflection Sheen */}
-              <div 
+              <div
                 className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-white/[0.06] to-transparent opacity-60 mix-blend-overlay transition-opacity duration-300"
                 style={{
                   transform: `translate3d(${rotate.y * 1.5}px, ${-rotate.x * 1.5}px, 0)`,
@@ -184,7 +184,7 @@ export const Interactive3DStage: React.FC<Interactive3DStageProps> = ({
 
         <span className="text-emerald-400 flex items-center gap-1 shrink-0 font-medium ml-2">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          <span>60 FPS Active</span>
+
         </span>
       </div>
 
