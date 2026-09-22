@@ -102,7 +102,7 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
                       <p className="text-xs text-slate-300 group-hover:text-slate-200 transition mt-0.5">Bespoke code & portals</p>
                     </div>
                   </a>
-                  <a href="/ai-software-development#automation" className="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 text-sm text-white hover:bg-white/10 transition group">
+                  <a href="/business-automation" className="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 text-sm text-white hover:bg-white/10 transition group">
                     <Bot className="h-4 w-4 text-purple-400 group-hover:scale-110 transition shrink-0" />
                     <div>
                       <p className="text-sm font-semibold text-white group-hover:text-cyan-300 transition leading-tight">Business Automation</p>
@@ -252,7 +252,7 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
             <a href="/ai-software-development" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• AI Software Development</a>
             <a href="/ai-web-design-development" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• AI Web Design & Development</a>
             <a href="/custom-applications" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• Custom Applications</a>
-            <a href="/ai-software-development#automation" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• Business Automation</a>
+            <a href="/business-automation" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• Business Automation</a>
             <a href="/trade-copier" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• Trading Technology</a>
           </div>
 

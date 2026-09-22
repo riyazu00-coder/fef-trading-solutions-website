@@ -91,7 +91,7 @@ const solutions: SolutionItem[] = [
       'System and Data Integration',
     ],
     ctaLabel: 'Explore Automation',
-    ctaHref: '/contact',
+    ctaHref: '/business-automation',
     visual: <AutomationVisual />,
   },
   {

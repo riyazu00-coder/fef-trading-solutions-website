@@ -1244,3 +1244,497 @@ body:has(.custom-apps-page) .fef-floating-support:hover{transform:scale(.9)}
 @media(max-width:767px){.custom-apps-hero-visual::before{display:none}.custom-apps-capability-grid .fef-glass-card,.custom-apps-layer-card,.custom-apps-process .fef-glass-card{min-height:auto}body:has(.custom-apps-page) .fef-floating-support{transform:scale(.76);right:.4rem!important;bottom:.4rem!important}}
 @media(prefers-reduced-motion:reduce){.custom-apps-hero::after,.custom-apps-hero-visual>div,.custom-apps-cta::before{animation:none!important}.custom-apps-capability-grid .fef-glass-card,.custom-apps-layer-card,.custom-apps-use-case-grid .fef-glass-card,.custom-apps-process .fef-glass-card{transition:none!important;transform:none!important}}
 /* ===== END CUSTOM APPLICATIONS CINEMATIC EXPERIENCE ===== */
+
+/* ===== BUSINESS AUTOMATION CINEMATIC EXPERIENCE ===== */
+
+.business-automation-page{
+  position:relative;
+  background:
+    radial-gradient(circle at 82% 8%,rgba(137,76,255,.10),transparent 29rem),
+    radial-gradient(circle at 8% 42%,rgba(34,211,238,.055),transparent 32rem),
+    #05070d;
+}
+
+.business-automation-gradient{
+  background:linear-gradient(100deg,#67e8f9 0%,#9b8cff 48%,#c084fc 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.business-automation-hero{
+  min-height:720px;
+  isolation:isolate;
+  background:
+    linear-gradient(rgba(113,82,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(113,82,255,.025) 1px,transparent 1px);
+  background-size:64px 64px;
+}
+
+.business-automation-hero::before{
+  content:"";
+  position:absolute;
+  width:38rem;
+  height:38rem;
+  right:-12rem;
+  top:-11rem;
+  border-radius:999px;
+  background:radial-gradient(circle,rgba(139,92,246,.17),rgba(77,70,229,.055) 43%,transparent 70%);
+  filter:blur(8px);
+  pointer-events:none;
+  animation:businessAutomationAmbient 9s ease-in-out infinite alternate;
+}
+
+.business-automation-hero::after{
+  content:"";
+  position:absolute;
+  width:30rem;
+  height:30rem;
+  left:-16rem;
+  bottom:-14rem;
+  border-radius:999px;
+  background:radial-gradient(circle,rgba(34,211,238,.09),transparent 68%);
+  pointer-events:none;
+}
+
+.business-automation-hero-visual{
+  position:relative;
+  perspective:1200px;
+}
+
+.business-automation-hero-visual::before{
+  content:"WORKFLOW ORCHESTRATION";
+  position:absolute;
+  z-index:3;
+  right:1rem;
+  top:-1.3rem;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.62rem;
+  letter-spacing:.22em;
+  color:rgba(196,181,253,.68);
+}
+
+.business-automation-hero-visual::after{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:12% 4% 8%;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(139,92,246,.20),rgba(34,211,238,.055) 42%,transparent 70%);
+  filter:blur(35px);
+  pointer-events:none;
+}
+
+.business-automation-hero-visual>div{
+  transform:rotateY(-4deg) rotateX(1.5deg);
+  transform-style:preserve-3d;
+  animation:businessAutomationFloat 7s ease-in-out infinite;
+}
+
+.business-automation-intro{
+  position:relative;
+  background:linear-gradient(180deg,rgba(10,12,24,.76),rgba(5,7,13,.94));
+  backdrop-filter:blur(18px);
+}
+
+.business-automation-capabilities{
+  position:relative;
+}
+
+.business-automation-capabilities::before{
+  content:"";
+  position:absolute;
+  width:26rem;
+  height:26rem;
+  right:-13rem;
+  top:12%;
+  border-radius:999px;
+  background:radial-gradient(circle,rgba(139,92,246,.07),transparent 70%);
+  pointer-events:none;
+}
+
+.business-automation-capability-grid .fef-glass-card{
+  position:relative;
+  overflow:hidden;
+  min-height:15.5rem;
+  background:linear-gradient(145deg,rgba(11,12,29,.82),rgba(5,8,18,.90));
+  border-color:rgba(155,130,255,.14);
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+
+.business-automation-capability-grid .fef-glass-card::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(167,139,250,.58),rgba(103,232,249,.28),transparent);
+  opacity:.7;
+}
+
+.business-automation-capability-grid .fef-glass-card::after{
+  content:"";
+  position:absolute;
+  width:8rem;
+  height:8rem;
+  right:-4rem;
+  bottom:-4rem;
+  border-radius:999px;
+  background:radial-gradient(circle,rgba(124,58,237,.11),transparent 70%);
+  transition:transform .35s ease;
+}
+
+.business-automation-capability-grid .fef-glass-card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(167,139,250,.31);
+  box-shadow:0 24px 55px rgba(0,0,0,.28),0 0 32px rgba(109,76,255,.06);
+}
+
+.business-automation-capability-grid .fef-glass-card:hover::after{
+  transform:scale(1.35);
+}
+
+.business-automation-flow{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(91,72,255,.09),transparent 34rem),
+    linear-gradient(180deg,rgba(8,10,22,.82),rgba(5,7,13,.94));
+}
+
+.business-automation-flow::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.34;
+  background-image:
+    linear-gradient(rgba(135,110,255,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(135,110,255,.045) 1px,transparent 1px);
+  background-size:52px 52px;
+  pointer-events:none;
+}
+
+.business-automation-workflow{
+  position:relative;
+  isolation:isolate;
+}
+
+.business-automation-workflow::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:7%;
+  right:7%;
+  top:2.15rem;
+  height:2px;
+  background:linear-gradient(90deg,#22d3ee,#766cff,#a855f7,#7c3aed,#22d3ee);
+  background-size:200% 100%;
+  box-shadow:0 0 20px rgba(124,92,255,.38);
+  animation:businessAutomationRail 6s linear infinite;
+}
+
+.business-automation-workflow-card{
+  min-height:17rem;
+  padding:1.25rem;
+  border:1px solid rgba(147,126,255,.13);
+  border-radius:1.15rem;
+  background:linear-gradient(155deg,rgba(12,14,32,.88),rgba(5,8,18,.92));
+  box-shadow:0 16px 38px rgba(0,0,0,.20);
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+
+.business-automation-workflow-card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(165,139,250,.31);
+  box-shadow:0 24px 52px rgba(0,0,0,.29),0 0 25px rgba(118,92,255,.07);
+}
+
+.business-automation-node{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:4.3rem;
+  height:4.3rem;
+  margin:0 auto;
+  border-radius:999px;
+  color:#ddd6fe;
+  border:1px solid rgba(167,139,250,.34);
+  background:
+    radial-gradient(circle at 35% 30%,rgba(196,181,253,.19),transparent 34%),
+    linear-gradient(145deg,rgba(94,66,190,.32),rgba(13,16,36,.95));
+  box-shadow:
+    0 0 0 6px rgba(124,92,255,.045),
+    0 0 28px rgba(124,92,255,.20);
+}
+
+.business-automation-node::after{
+  content:"";
+  position:absolute;
+  inset:-7px;
+  border-radius:999px;
+  border:1px dashed rgba(103,232,249,.18);
+  animation:businessAutomationNodeSpin 14s linear infinite;
+}
+
+.business-automation-connections{
+  position:relative;
+}
+
+.business-automation-connections::before{
+  content:"";
+  position:absolute;
+  width:30rem;
+  height:30rem;
+  left:-15rem;
+  top:15%;
+  border-radius:999px;
+  background:radial-gradient(circle,rgba(34,211,238,.065),transparent 70%);
+  pointer-events:none;
+}
+
+.business-automation-layer-stack{
+  position:relative;
+  display:grid;
+  gap:1rem;
+}
+
+.business-automation-layer-stack::before{
+  content:"";
+  position:absolute;
+  left:1.45rem;
+  top:2.2rem;
+  bottom:2.2rem;
+  width:1px;
+  background:linear-gradient(#67e8f9,#8b7cf6,#c084fc);
+  box-shadow:0 0 14px rgba(139,124,246,.30);
+}
+
+.business-automation-layer-card{
+  position:relative;
+  margin-left:1.15rem;
+  padding:1.35rem 1.4rem 1.35rem 2.3rem;
+  border:1px solid rgba(147,126,255,.14);
+  border-radius:1rem;
+  background:linear-gradient(135deg,rgba(11,14,31,.84),rgba(5,8,18,.91));
+  box-shadow:0 14px 34px rgba(0,0,0,.18);
+  transition:transform .3s ease,border-color .3s ease;
+}
+
+.business-automation-layer-card::before{
+  content:"";
+  position:absolute;
+  left:-.45rem;
+  top:50%;
+  width:.8rem;
+  height:.8rem;
+  transform:translateY(-50%);
+  border-radius:999px;
+  background:#9b8cff;
+  border:2px solid #111528;
+  box-shadow:0 0 18px rgba(155,140,255,.72);
+}
+
+.business-automation-layer-card:hover{
+  transform:translateX(7px);
+  border-color:rgba(167,139,250,.32);
+}
+
+.business-automation-layer-number{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  width:2.5rem;
+  height:2.5rem;
+  border-radius:.7rem;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.7rem;
+  color:#c4b5fd;
+  border:1px solid rgba(167,139,250,.20);
+  background:rgba(124,92,255,.08);
+}
+
+.business-automation-use-cases{
+  position:relative;
+  background:linear-gradient(180deg,rgba(8,10,22,.72),rgba(5,7,13,.94));
+}
+
+.business-automation-use-case-grid .fef-glass-card{
+  background:linear-gradient(145deg,rgba(10,13,29,.78),rgba(5,8,18,.90));
+  border-color:rgba(128,112,239,.13);
+  transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+
+.business-automation-use-case-grid .fef-glass-card:hover{
+  transform:translateX(6px);
+  border-color:rgba(103,232,249,.24);
+  box-shadow:0 18px 44px rgba(0,0,0,.23);
+}
+
+.business-automation-delivery-section{
+  position:relative;
+}
+
+.business-automation-delivery{
+  position:relative;
+  isolation:isolate;
+}
+
+.business-automation-delivery::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:5%;
+  right:5%;
+  top:1.55rem;
+  height:1px;
+  background:linear-gradient(90deg,#67e8f9,#8b7cf6,#c084fc);
+  box-shadow:0 0 18px rgba(124,92,255,.25);
+}
+
+.business-automation-delivery .fef-glass-card{
+  min-height:14rem;
+  background:linear-gradient(150deg,rgba(10,13,29,.79),rgba(5,8,18,.90));
+  border-color:rgba(147,126,255,.14);
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+
+.business-automation-delivery .fef-glass-card:nth-child(2),
+.business-automation-delivery .fef-glass-card:nth-child(4){
+  transform:translateY(14px);
+}
+
+.business-automation-delivery .fef-glass-card:hover{
+  transform:translateY(-7px);
+  border-color:rgba(167,139,250,.31);
+  box-shadow:0 22px 50px rgba(0,0,0,.26);
+}
+
+.business-automation-delivery .fef-glass-card:nth-child(2):hover,
+.business-automation-delivery .fef-glass-card:nth-child(4):hover{
+  transform:translateY(7px);
+}
+
+.business-automation-cta{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 120%,rgba(124,92,255,.20),transparent 45%),
+    linear-gradient(145deg,rgba(11,13,31,.93),rgba(5,8,18,.97))!important;
+  border-color:rgba(147,126,255,.18)!important;
+}
+
+.business-automation-cta::before{
+  content:"";
+  position:absolute;
+  left:-30%;
+  top:0;
+  width:35%;
+  height:100%;
+  background:linear-gradient(90deg,transparent,rgba(167,139,250,.06),transparent);
+  transform:skewX(-18deg);
+  animation:businessAutomationSweep 8s ease-in-out infinite;
+}
+
+body:has(.business-automation-page) .fef-floating-support{
+  transform:scale(.82);
+  transform-origin:bottom right;
+  right:.75rem!important;
+  bottom:.75rem!important;
+  opacity:.86;
+}
+
+body:has(.business-automation-page) .fef-floating-support:hover{
+  transform:scale(.9);
+}
+
+@keyframes businessAutomationFloat{
+  0%,100%{transform:rotateY(-4deg) rotateX(1.5deg) translateY(0)}
+  50%{transform:rotateY(-2.5deg) rotateX(1deg) translateY(-9px)}
+}
+
+@keyframes businessAutomationAmbient{
+  from{transform:translate3d(0,0,0) scale(.96);opacity:.66}
+  to{transform:translate3d(-2rem,2rem,0) scale(1.08);opacity:1}
+}
+
+@keyframes businessAutomationRail{
+  from{background-position:0% 50%}
+  to{background-position:200% 50%}
+}
+
+@keyframes businessAutomationNodeSpin{
+  to{transform:rotate(360deg)}
+}
+
+@keyframes businessAutomationSweep{
+  0%,55%{transform:translateX(-120%) skewX(-18deg)}
+  80%,100%{transform:translateX(430%) skewX(-18deg)}
+}
+
+@media(max-width:1023px){
+  .business-automation-hero{min-height:auto}
+  .business-automation-hero-visual>div{
+    transform:none;
+    animation:businessAutomationMobileFloat 6s ease-in-out infinite;
+  }
+  .business-automation-workflow::before,
+  .business-automation-delivery::before{
+    display:none;
+  }
+  .business-automation-delivery .fef-glass-card:nth-child(2),
+  .business-automation-delivery .fef-glass-card:nth-child(4){
+    transform:none;
+  }
+}
+
+@keyframes businessAutomationMobileFloat{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
+
+@media(max-width:767px){
+  .business-automation-hero-visual::before{display:none}
+  .business-automation-capability-grid .fef-glass-card,
+  .business-automation-workflow-card,
+  .business-automation-delivery .fef-glass-card{
+    min-height:auto;
+  }
+  .business-automation-layer-stack::before{
+    left:.3rem;
+  }
+  .business-automation-layer-card{
+    margin-left:0;
+    padding-left:1.35rem;
+  }
+  .business-automation-layer-card::before{
+    display:none;
+  }
+  body:has(.business-automation-page) .fef-floating-support{
+    transform:scale(.76);
+    right:.4rem!important;
+    bottom:.4rem!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .business-automation-hero::before,
+  .business-automation-hero-visual>div,
+  .business-automation-workflow::before,
+  .business-automation-node::after,
+  .business-automation-cta::before{
+    animation:none!important;
+  }
+  .business-automation-capability-grid .fef-glass-card,
+  .business-automation-workflow-card,
+  .business-automation-layer-card,
+  .business-automation-use-case-grid .fef-glass-card,
+  .business-automation-delivery .fef-glass-card{
+    transition:none!important;
+    transform:none!important;
+  }
+}
+
+/* ===== END BUSINESS AUTOMATION CINEMATIC EXPERIENCE ===== */

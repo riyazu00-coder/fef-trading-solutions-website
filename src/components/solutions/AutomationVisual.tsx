@@ -5,14 +5,14 @@ export const AutomationVisual: React.FC = () => {
   return (
     <Interactive3DStage
       imageSrc="/assets/3d/automation_robot_3d.jpg"
-      altText="3D Cybernetic Automation Mechanism"
-      badgeLabel="Cybernetic Robotic Core"
+      altText="Conceptual visualization of a connected business automation system"
+      badgeLabel="Workflow Orchestration"
       badgeColor="text-purple-300 border-purple-500/40 bg-purple-500/15"
       accentGlow="purple"
       telemetryMetrics={[
-        { label: 'Throughput', value: '1.4k jobs/min' },
-        { label: 'Uptime', value: '99.99%' },
-        { label: 'Execution', value: '48ms' },
+        { label: 'Layer', value: 'Operations' },
+        { label: 'Mode', value: 'Workflow' },
+        { label: 'Control', value: 'Human + System' },
       ]}
     />
   );

@@ -18,6 +18,7 @@ import { AboutUsPage } from './pages/AboutUsPage';
 import { AiSoftwarePage } from './pages/AiSoftwarePage';
 import { AiWebDevelopmentPage } from './pages/AiWebDevelopmentPage';
 import { CustomApplicationsPage } from './pages/CustomApplicationsPage';
+import { BusinessAutomationPage } from './pages/BusinessAutomationPage';
 import { TradeCopierPage } from './pages/TradeCopierPage';
 import { ManualTradeManagerPage } from './pages/ManualTradeManagerPage';
 import { TradingAgentPage } from './pages/TradingAgentPage';
@@ -78,6 +79,8 @@ export function App() {
         return <AiWebDevelopmentPage />;
       case '/custom-applications':
         return <CustomApplicationsPage />;
+      case '/business-automation':
+        return <BusinessAutomationPage />;
       case '/trade-copier':
         return <TradeCopierPage />;
       case '/manual-trade-manager':
