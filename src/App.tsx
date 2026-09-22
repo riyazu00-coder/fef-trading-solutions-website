@@ -17,6 +17,7 @@ import { FloatingSupportWidget } from './components/FloatingSupportWidget';
 import { AboutUsPage } from './pages/AboutUsPage';
 import { AiSoftwarePage } from './pages/AiSoftwarePage';
 import { AiWebDevelopmentPage } from './pages/AiWebDevelopmentPage';
+import { CustomApplicationsPage } from './pages/CustomApplicationsPage';
 import { TradeCopierPage } from './pages/TradeCopierPage';
 import { ManualTradeManagerPage } from './pages/ManualTradeManagerPage';
 import { TradingAgentPage } from './pages/TradingAgentPage';
@@ -75,6 +76,8 @@ export function App() {
         return <AiSoftwarePage />;
       case '/ai-web-design-development':
         return <AiWebDevelopmentPage />;
+      case '/custom-applications':
+        return <CustomApplicationsPage />;
       case '/trade-copier':
         return <TradeCopierPage />;
       case '/manual-trade-manager':

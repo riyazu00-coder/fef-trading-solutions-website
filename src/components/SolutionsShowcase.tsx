@@ -75,7 +75,7 @@ const solutions: SolutionItem[] = [
       'Scalable Software Architecture',
     ],
     ctaLabel: 'Explore Custom Development',
-    ctaHref: '/contact',
+    ctaHref: '/custom-applications',
     visual: <CustomCodingVisual />,
   },
   {

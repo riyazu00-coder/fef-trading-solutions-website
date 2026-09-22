@@ -88,14 +88,14 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
                       <p className="text-xs text-slate-300 group-hover:text-slate-200 transition mt-0.5">Custom intelligent systems</p>
                     </div>
                   </a>
-                  <a href="/ai-software-development#web" className="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 text-sm text-white hover:bg-white/10 transition group">
+                  <a href="/ai-web-design-development" className="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 text-sm text-white hover:bg-white/10 transition group">
                     <Globe className="h-4 w-4 text-cyan-400 group-hover:scale-110 transition shrink-0" />
                     <div>
                       <p className="text-sm font-semibold text-white group-hover:text-cyan-300 transition leading-tight">AI Web Design & Development</p>
                       <p className="text-xs text-slate-300 group-hover:text-slate-200 transition mt-0.5">Cinematic digital web platforms</p>
                     </div>
                   </a>
-                  <a href="/ai-software-development#custom-apps" className="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 text-sm text-white hover:bg-white/10 transition group">
+                  <a href="/custom-applications" className="flex items-center gap-2.5 rounded-xl px-3.5 py-2.5 text-sm text-white hover:bg-white/10 transition group">
                     <Terminal className="h-4 w-4 text-[#1da8ff] group-hover:scale-110 transition shrink-0" />
                     <div>
                       <p className="text-sm font-semibold text-white group-hover:text-cyan-300 transition leading-tight">Custom Applications</p>
@@ -250,8 +250,8 @@ export const TradingViewNavbar: React.FC<TradingViewNavbarProps> = ({ currentPat
           <div className="py-2 px-3 border-y border-white/10 space-y-1.5">
             <p className="text-xs font-mono font-bold text-cyan-400">Solutions</p>
             <a href="/ai-software-development" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• AI Software Development</a>
-            <a href="/ai-software-development#web" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• AI Web Design & Development</a>
-            <a href="/ai-software-development#custom-apps" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• Custom Applications</a>
+            <a href="/ai-web-design-development" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• AI Web Design & Development</a>
+            <a href="/custom-applications" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• Custom Applications</a>
             <a href="/ai-software-development#automation" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• Business Automation</a>
             <a href="/trade-copier" className="block pl-2 py-1 text-xs font-medium text-slate-300 hover:text-white" onClick={() => setMobileMenuOpen(false)}>• Trading Technology</a>
           </div>
