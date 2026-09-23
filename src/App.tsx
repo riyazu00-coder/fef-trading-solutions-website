@@ -11,6 +11,7 @@ import { TradingViewOperations } from './components/TradingViewOperations';
 import { TradingViewFaq } from './components/TradingViewFaq';
 import { TradingViewFooter } from './components/TradingViewFooter';
 import { FloatingSupportWidget } from './components/FloatingSupportWidget';
+import { FefCockpitBackground } from './components/FefCockpitBackground';
 
 // Subpages
 import { AboutUsPage } from './pages/AboutUsPage';
@@ -136,7 +137,8 @@ export function App() {
 
   return (
     <div className="relative min-h-screen text-[#f7fbff] overflow-x-hidden font-sans selection:bg-[#1da8ff]/30 selection:text-white">
-      {/* 1. Official TradingView Space Mission 3D Movable Aurora Background */}
+      {/* 1. Official FEF Cockpit Aurora Space Mission Background (app.feftradingsolutions.com/cockpit) */}
+      <FefCockpitBackground />
 
       {/* 2. Unified FEF Website */}
       <div className="relative z-10 flex flex-col min-h-screen">
