@@ -41,26 +41,26 @@ export const TradingViewMarketPulse: React.FC = () => {
 
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-      <div className="relative rounded-[2.5rem] fef-glass-section p-6 sm:p-10 lg:p-12 overflow-hidden">
+      <div className="relative rounded-[2.5rem] fef-glass-primary p-6 sm:p-10 lg:p-12 overflow-hidden shadow-sm">
         {/* Specular Edge Highlight */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent" />
 
         {/* Header */}
         <div className="grid lg:grid-cols-[1.3fr_0.7fr] gap-8 items-start">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 text-xs font-medium uppercase tracking-[0.2em]">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/25 bg-cyan-50 text-cyan-700 text-xs font-semibold uppercase tracking-[0.2em]">
               <Activity className="h-3.5 w-3.5" />
               Market reference feed
             </div>
 
-            <h2 className="mt-5 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-white">
+            <h2 className="mt-5 text-2xl sm:text-4xl lg:text-5xl font-black tracking-[-0.015em] text-[#080B1D] uppercase">
               FEF{' '}
-              <span className="fef-headline-gradient">
+              <span className="bg-gradient-to-r from-[#45c9f5] via-[#6695f5] to-[#a57af3] bg-clip-text text-transparent">
                 Market Pulse
               </span>
             </h2>
 
-            <p className="mt-4 text-base sm:text-lg font-normal text-slate-300 max-w-2xl leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg font-normal text-[#536078] max-w-2xl leading-relaxed">
               A professional snapshot of major markets for traders who monitor momentum, volatility and risk mood.
             </p>
 
@@ -69,17 +69,17 @@ export const TradingViewMarketPulse: React.FC = () => {
               {quotes.map((q) => (
                 <div
                   key={q.symbol}
-                  className="p-4 rounded-2xl fef-glass-card group transition duration-300"
+                  className="p-4 rounded-2xl fef-glass-secondary hover:border-cyan-400/60 hover:shadow-md transition duration-300 group"
                 >
                   <div className="flex items-start justify-between">
                     <div>
-                      <p className="font-mono text-base font-semibold text-white group-hover:text-cyan-400 transition">{q.symbol}</p>
-                      <p className="text-xs font-normal text-slate-400 mt-0.5">{q.name}</p>
+                      <p className="font-mono text-base font-bold text-[#080B1D] group-hover:text-cyan-600 transition">{q.symbol}</p>
+                      <p className="text-xs font-normal text-[#536078] mt-0.5">{q.name}</p>
                     </div>
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium text-emerald-400 bg-emerald-500/10 border border-emerald-500/30">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium text-emerald-700 bg-emerald-50 border border-emerald-200/80">
                       <span className="relative flex h-1.5 w-1.5">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
                       </span>
                       Reference
                     </span>
@@ -87,16 +87,16 @@ export const TradingViewMarketPulse: React.FC = () => {
 
                   <div className="mt-5 flex items-end justify-between gap-3">
                     <div>
-                      <p className="font-mono text-xl font-semibold text-white tracking-tight">{q.price}</p>
-                      <p className={`font-mono text-xs font-medium mt-0.5 flex items-center gap-1 ${q.isPositive ? 'text-emerald-400' : 'text-red-400'}`}>
+                      <p className="font-mono text-xl font-bold text-[#080B1D] tracking-tight">{q.price}</p>
+                      <p className={`font-mono text-xs font-semibold mt-0.5 flex items-center gap-1 ${q.isPositive ? 'text-emerald-600' : 'text-rose-600'}`}>
                         {q.isPositive ? <TrendingUp className="h-3 w-3" /> : <TrendingDown className="h-3 w-3" />}
                         {q.change}
                       </p>
                     </div>
 
                     {/* Mini Sparkline Chart */}
-                    <div className="h-9 w-24 overflow-hidden rounded bg-white/[0.04] p-1">
-                      <svg viewBox="0 0 140 42" className={`h-full w-full ${q.isPositive ? 'text-emerald-400' : 'text-red-400'} transition-colors duration-500`}>
+                    <div className="h-9 w-24 overflow-hidden rounded bg-white/70 border border-slate-200/60 p-1">
+                      <svg viewBox="0 0 140 42" className={`h-full w-full ${q.isPositive ? 'text-emerald-500' : 'text-rose-500'} transition-colors duration-500`}>
                         <polyline
                           points={q.points}
                           fill="none"
@@ -112,20 +112,20 @@ export const TradingViewMarketPulse: React.FC = () => {
               ))}
             </div>
 
-            <p className="mt-6 p-3.5 rounded-xl fef-glass-card-static text-xs font-normal text-slate-400">
+            <p className="mt-6 p-3.5 rounded-xl fef-glass-subtle text-xs font-normal text-[#536078]">
               Public reference market data. Values may be delayed, approximate, or replaced by fallback data when a provider is unavailable. These are not executable broker prices or financial advice.
             </p>
           </div>
 
-          {/* Right Column: Watchlist Focus Sidebar */}
+          {/* Right Column: Watchlist Focus Sidebar (Intentional Dark Contrast Panel) */}
           <div className="lg:sticky lg:top-24">
-            <aside className="p-5 sm:p-6 rounded-[2rem] fef-glass-card-static border border-emerald-500/30 shadow-[0_0_35px_rgba(25,215,135,0.12)]">
+            <aside className="p-5 sm:p-6 rounded-[2rem] bg-[#0A1022] border border-slate-800 shadow-xl text-white">
               <div className="flex items-center justify-between border-b border-white/10 pb-4">
                 <div>
                   <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-emerald-400">Trading Opportunities</p>
                   <h3 className="mt-1 text-lg sm:text-xl font-semibold text-white">
                     Watchlist{' '}
-                    <span className="fef-headline-gradient">
+                    <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-[#1da8ff] bg-clip-text text-transparent">
                       Focus
                     </span>
                   </h3>
@@ -135,14 +135,14 @@ export const TradingViewMarketPulse: React.FC = () => {
 
               <div className="mt-5 space-y-3">
                 {watchlist.map((item) => (
-                  <div key={item.name} className="p-3.5 rounded-xl fef-glass-card">
+                  <div key={item.name} className="p-3.5 rounded-xl bg-white/[0.05] border border-white/10 hover:border-emerald-500/30 transition">
                     <div className="flex items-center justify-between">
                       <p className="font-mono text-sm font-semibold text-white">{item.name}</p>
                       <span className={`px-2 py-0.5 rounded-full text-[10px] font-medium border ${item.tagColor}`}>
                         {item.tag}
                       </span>
                     </div>
-                    <p className="text-xs font-normal text-slate-400 mt-1">{item.status}</p>
+                    <p className="text-xs font-normal text-slate-300 mt-1">{item.status}</p>
 
                     <div className="mt-2.5 grid grid-cols-2 gap-2 text-xs">
                       <div className="p-2 rounded-lg bg-white/[0.04] border border-white/5">
@@ -162,11 +162,11 @@ export const TradingViewMarketPulse: React.FC = () => {
         </div>
 
         {/* Informational Disclaimer */}
-        <div className="mt-8 pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-slate-400">
+        <div className="mt-8 pt-4 border-t border-slate-200/80 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-[#536078]">
           <p>
             Public reference prices only. Values may be delayed or approximate and can differ from MT5 broker quotes. Not financial or trading advice.
           </p>
-          <a href="/risk-disclaimer" className="text-cyan-400 hover:underline shrink-0">
+          <a href="/risk-disclaimer" className="text-cyan-600 hover:text-cyan-700 font-medium hover:underline shrink-0">
             Read Risk Disclaimer
           </a>
         </div>

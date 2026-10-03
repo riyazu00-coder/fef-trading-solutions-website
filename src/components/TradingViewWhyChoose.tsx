@@ -37,24 +37,24 @@ export const TradingViewWhyChoose: React.FC = () => {
 
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full space-y-12">
-      
+
       {/* 6-Card Bento Feature Matrix */}
-      <div className="relative rounded-[2.5rem] fef-glass-section p-6 sm:p-10 lg:p-12 overflow-hidden">
+      <div className="relative rounded-[2.5rem] fef-glass-primary p-6 sm:p-10 lg:p-12 overflow-hidden shadow-sm">
         {/* Specular Edge Highlight */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
-        
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent" />
+
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 text-xs font-medium uppercase tracking-[0.2em]">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/25 bg-cyan-50 text-cyan-700 text-xs font-semibold uppercase tracking-[0.2em]">
             <Award className="h-3.5 w-3.5" />
             FEF Advantage
           </div>
-          <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-white">
+          <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-black tracking-[-0.015em] text-[#080B1D] uppercase">
             Why Professional Traders{' '}
-            <span className="fef-headline-gradient">
+            <span className="bg-gradient-to-r from-[#45c9f5] via-[#6695f5] to-[#a57af3] bg-clip-text text-transparent">
               Choose FEF
             </span>
           </h2>
-          <p className="mt-3 text-base sm:text-lg font-normal text-slate-300">
+          <p className="mt-3 text-base sm:text-lg font-normal text-[#536078]">
             FEF Trading Solutions focuses on reliable MT5 software, clear operator dashboards, and tools built for serious trading operations.
           </p>
         </div>
@@ -63,15 +63,15 @@ export const TradingViewWhyChoose: React.FC = () => {
           {reasons.map((r) => (
             <div
               key={r.title}
-              className="p-6 rounded-2xl fef-glass-card group"
+              className="p-6 rounded-2xl fef-glass-secondary hover:border-cyan-400/60 hover:shadow-md transition group"
             >
-              <div className="p-3 rounded-xl bg-white/5 border border-white/10 w-fit group-hover:scale-105 transition">
+              <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20 w-fit group-hover:scale-105 transition">
                 {r.icon}
               </div>
-              <h3 className="mt-5 text-base sm:text-lg font-semibold text-white group-hover:text-cyan-400 transition">
+              <h3 className="mt-5 text-base sm:text-lg font-bold text-[#080B1D] group-hover:text-cyan-600 transition">
                 {r.title}
               </h3>
-              <p className="mt-2 text-xs sm:text-sm font-normal text-slate-400 leading-relaxed">
+              <p className="mt-2 text-xs sm:text-sm font-normal text-[#536078] leading-relaxed">
                 {r.desc}
               </p>
             </div>
@@ -79,18 +79,18 @@ export const TradingViewWhyChoose: React.FC = () => {
         </div>
 
         {/* Section 10 Trust Strip: Practical Credibility */}
-        <div className="mt-12 pt-8 border-t border-white/10 grid sm:grid-cols-3 gap-6 text-center">
-          <div className="p-4 rounded-xl fef-glass-card-static">
-            <h4 className="font-mono text-lg sm:text-xl font-semibold text-white">MQL5 Market</h4>
-            <p className="text-xs font-normal text-slate-400 mt-1">Product distribution through the MQL5 Market.</p>
+        <div className="mt-12 pt-8 border-t border-slate-200/80 grid sm:grid-cols-3 gap-6 text-center">
+          <div className="p-4 rounded-xl fef-glass-subtle">
+            <h4 className="font-mono text-lg sm:text-xl font-bold text-[#080B1D]">MQL5 Market</h4>
+            <p className="text-xs font-normal text-[#536078] mt-1">Product distribution through the MQL5 Market.</p>
           </div>
-          <div className="p-4 rounded-xl fef-glass-card-static">
-            <h4 className="font-mono text-lg sm:text-xl font-semibold text-emerald-400">Demo-First Ready</h4>
-            <p className="text-xs font-normal text-slate-400 mt-1">Evaluate synchronization behavior, symbol mapping, and configured workflows on a demo account before live use.</p>
+          <div className="p-4 rounded-xl fef-glass-subtle">
+            <h4 className="font-mono text-lg sm:text-xl font-bold text-emerald-600">Demo-First Ready</h4>
+            <p className="text-xs font-normal text-[#536078] mt-1">Evaluate synchronization behavior, symbol mapping, and configured workflows on a demo account before live use.</p>
           </div>
-          <div className="p-4 rounded-xl fef-glass-card-static">
-            <h4 className="font-mono text-lg sm:text-xl font-semibold text-cyan-400">Continuous Workflow</h4>
-            <p className="text-xs font-normal text-slate-400 mt-1">Designed for ongoing synchronization while the required terminals and trading environment remain available.</p>
+          <div className="p-4 rounded-xl fef-glass-subtle">
+            <h4 className="font-mono text-lg sm:text-xl font-bold text-cyan-600">Continuous Workflow</h4>
+            <p className="text-xs font-normal text-[#536078] mt-1">Designed for ongoing synchronization while the required terminals and trading environment remain available.</p>
           </div>
         </div>
       </div>

@@ -111,24 +111,24 @@ export const TradingViewProductMatrix: React.FC = () => {
 
   return (
     <section id="solutions-matrix" className="relative py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-      <div className="relative rounded-[2.5rem] fef-glass-section p-6 sm:p-10 lg:p-12 overflow-hidden">
+      <div className="relative rounded-[2.5rem] fef-glass-primary p-6 sm:p-10 lg:p-12 overflow-hidden shadow-sm">
         {/* Specular Edge Highlight */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
-        
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent" />
+
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-white/10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-slate-200/80">
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-medium uppercase tracking-[0.2em]">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/25 bg-cyan-50 text-cyan-700 text-xs font-semibold uppercase tracking-[0.2em]">
               <Layers className="h-3.5 w-3.5" />
               FEF Software Ecosystem
             </div>
-            <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-white">
+            <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-black tracking-[-0.015em] text-[#080B1D] uppercase">
               One Platform.{' '}
-              <span className="fef-headline-gradient">
-                Multiple Professional Trading Solutions.
+              <span className="bg-gradient-to-r from-[#45c9f5] via-[#6695f5] to-[#a57af3] bg-clip-text text-transparent">
+                Multiple Professional Solutions.
               </span>
             </h2>
-            <p className="mt-3 text-base sm:text-lg font-normal text-slate-300 max-w-2xl">
+            <p className="mt-3 text-base sm:text-lg font-normal text-[#536078] max-w-2xl">
               FEF Trading Solutions is building an integrated ecosystem of MetaTrader 5 software designed for professional traders, portfolio managers, and proprietary firms.
             </p>
           </div>
@@ -145,10 +145,10 @@ export const TradingViewProductMatrix: React.FC = () => {
                 key={tab.id}
                 type="button"
                 onClick={() => setFilter(tab.id as any)}
-                className={`px-4 py-2 rounded-xl text-xs font-medium transition-all ${
+                className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
                   filter === tab.id
-                    ? 'bg-brand-gradient text-[#05070d] shadow-glow scale-105'
-                    : 'fef-glass-card text-slate-300 hover:text-white'
+                    ? 'bg-gradient-to-r from-[#45c9f5] via-[#6695f5] to-[#a57af3] text-white shadow-[0_4px_16px_rgba(69,201,245,0.3)] scale-105'
+                    : 'fef-glass-secondary text-[#536078] hover:text-[#080B1D] hover:border-slate-300'
                 }`}
               >
                 {tab.label}
@@ -162,34 +162,34 @@ export const TradingViewProductMatrix: React.FC = () => {
           {filtered.map((item) => (
             <div
               key={item.id}
-              className="p-6 rounded-2xl fef-glass-card group flex flex-col justify-between"
+              className="p-6 rounded-2xl fef-glass-secondary hover:border-cyan-400/60 hover:shadow-md transition group flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 group-hover:border-cyan-400/30 transition">
+                  <div className="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 group-hover:border-cyan-400/40 transition">
                     {item.icon}
                   </div>
-                  <span className="px-2.5 py-1 rounded-full text-[10px] font-medium text-slate-300 bg-white/5 border border-white/10">
+                  <span className="px-2.5 py-1 rounded-full text-[10px] font-semibold text-[#536078] fef-glass-subtle">
                     {item.tag}
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-base sm:text-lg font-semibold text-white group-hover:text-cyan-400 transition flex items-center justify-between">
+                <h3 className="mt-5 text-base sm:text-lg font-bold text-[#080B1D] group-hover:text-cyan-600 transition flex items-center justify-between">
                   {item.name}
-                  <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-400" />
+                  <ArrowUpRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity text-cyan-600" />
                 </h3>
 
-                <p className="mt-2 text-xs sm:text-sm font-normal text-slate-400 leading-relaxed">
+                <p className="mt-2 text-xs sm:text-sm font-normal text-[#536078] leading-relaxed">
                   {item.description}
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs">
-                <span className="font-mono text-[11px] text-slate-500">Status:</span>
-                <span className={`font-mono text-[11px] font-medium ${
+              <div className="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs">
+                <span className="font-mono text-[11px] text-[#536078]">Status:</span>
+                <span className={`font-mono text-[11px] font-semibold ${
                   item.status === 'Released on MQL5' || item.status === 'Available'
-                    ? 'text-emerald-400'
-                    : 'text-amber-400'
+                    ? 'text-emerald-600'
+                    : 'text-amber-600'
                 }`}>
                   {item.status}
                 </span>

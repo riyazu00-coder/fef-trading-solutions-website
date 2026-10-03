@@ -11,7 +11,7 @@ import { TradingViewOperations } from './components/TradingViewOperations';
 import { TradingViewFaq } from './components/TradingViewFaq';
 import { TradingViewFooter } from './components/TradingViewFooter';
 import { FloatingSupportWidget } from './components/FloatingSupportWidget';
-import { FefCockpitBackground } from './components/FefCockpitBackground';
+import { FefAiVisualIdentityBackground } from './components/FefAiVisualIdentityBackground';
 
 // Subpages
 import { AboutUsPage } from './pages/AboutUsPage';
@@ -135,16 +135,18 @@ export function App() {
     }
   };
 
+  const isHome = currentPath === '/' || currentPath === '';
+
   return (
-    <div className="relative min-h-screen text-[#f7fbff] overflow-x-hidden font-sans selection:bg-[#1da8ff]/30 selection:text-white">
-      {/* 1. Official FEF Cockpit Aurora Space Mission Background (app.feftradingsolutions.com/cockpit) */}
-      <FefCockpitBackground />
+    <div className="relative min-h-screen fef-ai-homepage text-slate-900 overflow-x-hidden font-sans selection:bg-[#1da8ff]/30 selection:text-slate-900">
+      {/* 1. Master Light AI Visual Identity Background */}
+      <FefAiVisualIdentityBackground />
 
       {/* 2. Unified FEF Website */}
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="relative z-10 flex flex-col min-h-screen w-full max-w-full overflow-x-hidden">
         <TradingViewNavbar currentPath={currentPath} />
         {renderPage()}
-        <TradingViewFooter />
+        <TradingViewFooter currentPath={currentPath} />
       </div>
 
       {/* 3. Floating Support Widget (On Every Page) */}

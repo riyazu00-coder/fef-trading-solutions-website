@@ -285,7 +285,7 @@ export const AiWebDevelopmentPage: React.FC = () => {
               {layers.map((item) => (
                 <article
                   key={item.number}
-                  className="ai-web-stack-card rounded-2xl border border-white/10 bg-black/20 p-5"
+                  className="ai-web-stack-card fef-glass-card rounded-2xl p-5"
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-semibold tracking-[0.18em] text-cyan-300">

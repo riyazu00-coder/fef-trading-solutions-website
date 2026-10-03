@@ -163,7 +163,7 @@ export const CustomApplicationsPage: React.FC = () => (
 
           <div className="custom-apps-layer-grid mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {layers.map(([number, Icon, title, text]) => (
-              <article key={title} className="custom-apps-layer-card relative rounded-2xl border border-white/10 bg-black/20 p-6">
+              <article key={title} className="custom-apps-layer-card fef-glass-card relative rounded-2xl p-6">
                 <div className="flex items-center justify-between">
                   <span className="font-mono text-xs text-cyan-300">{number}</span>
                   <Icon className="h-5 w-5 text-blue-200" />

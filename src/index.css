@@ -2403,3 +2403,404 @@ main h2{
 }
 
 /* ===== END FEF TYPOGRAPHY FINAL UNIFICATION ===== */
+
+/* ===== FEF AI VISUAL IDENTITY HOMEPAGE STYLES ===== */
+.fef-ai-homepage {
+  background-color: #f5f7fc !important;
+  color: #0f172a;
+}
+
+.fef-ai-homepage header.sticky {
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+html:has(.fef-ai-homepage),
+body:has(.fef-ai-homepage) {
+  background-color: #f5f7fc !important;
+}
+
+.fef-ai-homepage p {
+  text-shadow: none !important;
+}
+
+@keyframes fefFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fef-float {
+  animation: fefFloat 10s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fef-float {
+    animation: none !important;
+  }
+}
+
+/* ==========================================================================
+   FEF AI LIGHT GLASSMORPHISM DESIGN SYSTEM
+   Restrained optical glass hierarchy floating over pale ice-lavender atmosphere
+   ========================================================================== */
+
+/* 1. GLASS PRIMARY — For major feature containers, showcases, and stage sections */
+.fef-glass-primary {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(28px) saturate(135%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(135%) !important;
+  border: 1px solid rgba(120, 145, 210, 0.22) !important;
+  box-shadow:
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.9),
+    0 16px 40px -10px rgba(15, 23, 42, 0.06),
+    0 2px 12px rgba(69, 201, 245, 0.05) !important;
+}
+
+/* 2. GLASS SECONDARY — For interactive cards, grid tiles, and product panels */
+.fef-glass-secondary {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(20px) saturate(125%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(125%) !important;
+  border: 1px solid rgba(120, 145, 210, 0.18) !important;
+  box-shadow:
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.85),
+    0 8px 24px -6px rgba(15, 23, 42, 0.04),
+    0 1px 6px rgba(102, 149, 245, 0.03) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fef-glass-secondary:hover {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(69, 201, 245, 0.45) !important;
+  box-shadow:
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 1),
+    0 16px 36px -8px rgba(15, 23, 42, 0.08),
+    0 0 20px rgba(69, 201, 245, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+/* 3. GLASS SUBTLE — For pills, chips, navigation controls, and small info tiles */
+.fef-glass-subtle {
+  background: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(16px) saturate(120%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(120%) !important;
+  border: 1px solid rgba(120, 145, 210, 0.15) !important;
+  box-shadow:
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.75),
+    0 4px 12px -2px rgba(15, 23, 42, 0.03) !important;
+}
+
+/* 4. GLASS CTA / HERO FEATURE — For high-impact callouts with ambient glow */
+.fef-glass-cta {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 246, 255, 0.78) 50%, rgba(245, 240, 255, 0.82) 100%) !important;
+  backdrop-filter: blur(32px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(140%) !important;
+  border: 1px solid rgba(120, 145, 210, 0.30) !important;
+  box-shadow:
+    inset 0 1.5px 2px 0 rgba(255, 255, 255, 1),
+    0 24px 60px -12px rgba(15, 23, 42, 0.08),
+    0 0 40px -10px rgba(69, 201, 245, 0.20),
+    0 0 35px -10px rgba(165, 122, 243, 0.15) !important;
+}
+
+/* ==========================================================================
+   FEF MASTER LIGHT AI DESIGN SYSTEM: SUBPAGE & GLOBAL UNIFICATION
+   Propagates the clean, high-contrast light AI aesthetic across all routes
+   while strictly preserving dark frames for actual software UI / screenshots.
+   ========================================================================== */
+
+/* 1. Global Light Background on subpage root containers */
+.fef-ai-homepage .ai-software-page,
+.fef-ai-homepage .ai-web-page,
+.fef-ai-homepage .custom-apps-page,
+.fef-ai-homepage .business-automation-page,
+.fef-ai-homepage .trading-technology-page {
+  background: transparent !important;
+}
+
+.fef-ai-homepage .ai-software-page::before,
+.fef-ai-homepage .ai-software-page::after,
+.fef-ai-homepage .ai-software-page > section:first-child::before,
+.fef-ai-homepage .ai-software-page > section:first-child::after,
+.fef-ai-homepage .ai-web-page::before,
+.fef-ai-homepage .ai-web-page::after,
+.fef-ai-homepage .custom-apps-page::before,
+.fef-ai-homepage .business-automation-hero::before,
+.fef-ai-homepage .trading-technology-hero::before {
+  display: none !important;
+}
+
+/* 2. Unify .fef-glass-section and .fef-glass-card globally */
+.fef-ai-homepage .fef-glass-section,
+.fef-ai-homepage .ai-software-page .fef-glass-section,
+.fef-ai-homepage .ai-software-page > section:last-child .fef-glass-section,
+.fef-ai-homepage .ai-web-page .fef-glass-section,
+.fef-ai-homepage .custom-apps-page .fef-glass-section,
+.fef-ai-homepage .custom-apps-architecture .fef-glass-section,
+.fef-ai-homepage .custom-apps-cta,
+.fef-ai-homepage .business-automation-cta,
+.fef-ai-homepage .trading-technology-cta {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(28px) saturate(135%) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(135%) !important;
+  border: 1px solid rgba(120, 145, 210, 0.22) !important;
+  box-shadow:
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.9),
+    0 16px 40px -10px rgba(15, 23, 42, 0.06),
+    0 2px 12px rgba(69, 201, 245, 0.05) !important;
+}
+
+.fef-ai-homepage .fef-glass-card,
+.fef-ai-homepage .fef-glass-card-static,
+.fef-ai-homepage .glass-panel,
+.fef-ai-homepage .panel-static,
+.fef-ai-homepage .ai-software-page .fef-glass-card,
+.fef-ai-homepage .ai-web-page .fef-glass-card,
+.fef-ai-homepage .ai-web-stack-card,
+.fef-ai-homepage .custom-apps-page .fef-glass-card,
+.fef-ai-homepage .custom-apps-capability-grid .fef-glass-card,
+.fef-ai-homepage .custom-apps-layer-card,
+.fef-ai-homepage .custom-apps-use-case-grid .fef-glass-card,
+.fef-ai-homepage .custom-apps-process .fef-glass-card,
+.fef-ai-homepage .business-automation-workflow-card,
+.fef-ai-homepage .business-automation-layer-card,
+.fef-ai-homepage .business-automation-capability-grid .fef-glass-card,
+.fef-ai-homepage .business-automation-use-case-grid .fef-glass-card,
+.fef-ai-homepage .business-automation-delivery .fef-glass-card,
+.fef-ai-homepage .trading-technology-capability-grid .fef-glass-card,
+.fef-ai-homepage .trading-product-grid .fef-glass-card,
+.fef-ai-homepage .trading-technology-layer {
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: blur(20px) saturate(125%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(125%) !important;
+  border: 1px solid rgba(120, 145, 210, 0.18) !important;
+  box-shadow:
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.85),
+    0 8px 24px -6px rgba(15, 23, 42, 0.04),
+    0 1px 6px rgba(102, 149, 245, 0.03) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fef-ai-homepage .fef-glass-card:hover,
+.fef-ai-homepage .glass-card:hover,
+.fef-ai-homepage .premium-card:hover,
+.fef-ai-homepage .fef-glass-card-static:hover,
+.fef-ai-homepage .ai-software-page .fef-glass-card:hover,
+.fef-ai-homepage .ai-web-page .fef-glass-card:hover,
+.fef-ai-homepage .ai-web-stack-card:hover,
+.fef-ai-homepage .custom-apps-page .fef-glass-card:hover,
+.fef-ai-homepage .custom-apps-layer-card:hover,
+.fef-ai-homepage .business-automation-workflow-card:hover,
+.fef-ai-homepage .business-automation-layer-card:hover,
+.fef-ai-homepage .trading-technology-layer:hover {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(69, 201, 245, 0.45) !important;
+  box-shadow:
+    inset 0 1px 1.5px 0 rgba(255, 255, 255, 1),
+    0 16px 36px -8px rgba(15, 23, 42, 0.08),
+    0 0 20px rgba(69, 201, 245, 0.12) !important;
+  transform: translateY(-2px);
+}
+
+/* Neutralize legacy dark full-width bands on subpages */
+.fef-ai-homepage .custom-apps-intro,
+.fef-ai-homepage .business-automation-intro,
+.fef-ai-homepage .business-automation-flow,
+.fef-ai-homepage .business-automation-connections,
+.fef-ai-homepage .business-automation-use-cases,
+.fef-ai-homepage .trading-technology-intro,
+.fef-ai-homepage .trading-technology-capabilities,
+.fef-ai-homepage .trading-app-showcase,
+.fef-ai-homepage .trading-technology-products,
+.fef-ai-homepage .trading-technology-architecture,
+.fef-ai-homepage .trading-technology-stack {
+  background: transparent !important;
+  border-color: rgba(120, 145, 210, 0.14) !important;
+}
+
+.fef-ai-homepage .business-automation-node {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(120, 145, 210, 0.28) !important;
+  box-shadow: 0 4px 16px rgba(69, 201, 245, 0.15) !important;
+  color: #080B1D !important;
+}
+
+/* 3. High-Contrast Typography Hierarchy */
+.fef-ai-homepage h1:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *),
+.fef-ai-homepage h2:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *),
+.fef-ai-homepage h3:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *),
+.fef-ai-homepage h4:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *),
+.fef-ai-homepage h5:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *),
+.fef-ai-homepage h6:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *) {
+  color: #080B1D !important;
+}
+
+.fef-ai-homepage .fef-glass-section h1.text-white,
+.fef-ai-homepage .fef-glass-section h2.text-white,
+.fef-ai-homepage .fef-glass-section h3.text-white,
+.fef-ai-homepage .fef-glass-section h4.text-white,
+.fef-ai-homepage .fef-glass-card h1.text-white,
+.fef-ai-homepage .fef-glass-card h2.text-white,
+.fef-ai-homepage .fef-glass-card h3.text-white,
+.fef-ai-homepage .fef-glass-card h4.text-white,
+.fef-ai-homepage .fef-glass-card p.text-white,
+.fef-ai-homepage .fef-glass-card span.text-white,
+.fef-ai-homepage .fef-glass-card-static h1,
+.fef-ai-homepage .fef-glass-card-static h2,
+.fef-ai-homepage .fef-glass-card-static h3,
+.fef-ai-homepage .fef-glass-card-static h4,
+.fef-ai-homepage .fef-glass-card-static p.text-white,
+.fef-ai-homepage .fef-glass-card-static p.font-semibold,
+.fef-ai-homepage .fef-glass-card-static span.text-white,
+.fef-ai-homepage .ai-web-stack-card h3,
+.fef-ai-homepage .custom-apps-layer-card h3,
+.fef-ai-homepage .business-automation-workflow-card h3,
+.fef-ai-homepage .business-automation-layer-card h3,
+.fef-ai-homepage .trading-technology-layer h3 {
+  color: #080B1D !important;
+}
+
+.fef-ai-homepage .fef-headline-gradient,
+.fef-ai-homepage [class*="bg-clip-text"] {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.fef-ai-homepage p:not([class*="bg-slate-950"] *):not([class*="bg-[#060a14]"] *):not(pre *),
+.fef-ai-homepage .text-slate-300:not([class*="bg-slate-950"] *):not([class*="bg-[#060a14]"] *):not(pre *),
+.fef-ai-homepage .text-slate-200:not([class*="bg-slate-950"] *):not([class*="bg-[#060a14]"] *):not(pre *),
+.fef-ai-homepage .text-steel:not([class*="bg-slate-950"] *):not([class*="bg-[#060a14]"] *):not(pre *) {
+  color: #536078 !important;
+}
+
+.fef-ai-homepage .text-slate-400:not([class*="bg-slate-950"] *):not(pre *) {
+  color: #64748b !important;
+}
+
+/* 4. Badges & Status Pills */
+.fef-ai-homepage [class*="bg-cyan-400/10"],
+.fef-ai-homepage [class*="bg-cyan-500/10"],
+.fef-ai-homepage [class*="bg-cyan-400/[0.06]"],
+.fef-ai-homepage [class*="bg-cyan-400/[0.07]"] {
+  background-color: rgba(6, 182, 212, 0.08) !important;
+  border-color: rgba(6, 182, 212, 0.25) !important;
+  color: #0e7490 !important;
+}
+
+.fef-ai-homepage [class*="bg-emerald-400/10"],
+.fef-ai-homepage [class*="bg-emerald-500/10"] {
+  background-color: rgba(16, 185, 129, 0.08) !important;
+  border-color: rgba(16, 185, 129, 0.25) !important;
+  color: #047857 !important;
+}
+
+.fef-ai-homepage [class*="bg-purple-400/10"],
+.fef-ai-homepage [class*="bg-purple-500/10"],
+.fef-ai-homepage [class*="bg-violet-400/10"] {
+  background-color: rgba(168, 85, 247, 0.08) !important;
+  border-color: rgba(168, 85, 247, 0.25) !important;
+  color: #6d28d9 !important;
+}
+
+/* 5. Secondary Glass Action Buttons & Small Pills on Subpages */
+.fef-ai-homepage a[class*="bg-white/5"],
+.fef-ai-homepage button[class*="bg-white/5"],
+.fef-ai-homepage .fef-btn-glass {
+  background: rgba(255, 255, 255, 0.75) !important;
+  border: 1px solid rgba(120, 145, 210, 0.25) !important;
+  color: #080B1D !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+.fef-ai-homepage a[class*="bg-white/5"]:hover,
+.fef-ai-homepage button[class*="bg-white/5"]:hover,
+.fef-ai-homepage .fef-btn-glass:hover {
+  background: #ffffff !important;
+  border-color: rgba(69, 201, 245, 0.5) !important;
+  color: #080B1D !important;
+}
+
+.fef-ai-homepage [class*="bg-white/[0.025]"] {
+  background: rgba(255, 255, 255, 0.70) !important;
+  border-color: rgba(120, 145, 210, 0.20) !important;
+  color: #080B1D !important;
+}
+
+/* 6. Form Inputs & Textareas */
+.fef-ai-homepage input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]),
+.fef-ai-homepage textarea,
+.fef-ai-homepage select,
+.fef-ai-homepage .fef-glass-input {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(120, 145, 210, 0.28) !important;
+  color: #080B1D !important;
+  box-shadow: inset 0 1px 2px rgba(15, 23, 42, 0.04) !important;
+}
+
+.fef-ai-homepage input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):focus,
+.fef-ai-homepage textarea:focus,
+.fef-ai-homepage select:focus,
+.fef-ai-homepage .fef-glass-input:focus {
+  border-color: rgba(69, 201, 245, 0.6) !important;
+  box-shadow: 0 0 0 3px rgba(69, 201, 245, 0.18) !important;
+}
+
+.fef-ai-homepage input::placeholder,
+.fef-ai-homepage textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* 7. Tables */
+.fef-ai-homepage .fef-glass-table {
+  background: rgba(255, 255, 255, 0.70) !important;
+  border: 1px solid rgba(120, 145, 210, 0.20) !important;
+}
+
+.fef-ai-homepage .fef-glass-table th {
+  background: rgba(240, 246, 255, 0.85) !important;
+  color: #080B1D !important;
+  border-bottom: 1px solid rgba(120, 145, 210, 0.20) !important;
+}
+
+.fef-ai-homepage .fef-glass-table td {
+  color: #334155 !important;
+  border-bottom: 1px solid rgba(120, 145, 210, 0.12) !important;
+}
+
+.fef-ai-homepage .fef-glass-table td.font-semibold,
+.fef-ai-homepage .fef-glass-table td.text-white {
+  color: #080B1D !important;
+}
+
+/* 8. PRESERVED DARK HARDWARE / SOFTWARE SCREENSHOT FRAMES */
+.fef-ai-homepage [class*="bg-slate-950"],
+.fef-ai-homepage [class*="bg-[#060a14]"],
+.fef-ai-homepage [class*="bg-[#05070d]"],
+.fef-ai-homepage .mt5-screenshot-frame,
+.fef-ai-homepage .trading-app-screen,
+.fef-ai-homepage pre {
+  background-color: #060a14 !important;
+  color: #e2e8f0 !important;
+}
+
+.fef-ai-homepage .trading-app-screen-bar {
+  background: linear-gradient(180deg, rgba(16, 24, 32, 0.96), rgba(8, 13, 20, 0.96)) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.fef-ai-homepage [class*="bg-slate-950"] img,
+.fef-ai-homepage [class*="bg-[#060a14]"] img,
+.fef-ai-homepage .trading-app-screen img {
+  opacity: 1 !important;
+  filter: none !important;
+}

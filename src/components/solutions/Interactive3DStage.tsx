@@ -85,29 +85,29 @@ export const Interactive3DStage: React.FC<Interactive3DStageProps> = ({
       onMouseLeave={handleMouseLeave}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      className="relative w-full h-full min-h-[380px] sm:min-h-[460px] lg:min-h-[480px] rounded-3xl bg-[#040812]/80 border border-white/15 p-4 sm:p-6 flex flex-col justify-between overflow-hidden backdrop-blur-2xl shadow-[inset_0_1px_2px_rgba(255,255,255,0.25),0_20px_50px_rgba(0,0,0,0.8)] select-none group cursor-grab active:cursor-grabbing"
+      className="relative w-full h-full min-h-[360px] sm:min-h-[420px] lg:min-h-[440px] rounded-3xl bg-white/70 border border-slate-200/80 p-4 sm:p-6 flex flex-col justify-between overflow-hidden backdrop-blur-xl shadow-sm select-none group cursor-grab active:cursor-grabbing"
       style={{ perspective: '1400px' }}
     >
       {/* 1. Volumetric Ambient Lighting */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] bg-gradient-to-tr ${glowStyles} blur-[90px] rounded-full transition-opacity duration-700 ${isHovered ? 'opacity-90 scale-110' : 'opacity-60'}`} />
+        <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] bg-gradient-to-tr ${glowStyles} blur-[90px] rounded-full transition-opacity duration-700 ${isHovered ? 'opacity-40 scale-110' : 'opacity-25'}`} />
 
         {/* Subtle 3D Depth Grid Matrix */}
-        <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#19d3d0_1px,transparent_1px)] [background-size:24px_24px]" />
+        <div className="absolute inset-0 opacity-[0.025] bg-[radial-gradient(#0f172a_1px,transparent_1px)] [background-size:24px_24px]" />
       </div>
 
       {/* 2. Top Hologram Overlay Controls */}
       <div className="relative z-20 flex items-center justify-between gap-2 pb-2 text-[11px] font-mono">
         <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full border backdrop-blur-xl ${badgeColor}`}>
           <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-400"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-500 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-600"></span>
           </span>
           <span className="font-semibold tracking-wider uppercase text-[10px] sm:text-[11px]">{badgeLabel}</span>
         </div>
 
-        <div className="flex items-center gap-1.5 text-[10px] text-slate-400 bg-white/[0.04] px-2.5 py-1 rounded-lg border border-white/10">
-          <Sparkles className="h-3 w-3 text-cyan-400 animate-pulse" />
+        <div className="flex items-center gap-1.5 text-[10px] text-slate-600 bg-white/80 px-2.5 py-1 rounded-lg border border-slate-200/80 shadow-xs">
+          <Sparkles className="h-3 w-3 text-cyan-600 animate-pulse" />
           <span className="hidden sm:inline">Interactive 3D View</span>
           <span className="sm:hidden">3D Model</span>
         </div>
@@ -168,23 +168,22 @@ export const Interactive3DStage: React.FC<Interactive3DStageProps> = ({
       </div>
 
       {/* 4. Bottom Telemetry Bar */}
-      <div className="relative z-20 pt-2 border-t border-white/10 flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-slate-400">
+      <div className="relative z-20 pt-2 border-t border-slate-200/80 flex items-center justify-between text-[10px] sm:text-[11px] font-mono text-[#536078]">
         {telemetryMetrics.length > 0 ? (
           <div className="flex items-center gap-3 sm:gap-4 overflow-x-auto scrollbar-none">
             {telemetryMetrics.map((metric, idx) => (
               <span key={idx} className="flex items-center gap-1 shrink-0">
-                <span className="text-slate-400">{metric.label}:</span>
-                <span className="text-cyan-300 font-semibold">{metric.value}</span>
+                <span className="text-[#536078]">{metric.label}:</span>
+                <span className="text-[#0284c7] font-semibold">{metric.value}</span>
               </span>
             ))}
           </div>
         ) : (
-          <span className="text-slate-400">Cinematic 3D Real-time Scene</span>
+          <span className="text-[#536078]">Cinematic 3D Real-time Scene</span>
         )}
 
-        <span className="text-emerald-400 flex items-center gap-1 shrink-0 font-medium ml-2">
-          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-
+        <span className="text-emerald-700 flex items-center gap-1 shrink-0 font-medium ml-2">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-600 animate-pulse" />
         </span>
       </div>
 

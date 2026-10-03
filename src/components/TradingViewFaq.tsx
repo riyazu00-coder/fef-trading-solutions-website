@@ -42,22 +42,22 @@ export const TradingViewFaq: React.FC = () => {
 
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full space-y-16">
-      
+
       {/* 1. FAQ Accordion Bento */}
-      <div className="relative rounded-[2.5rem] fef-glass-section p-6 sm:p-10 lg:p-12 overflow-hidden">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
+      <div className="relative rounded-[2.5rem] bg-white/70 backdrop-blur-xl border border-slate-200/80 p-6 sm:p-10 lg:p-12 overflow-hidden shadow-sm">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent" />
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-400 text-xs font-medium uppercase tracking-[0.2em]">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-500/25 bg-cyan-50 text-cyan-700 text-xs font-semibold uppercase tracking-[0.2em]">
             <HelpCircle className="h-3.5 w-3.5" />
             FAQ
           </div>
-          <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-white">
+          <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-[#080B1D]">
             Frequently Asked{' '}
-            <span className="fef-headline-gradient">
+            <span className="bg-gradient-to-r from-[#1da8ff] via-[#6695f5] to-[#a57af3] bg-clip-text text-transparent">
               Questions
             </span>
           </h2>
-          <p className="mt-3 text-base sm:text-lg font-normal text-slate-300">
+          <p className="mt-3 text-base sm:text-lg font-normal text-[#536078]">
             Quick answers for traders, portfolio managers, and MT5 users considering FEF Professional Trade Copier MT5.
           </p>
         </div>
@@ -70,8 +70,8 @@ export const TradingViewFaq: React.FC = () => {
                 key={faq.q}
                 className={`rounded-2xl transition-all duration-300 overflow-hidden ${
                   isOpen
-                    ? 'fef-glass-card border-cyan-400/40 shadow-[0_0_25px_rgba(25,211,208,0.15)]'
-                    : 'fef-glass-card hover:border-white/20'
+                    ? 'fef-glass-primary border-cyan-400/50 shadow-md ring-1 ring-cyan-400/20'
+                    : 'fef-glass-secondary hover:border-slate-300'
                 }`}
               >
                 <button
@@ -79,17 +79,17 @@ export const TradingViewFaq: React.FC = () => {
                   onClick={() => toggleFaq(idx)}
                   className="w-full flex items-center justify-between p-5 sm:p-6 text-left"
                 >
-                  <span className="text-base sm:text-lg font-medium text-white pr-4">
+                  <span className="text-base sm:text-lg font-semibold text-[#080B1D] pr-4">
                     {faq.q}
                   </span>
                   <ChevronDown
-                    className={`h-5 w-5 text-cyan-400 shrink-0 transition-transform duration-300 ${
+                    className={`h-5 w-5 text-cyan-600 shrink-0 transition-transform duration-300 ${
                       isOpen ? 'rotate-180' : ''
                     }`}
                   />
                 </button>
                 {isOpen && (
-                  <div className="px-5 pb-6 sm:px-6 sm:pb-6 text-sm sm:text-base font-normal text-slate-300 leading-relaxed border-t border-white/5 pt-4">
+                  <div className="px-5 pb-6 sm:px-6 sm:pb-6 text-sm sm:text-base font-normal text-[#536078] leading-relaxed border-t border-slate-200/60 pt-4">
                     {faq.a}
                   </div>
                 )}
@@ -100,54 +100,61 @@ export const TradingViewFaq: React.FC = () => {
       </div>
 
       {/* 2. Regulatory Risk Warning Card */}
-      <div className="relative p-6 sm:p-8 rounded-[2rem] fef-glass-card-static border-amber-500/30 overflow-hidden">
+      <div className="relative p-6 sm:p-8 rounded-[2rem] bg-amber-50/80 border border-amber-300/70 overflow-hidden shadow-xs backdrop-blur-xl">
         <div className="flex items-start gap-4">
-          <div className="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/25 text-amber-400 shrink-0">
+          <div className="p-2.5 rounded-xl bg-amber-100/80 border border-amber-300 text-amber-700 shrink-0">
             <AlertTriangle className="h-5 w-5" />
           </div>
           <div>
-            <h3 className="text-sm sm:text-base font-semibold uppercase tracking-wider text-amber-400">
+            <h3 className="text-sm sm:text-base font-bold uppercase tracking-wider text-amber-900">
               Risk Warning
             </h3>
-            <p className="mt-2 text-xs sm:text-sm font-normal text-slate-300 leading-relaxed">
+            <p className="mt-2 text-xs sm:text-sm font-medium text-amber-950 leading-relaxed">
               Trading financial markets involves significant risk and may result in the loss of capital. FEF Trading Solutions develops software tools only and does not guarantee profits or trading performance. Always test on demo accounts before live deployment.
             </p>
           </div>
         </div>
       </div>
 
-      {/* 3. High-Impact CTA Bar */}
-      <div className="relative rounded-[2.5rem] fef-glass-section p-8 sm:p-12 text-center overflow-hidden">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
-        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/30">
-          Available on MQL5 Market
-        </span>
-        <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-white">
-          Get FEF Professional{' '}
-          <span className="bg-gradient-to-r from-[#1da8ff] via-[#19d3d0] to-[#19d787] bg-clip-text text-transparent">
-            Trade Copier MT5 Today
+      {/* 3. High-Impact CTA Bar (Luminous Light Glass AI Styling) */}
+      <div className="relative rounded-[2.5rem] fef-glass-cta p-8 sm:p-14 text-center overflow-hidden">
+        {/* Soft luminous ambient lighting */}
+        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#45c9f5]/15 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute -bottom-24 right-1/4 w-80 h-80 bg-[#a57af3]/15 rounded-full blur-[100px] pointer-events-none" />
+
+        <div className="relative z-10">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-[#080B1D] fef-glass-subtle">
+            Available on MQL5 Market
           </span>
-        </h2>
-        <p className="mt-3 text-base sm:text-lg font-normal text-slate-300 max-w-2xl mx-auto">
-          Purchase directly through the official MQL5 Market or contact our team for installation support, licensing guidance, and product information.
-        </p>
+          <h2 className="mt-4 text-2xl sm:text-4xl lg:text-5xl font-black tracking-[-0.02em] text-[#080B1D] uppercase">
+            Get FEF Professional{' '}
+            <span className="bg-gradient-to-r from-[#45c9f5] via-[#6695f5] to-[#a57af3] bg-clip-text text-transparent drop-shadow-[0_4px_24px_rgba(69,201,245,0.25)]">
+              Trade Copier MT5 Today
+            </span>
+          </h2>
+          <p className="mt-3 text-base sm:text-lg font-normal text-[#536078] max-w-2xl mx-auto">
+            Purchase directly through the official MQL5 Market or contact our team for installation support, licensing guidance, and product information.
+          </p>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href="https://www.mql5.com/en/market/product/183557"
-            target="_blank"
-            rel="noopener noreferrer" className="focus-ring inline-flex items-center gap-2.5 px-8 py-4 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
-          >
-            <span>Buy on MQL5 Market</span>
-            <ExternalLink className="h-4 w-4" />
-          </a>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://www.mql5.com/en/market/product/183557"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="focus-ring inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-[#45c9f5] via-[#6695f5] to-[#a57af3] hover:brightness-110 shadow-[0_6px_22px_rgba(69,201,245,0.32)] transition transform hover:-translate-y-0.5 active:translate-y-0"
+            >
+              <span>Buy on MQL5 Market</span>
+              <ExternalLink className="h-4 w-4" />
+            </a>
 
-          <a
-            href="/contact" className="focus-ring inline-flex items-center gap-2 px-7 py-4 rounded-xl text-sm sm:text-base font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
-          >
-            <Mail className="h-4 w-4 text-slate-400" />
-            <span>Contact FEF</span>
-          </a>
+            <a
+              href="/contact"
+              className="focus-ring inline-flex items-center gap-2 px-7 py-4 rounded-full text-sm sm:text-base font-semibold text-[#080B1D] fef-glass-secondary hover:bg-white/90 transition transform hover:-translate-y-0.5"
+            >
+              <Mail className="h-4 w-4 text-[#536078]" />
+              <span>Contact FEF</span>
+            </a>
+          </div>
         </div>
       </div>
 
