@@ -12,6 +12,7 @@ import { TradingViewFaq } from './components/TradingViewFaq';
 import { TradingViewFooter } from './components/TradingViewFooter';
 import { FloatingSupportWidget } from './components/FloatingSupportWidget';
 import { FefAiVisualIdentityBackground } from './components/FefAiVisualIdentityBackground';
+import { FefIntelligenceShowcase } from './components/FefIntelligenceShowcase';
 
 // Subpages
 import { AboutUsPage } from './pages/AboutUsPage';
@@ -124,7 +125,7 @@ export function App() {
             <TradingViewHero />
             <FeaturedTradeCopier />
             <TradingViewAiBento />
-            <TradingViewMarketPulse />
+            <FefIntelligenceShowcase />
             <TradingViewSyncCenter />
             <TradingViewProductMatrix />
             <TradingViewWhyChoose />
