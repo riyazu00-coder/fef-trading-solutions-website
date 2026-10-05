@@ -9,6 +9,7 @@ import {
   Send,
   MessageCircle,
 } from 'lucide-react';
+import { AboutBrandFilm } from '../components/AboutBrandFilm';
 
 export const AboutUsPage: React.FC = () => {
   return (
@@ -46,6 +47,9 @@ export const AboutUsPage: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Cinematic Brand Film */}
+      <AboutBrandFilm />
 
       {/* Mission & Vision */}
       <div className="grid md:grid-cols-2 gap-8">
