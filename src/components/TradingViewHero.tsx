@@ -1,31 +1,9 @@
 import React, { useState } from 'react';
-import { Sparkles, ArrowRight, Globe, Terminal, Bot, TrendingUp } from 'lucide-react';
+import { Sparkles, ArrowRight } from 'lucide-react';
 import { SolutionsShowcase } from './SolutionsShowcase';
-
-interface SolutionTab {
-  id: string;
-  name: string;
-  icon: React.ReactNode;
-}
-
-const solutionTabs: SolutionTab[] = [
-  { id: 'ai', name: 'AI Software', icon: <Sparkles className="h-3.5 w-3.5 text-emerald-500" /> },
-  { id: 'web', name: 'Web Development', icon: <Globe className="h-3.5 w-3.5 text-cyan-500" /> },
-  { id: 'code', name: 'Custom Coding', icon: <Terminal className="h-3.5 w-3.5 text-[#0099ff]" /> },
-  { id: 'auto', name: 'Automation', icon: <Bot className="h-3.5 w-3.5 text-purple-500" /> },
-  { id: 'trading', name: 'Trading Technology', icon: <TrendingUp className="h-3.5 w-3.5 text-emerald-500" /> },
-];
 
 export const TradingViewHero: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('ai');
-
-  const handleTabClick = (tabId: string) => {
-    setActiveTab(tabId);
-    const element = document.getElementById('solutions-showcase');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <div className="w-full">
@@ -178,38 +156,6 @@ export const TradingViewHero: React.FC = () => {
               </a>
             </div>
           </div>
-
-          {/* Solution Navigation: Thin Floating Glass Rail at Bottom of First Viewport */}
-          <div className="w-full pt-8 sm:pt-10 pb-4">
-            <div className="w-full flex items-center justify-start sm:justify-center overflow-x-auto pb-1 scrollbar-none px-1">
-              <div className="flex items-center gap-1 sm:gap-2 p-1.5 rounded-full bg-white/80 backdrop-blur-2xl border border-white/90 shadow-[0_12px_40px_rgba(0,0,0,0.06)] shrink-0">
-                {solutionTabs.map((tab) => {
-                  const isActive = activeTab === tab.id;
-                  return (
-                    <button
-                      key={tab.id}
-                      type="button"
-                      onClick={() => handleTabClick(tab.id)}
-                      className={`group relative flex items-center gap-2 px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 whitespace-nowrap focus:outline-none ${
-                        isActive
-                          ? 'text-[#080B1D] bg-white shadow-sm border border-white/95 scale-[1.01]'
-                          : 'text-[#536078] hover:text-[#080B1D] hover:bg-white/50'
-                      }`}
-                    >
-                      {isActive && (
-                        <span className="absolute bottom-0 inset-x-3 h-0.5 bg-gradient-to-r from-[#45c9f5] via-[#6695f5] to-[#a57af3] rounded-full shadow-[0_0_10px_rgba(69,201,245,0.7)]" />
-                      )}
-                      <span className={`transition-transform duration-200 ${isActive ? 'scale-110' : 'group-hover:scale-105'}`}>
-                        {tab.icon}
-                      </span>
-                      <span className="tracking-wide">{tab.name}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 

@@ -12,7 +12,7 @@ import {
   Rocket,
   Sparkles,
 } from 'lucide-react';
-import { WebDevVisual } from '../components/solutions/WebDevVisual';
+import { SolutionCinematicStage } from '../components/solutions/SolutionCinematicStage';
 
 const capabilities = [
   {
@@ -161,7 +161,19 @@ export const AiWebDevelopmentPage: React.FC = () => {
           </div>
 
           <div className="ai-web-hero-visual relative lg:col-span-6">
-            <WebDevVisual />
+            <SolutionCinematicStage
+              videoSrc="/videos/fef-ai-web-design-development.mp4"
+              headerLabel="DIGITAL EXPERIENCE STUDIO"
+              badgeColor="text-cyan-300 border-cyan-500/40 bg-cyan-500/15"
+              accentGlow="cyan"
+              topRightLabel="SYSTEM FILM"
+              telemetryMetrics={[
+                { label: "Layer", value: "Experience" },
+                { label: "Mode", value: "Interactive" },
+                { label: "Output", value: "Web Platform" },
+              ]}
+              ariaLabel="FEF AI Web Design & Development cinematic system film"
+            />
           </div>
 
         </div>
@@ -209,7 +221,7 @@ export const AiWebDevelopmentPage: React.FC = () => {
       </section>
 
       <section
-        id="web-capabilities" className="ai-web-capabilities relative px-5 py-16 sm:px-8 lg:px-10 lg:py-24"
+        id="web-capabilities" className="ai-web-capabilities relative px-5 py-12 sm:px-8 lg:px-10 lg:py-16"
       >
         <div className="mx-auto max-w-7xl">
 
@@ -255,7 +267,7 @@ export const AiWebDevelopmentPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="ai-web-architecture relative px-5 py-12 sm:px-8 lg:px-10 lg:py-20">
+      <section className="ai-web-architecture relative px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
         <div className="fef-glass-section mx-auto max-w-7xl rounded-[2rem] p-7 sm:p-10 lg:p-14">
           <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
 
@@ -309,7 +321,7 @@ export const AiWebDevelopmentPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="ai-web-process-section relative px-5 py-16 sm:px-8 lg:px-10 lg:py-24">
+      <section className="ai-web-process-section relative px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
         <div className="mx-auto max-w-7xl">
 
           <div className="max-w-3xl">
@@ -352,7 +364,7 @@ export const AiWebDevelopmentPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="ai-web-cta-section relative px-5 pb-28 pt-8 sm:px-8 lg:px-10 lg:pb-36">
+      <section className="ai-web-cta-section relative px-5 pb-16 pt-8 sm:px-8 lg:px-10 lg:pb-24">
         <div className="fef-glass-section ai-web-cta mx-auto max-w-7xl rounded-[2rem] px-7 py-12 text-center sm:px-10 sm:py-16">
 
           <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl border border-cyan-400/20 bg-cyan-400/[0.07]">

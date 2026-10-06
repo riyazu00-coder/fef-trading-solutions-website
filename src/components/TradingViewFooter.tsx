@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import {
   BadgeCheck,
   Layers,
@@ -16,9 +16,47 @@ interface TradingViewFooterProps {
 
 export const TradingViewFooter: React.FC<TradingViewFooterProps> = () => {
   const year = new Date().getFullYear();
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const videoContainerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const container = videoContainerRef.current;
+    if (!video || !container) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      video.pause();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.25) {
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(() => {});
+            }
+          } else if (!entry.isIntersecting || entry.intersectionRatio < 0.1) {
+            video.pause();
+          }
+        });
+      },
+      {
+        threshold: [0.1, 0.25, 0.5],
+      }
+    );
+
+    observer.observe(container);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
-    <footer className="relative mt-20 overflow-hidden border-t border-slate-200/70 bg-gradient-to-b from-transparent via-[#f0f4fc]/40 to-[#e8eefa]/70 text-[#536078]">
+    <footer className="relative mt-4 sm:mt-6 overflow-hidden border-t border-slate-200/70 bg-gradient-to-b from-transparent via-[#f0f4fc]/40 to-[#e8eefa]/70 text-[#536078]">
       {/* Technical grid atmosphere */}
       <div
         className="site-grid absolute inset-0 opacity-10 pointer-events-none"
@@ -40,7 +78,7 @@ export const TradingViewFooter: React.FC<TradingViewFooterProps> = () => {
         aria-hidden="true"
       />
 
-      <div className="relative mx-auto max-w-7xl px-5 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div className="relative mx-auto max-w-7xl px-5 pt-3 sm:pt-4 pb-6 sm:px-6 lg:px-8 lg:pb-8">
         {/* Upper callout */}
         <section className="relative overflow-hidden p-6 sm:p-8 lg:p-10 rounded-[2.5rem] fef-glass-cta shadow-xl">
           <div className="absolute -top-24 left-1/4 w-80 h-80 bg-[#45c9f5]/15 rounded-full blur-[100px] pointer-events-none" />
@@ -157,167 +195,195 @@ export const TradingViewFooter: React.FC<TradingViewFooterProps> = () => {
             </div>
           </div>
 
-          {/* Current website directory */}
-          <div className="grid gap-x-8 gap-y-10 sm:grid-cols-2 xl:grid-cols-4">
-            <div>
-              <div className="mb-4 flex items-center gap-2">
-                <Cpu className="h-4 w-4 text-cyan-600" />
-                <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#080B1D]">
-                  Solutions
-                </h4>
+          {/* Current website directory & Integrated Holographic Cinematic Interface */}
+          <div className="flex flex-col justify-between">
+            {/* Top: Four Directory Link Columns */}
+            <div className="grid gap-x-8 gap-y-8 sm:grid-cols-2 xl:grid-cols-4">
+              <div>
+                <div className="mb-4 flex items-center gap-2">
+                  <Cpu className="h-4 w-4 text-cyan-600" />
+                  <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-[#080B1D]">
+                    Solutions
+                  </h4>
+                </div>
+
+                <ul className="space-y-3 text-sm text-slate-800 font-medium">
+                  <li>
+                    <a href="/ai-software-development" className="transition text-slate-700 hover:text-cyan-600">
+                      AI Software
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/ai-web-design-development" className="transition text-slate-700 hover:text-cyan-600">
+                      AI Web Design
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/custom-applications" className="transition text-slate-700 hover:text-cyan-600">
+                      Custom Applications
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/business-automation" className="transition text-slate-700 hover:text-cyan-600">
+                      Business Automation
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/trading-technology" className="transition text-slate-700 hover:text-cyan-600">
+                      Trading Technology
+                    </a>
+                  </li>
+                </ul>
               </div>
 
-              <ul className="space-y-3 text-sm text-slate-800 font-medium">
-                <li>
-                  <a href="/ai-software-development" className="transition text-slate-700 hover:text-cyan-600">
-                    AI Software
-                  </a>
-                </li>
-                <li>
-                  <a href="/ai-web-design-development" className="transition text-slate-700 hover:text-cyan-600">
-                    AI Web Design
-                  </a>
-                </li>
-                <li>
-                  <a href="/custom-applications" className="transition text-slate-700 hover:text-cyan-600">
-                    Custom Applications
-                  </a>
-                </li>
-                <li>
-                  <a href="/business-automation" className="transition text-slate-700 hover:text-cyan-600">
-                    Business Automation
-                  </a>
-                </li>
-                <li>
-                  <a href="/trading-technology" className="transition text-slate-700 hover:text-cyan-600">
-                    Trading Technology
-                  </a>
-                </li>
-              </ul>
-            </div>
+              <div>
+                <div className="mb-4 flex items-center gap-2">
+                  <Workflow className="h-4 w-4 text-blue-600" />
+                  <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#080B1D]">
+                    Products
+                  </h4>
+                </div>
 
-            <div>
-              <div className="mb-4 flex items-center gap-2">
-                <Workflow className="h-4 w-4 text-blue-600" />
-                <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#080B1D]">
-                  Products
-                </h4>
+                <ul className="space-y-3 text-sm text-slate-800 font-medium">
+                  <li>
+                    <a href="/trade-copier" className="transition text-slate-700 hover:text-cyan-600">
+                      Trade Copier MT5
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/manual-trade-manager" className="transition text-slate-700 hover:text-cyan-600">
+                      Manual Trade Manager
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/trading-agent" className="transition text-slate-700 hover:text-cyan-600">
+                      Trading Agent
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/products" className="transition text-slate-700 hover:text-cyan-600">
+                      All Products
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/pricing" className="transition text-slate-700 hover:text-cyan-600">
+                      Pricing
+                    </a>
+                  </li>
+                </ul>
               </div>
 
-              <ul className="space-y-3 text-sm text-slate-800 font-medium">
-                <li>
-                  <a href="/trade-copier" className="transition text-slate-700 hover:text-cyan-600">
-                    Trade Copier MT5
-                  </a>
-                </li>
-                <li>
-                  <a href="/manual-trade-manager" className="transition text-slate-700 hover:text-cyan-600">
-                    Manual Trade Manager
-                  </a>
-                </li>
-                <li>
-                  <a href="/trading-agent" className="transition text-slate-700 hover:text-cyan-600">
-                    Trading Agent
-                  </a>
-                </li>
-                <li>
-                  <a href="/products" className="transition text-slate-700 hover:text-cyan-600">
-                    All Products
-                  </a>
-                </li>
-                <li>
-                  <a href="/pricing" className="transition text-slate-700 hover:text-cyan-600">
-                    Pricing
-                  </a>
-                </li>
-              </ul>
-            </div>
+              <div>
+                <div className="mb-4 flex items-center gap-2">
+                  <Globe2 className="h-4 w-4 text-violet-600" />
+                  <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#080B1D]">
+                    Resources
+                  </h4>
+                </div>
 
-            <div>
-              <div className="mb-4 flex items-center gap-2">
-                <Globe2 className="h-4 w-4 text-violet-600" />
-                <h4 className="text-xs font-bold uppercase tracking-[0.18em] text-[#080B1D]">
-                  Resources
-                </h4>
+                <ul className="space-y-3 text-sm text-slate-800 font-medium">
+                  <li>
+                    <a href="/documentation" className="transition text-slate-700 hover:text-cyan-600">
+                      Documentation
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/downloads" className="transition text-slate-700 hover:text-cyan-600">
+                      Downloads
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/changelog" className="transition text-slate-700 hover:text-cyan-600">
+                      Changelog
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/support" className="transition text-slate-700 hover:text-cyan-600">
+                      Support Center
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/contact" className="transition text-slate-700 hover:text-cyan-600">
+                      Contact
+                    </a>
+                  </li>
+                </ul>
               </div>
 
-              <ul className="space-y-3 text-sm text-slate-800 font-medium">
-                <li>
-                  <a href="/documentation" className="transition text-slate-700 hover:text-cyan-600">
-                    Documentation
-                  </a>
-                </li>
-                <li>
-                  <a href="/downloads" className="transition text-slate-700 hover:text-cyan-600">
-                    Downloads
-                  </a>
-                </li>
-                <li>
-                  <a href="/changelog" className="transition text-slate-700 hover:text-cyan-600">
-                    Changelog
-                  </a>
-                </li>
-                <li>
-                  <a href="/support" className="transition text-slate-700 hover:text-cyan-600">
-                    Support Center
-                  </a>
-                </li>
-                <li>
-                  <a href="/contact" className="transition text-slate-700 hover:text-cyan-600">
-                    Contact
-                  </a>
-                </li>
-              </ul>
+              <div>
+                <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#080B1D]">
+                  Official Market
+                </h4>
+
+                <ul className="space-y-3 text-sm text-slate-800 font-medium">
+                  <li>
+                    <a
+                      href="https://www.mql5.com/en/market/product/183557"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 transition text-slate-700 hover:text-cyan-600"
+                    >
+                      Trade Copier
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.mql5.com/en/market/product/183695"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 transition text-slate-700 hover:text-cyan-600"
+                    >
+                      Manual Manager
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="https://www.mql5.com/en/users/feftradingsolutions"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 transition text-slate-700 hover:text-cyan-600"
+                    >
+                      FEF MQL5 Profile
+                      <ExternalLink className="h-3 w-3" />
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="/about-us" className="transition text-slate-700 hover:text-cyan-600">
+                      About Us
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div>
-              <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#080B1D]">
-                Official Market
-              </h4>
-
-              <ul className="space-y-3 text-sm text-slate-800 font-medium">
-                <li>
-                  <a
-                    href="https://www.mql5.com/en/market/product/183557"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 transition text-slate-700 hover:text-cyan-600"
-                  >
-                    Trade Copier
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="https://www.mql5.com/en/market/product/183695"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 transition text-slate-700 hover:text-cyan-600"
-                  >
-                    Manual Manager
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="https://www.mql5.com/en/users/feftradingsolutions"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 transition text-slate-700 hover:text-cyan-600"
-                  >
-                    FEF MQL5 Profile
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                </li>
-
-                <li>
-                  <a href="/about-us" className="transition text-slate-700 hover:text-cyan-600">
-                    About Us
-                  </a>
-                </li>
-              </ul>
+            {/* Bottom: Holographic Interface Video filling existing empty rectangular space (Desktop/Tablet) */}
+            <div
+              ref={videoContainerRef}
+              className="hidden sm:block mt-6 relative w-full h-[210px] rounded-2xl overflow-hidden border border-slate-200/80 bg-[#050814] shadow-sm select-none"
+            >
+              <video
+                ref={videoRef}
+                src="/videos/fef-footer-holographic-interface.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                controls={false}
+                disableRemotePlayback
+                aria-label="FEF holographic interface cinematic background"
+                className="w-full h-full object-cover object-center"
+              />
+              {/* Subtle specular rim light */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10 shadow-[inset_0_0_30px_rgba(0,0,0,0.35)]"
+              />
             </div>
           </div>
         </div>

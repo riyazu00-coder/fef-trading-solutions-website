@@ -110,7 +110,7 @@ export const TradingViewProductMatrix: React.FC = () => {
   const filtered = filter === 'all' ? products : products.filter((p) => p.category === filter);
 
   return (
-    <section id="solutions-matrix" className="relative py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+    <section id="solutions-matrix" className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
       <div className="relative rounded-[2.5rem] fef-glass-primary p-6 sm:p-10 lg:p-12 overflow-hidden shadow-sm">
         {/* Specular Edge Highlight */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent" />

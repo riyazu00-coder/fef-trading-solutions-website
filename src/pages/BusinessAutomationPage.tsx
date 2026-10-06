@@ -15,7 +15,7 @@ import {
   Workflow,
   Zap,
 } from 'lucide-react';
-import { AutomationVisual } from '../components/solutions/AutomationVisual';
+import { SolutionCinematicStage } from '../components/solutions/SolutionCinematicStage';
 
 const capabilities = [
   {
@@ -165,13 +165,25 @@ export const BusinessAutomationPage: React.FC = () => (
         </div>
 
         <div className="business-automation-hero-visual relative">
-          <AutomationVisual />
+          <SolutionCinematicStage
+            videoSrc="/videos/fef-business-automation.mp4"
+            headerLabel="WORKFLOW ORCHESTRATION"
+            badgeColor="text-purple-300 border-purple-500/40 bg-purple-500/15"
+            accentGlow="purple"
+            topRightLabel="SYSTEM FILM"
+            telemetryMetrics={[
+              { label: "Layer", value: "Operations" },
+              { label: "Mode", value: "Workflow" },
+              { label: "Control", value: "Human + System" },
+            ]}
+            ariaLabel="FEF Business Automation cinematic system film"
+          />
         </div>
       </div>
     </section>
 
     <section className="business-automation-intro border-b border-white/10">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-[.72fr_1.28fr] lg:items-end lg:px-8 lg:py-24">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 lg:grid-cols-[.72fr_1.28fr] lg:items-end lg:px-8 lg:py-16">
         <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-purple-300">
             Beyond repetitive manual work
@@ -194,7 +206,7 @@ export const BusinessAutomationPage: React.FC = () => (
     <section
       id="automation-capabilities" className="business-automation-capabilities"
     >
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <div className="mb-12 max-w-3xl">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-purple-300">
             Automation capabilities
@@ -222,7 +234,7 @@ export const BusinessAutomationPage: React.FC = () => (
     </section>
 
     <section className="business-automation-flow border-y border-white/10">
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
             Workflow orchestration
@@ -309,7 +321,7 @@ export const BusinessAutomationPage: React.FC = () => (
     </section>
 
     <section className="business-automation-use-cases border-y border-white/10">
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <div className="mb-12 max-w-3xl">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
             Where automation fits
@@ -345,7 +357,7 @@ export const BusinessAutomationPage: React.FC = () => (
     </section>
 
     <section className="business-automation-delivery-section">
-      <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-purple-300">
             Delivery process
@@ -363,14 +375,14 @@ export const BusinessAutomationPage: React.FC = () => (
             <article key={number} className="fef-glass-card p-6">
               <span className="font-mono text-xs text-purple-300">{number}</span>
               <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-400">{text}</p>
+              <p className="mt-3 text-sm leading-7 text-slate-400">{text}</p>
             </article>
           ))}
         </div>
       </div>
     </section>
 
-    <section className="business-automation-cta-section px-6 pb-24 lg:px-8 lg:pb-28">
+    <section className="business-automation-cta-section px-6 pb-16 lg:px-8 lg:pb-24">
       <div className="business-automation-cta fef-glass-card-static mx-auto max-w-6xl px-6 py-12 text-center sm:px-10 sm:py-16">
         <RefreshCw className="mx-auto mb-6 h-7 w-7 text-purple-300" />
         <h2 className="mx-auto max-w-3xl text-3xl font-semibold tracking-[-0.03em] text-white sm:text-4xl">

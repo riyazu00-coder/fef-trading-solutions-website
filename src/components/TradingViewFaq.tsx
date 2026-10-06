@@ -41,7 +41,7 @@ export const TradingViewFaq: React.FC = () => {
   };
 
   return (
-    <section className="relative py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full space-y-16">
+    <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full space-y-10 sm:space-y-12">
 
       {/* 1. FAQ Accordion Bento */}
       <div className="relative rounded-[2.5rem] bg-white/70 backdrop-blur-xl border border-slate-200/80 p-6 sm:p-10 lg:p-12 overflow-hidden shadow-sm">

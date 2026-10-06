@@ -3,7 +3,7 @@ import { ExternalLink, ChevronRight, BadgeCheck, ShieldCheck, Activity, Zap } fr
 
 export const FeaturedTradeCopier: React.FC = () => {
   return (
-    <section id="featured-trade-copier" className="relative py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+    <section id="featured-trade-copier" className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
 
       {/* 1. Editorial Header Section */}
       <div className="text-center max-w-3xl mx-auto">

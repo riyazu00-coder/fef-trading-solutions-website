@@ -13,7 +13,7 @@ import {
   SlidersHorizontal,
   Workflow,
 } from 'lucide-react';
-import { TradingTechVisual } from '../components/solutions/TradingTechVisual';
+import { SolutionCinematicStage } from '../components/solutions/SolutionCinematicStage';
 
 const capabilities = [
   {
@@ -133,12 +133,24 @@ export const TradingTechnologyPage: React.FC = () => (
         </div>
 
         <div className="trading-technology-hero-visual">
-          <TradingTechVisual />
+          <SolutionCinematicStage
+            videoSrc="/videos/fef-trading-technology.mp4"
+            headerLabel="TRADING TECHNOLOGY"
+            badgeColor="text-emerald-300 border-emerald-500/40 bg-emerald-500/15"
+            accentGlow="emerald"
+            topRightLabel="SYSTEM FILM"
+            telemetryMetrics={[
+              { label: "Platform", value: "MetaTrader 5" },
+              { label: "Layer", value: "Trading Software" },
+              { label: "Workspace", value: "FEF Trading App" },
+            ]}
+            ariaLabel="FEF Trading Technology cinematic system film"
+          />
         </div>
       </div>
     </section>
 
-    <section className="trading-technology-intro px-6 py-20 lg:px-8 lg:py-24">
+    <section className="trading-technology-intro px-6 py-12 lg:px-8 lg:py-16">
       <div className="mx-auto max-w-4xl text-center">
         <p className="font-mono text-xs uppercase tracking-[0.22em] text-emerald-300">
           Beyond a single trading tool
@@ -158,7 +170,7 @@ export const TradingTechnologyPage: React.FC = () => (
     </section>
 
     <section
-      id="trading-capabilities" className="trading-technology-capabilities px-6 py-20 lg:px-8 lg:py-28"
+      id="trading-capabilities" className="trading-technology-capabilities px-6 py-12 lg:px-8 lg:py-16"
     >
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
@@ -187,7 +199,7 @@ export const TradingTechnologyPage: React.FC = () => (
       </div>
     </section>
 
-    <section className="trading-app-showcase px-6 py-20 lg:px-8 lg:py-28">
+    <section className="trading-app-showcase px-6 py-12 lg:px-8 lg:py-16">
       <div className="mx-auto max-w-7xl">
         <div className="grid items-end gap-8 lg:grid-cols-[1fr_auto]">
           <div className="max-w-3xl">
@@ -246,7 +258,7 @@ export const TradingTechnologyPage: React.FC = () => (
       </div>
     </section>
 
-    <section className="trading-technology-products px-6 py-20 lg:px-8 lg:py-28">
+    <section className="trading-technology-products px-6 py-12 lg:px-8 lg:py-16">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
           <p className="font-mono text-xs uppercase tracking-[0.22em] text-emerald-300">
@@ -285,7 +297,7 @@ export const TradingTechnologyPage: React.FC = () => (
       </div>
     </section>
 
-    <section className="trading-technology-architecture px-6 py-20 lg:px-8 lg:py-28">
+    <section className="trading-technology-architecture px-6 py-12 lg:px-8 lg:py-16">
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
         <div>
           <p className="font-mono text-xs uppercase tracking-[0.22em] text-cyan-300">
@@ -319,7 +331,7 @@ export const TradingTechnologyPage: React.FC = () => (
       </div>
     </section>
 
-    <section className="trading-technology-cta-section px-6 pb-24 lg:px-8 lg:pb-28">
+    <section className="trading-technology-cta-section px-6 pb-16 lg:px-8 lg:pb-24">
       <div className="trading-technology-cta fef-glass-card-static mx-auto max-w-6xl px-6 py-12 text-center sm:px-10 sm:py-16">
         <Gauge className="mx-auto mb-6 h-7 w-7 text-emerald-300" />
         <h2 className="mx-auto max-w-3xl text-3xl font-semibold tracking-[-0.035em] text-white sm:text-4xl">

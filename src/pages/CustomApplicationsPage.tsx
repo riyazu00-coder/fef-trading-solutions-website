@@ -13,7 +13,7 @@ import {
   Smartphone,
   Workflow,
 } from 'lucide-react';
-import { CustomCodingVisual } from '../components/solutions/CustomCodingVisual';
+import { SolutionCinematicStage } from '../components/solutions/SolutionCinematicStage';
 
 const capabilities = [
   {
@@ -109,12 +109,24 @@ export const CustomApplicationsPage: React.FC = () => (
         </div>
 
         <div className="custom-apps-hero-visual relative">
-          <CustomCodingVisual />
+          <SolutionCinematicStage
+            videoSrc="/videos/fef-custom-applications.mp4"
+            headerLabel="APPLICATION ENGINEERING"
+            badgeColor="text-blue-300 border-blue-500/40 bg-blue-500/15"
+            accentGlow="blue"
+            topRightLabel="SYSTEM FILM"
+            telemetryMetrics={[
+              { label: "Layer", value: "Application" },
+              { label: "Mode", value: "Custom Build" },
+              { label: "System", value: "Connected" },
+            ]}
+            ariaLabel="FEF Custom Applications cinematic system film"
+          />
         </div>
       </div>
     </section>
 
-    <section className="custom-apps-intro px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+    <section className="custom-apps-intro px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.72fr_1.28fr] lg:items-end">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-cyan-300">
           Beyond off-the-shelf software
@@ -131,7 +143,7 @@ export const CustomApplicationsPage: React.FC = () => (
       </div>
     </section>
 
-    <section id="custom-capabilities" className="custom-apps-capabilities px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+    <section id="custom-capabilities" className="custom-apps-capabilities px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
       <div className="mx-auto max-w-7xl">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-300">Core capabilities</p>
         <h2 className="mt-4 max-w-4xl text-3xl font-semibold tracking-[-0.035em] text-white sm:text-4xl lg:text-5xl">
@@ -153,7 +165,7 @@ export const CustomApplicationsPage: React.FC = () => (
       </div>
     </section>
 
-    <section className="custom-apps-architecture px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+    <section className="custom-apps-architecture px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
       <div className="mx-auto max-w-7xl">
         <div className="fef-glass-section p-6 sm:p-9 lg:p-12">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-cyan-300">Application architecture</p>
@@ -177,7 +189,7 @@ export const CustomApplicationsPage: React.FC = () => (
       </div>
     </section>
 
-    <section className="custom-apps-use-cases px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+    <section className="custom-apps-use-cases px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
         <div>
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-blue-300">Where custom software fits</p>
@@ -199,7 +211,7 @@ export const CustomApplicationsPage: React.FC = () => (
       </div>
     </section>
 
-    <section className="custom-apps-process-section px-5 py-20 sm:px-8 lg:px-10 lg:py-28">
+    <section className="custom-apps-process-section px-5 py-12 sm:px-8 lg:px-10 lg:py-16">
       <div className="mx-auto max-w-7xl">
         <p className="text-xs font-medium uppercase tracking-[0.2em] text-cyan-300">Development process</p>
         <h2 className="mt-4 max-w-4xl text-3xl font-semibold tracking-[-0.035em] text-white sm:text-4xl lg:text-5xl">
@@ -218,7 +230,7 @@ export const CustomApplicationsPage: React.FC = () => (
       </div>
     </section>
 
-    <section className="custom-apps-cta-section px-5 pb-24 pt-12 sm:px-8 lg:px-10 lg:pb-32">
+    <section className="custom-apps-cta-section px-5 pb-16 pt-8 sm:px-8 lg:px-10 lg:pb-24">
       <div className="custom-apps-cta fef-glass-section mx-auto max-w-7xl px-6 py-14 text-center sm:px-10 lg:py-20">
         <Blocks className="mx-auto h-7 w-7 text-cyan-300" />
         <h2 className="mx-auto mt-6 max-w-4xl text-3xl font-semibold tracking-[-0.035em] text-white sm:text-4xl lg:text-5xl">

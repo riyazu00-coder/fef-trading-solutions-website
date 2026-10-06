@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import {
   ExternalLink,
   Zap,
@@ -8,54 +8,131 @@ import {
 } from 'lucide-react';
 
 export const ManualTradeManagerPage: React.FC = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const videoContainerRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    const container = videoContainerRef.current;
+    if (!video || !container) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+      video.pause();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.25) {
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(() => {});
+            }
+          } else if (!entry.isIntersecting || entry.intersectionRatio < 0.1) {
+            video.pause();
+          }
+        });
+      },
+      {
+        threshold: [0.1, 0.25, 0.5],
+      }
+    );
+
+    observer.observe(container);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-12">
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-12">
       {/* Hero */}
-      <div className="relative rounded-[2.5rem] fef-glass-section p-8 sm:p-12 lg:p-14 overflow-hidden">
+      <div className="relative rounded-[2.5rem] fef-glass-section p-6 sm:p-10 lg:p-12 overflow-hidden">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 text-xs font-semibold tracking-wider uppercase">
-            <Zap className="h-3.5 w-3.5" />
-            <span>Available on MQL5 Market</span>
+
+        {/* Two-Column Primary Row: Left Copy (~45%) | Right Cinematic Video (~55%) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          {/* LEFT: Product Information */}
+          <div className="lg:col-span-5 flex flex-col justify-center">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cyan-400/30 bg-cyan-400/10 text-cyan-300 text-xs font-semibold tracking-wider uppercase w-fit">
+              <Zap className="h-3.5 w-3.5" />
+              <span>Available on MQL5 Market</span>
+            </div>
+
+            <h1 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.02em] text-white leading-[1.12]">
+              FEF Manual <span className="fef-headline-gradient">Trade Manager Pro MT5</span>
+            </h1>
+
+            <p className="mt-4 text-sm sm:text-base text-slate-300 font-normal leading-relaxed max-w-xl">
+              A professional manual trade management dashboard for MetaTrader 5, built for traders who want structured SL/TP handling, breakeven, trailing stops, partial close, and visual market context.
+            </p>
+
+            <div className="mt-6 sm:mt-8 flex flex-wrap gap-3.5">
+              <a
+                href="https://www.mql5.com/en/market/product/183695"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="focus-ring inline-flex items-center gap-2.5 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
+              >
+                <span>Buy on MQL5 Market</span>
+                <ExternalLink className="h-4 w-4" />
+              </a>
+              <a
+                href="/documentation/manual-trade-manager-setup"
+                className="focus-ring inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl text-sm sm:text-base font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
+              >
+                <BookOpen className="h-4 w-4" />
+                <span>Setup Guide</span>
+              </a>
+            </div>
           </div>
-          <h1 className="mt-6 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-[-0.02em] text-white leading-tight">
-            FEF Manual <span className="fef-headline-gradient">Trade Manager Pro MT5</span>
-          </h1>
-          <p className="mt-5 text-base sm:text-lg text-slate-300 font-normal leading-relaxed">
-            A professional manual trade management dashboard for MetaTrader 5, built for traders who want structured SL/TP handling, breakeven, trailing stops, partial close, and visual market context.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="https://www.mql5.com/en/market/product/183695"
-              target="_blank"
-              rel="noopener noreferrer" className="focus-ring inline-flex items-center gap-2.5 px-8 py-4 rounded-xl text-sm sm:text-base font-medium text-[#05070d] bg-brand-gradient hover:brightness-110 shadow-glow transition transform hover:scale-105 active:scale-95"
+
+          {/* RIGHT: Cinematic Workflow Video */}
+          <div className="lg:col-span-7 w-full flex items-center justify-center">
+            <div
+              ref={videoContainerRef}
+              className="relative w-full aspect-video rounded-2xl overflow-hidden bg-[#050814] border border-white/10 shadow-[0_16px_36px_rgba(0,0,0,0.4)] select-none"
             >
-              <span>Buy on MQL5 Market</span>
-              <ExternalLink className="h-4 w-4" />
-            </a>
-            <a
-              href="/documentation/manual-trade-manager-setup" className="focus-ring inline-flex items-center gap-2 px-7 py-4 rounded-xl text-sm sm:text-base font-medium text-white bg-white/5 border border-white/15 hover:bg-white/10 hover:border-cyan-400/40 backdrop-blur-xl transition"
-            >
-              <BookOpen className="h-4 w-4" />
-              <span>Setup Guide</span>
-            </a>
+              <video
+                ref={videoRef}
+                src="/videos/fef-manual-trade-manager-pro.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                controls={false}
+                disableRemotePlayback
+                aria-label="FEF Manual Trade Manager Pro MT5 cinematic demonstration"
+                className="w-full h-full object-contain object-center"
+              />
+              {/* Subtle inner glass edge ring */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10 shadow-[inset_0_0_35px_rgba(0,0,0,0.3)]"
+              />
+            </div>
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <div className="p-4 rounded-xl fef-glass-card text-center">
+        {/* Full-Width 4 Specification Cards Underneath */}
+        <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 sm:pt-8 border-t border-white/10">
+          <div className="p-3.5 sm:p-4 rounded-xl fef-glass-card text-center">
             <p className="text-[11px] uppercase tracking-wider text-slate-400 font-mono">Focus</p>
             <p className="mt-1 text-base font-semibold text-white">Manual Control</p>
           </div>
-          <div className="p-4 rounded-xl fef-glass-card text-center">
+          <div className="p-3.5 sm:p-4 rounded-xl fef-glass-card text-center">
             <p className="text-[11px] uppercase tracking-wider text-slate-400 font-mono">Platform</p>
             <p className="mt-1 text-base font-semibold text-white">MT5 Dashboard</p>
           </div>
-          <div className="p-4 rounded-xl fef-glass-card text-center">
+          <div className="p-3.5 sm:p-4 rounded-xl fef-glass-card text-center">
             <p className="text-[11px] uppercase tracking-wider text-slate-400 font-mono">Signals</p>
             <p className="mt-1 text-base font-semibold text-white">No Auto Signals</p>
           </div>
-          <div className="p-4 rounded-xl fef-glass-card text-center">
+          <div className="p-3.5 sm:p-4 rounded-xl fef-glass-card text-center">
             <p className="text-[11px] uppercase tracking-wider text-slate-400 font-mono">Delivery</p>
             <p className="mt-1 text-base font-semibold text-white">MQL5 Market</p>
           </div>

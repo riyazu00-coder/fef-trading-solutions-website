@@ -427,6 +427,30 @@ table tr:last-child td,
   }
 }
 
+@keyframes syncPulseFlow {
+  0% {
+    stroke-dashoffset: 60;
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -60;
+    opacity: 0.4;
+  }
+}
+
+.animate-sync-pulse {
+  animation: syncPulseFlow 1.2s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-sync-pulse {
+    animation: none !important;
+  }
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -603,9 +627,8 @@ table tr:last-child td,
    --------------------------------------------------------------- */
 
 .ai-software-page > section:first-child {
-  min-height: min(820px, calc(100vh - var(--header-height)));
-  display: flex;
-  align-items: center;
+  min-height: auto;
+  display: block;
 }
 
 .ai-software-page > section:first-child::after {
@@ -1107,7 +1130,6 @@ body:has(.ai-software-page) .fef-floating-support:focus-within {
 .ai-web-hero-visual>div{transform:rotateY(-4deg) rotateX(1deg) translateZ(0);transition:transform .6s cubic-bezier(.2,.8,.2,1),filter .6s ease;animation:aiWebFloat 7s ease-in-out infinite}
 .ai-web-hero-visual:hover>div{transform:rotateY(-1deg) rotateX(0deg) translateY(-6px) scale(1.015);filter:brightness(1.06)}
 .ai-web-hero-visual::before{content:\"\";position:absolute;inset:12% -4% -8% 8%;z-index:-1;border-radius:42%;background:radial-gradient(ellipse,rgba(38,151,255,.22),rgba(79,55,255,.11) 42%,transparent 72%);filter:blur(38px)}
-.ai-web-hero-visual::after{content:\"INTERACTIVE DIGITAL EXPERIENCE\";position:absolute;right:3%;bottom:-1.25rem;padding:.42rem .7rem;border:1px solid rgba(113,203,255,.18);border-radius:999px;background:rgba(3,9,20,.68);backdrop-filter:blur(12px);font-size:9px;font-weight:700;letter-spacing:.2em;color:rgba(181,226,255,.7)}
 .ai-web-hero .fef-gradient-text{background-image:linear-gradient(100deg,#70d9ff 0%,#8ea5ff 46%,#b989ff 100%)}
 .ai-web-hero .fef-btn-primary{box-shadow:0 14px 38px rgba(27,154,255,.2),inset 0 1px rgba(255,255,255,.22)}
 .ai-web-intro{background:linear-gradient(180deg,transparent,rgba(9,15,31,.34),transparent)}
@@ -1200,7 +1222,6 @@ body:has(.ai-web-page) .fef-floating-support:hover,body:has(.ai-web-page) .fef-f
 .custom-apps-hero::after{content:"";position:absolute;width:32rem;height:32rem;right:-10rem;top:8%;border-radius:999px;background:radial-gradient(circle,rgba(77,104,255,.11),transparent 68%);filter:blur(18px);z-index:-1;animation:customAppsAmbient 9s ease-in-out infinite alternate}
 .custom-apps-hero .fef-gradient-text,.custom-apps-page h2 .fef-gradient-text{background:linear-gradient(100deg,#50dcff 0%,#6d8dff 52%,#a879ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 20px rgba(86,135,255,.12))}
 .custom-apps-hero-visual{position:relative;perspective:1500px;filter:drop-shadow(0 32px 70px rgba(0,0,0,.42))}
-.custom-apps-hero-visual::before{content:"APPLICATION SYSTEM";position:absolute;right:4%;top:-1.75rem;font-size:.62rem;letter-spacing:.24em;color:rgba(125,211,252,.58);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .custom-apps-hero-visual::after{content:"";position:absolute;inset:12% 8%;z-index:-1;border-radius:999px;background:radial-gradient(circle,rgba(63,126,255,.19),rgba(104,73,255,.07) 40%,transparent 72%);filter:blur(30px)}
 .custom-apps-hero-visual>div{transform:rotateY(-4deg) rotateX(1.5deg);transition:transform .55s cubic-bezier(.2,.8,.2,1);animation:customAppsFloat 6.5s ease-in-out infinite}
 .custom-apps-hero-visual:hover>div{transform:rotateY(-1deg) rotateX(0deg) translateY(-7px) scale(1.01)}
@@ -1303,17 +1324,6 @@ body:has(.custom-apps-page) .fef-floating-support:hover{transform:scale(.9)}
   perspective:1200px;
 }
 
-.business-automation-hero-visual::before{
-  content:"WORKFLOW ORCHESTRATION";
-  position:absolute;
-  z-index:3;
-  right:1rem;
-  top:-1.3rem;
-  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
-  font-size:.62rem;
-  letter-spacing:.22em;
-  color:rgba(196,181,253,.68);
-}
 
 .business-automation-hero-visual::after{
   content:"";
@@ -1796,17 +1806,6 @@ body:has(.business-automation-page) .fef-floating-support:hover{
   perspective:1300px;
 }
 
-.trading-technology-hero-visual::before{
-  content:"TRADING SYSTEM";
-  position:absolute;
-  z-index:4;
-  right:1rem;
-  top:-1.25rem;
-  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
-  font-size:.62rem;
-  letter-spacing:.23em;
-  color:rgba(110,231,183,.70);
-}
 
 .trading-technology-hero-visual::after{
   content:"";
@@ -2673,14 +2672,25 @@ body:has(.fef-ai-homepage) {
   -webkit-text-fill-color: transparent !important;
 }
 
-.fef-ai-homepage p:not([class*="bg-slate-950"] *):not([class*="bg-[#060a14]"] *):not(pre *),
-.fef-ai-homepage .text-slate-300:not([class*="bg-slate-950"] *):not([class*="bg-[#060a14]"] *):not(pre *),
-.fef-ai-homepage .text-slate-200:not([class*="bg-slate-950"] *):not([class*="bg-[#060a14]"] *):not(pre *),
-.fef-ai-homepage .text-steel:not([class*="bg-slate-950"] *):not([class*="bg-[#060a14]"] *):not(pre *) {
+.fef-ai-homepage p:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *):not(.agent-live-app *):not(pre *),
+.fef-ai-homepage .text-slate-300:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *):not(.agent-live-app *):not(pre *),
+.fef-ai-homepage .text-slate-200:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *):not(.agent-live-app *):not(pre *),
+.fef-ai-homepage .text-steel:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *):not(.agent-live-app *):not(pre *) {
   color: #536078 !important;
 }
 
-.fef-ai-homepage .text-slate-400:not([class*="bg-slate-950"] *):not(pre *) {
+/* Crisp readable body/feature list items in light glass surfaces */
+.fef-ai-homepage li:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *):not(.agent-live-app *):not(pre *),
+.fef-ai-homepage ul li:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *):not(.agent-live-app *):not(pre *),
+.fef-ai-homepage ul li span:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *):not(.agent-live-app *):not(pre *),
+.fef-ai-homepage .fef-glass-section li,
+.fef-ai-homepage .fef-glass-card li,
+.fef-ai-homepage .fef-glass-card .space-y-2 > div span,
+.fef-ai-homepage .fef-glass-section .space-y-2 > div span {
+  color: #334155 !important;
+}
+
+.fef-ai-homepage .text-slate-400:not([class*="bg-slate-950"] *):not([class*="bg-[#0"] *):not(.agent-live-app *):not(pre *) {
   color: #64748b !important;
 }
 
@@ -2803,4 +2813,49 @@ body:has(.fef-ai-homepage) {
 .fef-ai-homepage .trading-app-screen img {
   opacity: 1 !important;
   filter: none !important;
+}
+
+/* 9. SCOPED DARK COMPONENT TYPOGRAPHY HIERARCHY (.agent-live-app & siblings) */
+.agent-live-app {
+  color: #cbd5e1;
+}
+
+.agent-live-app h2,
+.agent-live-app h3 {
+  color: #f8fafc !important;
+}
+
+.agent-live-app p {
+  color: #cbd5e1 !important;
+}
+
+.agent-live-app .text-slate-300 {
+  color: #cbd5e1 !important;
+}
+
+.agent-live-app .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.agent-live-app .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+.agent-live-app .agent-live-badge,
+.agent-live-app [class*="tracking-[0.15em]"],
+.agent-live-app [class*="Live application interface"] {
+  color: #e2e8f0 !important;
+  background-color: rgba(255, 255, 255, 0.07) !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+.agent-live-app .agent-live-warning,
+.agent-live-app [class*="border-amber-400"] {
+  background-color: rgba(245, 158, 11, 0.08) !important;
+  border-color: rgba(245, 158, 11, 0.28) !important;
+}
+
+.agent-live-app .agent-live-warning p,
+.agent-live-app [class*="border-amber-400"] p {
+  color: #cbd5e1 !important;
 }

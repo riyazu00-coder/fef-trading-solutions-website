@@ -10,7 +10,7 @@ import {
 
 export const ProductsPage: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 space-y-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-8 sm:pb-10 space-y-8 sm:space-y-10">
       {/* Hero */}
       <div className="relative rounded-[2.5rem] fef-glass-section p-8 sm:p-12 lg:p-14 overflow-hidden">
         <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
@@ -78,21 +78,21 @@ export const ProductsPage: React.FC = () => {
                 Professional master/slave trade copier for MetaTrader 5 account synchronization using a local IPC-based replication workflow.
               </p>
 
-              <div className="mt-6 space-y-2 text-xs sm:text-sm text-slate-200">
+              <div className="mt-6 space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0" />
                   <span>Master/slave synchronization</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0" />
                   <span>Multi-account workflow</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0" />
                   <span>Operator monitoring HUD</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-emerald-500 shrink-0" />
                   <span>MQL5 Market delivery</span>
                 </div>
               </div>
@@ -136,21 +136,21 @@ export const ProductsPage: React.FC = () => {
                 Manual trade management and visual market assistant dashboard for MetaTrader 5, engineered for structured post-entry protection.
               </p>
 
-              <div className="mt-6 space-y-2 text-xs sm:text-sm text-slate-200">
+              <div className="mt-6 space-y-2 text-xs sm:text-sm text-slate-700 font-medium">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-cyan-500 shrink-0" />
                   <span>Manual trade protection (no automated signals)</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-cyan-500 shrink-0" />
                   <span>SL/TP, breakeven, trailing, and partial close</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-cyan-500 shrink-0" />
                   <span>Visual on-chart market assistant HUD</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-cyan-500 shrink-0" />
                   <span>MQL5 Market delivery</span>
                 </div>
               </div>

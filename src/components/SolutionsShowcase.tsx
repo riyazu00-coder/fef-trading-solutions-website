@@ -10,11 +10,7 @@ import {
   Layers
 } from 'lucide-react';
 
-import { AiSoftwareVisual } from './solutions/AiSoftwareVisual';
-import { WebDevVisual } from './solutions/WebDevVisual';
-import { CustomCodingVisual } from './solutions/CustomCodingVisual';
-import { AutomationVisual } from './solutions/AutomationVisual';
-import { TradingTechVisual } from './solutions/TradingTechVisual';
+import { HomeSolutionCinematicPreview } from './solutions/HomeSolutionCinematicPreview';
 
 interface SolutionItem {
   id: string;
@@ -26,7 +22,12 @@ interface SolutionItem {
   capabilities: string[];
   ctaLabel: string;
   ctaHref: string;
-  visual: React.ReactNode;
+  videoSrc: string;
+  badgeLabel: string;
+  badgeColor: string;
+  accentGlow: 'cyan' | 'emerald' | 'purple' | 'blue';
+  telemetryMetrics: { label: string; value: string }[];
+  ariaLabel: string;
 }
 
 const solutions: SolutionItem[] = [
@@ -44,7 +45,16 @@ const solutions: SolutionItem[] = [
     ],
     ctaLabel: 'Explore AI Solutions',
     ctaHref: '/ai-software-development',
-    visual: <AiSoftwareVisual />,
+    videoSrc: '/videos/fef-ai-software-development.mp4',
+    badgeLabel: 'AI Intelligence Core',
+    badgeColor: 'text-cyan-300 border-cyan-500/40 bg-cyan-500/15',
+    accentGlow: 'cyan',
+    telemetryMetrics: [
+      { label: 'Layer', value: 'Intelligence' },
+      { label: 'Mode', value: 'Workflow' },
+      { label: 'Control', value: 'Human + AI' },
+    ],
+    ariaLabel: 'FEF AI Software Development cinematic preview',
   },
   {
     id: 'web',
@@ -60,7 +70,16 @@ const solutions: SolutionItem[] = [
     ],
     ctaLabel: 'Explore Web Development',
     ctaHref: '/ai-web-design-development',
-    visual: <WebDevVisual />,
+    videoSrc: '/videos/fef-ai-web-design-development.mp4',
+    badgeLabel: 'Digital Experience Studio',
+    badgeColor: 'text-cyan-300 border-cyan-500/40 bg-cyan-500/15',
+    accentGlow: 'cyan',
+    telemetryMetrics: [
+      { label: 'Layer', value: 'Experience' },
+      { label: 'Mode', value: 'Interactive' },
+      { label: 'Output', value: 'Web Platform' },
+    ],
+    ariaLabel: 'FEF AI Web Design & Development cinematic preview',
   },
   {
     id: 'code',
@@ -76,7 +95,16 @@ const solutions: SolutionItem[] = [
     ],
     ctaLabel: 'Explore Custom Development',
     ctaHref: '/custom-applications',
-    visual: <CustomCodingVisual />,
+    videoSrc: '/videos/fef-custom-applications.mp4',
+    badgeLabel: 'Application Engineering',
+    badgeColor: 'text-blue-300 border-blue-500/40 bg-blue-500/15',
+    accentGlow: 'blue',
+    telemetryMetrics: [
+      { label: 'Layer', value: 'Application' },
+      { label: 'Mode', value: 'Custom Build' },
+      { label: 'System', value: 'Connected' },
+    ],
+    ariaLabel: 'FEF Custom Applications cinematic preview',
   },
   {
     id: 'auto',
@@ -92,7 +120,16 @@ const solutions: SolutionItem[] = [
     ],
     ctaLabel: 'Explore Automation',
     ctaHref: '/business-automation',
-    visual: <AutomationVisual />,
+    videoSrc: '/videos/fef-business-automation.mp4',
+    badgeLabel: 'Workflow Orchestration',
+    badgeColor: 'text-purple-300 border-purple-500/40 bg-purple-500/15',
+    accentGlow: 'purple',
+    telemetryMetrics: [
+      { label: 'Layer', value: 'Operations' },
+      { label: 'Mode', value: 'Workflow' },
+      { label: 'Control', value: 'Human + System' },
+    ],
+    ariaLabel: 'FEF Business Automation cinematic preview',
   },
   {
     id: 'trading',
@@ -108,7 +145,16 @@ const solutions: SolutionItem[] = [
     ],
     ctaLabel: 'Explore Trading Technology',
     ctaHref: '/trading-technology',
-    visual: <TradingTechVisual />,
+    videoSrc: '/videos/fef-trading-technology.mp4',
+    badgeLabel: 'Trading Technology',
+    badgeColor: 'text-emerald-300 border-emerald-500/40 bg-emerald-500/15',
+    accentGlow: 'emerald',
+    telemetryMetrics: [
+      { label: 'Platform', value: 'MetaTrader 5' },
+      { label: 'Layer', value: 'Trading Software' },
+      { label: 'Workspace', value: 'FEF Trading App' },
+    ],
+    ariaLabel: 'FEF Trading Technology cinematic preview',
   },
 ];
 
@@ -233,10 +279,18 @@ export const SolutionsShowcase: React.FC<SolutionsShowcaseProps> = ({
             </div>
           </div>
 
-          {/* RIGHT COLUMN: Interactive Visual Demonstration in Subtle Light Glass Frame */}
+          {/* RIGHT COLUMN: Cinematic Video Preview Demonstration in Subtle Light Glass Frame */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             <div className="rounded-3xl p-2.5 sm:p-3 fef-glass-primary">
-              {current.visual}
+              <HomeSolutionCinematicPreview
+                videoSrc={current.videoSrc}
+                badgeLabel={current.badgeLabel}
+                badgeColor={current.badgeColor}
+                accentGlow={current.accentGlow}
+                topRightLabel="SYSTEM PREVIEW"
+                telemetryMetrics={current.telemetryMetrics}
+                ariaLabel={current.ariaLabel}
+              />
             </div>
           </div>
         </div>

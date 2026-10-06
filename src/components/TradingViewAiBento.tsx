@@ -3,7 +3,7 @@ import { Bot, BrainCircuit, Globe, Download, ExternalLink, QrCode } from 'lucide
 
 export const TradingViewAiBento: React.FC = () => {
   return (
-    <section className="relative py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+    <section className="relative py-10 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
       <div className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-center">
 
         {/* Left Column: Heading & Content */}

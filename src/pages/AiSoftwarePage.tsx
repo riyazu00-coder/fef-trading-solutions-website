@@ -12,7 +12,7 @@ import {
   Workflow,
   Zap,
 } from "lucide-react";
-import { AiSoftwareVisual } from "../components/solutions/AiSoftwareVisual";
+import { SolutionCinematicStage } from "../components/solutions/SolutionCinematicStage";
 
 const capabilities = [
   {
@@ -80,7 +80,7 @@ export const AiSoftwarePage: React.FC = () => {
   return (
     <main className="ai-software-page relative flex-1 overflow-hidden">
       {/* HERO */}
-      <section className="relative mx-auto max-w-7xl px-4 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-14 lg:px-8 lg:pb-24 lg:pt-16">
+      <section className="relative mx-auto max-w-7xl px-4 pb-8 pt-8 sm:px-6 sm:pb-10 sm:pt-12 lg:px-8 lg:pb-12 lg:pt-14">
         <div className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[820px] -translate-x-1/2 rounded-full bg-cyan-500/[0.07] blur-[120px]" />
 
         <div className="relative grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
@@ -130,13 +130,25 @@ export const AiSoftwarePage: React.FC = () => {
           </div>
 
           <div className="lg:col-span-6">
-            <AiSoftwareVisual />
+            <SolutionCinematicStage
+              videoSrc="/videos/fef-ai-software-development.mp4"
+              headerLabel="AI INTELLIGENCE CORE"
+              badgeColor="text-cyan-300 border-cyan-500/40 bg-cyan-500/15"
+              accentGlow="cyan"
+              topRightLabel="SYSTEM FILM"
+              telemetryMetrics={[
+                { label: "Layer", value: "Intelligence" },
+                { label: "Mode", value: "Workflow" },
+                { label: "Control", value: "Human + AI" },
+              ]}
+              ariaLabel="FEF AI Software Development cinematic system film"
+            />
           </div>
         </div>
       </section>
 
       {/* INTRODUCTION */}
-      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 pt-6 pb-3 sm:px-6 sm:pt-8 sm:pb-4 lg:px-8">
         <div className="fef-glass-section overflow-hidden rounded-[2rem] p-7 sm:p-10 lg:p-12">
           <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-5">
@@ -174,7 +186,7 @@ export const AiSoftwarePage: React.FC = () => {
 
       {/* CAPABILITIES */}
       <section
-        id="capabilities" className="mx-auto max-w-7xl scroll-mt-28 px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+        id="capabilities" className="mx-auto max-w-7xl scroll-mt-28 px-4 pt-6 pb-8 sm:px-6 sm:pt-8 sm:pb-10 lg:px-8"
       >
         <div className="mx-auto max-w-3xl text-center">
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-cyan-400">
@@ -213,7 +225,7 @@ export const AiSoftwarePage: React.FC = () => {
       </section>
 
       {/* SYSTEM FLOW */}
-      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
         <div className="fef-glass-section relative overflow-hidden rounded-[2rem] p-7 sm:p-10 lg:p-12">
           <div className="pointer-events-none absolute right-0 top-0 h-72 w-72 rounded-full bg-emerald-400/[0.06] blur-[90px]" />
 
@@ -270,7 +282,7 @@ export const AiSoftwarePage: React.FC = () => {
       </section>
 
       {/* PROCESS */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
         <div className="max-w-2xl">
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-cyan-400">
             Development process
@@ -303,7 +315,7 @@ export const AiSoftwarePage: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-7xl px-4 pb-20 pt-8 sm:px-6 sm:pb-24 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 sm:pb-16 lg:px-8">
         <div className="fef-glass-section relative overflow-hidden rounded-[2rem] px-6 py-12 text-center sm:px-10 sm:py-16">
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-72 w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/[0.08] blur-[100px]" />
 
